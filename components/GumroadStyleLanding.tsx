@@ -172,11 +172,11 @@ export default function GumroadLandingWithProjects() {
                 <div className="text-gray-800 font-medium">Days Delivery</div>
               </div>
               <div>
-                <div className="text-5xl font-bold mb-2 text-gray-900">100+</div>
+                <div className="text-5xl font-bold mb-2 text-gray-900">11+</div>
                 <div className="text-gray-800 font-medium">Projects Shipped</div>
               </div>
               <div>
-                <div className="text-5xl font-bold mb-2 text-gray-900">50+</div>
+                <div className="text-5xl font-bold mb-2 text-gray-900">10+</div>
                 <div className="text-gray-800 font-medium">Happy Clients</div>
               </div>
             </div>
