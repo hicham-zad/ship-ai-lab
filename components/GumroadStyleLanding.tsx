@@ -104,10 +104,15 @@ export default function GumroadLandingWithProjects() {
             With budget-friendly fixed pricing, we'll craft, build, and bring your idea to life within 15 days.
           </p>
 
-          <button className="group px-8 py-4 bg-black text-white rounded-full font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all inline-flex items-center gap-2">
+          <a
+            href="https://calendly.com/hzaydi24/codeblend"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group px-8 py-4 bg-black text-white rounded-full font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all inline-flex items-center gap-2"
+          >
             Start Your Project
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
 
         {/* Services Section */}
@@ -142,7 +147,7 @@ export default function GumroadLandingWithProjects() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
               Featured Projects
             </h2>
-            <Star className="w-8 h-8 fill-yellow-400 text-yellow-400 flex-shrink-0" />
+            <Star className="w-8 h-8 fill-yellow-400 text-yellow-400 shrink-0" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -160,7 +165,7 @@ export default function GumroadLandingWithProjects() {
 
         {/* Stats Section */}
         <div className="mb-20 md:mb-32">
-          <div className="border-2 border-black rounded-3xl p-10 bg-gradient-to-br from-pink-100 via-yellow-100 to-blue-100">
+          <div className="border-2 border-black rounded-3xl p-10 bg-linear-to-br from-pink-100 via-yellow-100 to-blue-100">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-5xl font-bold mb-2 text-gray-900">15</div>
@@ -190,13 +195,18 @@ export default function GumroadLandingWithProjects() {
             </h2>
             
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's turn your idea into reality with our proven 15-day delivery process.
+              Let&apos;s turn your idea into reality with our proven 15-day delivery process.
             </p>
             
-            <button className="group px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all inline-flex items-center gap-2">
+            <a
+              href="https://calendly.com/hzaydi24/codeblend"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all inline-flex items-center gap-2"
+            >
               Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
 
