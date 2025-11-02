@@ -1,6 +1,7 @@
 "use client";
 import { Rocket, Code, Smartphone, Brain, ArrowRight, Star } from 'lucide-react';
 import ProjectCard from './ProjectCard';
+import Image from 'next/image';
 
 export default function GumroadLandingWithProjects() {
   const services = [
@@ -79,40 +80,59 @@ export default function GumroadLandingWithProjects() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* Background Gradient */}
+      {/* <div className="absolute inset-0 -z-10 h-full w-full 
+      [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
+     */}
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-5 py-16 md:py-24">
         
         {/* Hero Section */}
-        <div className="mb-20 md:mb-32">
-          {/* Logo */}
-          <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 bg-black text-white rounded-full font-medium text-sm hover:scale-105 transition-transform cursor-pointer">
-            <Rocket className="w-4 h-4" />
-            <span>Ship AI Lab</span>
+        <div className="mb-20 md:mb-32 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16">
+          {/* Left: Text Content */}
+          <div className="flex-1">
+            {/* Logo */}
+            <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 bg-black text-white rounded-full font-medium text-sm hover:scale-105 transition-transform cursor-pointer">
+              <Rocket className="w-4 h-4" />
+              <span>Ship AI Lab</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-7 tracking-tight text-gray-900">
+              Launch Your Product<br />
+              in Just{' '}
+              <span className="relative inline-block">
+                <span className="relative z-10 text-gray-900">15 Days</span>
+              <span className="absolute bottom-2 left-0 w-full h-4 bg-[#ff5859] -rotate-1"></span>
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10 leading-relaxed">
+              With budget-friendly fixed pricing, we&apos;ll craft, build, and bring your idea to life within 15 days.
+            </p>
+            <a
+              href="https://calendly.com/hzaydi24/codeblend"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-4 bg-black text-white rounded-full font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all inline-flex items-center gap-2"
+            >
+              Start Your Project
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-7 tracking-tight text-gray-900">
-            Launch Your Product<br />
-            in Just{' '}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-gray-900">15 Days</span>
-              <span className="absolute bottom-2 left-0 w-full h-4 bg-yellow-300 -rotate-1"></span>
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10 leading-relaxed">
-            With budget-friendly fixed pricing, we'll craft, build, and bring your idea to life within 15 days.
-          </p>
-
-          <a
-            href="https://calendly.com/hzaydi24/codeblend"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group px-8 py-4 bg-black text-white rounded-full font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all inline-flex items-center gap-2"
-          >
-            Start Your Project
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          {/* Right: GIF Image */}
+          <div className="flex-1 flex justify-center  items-center md:w-1/2 w-full  h-full">
+            <div className="w-full max-w-[450px] 
+            aspect-square md:aspect-auto md:h-[500px]
+             flex items-center justify-center">
+              <Image
+                src="/shipailab.gif"
+                alt="Ship AI Lab Demo"
+                width={420}
+                height={420}
+                className="w-full h-full object-contain rounded-2xl shadow-sm  bg-white"
+                priority
+              />
+            </div>
+          </div>
         </div>
 
         {/* Services Section */}
