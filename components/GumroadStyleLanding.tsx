@@ -114,7 +114,7 @@ export default function GumroadLandingWithProjects() {
               rel="noopener noreferrer"
               className="group px-8 py-4 bg-black text-white rounded-full font-semibold text-lg hover:scale-105 hover:shadow-xl transition-all inline-flex items-center gap-2"
             >
-              Start Your Project
+            Book a Call
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
