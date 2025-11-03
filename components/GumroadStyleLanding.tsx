@@ -1,5 +1,5 @@
 "use client";
-import { Rocket, Code, Smartphone, Brain, ArrowRight, Star } from 'lucide-react';
+import { Code, Smartphone, Brain, ArrowRight, Star } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import Image from 'next/image';
 
@@ -80,11 +80,12 @@ export default function GumroadLandingWithProjects() {
   ];
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen  relative">
       {/* Background Gradient */}
-      {/* <div className="absolute inset-0 -z-10 h-full w-full 
-      [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
-     */}
+     <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f5c4c4,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+      <div className="absolute bottom-0 left-0 right-0 top-0 
+      
+      bg-[radial-gradient(circle_500px_at_50%_200px,#fcaeae,transparent)]"></div></div>
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-5 py-16 md:py-24">
         
@@ -94,11 +95,11 @@ export default function GumroadLandingWithProjects() {
           <div className="flex-1">
             {/* Logo */}
             <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 bg-black text-white rounded-full font-medium text-sm hover:scale-105 transition-transform cursor-pointer">
-              <Rocket className="w-4 h-4" />
-              <span>Ship AI Lab</span>
+              <Image src="/logo-home.png" alt="Ship AI Lab Logo" width={24} height={24} className="w-6 h-6" />
+              <span className='-ml-[13px] pt-[1px] font-bold text-lg'>hip AI Lab</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-7 tracking-tight text-gray-900">
-              Launch Your Product<br />
+              Launch Your AI App
               in Just{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 text-gray-900">15 Days</span>
@@ -106,7 +107,7 @@ export default function GumroadLandingWithProjects() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mb-10 leading-relaxed">
-              With budget-friendly fixed pricing, we&apos;ll craft, build, and bring your idea to life within 15 days.
+With our fixed, budget-friendly pricing, we design, build, and launch your idea — all in just 15 days.
             </p>
             <a
               href="https://calendly.com/hzaydi24/codeblend"
@@ -165,9 +166,9 @@ export default function GumroadLandingWithProjects() {
         <div className="mb-20 md:mb-32">
           <div className="flex items-center gap-3 mb-14">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
-              Featured Projects
+              Our Work
             </h2>
-            <Star className="w-8 h-8 fill-yellow-400 text-yellow-400 shrink-0" />
+            {/* <Star className="w-8 h-8 fill-yellow-400 text-yellow-400 shrink-0" /> */}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -233,15 +234,22 @@ export default function GumroadLandingWithProjects() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t-2 border-gray-200 py-10 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-5 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Rocket className="w-5 h-5 text-gray-900" />
-            <span className="font-bold text-gray-900">Ship AI Lab</span>
+      <footer className="border-t-2 border-gray-200 py-10 bg-gray-50 mt-10">
+        <div className="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 text-center md:text-left">
+          <div>
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+              <span className="font-bold text-gray-900">Ship AI Lab</span>
+            </div>
+            <p className="text-sm text-gray-600 mb-2">© 2024-2025 Ship AI Lab. A brand of Ship AI Solutions, LLC.</p>
+            <p className="text-xs text-gray-400">Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA</p>
+            <p className="text-xs text-gray-400">Email: contact@shipailab.com · Phone: 251-332-3311</p>
           </div>
-          <p className="text-sm text-gray-600">
-            © 2024 Ship AI Lab. A brand of Ship AI Solutions, LLC.
-          </p>
+          <div className="flex text-sm flex-col gap-2 md:items-end items-center">
+            <a href="/privacy-policy" className="text-gray-700 hover:text-primary transition">Privacy Policy</a>
+            <a href="/terms-of-service" className="text-gray-700 hover:text-primary transition">Terms of Service</a>
+            {/* <a href="/cookie-policy" className="text-gray-700 hover:text-primary transition">Cookie Policy</a>
+            <a href="/contact" className="text-gray-700 hover:text-primary transition">Contact</a> */}
+          </div>
         </div>
       </footer>
     </div>
