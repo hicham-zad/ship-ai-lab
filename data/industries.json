@@ -1,0 +1,242 @@
+[
+  {
+    "slug": "healthcare",
+    "name": "Healthcare",
+    "title": "AI MVP for Healthcare | Ship AI Lab",
+    "metaDescription": "Build HIPAA-compliant AI MVPs for healthcare in 15 days. From telemedicine to patient management, we deliver smart, secure healthcare apps fast.",
+    "h1": "AI MVP Development for Healthcare",
+    "subtitle": "Accelerate Digital Health Innovation with AI",
+    "painPoints": [
+      "Manual patient data processes",
+      "Limited appointment automation",
+      "Lack of predictive analytics for care",
+      "Inefficient record systems"
+    ],
+    "solutions": [
+      "AI-powered data entry",
+      "Smart scheduling & reminders",
+      "Predictive health dashboards",
+      "EHR-integrated management"
+    ],
+    "features": ["HIPAA-ready", "AI diagnosis", "Telemedicine", "Realtime monitoring"],
+    "techStack": ["Next.js", "OpenAI", "AWS", "PostgreSQL"],
+    "timeline": "15 days",
+    "startingPrice": "$8,000"
+  },
+  {
+    "slug": "finance",
+    "name": "Finance",
+    "title": "AI MVP for Finance | Ship AI Lab",
+    "metaDescription": "Launch your AI finance MVP in 15 days. From fraud detection to portfolio analytics, we build secure, compliant AI financial platforms.",
+    "h1": "AI MVP Development for Finance",
+    "subtitle": "Automate Financial Insights with AI",
+    "painPoints": [
+      "Manual reporting and auditing",
+      "Fraud detection challenges",
+      "Slow credit risk assessment",
+      "Outdated analytics tools"
+    ],
+    "solutions": [
+      "AI fraud detection",
+      "Automated reporting engines",
+      "Credit scoring models",
+      "Portfolio analytics dashboards"
+    ],
+    "features": ["PCI-compliant", "Realtime risk scoring", "Automated reports", "Secure cloud setup"],
+    "techStack": ["Next.js", "Python", "OpenAI", "AWS"],
+    "timeline": "15 days",
+    "startingPrice": "$9,000"
+  },
+  {
+    "slug": "ecommerce",
+    "name": "E-Commerce",
+    "title": "AI MVP for E-Commerce | Ship AI Lab",
+    "metaDescription": "Build your AI-powered eCommerce MVP fast. From product recommendations to smart inventory, we deliver results-driven AI stores in 15 days.",
+    "h1": "AI MVP Development for E-Commerce",
+    "subtitle": "Boost Sales with Smart E-Commerce Automation",
+    "painPoints": [
+      "Manual inventory updates",
+      "Low conversion rates",
+      "Unoptimized recommendations",
+      "Slow customer support"
+    ],
+    "solutions": [
+      "AI product recommendations",
+      "Smart inventory tracking",
+      "Personalized user experiences",
+      "AI chat support"
+    ],
+    "features": ["SEO-ready store", "Realtime analytics", "Smart filters", "AI chatbots"],
+    "techStack": ["Next.js", "Stripe", "OpenAI", "MongoDB"],
+    "timeline": "15 days",
+    "startingPrice": "$7,000"
+  },
+  {
+    "slug": "education",
+    "name": "Education",
+    "title": "AI MVP for Education | Ship AI Lab",
+    "metaDescription": "Create AI-driven learning platforms fast. Personalized learning, smart assessments, and student analytics in just 15 days.",
+    "h1": "AI MVP Development for Education",
+    "subtitle": "Empower Learning with Intelligent AI Tools",
+    "painPoints": [
+      "One-size-fits-all courses",
+      "Manual grading systems",
+      "Low engagement tracking",
+      "Poor student analytics"
+    ],
+    "solutions": [
+      "Personalized learning paths",
+      "AI grading tools",
+      "Performance dashboards",
+      "Virtual teaching assistants"
+    ],
+    "features": ["Adaptive learning", "Gamification", "Analytics", "AI tutors"],
+    "techStack": ["Next.js", "Python", "OpenAI", "Firebase"],
+    "timeline": "15 days",
+    "startingPrice": "$8,500"
+  },
+  {
+    "slug": "real-estate",
+    "name": "Real Estate",
+    "title": "AI MVP for Real Estate | Ship AI Lab",
+    "metaDescription": "Launch your AI real estate MVP in 15 days. From property valuation to virtual tours, we make buying and renting smarter.",
+    "h1": "AI MVP Development for Real Estate",
+    "subtitle": "Reinvent Property Tech with AI Innovation",
+    "painPoints": [
+      "Manual lead management",
+      "Hard-to-update listings",
+      "No price prediction tools",
+      "Slow customer responses"
+    ],
+    "solutions": [
+      "AI property valuation",
+      "Automated lead sorting",
+      "Smart listing recommendations",
+      "Virtual assistants for clients"
+    ],
+    "features": ["Map integration", "CRM tools", "AI leads", "360° tours"],
+    "techStack": ["Next.js", "Mapbox", "OpenAI", "Supabase"],
+    "timeline": "15 days",
+    "startingPrice": "$8,000"
+  },
+  {
+    "slug": "marketing",
+    "name": "Marketing",
+    "title": "AI MVP for Marketing | Ship AI Lab",
+    "metaDescription": "Automate your marketing with AI. Campaign analytics, content generation, and lead tracking — ready in 15 days.",
+    "h1": "AI MVP Development for Marketing",
+    "subtitle": "Automate Campaigns and Drive Growth with AI",
+    "painPoints": [
+      "Manual campaign optimization",
+      "Slow content creation",
+      "Unclear ROI tracking",
+      "Fragmented lead data"
+    ],
+    "solutions": [
+      "AI campaign optimization",
+      "Content generation tools",
+      "ROI analytics dashboards",
+      "Lead management automation"
+    ],
+    "features": ["SEO tools", "Social integration", "Email automation", "AI content engine"],
+    "techStack": ["Next.js", "OpenAI", "HubSpot API", "PostgreSQL"],
+    "timeline": "15 days",
+    "startingPrice": "$7,500"
+  },
+  {
+    "slug": "travel",
+    "name": "Travel",
+    "title": "AI MVP for Travel | Ship AI Lab",
+    "metaDescription": "Build AI-powered travel platforms with recommendations, chatbots, and booking automation — delivered in 15 days.",
+    "h1": "AI MVP Development for Travel",
+    "subtitle": "Deliver Smart Travel Experiences with AI",
+    "painPoints": [
+      "Complex booking flows",
+      "Lack of personalization",
+      "Slow response to travelers",
+      "Unoptimized itineraries"
+    ],
+    "solutions": [
+      "AI trip planners",
+      "Smart chat assistants",
+      "Personalized destination feeds",
+      "Dynamic pricing tools"
+    ],
+    "features": ["Booking APIs", "AI chat", "Realtime updates", "Multi-language support"],
+    "techStack": ["Next.js", "OpenAI", "Google Maps API", "Firebase"],
+    "timeline": "15 days",
+    "startingPrice": "$8,000"
+  },
+  {
+    "slug": "logistics",
+    "name": "Logistics",
+    "title": "AI MVP for Logistics | Ship AI Lab",
+    "metaDescription": "Optimize delivery and warehouse operations using AI. Build your logistics MVP in 15 days — fast, smart, scalable.",
+    "h1": "AI MVP Development for Logistics",
+    "subtitle": "Streamline Supply Chains with AI Automation",
+    "painPoints": [
+      "Manual route planning",
+      "Inventory mismanagement",
+      "Slow delivery updates",
+      "High operational costs"
+    ],
+    "solutions": [
+      "AI route optimization",
+      "Smart warehouse systems",
+      "Fleet tracking dashboards",
+      "Predictive maintenance alerts"
+    ],
+    "features": ["GPS integration", "Realtime analytics", "Cost optimization", "AI predictions"],
+    "techStack": ["Next.js", "Python", "OpenAI", "AWS"],
+    "timeline": "15 days",
+    "startingPrice": "$9,000"
+  },
+  {
+    "slug": "fitness",
+    "name": "Fitness",
+    "title": "AI MVP for Fitness | Ship AI Lab",
+    "metaDescription": "Build AI fitness MVPs in 15 days — from workout tracking to AI nutrition plans. Personalized and scalable solutions.",
+    "h1": "AI MVP Development for Fitness",
+    "subtitle": "Create Smart Fitness Platforms that Motivate Users",
+    "painPoints": [
+      "Low user engagement",
+      "No personalized workouts",
+      "Manual progress tracking",
+      "Generic nutrition plans"
+    ],
+    "solutions": [
+      "AI workout recommendations",
+      "Nutrition planning engines",
+      "Gamified fitness tracking",
+      "Smart reminders"
+    ],
+    "features": ["Wearable integration", "AI coach", "Progress charts", "Community support"],
+    "techStack": ["Next.js", "OpenAI", "Firebase", "Stripe"],
+    "timeline": "15 days",
+    "startingPrice": "$7,500"
+  },
+  {
+    "slug": "legal",
+    "name": "Legal",
+    "title": "AI MVP for Legal | Ship AI Lab",
+    "metaDescription": "Automate document review, case analysis, and compliance checks using AI. Get your legal MVP live in 15 days.",
+    "h1": "AI MVP Development for Legal Firms",
+    "subtitle": "Bring Intelligence and Speed to Legal Workflows",
+    "painPoints": [
+      "Manual contract review",
+      "Slow case research",
+      "Error-prone compliance checks",
+      "Unstructured document data"
+    ],
+    "solutions": [
+      "AI document review systems",
+      "Smart legal research assistants",
+      "Compliance automation",
+      "Case prediction analytics"
+    ],
+    "features": ["Secure data", "Custom AI models", "Document management", "Legal chatbot"],
+    "techStack": ["Next.js", "OpenAI", "Python", "AWS"],
+    "timeline": "15 days",
+    "startingPrice": "$9,000"
+  }
+]

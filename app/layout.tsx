@@ -39,11 +39,17 @@ export const metadata: Metadata = {
     siteName: "ShipAI Lab",
     images: [
       {
-        url: "/shipailab.gif",
+        url: "https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png",
         width: 800,
         height: 600,
-        alt: "ShipAI Lab Demo",
+        alt: "ShipAI Lab Demo"
       },
+      {
+        url:"https://res.cloudinary.com/dyovzofma/image/upload/v1762178065/SHIP_AI_mhueop.png",
+        width: 1800,
+        height: 1600,
+        alt: "ShipAI Lab Logo",
+      }
     ],
     locale: "en_US",
     type: "website",
@@ -53,7 +59,7 @@ export const metadata: Metadata = {
     title: "ShipAI Lab | AI SaaS & Product Development in 15 Days",
     description:
       "ShipAI Lab builds and launches your AI-powered SaaS, web, and mobile products in just 15 days. Fixed pricing, expert team, and proven results. Start your project today!",
-    images: ["/shipailab.gif"],
+    images: ["https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png"],
   },
   // authors: [{ name: "ShipAI Lab Team", url: "https://shipailab.com/" }],
   creator: "ShipAI Lab Team",
@@ -66,9 +72,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-KN7Z7K58');
+            `,
+          }}
+        />
+        {/* End Google Tag Manager */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KN7Z7K58"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
       </body>
     </html>

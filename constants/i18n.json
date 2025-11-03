@@ -1,0 +1,28 @@
+{
+  "en": {
+    "title": "AI SaaS & Product Development in 15 Days",
+    "cta": "Book a Call",
+    "whatWeBuild": "What We Build",
+    "featuredProjects": "Featured Projects",
+    "daysDelivery": "Days Delivery",
+    "projectsShipped": "Projects Shipped",
+    "happyClients": "Happy Clients",
+    "footer": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "es": {
+    "title": "SaaS de IA y desarrollo de productos en 15 días",
+    "cta": "Reserva una llamada",
+    "whatWeBuild": "Qué construimos",
+    "featuredProjects": "Proyectos destacados",
+    "daysDelivery": "Días de entrega",
+    "projectsShipped": "Proyectos enviados",
+    "happyClients": "Clientes felices",
+    "footer": {
+      "privacy": "Política de privacidad",
+      "terms": "Términos de servicio"
+    }
+  }
+}

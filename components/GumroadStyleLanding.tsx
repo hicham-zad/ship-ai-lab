@@ -32,45 +32,52 @@ export default function GumroadLandingWithProjects() {
     { 
       name: "NoMoreCopyRight", 
       description: "An AI tool that creates copyright-free images, videos, and music, combined with a free stock content platform.", 
-      color: "bg-purple-100",
+      color: "bg-cyan-100",
       url: "https://nomorecopyright.com"
     },
+    {
+      name: "Reisknaller",
+      description: "A Dutch travel platform offering unbeatable travel deals and packages.",
+      color: "bg-amber-100",
+      url: "https://www.reisknaller.nl"
+
+    },
     { 
-      name: "StoryTyme.ai", 
+      name: "StoryTyme", 
       description: "Create custom children's books in 5 simple steps", 
-      color: "bg-pink-100",
+      color: "bg-purple-100",
       url: "https://storytyme.ai"
     },
     { 
-      name: "getsweet.ai", 
+      name: "GetsweetAI", 
       description: "AI platform for the social media automation", 
-      color: "bg-blue-100",
+      color: "bg-pink-100",
       url: "https://getsweet.ai"
     },
+    // { 
+    //   name: "robotizia.ai", 
+    //   description: "AI content & automation platform", 
+    //   color: "bg-green-100",
+    //   url: "https://robotizia.ai"
+    // },
     { 
-      name: "robotizia.ai", 
-      description: "AI content & automation platform", 
-      color: "bg-green-100",
-      url: "https://robotizia.ai"
-    },
-    { 
-      name: "sasgpt.com", 
-      description: "AI SaaS GPT solutions", 
-      color: "bg-yellow-100",
+      name: "SASGPT", 
+      description: "SASGPT is an AI-powered SAS code editor that lets you write, generate, and analyze SAS code instantly.", 
+      color: "bg-blue-100",
       url: "https://sasgpt.com"
     },
     { 
-      name: "bevinzey.com", 
+      name: "Bevinzey", 
       description: "AI education assistant", 
       color: "bg-orange-100",
       url: "https://bevinzey.com"
     },
-    { 
-      name: "sedihisham.com", 
-      description: "Ecom platform", 
-      color: "bg-red-100",
-      url: "https://sedihisham.com"
-    },
+    // { 
+    //   name: "sedihisham.com", 
+    //   description: "Ecom platform", 
+    //   color: "bg-red-100",
+    //   url: "https://sedihisham.com"
+    // },
     { 
       name: "cookeai.com", 
       description: "AI-powered recipe generator", 
