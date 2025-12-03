@@ -4026,7 +4026,839 @@ const industries: Industry[] = [
     timeline: "7 weeks",
     startingPrice: "$149/user/month",
     stats: { roi: "Ability to take 1 extra job daily", efficiency: "Reduced fuel costs", satisfaction: "N/A" },
+  },
+  {
+    slug: "ai-mvp-for-architecture",
+    name: "Architecture",
+    title: "AI MVP for Architecture | Ship AI Lab",
+    metaDescription: "Build AI-powered architectural MVPs in 15 days. From generative design to compliance checking, we accelerate your innovation.",
+    "h1": "AI MVP Development for Architecture & Design",
+    subtitle: "Accelerate Design and Compliance with AI",
+    painPoints: [
+      "Slow, iterative design exploration",
+      "Manual compliance and code checks",
+      "Inefficient project documentation",
+      "Poor visualization realism"
+    ],
+    solutions: [
+      "Generative design tools",
+      "AI-driven compliance checkers",
+      "Automated documentation and specification generation",
+      "AI rendering optimization"
+    ],
+    features: [
+      "BIM integration",
+      "Code analysis AI",
+      "3D rendering optimization",
+      "Multi-criteria design evaluation"
+    ],
+    useCases: [
+      {
+        title: "Generative Layout Tool",
+        description: "Create thousands of design iterations based on constraints in minutes"
+      },
+      {
+        title: "Building Code AI",
+        description: "Instantly check designs against local building codes"
+      },
+      {
+        title: "Specification Writer",
+        description: "Automate the creation of project specification documents"
+      }
+    ],
+    techStack: ["Next.js", "Three.js", "Python", "OpenAI"],
+    timeline: "15 days",
+    startingPrice: "$9,500",
+    stats: {
+      roi: "40% faster design cycle",
+      efficiency: "5x compliance check speed",
+      satisfaction: "92% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-hospitality",
+    name: "Hospitality",
+    title: "AI MVP for Hospitality | Ship AI Lab",
+    metaDescription: "Develop AI tools for hotels and restaurants in 15 days. Enhance guest experience, automate bookings, and optimize pricing.",
+    "h1": "AI MVP Development for Hospitality",
+    subtitle: "Elevate Guest Experience and Operational Efficiency with AI",
+    painPoints: [
+      "Manual booking and reservation management",
+      "Inconsistent customer service responses",
+      "Unoptimized room/menu pricing",
+      "Slow facility maintenance reporting"
+    ],
+    solutions: [
+      "AI-driven reservation management",
+      "Intelligent guest chatbots",
+      "Dynamic pricing and yield management",
+      "Automated maintenance ticketing"
+    ],
+    features: [
+      "PMS integration",
+      "Guest messaging AI",
+      "Sentiment analysis",
+      "Booking engine API"
+    ],
+    useCases: [
+      {
+        title: "AI Concierge Bot",
+        description: "Provide 24/7 instant answers for guest inquiries and local recommendations"
+      },
+      {
+        title: "Dynamic Price Optimizer",
+        description: "Adjust room rates in real-time based on demand and competition"
+      },
+      {
+        title: "Reputation Monitor",
+        description: "Analyze guest feedback and alert staff to critical issues"
+      }
+    ],
+    techStack: ["Next.js", "OpenAI", "Stripe", "PostgreSQL"],
+    timeline: "15 days",
+    startingPrice: "$8,500",
+    stats: {
+      roi: "25% revenue lift (dynamic pricing)",
+      efficiency: "4x faster guest support",
+      satisfaction: "94% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-hr",
+    name: "Human Resources (HR)",
+    title: "AI MVP for HR | Ship AI Lab",
+    metaDescription: "Launch your AI HR MVP in 15 days. Automate recruitment, personalize training, and improve employee engagement.",
+    "h1": "AI MVP Development for Human Resources",
+    subtitle: "Intelligent Automation for the Modern Workplace",
+    painPoints: [
+      "Manual resume screening and shortlisting",
+      "Generic employee training programs",
+      "High employee turnover rates",
+      "Bias in hiring processes"
+    ],
+    solutions: [
+      "AI resume screening and matching",
+      "Personalized learning and development paths",
+      "Predictive turnover risk analysis",
+      "Bias detection in job descriptions"
+    ],
+    features: [
+      "ATS integration",
+      "Skills gap analysis",
+      "Sentiment monitoring",
+      "Onboarding automation"
+    ],
+    useCases: [
+      {
+        title: "Smart Recruiter Bot",
+        description: "Automatically shortlist best-fit candidates and schedule interviews"
+      },
+      {
+        title: "Employee Engagement AI",
+        description: "Analyze internal communication for morale and burnout signals"
+      },
+      {
+        title: "Personalized L&D",
+        description: "Recommend training modules based on employee career goals and performance"
+      }
+    ],
+    techStack: ["Next.js", "OpenAI", "Google Cloud", "MongoDB"],
+    timeline: "15 days",
+    startingPrice: "$9,000",
+    stats: {
+      roi: "30% faster hiring cycle",
+      efficiency: "3x less administrative work",
+      satisfaction: "95% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-manufacturing",
+    name: "Manufacturing",
+    title: "AI MVP for Manufacturing | Ship AI Lab",
+    metaDescription: "Build AI manufacturing MVPs in 15 days. Implement predictive maintenance, quality control, and production optimization.",
+    "h1": "AI MVP Development for Manufacturing",
+    subtitle: "Drive Factory Floor Efficiency with Intelligent Systems",
+    painPoints: [
+      "Unexpected equipment downtime",
+      "Manual product quality inspection",
+      "Inaccurate production forecasting",
+      "High energy consumption"
+    ],
+    solutions: [
+      "Predictive maintenance systems",
+      "AI visual quality inspection",
+      "Production scheduling optimization",
+      "Energy consumption anomaly detection"
+    ],
+    features: [
+      "IoT sensor integration",
+      "Machine vision",
+      "Real-time defect logging",
+      "SCADA/MES integration"
+    ],
+    useCases: [
+      {
+        title: "Predictive Maintenance",
+        description: "Forecast equipment failure before it happens to minimize downtime"
+      },
+      {
+        title: "Automated Quality Control",
+        description: "Use cameras and AI to check product quality on the assembly line"
+      },
+      {
+        title: "Production Optimizer",
+        description: "Dynamically adjust machine schedules for maximum throughput"
+      }
+    ],
+    techStack: ["Python", "TensorFlow", "AWS IoT", "Next.js"],
+    timeline: "15 days",
+    startingPrice: "$10,000",
+    stats: {
+      roi: "20% reduction in downtime",
+      efficiency: "4x faster inspection",
+      satisfaction: "93% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-government",
+    name: "Government/Public Sector",
+    title: "AI MVP for Government | Ship AI Lab",
+    metaDescription: "Launch secure, compliant AI MVPs for government agencies in 15 days. Improve public service delivery and operational transparency.",
+    "h1": "AI MVP Development for Public Sector & Government",
+    subtitle: "Modernize Public Services with Secure AI Solutions",
+    painPoints: [
+      "Slow processing of public inquiries and applications",
+      "Manual document classification and routing",
+      "Difficulty in anomaly detection for public funds",
+      "Outdated information access for citizens"
+    ],
+    solutions: [
+      "AI public inquiry chatbots",
+      "Automated document processing and routing",
+      "Fraud and anomaly detection systems",
+      "Intelligent knowledge bases"
+    ],
+    features: [
+      "High-security compliance (FedRAMP, etc.)",
+      "OCR and document analysis",
+      "Citizen portal",
+      "Data anonymization"
+    ],
+    useCases: [
+      {
+        title: "Citizen Support Bot",
+        description: "Provide instant, accurate answers to common government service questions"
+      },
+      {
+        title: "Grant Application Processor",
+        description: "Automate the initial screening and classification of grant applications"
+      },
+      {
+        title: "Fraud Detector",
+        description: "Analyze financial transactions for potential misuse of public funds"
+      }
+    ],
+    techStack: ["Next.js", "Python", "Azure Government", "PostgreSQL"],
+    timeline: "15 days",
+    startingPrice: "$10,000",
+    stats: {
+      roi: "35% faster service delivery",
+      efficiency: "5x document processing speed",
+      satisfaction: "90% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-telecom",
+    name: "Telecommunications",
+    title: "AI MVP for Telecom | Ship AI Lab",
+    metaDescription: "Rapidly build AI telecom MVPs in 15 days. Optimize network performance, predict churn, and automate customer support.",
+    "h1": "AI MVP Development for Telecommunications",
+    subtitle: "Intelligent Networks and Customer Operations",
+    painPoints: [
+      "High customer churn rates",
+      "Inefficient network traffic management",
+      "Manual fault diagnosis and troubleshooting",
+      "Overwhelmed call centers"
+    ],
+    solutions: [
+      "Predictive customer churn models",
+      "AI-driven network optimization",
+      "Automated fault detection and root cause analysis",
+      "Intelligent call routing and chatbots"
+    ],
+    features: [
+      "Network performance monitoring",
+      "Customer data platform (CDP) integration",
+      "Service ticket automation",
+      "SLA compliance tracking"
+    ],
+    useCases: [
+      {
+        title: "Churn Predictor",
+        description: "Identify customers at risk of leaving and trigger retention campaigns"
+      },
+      {
+        title: "Network Anomaly Detector",
+        description: "Pinpoint network issues instantly to minimize service disruption"
+      },
+      {
+        title: "Self-Service Diagnostics",
+        description: "Guided AI troubleshooting for common customer issues"
+      }
+    ],
+    techStack: ["Python", "Next.js", "AWS", "Kafka"],
+    timeline: "15 days",
+    startingPrice: "$9,500",
+    stats: {
+      roi: "15% reduction in churn",
+      efficiency: "3x faster fault resolution",
+      satisfaction: "94% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-insurance",
+    name: "Insurance",
+    title: "AI MVP for Insurance | Ship AI Lab",
+    metaDescription: "Develop AI insurance MVPs in 15 days. Automate claims processing, risk assessment, and personalized policy generation.",
+    "h1": "AI MVP Development for Insurance",
+    subtitle: "Transform Underwriting and Claims with AI",
+    painPoints: [
+      "Slow, manual claims processing",
+      "Inaccurate risk assessment for policies",
+      "High potential for claims fraud",
+      "Generic customer policy recommendations"
+    ],
+    solutions: [
+      "Automated claims triage and processing",
+      "AI underwriting risk scoring",
+      "Fraud detection engines",
+      "Personalized policy recommendation systems"
+    ],
+    features: [
+      "Document processing AI (OCR)",
+      "Image/video analysis for damage",
+      "Regulatory compliance dashboard",
+      "Policy generation tools"
+    ],
+    useCases: [
+      {
+        title: "Instant Claim Triage",
+        description: "Classify and route claims automatically based on severity and complexity"
+      },
+      {
+        title: "Fraud Flagging System",
+        description: "Analyze claim details and external data to identify suspicious activity"
+      },
+      {
+        title: "Risk Scorer",
+        description: "Calculate individual risk profiles for personalized premium pricing"
+      }
+    ],
+    techStack: ["Next.js", "Python", "OpenAI", "AWS"],
+    timeline: "15 days",
+    startingPrice: "$9,000",
+    stats: {
+      roi: "40% faster claims payout",
+      efficiency: "3x underwriting speed",
+      satisfaction: "95% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-agriculture",
+    name: "Agriculture (AgriTech)",
+    title: "AI MVP for Agriculture | Ship AI Lab",
+    metaDescription: "Build AI AgriTech MVPs in 15 days. Optimize crop yields, monitor livestock, and manage resources efficiently.",
+    "h1": "AI MVP Development for AgriTech",
+    subtitle: "Smart Farming: Precision and Sustainability with AI",
+    painPoints: [
+      "Inaccurate crop yield prediction",
+      "Manual pest and disease detection",
+      "Inefficient water and fertilizer use",
+      "Labor-intensive livestock monitoring"
+    ],
+    solutions: [
+      "Predictive yield modeling",
+      "AI-driven visual crop health analysis",
+      "Automated resource allocation (water, nutrients)",
+      "Smart livestock health tracking"
+    ],
+    features: [
+      "Drone/satellite imagery processing",
+      "Sensor data integration",
+      "Weather prediction API",
+      "Mobile field reporting"
+    ],
+    useCases: [
+      {
+        title: "Pest & Disease Detector",
+        description: "Use drone imagery and AI to spot early signs of crop issues"
+      },
+      {
+        title: "Irrigation Optimizer",
+        description: "Calculate precise water needs based on soil, weather, and crop stage"
+      },
+      {
+        title: "Yield Forecaster",
+        description: "Predict harvest size and timing with high accuracy"
+      }
+    ],
+    techStack: ["Python", "TensorFlow", "PostGIS", "React Native"],
+    timeline: "15 days",
+    startingPrice: "$8,500",
+    stats: {
+      roi: "15% higher crop yield",
+      efficiency: "30% reduction in resource waste",
+      satisfaction: "93% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-energy",
+    name: "Energy & Utilities",
+    title: "AI MVP for Energy | Ship AI Lab",
+    metaDescription: "Develop AI solutions for the energy sector in 15 days. Optimize grid management, predict demand, and enhance asset maintenance.",
+    "h1": "AI MVP Development for Energy & Utilities",
+    subtitle: "Optimize Grid Management and Predictive Maintenance with AI",
+    painPoints: [
+      "Unoptimized energy production and storage",
+      "Slow detection of equipment faults in the field",
+      "Inaccurate energy demand forecasting",
+      "High operational costs for grid management"
+    ],
+    solutions: [
+      "Renewable energy production optimization",
+      "Predictive asset failure alerts",
+      "High-accuracy demand forecasting models",
+      "Automated grid load balancing"
+    ],
+    features: [
+      "SCADA integration",
+      "Real-time sensor monitoring",
+      "Energy market API",
+      "Anomaly detection"
+    ],
+    useCases: [
+      {
+        title: "Predictive Grid Maintenance",
+        description: "Identify vulnerable infrastructure components before they fail"
+      },
+      {
+        title: "Demand Forecasting AI",
+        description: "Predict energy consumption peaks for better resource allocation"
+      },
+      {
+        title: "Renewable Optimizer",
+        description: "Maximize output from solar or wind farms based on weather predictions"
+      }
+    ],
+    techStack: ["Python", "AWS IoT", "Next.js", "InfluxDB"],
+    timeline: "15 days",
+    startingPrice: "$10,000",
+    stats: {
+      roi: "20% reduction in outages",
+      efficiency: "4x faster fault detection",
+      satisfaction: "91% satisfaction"
+    }
+  },
+  {
+    slug: "ai-mvp-for-media",
+    name: "Media & Publishing",
+    title: "AI MVP for Media | Ship AI Lab",
+    metaDescription: "Launch AI media MVPs in 15 days. Automate content creation, personalize newsfeeds, and optimize paywall strategies.",
+    "h1": "AI MVP Development for Media & Publishing",
+    subtitle: "Automate Content and Personalize Consumption",
+    painPoints: [
+      "High cost of manual content creation",
+      "Low user engagement on generic feeds",
+      "Inaccurate prediction of viral content",
+      "Unoptimized subscription/paywall conversion"
+    ],
+    solutions: [
+      "AI content generation and summarization",
+      "Personalized recommendation engines",
+      "Predictive content performance scoring",
+      "Dynamic paywall optimization"
+    ],
+    features: [
+      "NLP text generation",
+      "User behavior analytics",
+      "A/B testing tools",
+      "CMS integration"
+    ],
+    useCases: [
+      {
+        title: "Content Summarizer",
+        description: "Generate brief, engaging summaries for articles and video"
+      },
+      {
+        title: "Smart Newsfeed",
+        description: "Deliver highly personalized content feeds to maximize engagement"
+      },
+      {
+        title: "Paywall Optimizer",
+        description: "Identify the optimal moment and price point to ask a user to subscribe"
+      }
+    ],
+    techStack: ["Next.js", "OpenAI", "Python", "PostgreSQL"],
+    timeline: "15 days",
+    startingPrice: "$7,500",
+    stats: {
+      roi: "50% higher engagement",
+      efficiency: "2x content output speed",
+      satisfaction: "96% satisfaction"
+    }
+  },
+  {
+    slug: "ai-saas-for-local-vineyards",
+    name: "Vineyard Disease Detection",
+    title: "AI Pest & Disease Detection for Local Vineyards",
+    metaDescription: "Mobile app using image recognition to instantly identify common vineyard diseases like downy mildew and botrytis.",
+    "h1": "Precision Vineyard Health Monitoring",
+    subtitle: "Early Detection, Healthier Vines: AI for Viti-Culture",
+    painPoints: [
+      "Slow, manual disease scouting",
+      "Late detection leading to crop loss",
+      "Overuse of fungicides",
+      "Manual record-keeping of disease outbreaks"
+    ],
+    solutions: [
+      "Instant visual disease identification",
+      "GPS-tagged outbreak mapping",
+      "AI-driven treatment recommendations",
+      "Historical disease tracking"
+    ],
+    features: [
+      "Image recognition (vines)",
+      "Offline functionality",
+      "Weather API integration",
+      "Pesticide usage logging"
+    ],
+    useCases: [
+      {
+        title: "Vine Health Scanner",
+        description: "Snap a photo of a leaf for immediate disease diagnosis"
+      },
+      {
+        title: "Spray Recommender",
+        description: "Suggests the minimum effective treatment based on weather and disease severity"
+      }
+    ],
+    techStack: ["React Native", "TensorFlow Lite", "Firebase"],
+    timeline: "4 weeks",
+    startingPrice: "$59/month",
+    stats: {
+      roi: "10% higher yield via early detection",
+      efficiency: "5x faster scouting time",
+      satisfaction: "N/A"
+    }
+  },
+  {
+    slug: "ai-saas-for-salty-dog-groomers",
+    name: "Dog Groomer Appointment Optimization",
+    title: "AI Appointment Stacking for Busy Dog Groomers",
+    metaDescription: "SaaS to intelligently schedule grooming appointments to minimize staff idle time and maximize back-to-back services.",
+    "h1": "Maximize Bookings, Minimize Downtime for Groomers",
+    subtitle: "The Smart Scheduler for High-Volume Pet Care",
+    painPoints: [
+      "Inefficient gaps between appointments",
+      "Difficulty managing specific groomer skills/preferences",
+      "Manual scheduling by phone",
+      "Missed upselling opportunities"
+    ],
+    solutions: [
+      "AI-driven sequential appointment scheduling",
+      "Smart booking rules based on service time and resources",
+      "Automated SMS/email reminders",
+      "Service upsell nudges"
+    ],
+    features: [
+      "Customer/pet profile management",
+      "Online booking widget",
+      "Staff preference rules",
+      "Payment processing integration"
+    ],
+    useCases: [
+      {
+        title: "Stack Optimizer",
+        description: "Finds the most efficient sequence of bookings for the day"
+      },
+      {
+        title: "No-Show Filler",
+        description: "Instantly suggests available slots to waitlisted customers"
+      }
+    ],
+    techStack: ["Next.js", "Stripe", "PostgreSQL"],
+    timeline: "3 weeks",
+    startingPrice: "$69/month",
+    stats: {
+      roi: "15% increase in daily bookings",
+      efficiency: "80% less scheduling time",
+      satisfaction: "N/A"
+    }
+  },
+  {
+    slug: "ai-saas-for-craft-breweries",
+    name: "Craft Brewery Inventory Forecasting",
+    title: "AI Raw Material Forecast for Craft Breweries",
+    metaDescription: "Predictive tool for small breweries to forecast hop, malt, and yeast needs based on upcoming seasonal releases and taproom sales data.",
+    "h1": "Intelligent Raw Material Procurement for Brewers",
+    subtitle: "Never Run Out of Hops Again: Smart Ingredient Planning",
+    painPoints: [
+      "Inaccurate bulk ingredient ordering",
+      "Risk of key ingredients going out of stock",
+      "Manual tracking of aging/fermentation cycles",
+      "Unforeseen costs from rushed orders"
+    ],
+    solutions: [
+      "AI-based material demand prediction",
+      "Automated reorder point alerts",
+      "Supply chain lead time factoring",
+      "Inventory valuation tracking"
+    ],
+    features: [
+      "Sales data integration",
+      "Recipe BOM management",
+      "Supplier contact management",
+      "Seasonal trend analysis"
+    ],
+    useCases: [
+      {
+        title: "Ingredient Planner",
+        description: "Calculates exactly what to order, and when, for the next 6 weeks"
+      },
+      {
+        title: "Cost Analyst",
+        description: "Compares ingredient costs across suppliers and forecasts batch costs"
+      }
+    ],
+    techStack: ["Python", "Pandas", "Supabase"],
+    timeline: "4 weeks",
+    startingPrice: "$99/month",
+    stats: {
+      roi: "5% reduction in ingredient cost variance",
+      efficiency: "6x faster procurement planning",
+      satisfaction: "N/A"
+    }
+  },
+  {
+    slug: "ai-saas-for-wedding-dj-services",
+    name: "Wedding DJ Playlist Generator",
+    title: "AI Personalized Playlist Curation for Wedding DJs",
+    metaDescription: "Tool that blends client 'must-play' and 'do-not-play' lists with AI-generated flow to match the specific crowd and event energy.",
+    "h1": "The Ultimate AI DJ Assistant",
+    subtitle: "Seamless Transitions, Perfect Crowd Vibe, Every Time",
+    painPoints: [
+      "Difficulty managing conflicting music requests",
+      "Manual creation of a set list that flows well",
+      "Predicting floor-clearing songs",
+      "Slow pre-event client consultation on music"
+    ],
+    solutions: [
+      "Music request conflict resolution AI",
+      "Dynamic playlist flow generation",
+      "Crowd sentiment prediction (based on past event data)",
+      "Automated song transition timing"
+    ],
+    features: [
+      "Spotify/Apple Music API integration",
+      "Client preference intake form",
+      "Tempo/key matching",
+      "Energy analysis"
+    ],
+    useCases: [
+      {
+        title: "Set List Optimizer",
+        description: "Generates a perfectly mixed set list from 100s of client requests"
+      },
+      {
+        title: "Mood Pacer",
+        description: "Suggests mood-setting songs based on time of night (dinner, dancing, send-off)"
+      }
+    ],
+    techStack: ["Next.js", "OpenAI", "Spotify API"],
+    timeline: "3 weeks",
+    startingPrice: "$49/month",
+    stats: {
+      roi: "Higher client tips/referrals",
+      efficiency: "10x faster set prep",
+      satisfaction: "N/A"
+    }
+  },
+  {
+    slug: "ai-saas-for-boutique-hotels",
+    name: "Boutique Hotel Revenue Management",
+    title: "AI Dynamic Pricing for Small Boutique Hotels",
+    metaDescription: "Specialized revenue management system (RMS) for independent boutique hotels to dynamically price rooms based on local events and micro-demand.",
+    "h1": "Smart Pricing, Big Revenue for Boutique Stays",
+    subtitle: "Tailored Dynamic Pricing, No Enterprise Complexity",
+    painPoints: [
+      "Manual rate changes based on limited data",
+      "Missing local event demand spikes",
+      "Underpricing during high-demand windows",
+      "Dependency on expensive enterprise RMS systems"
+    ],
+    solutions: [
+      "Hyper-local dynamic pricing algorithm",
+      "Competitor and local event data ingestion",
+      "Automated rate updates to PMS/OTAs",
+      "Occupancy forecasting"
+    ],
+    features: [
+      "PMS integration (Cloudbeds, etc.)",
+      "Local event calendar scraper",
+      "Customizable rate fences",
+      "Real-time rate dashboard"
+    ],
+    useCases: [
+      {
+        title: "Rate Setter",
+        description: "Sets the optimal price for every room type 365 days out"
+      },
+      {
+        title: "Event Spotter",
+        description: "Alerts the manager to a newly announced local event and suggests a rate hike"
+      }
+    ],
+    techStack: ["Next.js", "Python", "AWS", "Stripe"],
+    timeline: "5 weeks",
+    startingPrice: "$199/month",
+    stats: {
+      roi: "7% increase in RevPAR",
+      efficiency: "10x faster rate management",
+      satisfaction: "N/A"
+    }
+  },
+  {
+    slug: "ai-saas-for-commercial-cleaning",
+    name: "Commercial Cleaning Bid Creator",
+    title: "AI Quote Generator for Small Commercial Cleaning Services",
+    metaDescription: "Tool that uses building square footage, service frequency, and location to generate accurate and competitive cleaning service bids instantly.",
+    "h1": "Instant, Optimized Cleaning Service Bids",
+    subtitle: "Win More Contracts with AI-Powered Quoting",
+    painPoints: [
+      "Slow, inconsistent manual bid creation",
+      "Underpricing services and losing money",
+      "Time spent on non-winning bids",
+      "Difficulty calculating labor hours accurately"
+    ],
+    solutions: [
+      "Predictive labor hour calculation",
+      "Automated bid document generation",
+      "Competitor price scraping for optimization",
+      "Profit margin analyzer"
+    ],
+    features: [
+      "PDF quote generator",
+      "Local wage rate integration",
+      "Service-specific templates",
+      "CRM export"
+    ],
+    useCases: [
+      {
+        title: "Instant Bidder",
+        description: "Generates a fully costed, competitive bid in under 5 minutes"
+      },
+      {
+        title: "Margin Tracker",
+        description: "Identifies low-profit contracts and suggests re-negotiation points"
+      }
+    ],
+    techStack: ["Next.js", "OpenAI", "Supabase"],
+    timeline: "3 weeks",
+    startingPrice: "$79/month",
+    stats: {
+      roi: "20% higher bid-to-win ratio",
+      efficiency: "15x faster quoting",
+      satisfaction: "N/A"
+    }
+  },
+  {
+    slug: "ai-saas-for-podcasters",
+    name: "Podcast Show Notes Automation",
+    title: "AI Show Notes & Time-Stamp Generator for Podcasters",
+    metaDescription: "Tool that automatically transcribes a podcast, summarizes key segments, and generates time-stamped show notes, titles, and social posts.",
+    "h1": "Automated Content Production for Podcasters",
+    subtitle: "Maximize Reach, Minimize Post-Production Time",
+    painPoints: [
+      "Tedious manual show notes writing",
+      "Time-consuming transcription and time-stamping",
+      "Difficulty creating engaging social media snippets",
+      "Lack of SEO optimization for episodes"
+    ],
+    solutions: [
+      "AI transcription and summarization",
+      "Automated time-stamp creation",
+      "SEO-optimized title and description suggestions",
+      "Social media snippet generation"
+    ],
+    features: [
+      "Audio file uploader",
+      "Text editing interface",
+      "SEO score checker",
+      "Multi-platform export (YouTube, RSS)"
+    ],
+    useCases: [
+      {
+        title: "Smart Show Note Writer",
+        description: "Generates detailed, time-stamped notes from the audio content"
+      },
+      {
+        title: "Snippet Creator",
+        description: "Identifies the most shareable quotes for Twitter/Instagram"
+      }
+    ],
+    techStack: ["Next.js", "Whisper API", "OpenAI"],
+    timeline: "2 weeks",
+    startingPrice: "$39/month",
+    stats: {
+      roi: "50% more downloads (via better SEO)",
+      efficiency: "8x faster post-production",
+      satisfaction: "N/A"
+    }
+  },
+  {
+    slug: "ai-saas-for-cpa-tax-firms",
+    name: "CPA Client Onboarding",
+    title: "AI Tax Document Aggregator for Small CPA Firms",
+    metaDescription: "Tool to organize, categorize, and verify all incoming tax documents (W-2s, 1099s, etc.) from clients for CPAs.",
+    "h1": "Streamlined Client Document Intake for Tax Season",
+    subtitle: "From Inbox Chaos to Organized Files: Tax Prep Automation",
+    painPoints: [
+      "Clients sending unorganized, mixed PDF/image files",
+      "Manual classification and naming of tax documents",
+      "Missing critical tax forms for filing",
+      "Slow client communication for document requests"
+    ],
+    solutions: [
+      "AI-driven document classification (W-2, 1099, etc.)",
+      "Automated checklist verification (missing forms alert)",
+      "Secure client portal for file upload",
+      "One-click file renaming and routing"
+    ],
+    features: [
+      "OCR scanning",
+      "Encrypted file storage",
+      "Client reminder system",
+      "Tax software integration (e.g., Lacerte export)"
+    ],
+    useCases: [
+      {
+        title: "Document Sorter",
+        description: "Classifies 100 client files and organizes them into folders in minutes"
+      },
+      {
+        title: "Missing Form Alert",
+        description: "Compares expected documents to received and notifies the CPA of gaps"
+      }
+    ],
+    techStack: ["Next.js", "AWS Textract", "AWS S3"],
+    timeline: "4 weeks",
+    startingPrice: "$149/month",
+    stats: {
+      roi: "Increased capacity during tax season",
+      efficiency: "90% less data entry time",
+      satisfaction: "N/A"
+    }
   }
-];
+]
 
 export default industries;
