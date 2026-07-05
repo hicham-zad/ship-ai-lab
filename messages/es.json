@@ -1,0 +1,79 @@
+{
+    "HomePage": {
+        "hero": {
+            "title": "Lanza Tu App de IA en Solo",
+            "titleHighlight": "15 Días",
+            "subtitle": "Con nuestro precio fijo y asequible, diseñamos, construimos y lanzamos tu idea — todo en solo 15 días.",
+            "cta": "Reservar una Llamada"
+        },
+        "services": {
+            "title": "Lo Que Construimos",
+            "saas": {
+                "title": "Plataformas SaaS",
+                "description": "Construye soluciones SaaS escalables y fáciles de usar adaptadas a las necesidades de tu negocio."
+            },
+            "mobile": {
+                "title": "Apps Móviles y Web",
+                "description": "Crea aplicaciones móviles y web de alto rendimiento diseñadas para el compromiso y éxito del usuario."
+            },
+            "ai": {
+                "title": "Apps Potenciadas por IA",
+                "description": "Desarrolla aplicaciones innovadoras de IA para automatizar procesos e impulsar el crecimiento empresarial."
+            }
+        },
+        "work": {
+            "title": "Nuestro Trabajo"
+        },
+        "mobileApps": {
+            "title": "Apps Móviles Que Construimos",
+            "tikonote": {
+                "name": "TikoNote",
+                "description": "App de Estudio con IA que ayuda a los estudiantes a aprender 10 veces más rápido. Transforma cualquier contenido en Tarjetas, Cuestionarios, Resúmenes y Mapas Mentales al instante.",
+                "tags": {
+                    "aiPowered": "Potenciado por IA",
+                    "mobileApp": "App Móvil",
+                    "education": "Educación"
+                }
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "description": "Encuentra la película perfecta para tu grupo en 30 segundos. Recomendaciones potenciadas por IA que a todos les encantarán. ¡No más debates interminables!",
+                "tags": {
+                    "aiRecommendations": "Recomendaciones IA",
+                    "mobileApp": "App Móvil",
+                    "entertainment": "Entretenimiento"
+                }
+            }
+        },
+        "stats": {
+            "delivery": "Días de Entrega",
+            "projects": "Proyectos Enviados",
+            "clients": "Clientes Felices"
+        },
+        "cta": {
+            "title": "¿Listo para Lanzar Tu Próximo Producto de IA?",
+            "subtitle": "Convirtamos tu idea en realidad con nuestro proceso probado de entrega de 15 días.",
+            "button": "Comenzar"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. Una marca de Ship AI Solutions, LLC.",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA",
+            "contact": "Email: contact@shipailab.com · Teléfono: 251-332-3311",
+            "privacyPolicy": "Política de Privacidad",
+            "termsOfService": "Términos de Servicio"
+        }
+    },
+    "Navigation": {
+        "home": "Inicio",
+        "features": "Características",
+        "pricing": "Precios",
+        "contact": "Contacto"
+    },
+    "Common": {
+        "learnMore": "Saber Más",
+        "getStarted": "Comenzar",
+        "bookCall": "Reservar Llamada",
+        "viewMore": "Ver Más"
+    }
+}

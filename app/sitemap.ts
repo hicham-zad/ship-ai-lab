@@ -1,47 +1,31 @@
 import { MetadataRoute } from 'next';
 import locations from '@/data/locations';
-import industries from '@/data/industries';
-import usecases from '@/data/usecases';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://shipailab.com';
+    const locales = ['en', 'es'];
+
+    // Helper function to create URLs for both locales
+    const createLocalizedUrls = (path: string, priority: number = 0.8) => {
+        return locales.map((locale) => ({
+            url: locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'weekly' as const,
+            priority,
+        }));
+    };
 
     // Static routes
-    const routes = [
-        '',
-        '/privacy-policy',
-        '/terms-of-service',
-        '/use-cases',
-    ].map((route) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'weekly' as const,
-        priority: route === '' ? 1.0 : 0.8,
-    }));
+    const staticRoutes = [
+        { path: '', priority: 1.0 },
+        { path: '/privacy-policy', priority: 0.8 },
+        { path: '/terms-of-service', priority: 0.8 },
+    ].flatMap(({ path, priority }) => createLocalizedUrls(path, priority));
 
     // Location routes
-    const locationRoutes = locations.map((location) => ({
-        url: `${baseUrl}/${location.slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-    }));
+    const locationRoutes = locations.flatMap((location) =>
+        createLocalizedUrls(`/${location.slug}`, 0.8)
+    );
 
-    // Industry routes
-    const industryRoutes = industries.map((industry) => ({
-        url: `${baseUrl}/industries/${industry.slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-    }));
-
-    // Use Case routes
-    const useCaseRoutes = usecases.map((useCase) => ({
-        url: `${baseUrl}/use-cases/${useCase.slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-    }));
-
-    return [...routes, ...locationRoutes, ...industryRoutes, ...useCaseRoutes];
+    return [...staticRoutes, ...locationRoutes];
 }

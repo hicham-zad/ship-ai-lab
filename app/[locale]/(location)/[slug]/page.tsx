@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowRight, Check, MapPin, Zap, Users, Clock, Sparkles, Brain } from 'lucide-react';
 import locationsData from '@/data/locations';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import StructuredData from '@/components/StructuredData';
+import { generateLocationFAQs } from '@/lib/faq-generator';
 
 // Generate static paths for all locations
 export async function generateStaticParams() {
@@ -122,43 +125,20 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     ],
   };
 
+  // Generate dynamic FAQs
+  const dynamicFAQs = generateLocationFAQs(location);
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `Do you work with ${location.name} startups?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Yes! We work with founders and businesses in ${location.name} and globally. All communication is remote via video calls and Slack.`,
-        },
+    mainEntity: dynamicFAQs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
       },
-      {
-        '@type': 'Question',
-        name: 'Can you really deliver in 15 days?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely. We focus on core MVP features using modern frameworks. You launch fast, then iterate based on user feedback.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What if I need changes after launch?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We include 30 days of bug fixes and minor tweaks. For new features, we offer ongoing maintenance packages.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do I own the code?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. You get full ownership of the source code, documentation, and all design files.',
-        },
-      },
-    ],
+    })),
   };
 
   const serviceSchema = {
@@ -186,36 +166,28 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     },
   };
 
+  // Breadcrumb items
+  const breadcrumbItems = [
+    { name: location.name, url: `/${slug}` },
+  ];
+
   return (
     <>
       {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      <StructuredData
+        data={[
+          localBusinessSchema,
+          breadcrumbSchema,
+          faqSchema,
+          serviceSchema,
+        ]}
       />
 
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <div className="relative bg-gradient-to-br from-red-50 via-white to-blue-50 py-20">
           <div className="max-w-6xl mx-auto px-5">
-            <Link
-              href="/"
-              className="text-sm text-gray-600 hover:text-gray-900 mb-6 inline-flex items-center"
-            >
-              ← Back to Home
-            </Link>
+            <Breadcrumbs items={breadcrumbItems} />
 
             <div className="flex items-center gap-3 mb-6">
               <MapPin className="w-10 h-10 text-gray-900" strokeWidth={2} />
@@ -479,55 +451,17 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </h2>
 
             <div className="space-y-6">
-              <details className="border-2 border-gray-200 rounded-xl p-6 group bg-white">
-                <summary className="font-semibold text-lg cursor-pointer text-gray-900 list-none flex items-center justify-between">
-                  <span>Do you work with {location.name} startups?</span>
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-gray-700">
-                  Yes! We work with founders and businesses in {location.name} and globally. All communication is remote via video calls and Slack.
-                </p>
-              </details>
-
-              <details className="border-2 border-gray-200 rounded-xl p-6 group bg-white">
-                <summary className="font-semibold text-lg cursor-pointer text-gray-900 list-none flex items-center justify-between">
-                  <span>Can you really deliver in 15 days?</span>
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-gray-700">
-                  Absolutely. We focus on core MVP features using modern frameworks. You launch fast, then iterate based on user feedback.
-                </p>
-              </details>
-
-              <details className="border-2 border-gray-200 rounded-xl p-6 group bg-white">
-                <summary className="font-semibold text-lg cursor-pointer text-gray-900 list-none flex items-center justify-between">
-                  <span>What if I need changes after launch?</span>
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-gray-700">
-                  We include 30 days of bug fixes and minor tweaks. For new features, we offer ongoing maintenance packages.
-                </p>
-              </details>
-
-              <details className="border-2 border-gray-200 rounded-xl p-6 group bg-white">
-                <summary className="font-semibold text-lg cursor-pointer text-gray-900 list-none flex items-center justify-between">
-                  <span>Do I own the code?</span>
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-gray-700">
-                  Yes. You get full ownership of the source code, documentation, and all design files.
-                </p>
-              </details>
-
-              <details className="border-2 border-gray-200 rounded-xl p-6 group bg-white">
-                <summary className="font-semibold text-lg cursor-pointer text-gray-900 list-none flex items-center justify-between">
-                  <span>What industries do you serve?</span>
-                  <span className="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-gray-700">
-                  We build AI apps for healthcare, fintech, e-commerce, education, real estate, and more. Check our portfolio for examples.
-                </p>
-              </details>
+              {dynamicFAQs.map((faq, index) => (
+                <details key={index} className="border-2 border-gray-200 rounded-xl p-6 group bg-white">
+                  <summary className="font-semibold text-lg cursor-pointer text-gray-900 list-none flex items-center justify-between">
+                    <span>{faq.question}</span>
+                    <span className="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-gray-700">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </div>
@@ -556,29 +490,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
 
-        {/* Other Locations */}
-        <div className="py-20 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-5">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
-              Other Cities We Serve
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {locationsData
-                .filter(loc => loc.slug !== location.slug)
-                .slice(0, 8)
-                .map((loc) => (
-                  <Link
-                    key={loc.slug}
-                    href={`/${loc.slug}`}
-                    className="p-4 border-2 border-gray-200 rounded-xl hover:border-black hover:shadow-lg transition-all text-center bg-white"
-                  >
-                    <MapPin className="w-6 h-6 mx-auto mb-2 text-gray-600" />
-                    <p className="font-semibold text-gray-900">{loc.name}</p>
-                  </Link>
-                ))}
-            </div>
-          </div>
-        </div>
+
       </main>
     </>
   );

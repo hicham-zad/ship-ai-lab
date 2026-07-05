@@ -1,0 +1,79 @@
+{
+    "HomePage": {
+        "hero": {
+            "title": "Launch Your AI App in Just",
+            "titleHighlight": "15 Days",
+            "subtitle": "With our fixed, budget-friendly pricing, we design, build, and launch your idea — all in just 15 days.",
+            "cta": "Book a Call"
+        },
+        "services": {
+            "title": "What We Build",
+            "saas": {
+                "title": "SaaS Platforms",
+                "description": "Build scalable, user-friendly SaaS solutions tailored to your business needs."
+            },
+            "mobile": {
+                "title": "Mobile & Web Apps",
+                "description": "Create high-performance mobile and web apps designed for user engagement and success."
+            },
+            "ai": {
+                "title": "AI-Powered Apps",
+                "description": "Develop innovative AI applications to automate processes and drive business growth."
+            }
+        },
+        "work": {
+            "title": "Our Work"
+        },
+        "mobileApps": {
+            "title": "Mobile Apps We Build",
+            "tikonote": {
+                "name": "TikoNote",
+                "description": "AI Study App that helps students learn 10x faster. Transform any content into Flashcards, Quizzes, Summaries & Mind Maps instantly.",
+                "tags": {
+                    "aiPowered": "AI-Powered",
+                    "mobileApp": "Mobile App",
+                    "education": "Education"
+                }
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "description": "Find the perfect movie for your group in 30 seconds. AI-powered recommendations that everyone will love. No more endless debates!",
+                "tags": {
+                    "aiRecommendations": "AI Recommendations",
+                    "mobileApp": "Mobile App",
+                    "entertainment": "Entertainment"
+                }
+            }
+        },
+        "stats": {
+            "delivery": "Days Delivery",
+            "projects": "Projects Shipped",
+            "clients": "Happy Clients"
+        },
+        "cta": {
+            "title": "Ready to Ship Your Next AI Product?",
+            "subtitle": "Let's turn your idea into reality with our proven 15-day delivery process.",
+            "button": "Get Started"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. A brand of Ship AI Solutions, LLC.",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA",
+            "contact": "Email: contact@shipailab.com · Phone: 251-332-3311",
+            "privacyPolicy": "Privacy Policy",
+            "termsOfService": "Terms of Service"
+        }
+    },
+    "Navigation": {
+        "home": "Home",
+        "features": "Features",
+        "pricing": "Pricing",
+        "contact": "Contact"
+    },
+    "Common": {
+        "learnMore": "Learn More",
+        "getStarted": "Get Started",
+        "bookCall": "Book a Call",
+        "viewMore": "View More"
+    }
+}

@@ -1,12 +1,27 @@
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import { getCanonicalUrl } from '@/lib/seo';
+
+export const metadata = {
+  title: 'Privacy Policy | ShipAI Lab',
+  description: 'Privacy Policy for ShipAI Lab. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: getCanonicalUrl('/privacy-policy'),
+  },
+  openGraph: {
+    title: 'Privacy Policy | ShipAI Lab',
+    description: 'Privacy Policy for ShipAI Lab. Learn how we collect, use, and protect your personal information.',
+    url: 'https://shipailab.com/privacy-policy',
+    type: 'website',
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Back Button */}
-        <Link 
+        <Link
           href="/"
           className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-8 transition-colors"
         >
@@ -27,8 +42,8 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-700 leading-relaxed">
-              Ship AI Solutions, LLC ("we," "our," or "us") is committed to protecting your privacy. 
-              This Privacy Policy explains how we collect, use, disclose, and safeguard your information 
+              Ship AI Solutions, LLC ("we," "our," or "us") is committed to protecting your privacy.
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information
               when you visit our website or use our services.
             </p>
           </section>
@@ -102,8 +117,8 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Data Security</h2>
             <p className="text-gray-700 leading-relaxed">
-              We implement appropriate technical and organizational measures to protect your personal 
-              information against unauthorized access, alteration, disclosure, or destruction. However, 
+              We implement appropriate technical and organizational measures to protect your personal
+              information against unauthorized access, alteration, disclosure, or destruction. However,
               no method of transmission over the internet or electronic storage is 100% secure.
             </p>
           </section>
@@ -128,8 +143,8 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Cookies and Tracking Technologies</h2>
             <p className="text-gray-700 leading-relaxed">
-              We use cookies and similar tracking technologies to track activity on our website and 
-              store certain information. You can instruct your browser to refuse all cookies or to 
+              We use cookies and similar tracking technologies to track activity on our website and
+              store certain information. You can instruct your browser to refuse all cookies or to
               indicate when a cookie is being sent.
             </p>
           </section>
@@ -138,8 +153,8 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Third-Party Links</h2>
             <p className="text-gray-700 leading-relaxed">
-              Our website may contain links to third-party websites. We are not responsible for the 
-              privacy practices or content of these external sites. We encourage you to review their 
+              Our website may contain links to third-party websites. We are not responsible for the
+              privacy practices or content of these external sites. We encourage you to review their
               privacy policies.
             </p>
           </section>
@@ -148,8 +163,8 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Children's Privacy</h2>
             <p className="text-gray-700 leading-relaxed">
-              Our services are not directed to individuals under the age of 18. We do not knowingly 
-              collect personal information from children. If you become aware that a child has provided 
+              Our services are not directed to individuals under the age of 18. We do not knowingly
+              collect personal information from children. If you become aware that a child has provided
               us with personal information, please contact us.
             </p>
           </section>
@@ -158,7 +173,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Changes to This Privacy Policy</h2>
             <p className="text-gray-700 leading-relaxed">
-              We may update this Privacy Policy from time to time. We will notify you of any changes 
+              We may update this Privacy Policy from time to time. We will notify you of any changes
               by posting the new Privacy Policy on this page and updating the "Last Updated" date.
             </p>
           </section>
@@ -181,7 +196,7 @@ export default function PrivacyPolicy() {
               <p className="text-gray-700">
                 <span className="font-medium">Phone:</span> 251-332-3311
               </p>
-            
+
             </div>
           </section>
 
@@ -189,7 +204,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Governing Law</h2>
             <p className="text-gray-700 leading-relaxed">
-              This Privacy Policy is governed by and construed in accordance with the laws of the 
+              This Privacy Policy is governed by and construed in accordance with the laws of the
               State of Wyoming, United States, without regard to its conflict of law provisions.
             </p>
           </section>
@@ -197,7 +212,7 @@ export default function PrivacyPolicy() {
 
         {/* Footer */}
         <div className="mt-8 text-center">
-          <Link 
+          <Link
             href="/"
             className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
