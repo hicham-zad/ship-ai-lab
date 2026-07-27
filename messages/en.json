@@ -1,59 +1,102 @@
 {
     "HomePage": {
+        "nav": {
+            "services": "Services",
+            "ourWork": "Our Work",
+            "reviews": "Reviews",
+            "faq": "FAQ",
+            "bookCall": "Book a Call"
+        },
         "hero": {
-            "title": "Launch Your AI App in Just",
-            "titleHighlight": "15 Days",
-            "subtitle": "With our fixed, budget-friendly pricing, we design, build, and launch your idea — all in just 15 days.",
-            "cta": "Book a Call"
+            "title": "We build AI products.",
+            "titleHighlight": "You launch fast.",
+            "titleEnd": "",
+            "socialProof": "+20 five-star reviews across Upwork & Fiverr",
+            "subtitle": "From idea to App Store, Ship AI Solutions designs, builds, and launches AI-powered SaaS, mobile, and web apps for founders who can't wait around.",
+            "cta": "Book a Free Call",
+            "ctaSub": "Free 30-min consultation · No commitment",
+            "proof": "Trusted by founders and companies worldwide"
         },
         "services": {
             "title": "What We Build",
+            "subtitle": "Everything you need to launch.",
+            "badge": "15-day delivery · fixed price",
             "saas": {
-                "title": "SaaS Platforms",
-                "description": "Build scalable, user-friendly SaaS solutions tailored to your business needs."
+                "title": "SaaS & Web Platforms",
+                "description": "Full-stack web apps with auth, payments, dashboards, and everything users expect. We ship the whole product — not just the front-end."
             },
             "mobile": {
-                "title": "Mobile & Web Apps",
-                "description": "Create high-performance mobile and web apps designed for user engagement and success."
+                "title": "iOS & Android Apps",
+                "description": "Native-quality mobile apps that pass App Store review and actually get used. Built with React Native, shipped to both stores in 15 days."
             },
             "ai": {
-                "title": "AI-Powered Apps",
-                "description": "Develop innovative AI applications to automate processes and drive business growth."
+                "title": "AI Features & Automation",
+                "description": "GPT, Claude, or custom model integrations that do real work. Not chatbots for the sake of it — AI that saves your users time every day."
             }
         },
         "work": {
-            "title": "Our Work"
+            "title": "Our Work",
+            "liveBadge": "All live in production",
+            "nomorecopyright": "AI-generated copyright-free images, videos, and music. Built for creators who need to move fast.",
+            "reisknaller": "Travel deal platform built for the Dutch market. Aggregates offers and presents them in a fast, clean UI.",
+            "storytyme": "Parents generate personalized children's books with AI in 5 steps. Real product, real families using it.",
+            "getsweetai": "Social media automation platform powered by AI. Write, schedule, and optimize content at scale."
         },
         "mobileApps": {
-            "title": "Mobile Apps We Build",
+            "title": "Apps We've Shipped",
+            "subtitle": "Real apps. Real users. Shipped in 15 days.",
             "tikonote": {
                 "name": "TikoNote",
-                "description": "AI Study App that helps students learn 10x faster. Transform any content into Flashcards, Quizzes, Summaries & Mind Maps instantly.",
-                "tags": {
-                    "aiPowered": "AI-Powered",
-                    "mobileApp": "Mobile App",
-                    "education": "Education"
-                }
+                "tagline": "Study smarter with AI.",
+                "description": "Turn any lecture, PDF, or note into flashcards, quizzes, and mind maps — instantly. Built for students who want results, not busywork."
             },
             "seenandfeel": {
                 "name": "SeenAndFeel",
-                "description": "Find the perfect movie for your group in 30 seconds. AI-powered recommendations that everyone will love. No more endless debates!",
-                "tags": {
-                    "aiRecommendations": "AI Recommendations",
-                    "mobileApp": "Mobile App",
-                    "entertainment": "Entertainment"
-                }
+                "tagline": "Pick a movie everyone agrees on.",
+                "description": "AI-powered film discovery for groups. Stop scrolling, start watching. Available on the App Store."
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "Find the perfect baby name, together.",
+                "description": "Couples swipe on names and match when both like the same one. A fun, conflict-free way to name your baby."
             }
         },
         "stats": {
             "delivery": "Days Delivery",
             "projects": "Projects Shipped",
-            "clients": "Happy Clients"
+            "clients": "Happy Clients",
+            "rating": "Avg. Rating"
+        },
+        "reviews": {
+            "title": "What Our Clients Say",
+            "subtitle": "100% five-star reviews across Fiverr and Upwork. Every project delivered with excellence — don't just take our word for it.",
+            "proofTitle": "Verified Reviews from Fiverr & Upwork",
+            "proofSubtitle": "Click any screenshot to enlarge. These are real, unedited reviews from our clients.",
+            "viewAllUpwork": "View all reviews on Upwork",
+            "viewAllFiverr": "View all reviews on Fiverr"
         },
         "cta": {
             "title": "Ready to Ship Your Next AI Product?",
             "subtitle": "Let's turn your idea into reality with our proven 15-day delivery process.",
             "button": "Get Started"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Everything you need to know before we start building.",
+            "q1": "How long does it take to build an app?",
+            "a1": "15 days fixed delivery time for our standard packages.",
+            "q2": "Do you build native apps?",
+            "a2": "Yes, we build React Native apps that compile to high-performance iOS and Android native code.",
+            "q3": "Are there any hidden costs?",
+            "a3": "No, we operate on a fixed-price model. What we quote is exactly what you pay.",
+            "q4": "Do you handle App Store submission?",
+            "a4": "Yes, we handle the entire process from development to Apple App Store and Google Play Store deployment."
+        },
+        "images": {
+            "logoAlt": "Ship AI Lab Logo - AI Development Agency",
+            "tikonoteAlt": "TikoNote AI Education Study App",
+            "seenandfeelAlt": "SeenAndFeel AI Movie Recommendations App",
+            "namelyAlt": "Namely AI Baby Name Tinder App"
         },
         "footer": {
             "brand": "Ship AI Lab",

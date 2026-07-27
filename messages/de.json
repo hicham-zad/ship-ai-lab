@@ -1,0 +1,122 @@
+{
+    "HomePage": {
+        "nav": {
+            "services": "Leistungen",
+            "ourWork": "Unsere Arbeit",
+            "reviews": "Bewertungen",
+            "faq": "FAQ",
+            "bookCall": "Gespräch buchen"
+        },
+        "hero": {
+            "title": "Deine KI-Idee.",
+            "titleHighlight": "In 15 Tagen live.",
+            "titleEnd": "",
+            "socialProof": "Mehr als 20 Fünf-Sterne-Bewertungen auf Upwork und Fiverr",
+            "subtitle": "Ein Team für alles — Strategie, Design und Entwicklung. Deine Idee wird zum echten Produkt, ohne den Aufwand klassischer Agenturen.",
+            "cta": "Kostenloses Gespräch buchen",
+            "ctaSub": "Kostenlose 30-Minuten-Beratung · Keine Verpflichtung",
+            "proof": "Gründer und Unternehmen weltweit vertrauen uns"
+        },
+        "services": {
+            "title": "Was wir bauen",
+            "subtitle": "Alles, was du für den Launch brauchst.",
+            "badge": "15 Tage Lieferung · Festpreis",
+            "saas": {
+                "title": "SaaS & Webplattformen",
+                "description": "Full-Stack-Web-Apps mit Auth, Zahlungen, Dashboards und allem, was Nutzer erwarten. Wir liefern das ganze Produkt — nicht nur das Front-End."
+            },
+            "mobile": {
+                "title": "iOS & Android Apps",
+                "description": "Mobile Apps in nativer Qualität, die die App Store-Prüfung bestehen. Mit React Native in 15 Tagen für beide Stores entwickelt."
+            },
+            "ai": {
+                "title": "KI-Funktionen & Automatisierung",
+                "description": "GPT, Claude oder maßgeschneiderte Modelle, die echte Arbeit leisten. Kein KI-Gimmick — echte Zeitersparnis für deine Nutzer täglich."
+            }
+        },
+        "work": {
+            "title": "Unsere Arbeit",
+            "liveBadge": "Alle live in Produktion",
+            "nomorecopyright": "KI-generierte urheberrechtsfreie Bilder, Videos und Musik. Für Creator, die schnell liefern müssen.",
+            "reisknaller": "Reiseangebote-Plattform für den niederländischen Markt. Aggregiert Angebote in einer schnellen, klaren Oberfläche.",
+            "storytyme": "Eltern erstellen personalisierte Kinderbücher mit KI in 5 Schritten. Echtes Produkt, echte Familien.",
+            "getsweetai": "KI-gestützte Social-Media-Automatisierung. Inhalte schreiben, planen und optimieren — in großem Maßstab."
+        },
+        "mobileApps": {
+            "title": "Apps, die wir ausgeliefert haben",
+            "subtitle": "Echte Apps. Echte Nutzer. In 15 Tagen geliefert.",
+            "tikonote": {
+                "name": "TikoNote",
+                "tagline": "Intelligenter lernen mit KI.",
+                "description": "Verwandeln Sie jede Vorlesung, jedes PDF oder jede Notiz in Karteikarten, Quiz und Mindmaps — sofort. Für Studenten, die Ergebnisse wollen."
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "tagline": "Wählen Sie einen Film, dem alle zustimmen.",
+                "description": "KI-gestützte Filmentdeckung für Gruppen. Hören Sie auf zu scrollen, fangen Sie an zu schauen. Im App Store erhältlich."
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "Finden Sie gemeinsam den perfekten Babynamen.",
+                "description": "Paare wischen über Namen und matchen, wenn beide den gleichen mögen. Eine unterhaltsame, konfliktfreie Möglichkeit, Ihr Baby zu benennen."
+            }
+        },
+        "stats": {
+            "delivery": "Tage Lieferung",
+            "projects": "Projekte ausgeliefert",
+            "clients": "Zufriedene Kunden",
+            "rating": "Ø Bewertung"
+        },
+        "reviews": {
+            "title": "Was unsere Kunden sagen",
+            "subtitle": "100 % Fünf-Sterne-Bewertungen bei Fiverr und Upwork. Jedes Projekt mit Exzellenz geliefert.",
+            "proofTitle": "Verifizierte Bewertungen von Fiverr & Upwork",
+            "proofSubtitle": "Klicken Sie auf einen Screenshot zum Vergrößern. Dies sind echte, unbearbeitete Bewertungen unserer Kunden.",
+            "viewAllUpwork": "Alle Bewertungen auf Upwork ansehen",
+            "viewAllFiverr": "Alle Bewertungen auf Fiverr ansehen"
+        },
+        "cta": {
+            "title": "Bereit, dein nächstes KI-Produkt zu starten?",
+            "subtitle": "Lass uns deine Idee mit unserem bewährten 15-Tage-Lieferprozess in die Realität umsetzen.",
+            "button": "Loslegen"
+        },
+        "faq": {
+            "title": "Häufig gestellte Fragen",
+            "subtitle": "Alles, was du wissen musst, bevor wir loslegen.",
+            "q1": "Wie lange dauert es, eine App zu erstellen?",
+            "a1": "15 Tage feste Lieferzeit für unsere Standardpakete.",
+            "q2": "Bauen Sie native Apps?",
+            "a2": "Ja, wir bauen React Native Apps, die zu leistungsstarkem nativen iOS- und Android-Code kompilieren.",
+            "q3": "Gibt es versteckte Kosten?",
+            "a3": "Nein, wir arbeiten mit einem Festpreismodell. Was wir anbieten, ist genau das, was Sie bezahlen.",
+            "q4": "Übernehmen Sie die App Store-Einreichung?",
+            "a4": "Ja, wir kümmern uns um den gesamten Prozess von der Entwicklung bis zur Bereitstellung im Apple App Store und Google Play Store."
+        },
+        "images": {
+            "logoAlt": "Ship AI Lab Logo - KI-Entwicklungsagentur",
+            "tikonoteAlt": "TikoNote KI-Studien-App",
+            "seenandfeelAlt": "SeenAndFeel KI-Filmempfehlungs-App",
+            "namelyAlt": "Namely KI-Babynamen-App"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. Eine Marke von Ship AI Solutions, LLC.",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA",
+            "contact": "E-Mail: contact@shipailab.com · Telefon: 251-332-3311",
+            "privacyPolicy": "Datenschutzrichtlinie",
+            "termsOfService": "Nutzungsbedingungen"
+        }
+    },
+    "Navigation": {
+        "home": "Startseite",
+        "features": "Funktionen",
+        "pricing": "Preise",
+        "contact": "Kontakt"
+    },
+    "Common": {
+        "learnMore": "Mehr erfahren",
+        "getStarted": "Loslegen",
+        "bookCall": "Gespräch buchen",
+        "viewMore": "Mehr ansehen"
+    }
+}

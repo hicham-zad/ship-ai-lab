@@ -1,0 +1,122 @@
+{
+    "HomePage": {
+        "nav": {
+            "services": "Serviços",
+            "ourWork": "Nosso Trabalho",
+            "reviews": "Avaliações",
+            "faq": "FAQ",
+            "bookCall": "Agendar chamada"
+        },
+        "hero": {
+            "title": "Sua ideia com IA,",
+            "titleHighlight": "no mercado em 15 dias.",
+            "titleEnd": "",
+            "socialProof": "+20 avaliações cinco estrelas no Upwork e Fiverr",
+            "subtitle": "Uma equipe do início ao fim. Estratégia, design e desenvolvimento — seu produto pronto sem a burocracia das agências tradicionais.",
+            "cta": "Agendar chamada gratuita",
+            "ctaSub": "Consulta gratuita de 30 min · Sem compromisso",
+            "proof": "Confiável por fundadores e empresas em todo o mundo"
+        },
+        "services": {
+            "title": "O que nós construímos",
+            "subtitle": "Tudo o que você precisa para lançar.",
+            "badge": "Entrega em 15 dias · preço fixo",
+            "saas": {
+                "title": "SaaS e Plataformas Web",
+                "description": "Apps web full-stack com autenticação, pagamentos, painéis e tudo o que os usuários esperam. Entregamos o produto completo — não apenas o front-end."
+            },
+            "mobile": {
+                "title": "Apps iOS e Android",
+                "description": "Apps móveis com qualidade nativa que passam na revisão da App Store. Construídos com React Native, entregues em ambas as lojas em 15 dias."
+            },
+            "ai": {
+                "title": "Recursos de IA e Automação",
+                "description": "Integrações GPT, Claude ou modelos personalizados que fazem trabalho real. IA que economiza tempo dos seus usuários todos os dias."
+            }
+        },
+        "work": {
+            "title": "Nosso Trabalho",
+            "liveBadge": "Todos em produção",
+            "nomorecopyright": "Imagens, vídeos e músicas sem direitos autorais gerados por IA. Para criadores que precisam agir rápido.",
+            "reisknaller": "Plataforma de ofertas de viagem para o mercado holandês. Agrega ofertas em uma interface rápida e limpa.",
+            "storytyme": "Pais criam livros infantis personalizados com IA em 5 passos. Produto real, famílias reais usando.",
+            "getsweetai": "Plataforma de automação de redes sociais com IA. Escreva, agende e otimize conteúdo em escala."
+        },
+        "mobileApps": {
+            "title": "Aplicativos que Lançamos",
+            "subtitle": "Apps reais. Usuários reais. Entregues em 15 dias.",
+            "tikonote": {
+                "name": "TikoNote",
+                "tagline": "Estude de forma mais inteligente com IA.",
+                "description": "Transforme qualquer palestra, PDF ou anotação em flashcards, questionários e mapas mentais — instantaneamente. Feito para estudantes que querem resultados."
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "tagline": "Escolha um filme que todos concordem.",
+                "description": "Descoberta de filmes em grupo com tecnologia IA. Pare de rolar, comece a assistir. Disponível na App Store."
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "Encontrem o nome perfeito para o bebê, juntos.",
+                "description": "Casais deslizam nomes e combinam quando ambos gostam do mesmo. Uma maneira divertida e sem conflitos de nomear seu bebê."
+            }
+        },
+        "stats": {
+            "delivery": "Dias de Entrega",
+            "projects": "Projetos Entregues",
+            "clients": "Clientes Felizes",
+            "rating": "Nota Média"
+        },
+        "reviews": {
+            "title": "O que Nossos Clientes Dizem",
+            "subtitle": "100% de avaliações cinco estrelas no Fiverr e Upwork. Cada projeto entregue com excelência.",
+            "proofTitle": "Avaliações Verificadas no Fiverr e Upwork",
+            "proofSubtitle": "Clique em qualquer captura de tela para ampliar. Estas são avaliações reais e não editadas de nossos clientes.",
+            "viewAllUpwork": "Ver todas as avaliações no Upwork",
+            "viewAllFiverr": "Ver todas as avaliações no Fiverr"
+        },
+        "cta": {
+            "title": "Pronto para Lançar Seu Próximo Produto de IA?",
+            "subtitle": "Vamos transformar sua ideia em realidade com nosso processo comprovado de entrega de 15 dias.",
+            "button": "Começar"
+        },
+        "faq": {
+            "title": "Perguntas Frequentes",
+            "subtitle": "Tudo o que você precisa saber antes de começarmos a construir.",
+            "q1": "Quanto tempo leva para construir um aplicativo?",
+            "a1": "Prazo de entrega fixo de 15 dias para nossos pacotes padrão.",
+            "q2": "Vocês constroem aplicativos nativos?",
+            "a2": "Sim, construímos aplicativos React Native que compilam em código nativo de alto desempenho para iOS e Android.",
+            "q3": "Existem custos ocultos?",
+            "a3": "Não, operamos em um modelo de preço fixo. O que citamos é exatamente o que você paga.",
+            "q4": "Vocês lidam com o envio para a App Store?",
+            "a4": "Sim, lidamos com todo o processo, desde o desenvolvimento até a implantação na Apple App Store e no Google Play Store."
+        },
+        "images": {
+            "logoAlt": "Logotipo Ship AI Lab - Agência de Desenvolvimento de IA",
+            "tikonoteAlt": "TikoNote Aplicativo de Estudo com IA",
+            "seenandfeelAlt": "SeenAndFeel Aplicativo de Recomendações de Filmes com IA",
+            "namelyAlt": "Namely Aplicativo de Nomes de Bebês com IA"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. Uma marca da Ship AI Solutions, LLC.",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, EUA",
+            "contact": "E-mail: contact@shipailab.com · Telefone: 251-332-3311",
+            "privacyPolicy": "Política de Privacidade",
+            "termsOfService": "Termos de Serviço"
+        }
+    },
+    "Navigation": {
+        "home": "Início",
+        "features": "Recursos",
+        "pricing": "Preços",
+        "contact": "Contato"
+    },
+    "Common": {
+        "learnMore": "Saiba Mais",
+        "getStarted": "Começar",
+        "bookCall": "Agendar Chamada",
+        "viewMore": "Ver Mais"
+    }
+}

@@ -201,3 +201,22 @@ export function generateAlternateLinks(path: string, locales: string[]) {
     href: `${SITE_URL}/${locale}${path}`,
   }));
 }
+
+/**
+ * Generate ImageObject Schema
+ */
+export function generateImageSchema(params: {
+  url: string;
+  caption: string;
+  width?: number;
+  height?: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: params.url.startsWith('http') ? params.url : `${SITE_URL}${params.url}`,
+    caption: params.caption,
+    width: params.width || 800,
+    height: params.height || 600,
+  };
+}

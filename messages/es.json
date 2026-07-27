@@ -1,59 +1,102 @@
 {
     "HomePage": {
+        "nav": {
+            "services": "Servicios",
+            "ourWork": "Nuestro Trabajo",
+            "reviews": "Reseñas",
+            "faq": "FAQ",
+            "bookCall": "Reservar llamada"
+        },
         "hero": {
-            "title": "Lanza Tu App de IA en Solo",
-            "titleHighlight": "15 Días",
-            "subtitle": "Con nuestro precio fijo y asequible, diseñamos, construimos y lanzamos tu idea — todo en solo 15 días.",
-            "cta": "Reservar una Llamada"
+            "title": "Tu idea de IA,",
+            "titleHighlight": "lista para el mercado.",
+            "titleEnd": "",
+            "socialProof": "+20 reseñas de cinco estrellas en Upwork y Fiverr",
+            "subtitle": "Un solo equipo de principio a fin. Estrategia, diseño y desarrollo en 15 días — sin reuniones interminables ni sorpresas.",
+            "cta": "Reservar Llamada Gratis",
+            "ctaSub": "Consulta gratis de 30 min · Sin compromiso",
+            "proof": "La confianza de fundadores y empresas en todo el mundo"
         },
         "services": {
-            "title": "Lo Que Construimos",
+            "title": "Qué Construimos",
+            "subtitle": "Todo lo que necesitas para lanzar.",
+            "badge": "Entrega en 15 días · precio fijo",
             "saas": {
-                "title": "Plataformas SaaS",
-                "description": "Construye soluciones SaaS escalables y fáciles de usar adaptadas a las necesidades de tu negocio."
+                "title": "Plataformas SaaS y Web",
+                "description": "Apps web full-stack con autenticación, pagos, paneles y todo lo que esperan los usuarios. Entregamos el producto completo, no solo el front-end."
             },
             "mobile": {
-                "title": "Apps Móviles y Web",
-                "description": "Crea aplicaciones móviles y web de alto rendimiento diseñadas para el compromiso y éxito del usuario."
+                "title": "Apps iOS y Android",
+                "description": "Apps móviles de calidad nativa que pasan la revisión de la App Store y se usan de verdad. Con React Native, en ambas tiendas en 15 días."
             },
             "ai": {
-                "title": "Apps Potenciadas por IA",
-                "description": "Desarrolla aplicaciones innovadoras de IA para automatizar procesos e impulsar el crecimiento empresarial."
+                "title": "IA y Automatización",
+                "description": "Integraciones GPT, Claude o modelos propios que hacen trabajo real. No chatbots decorativos — IA que ahorra tiempo a tus usuarios cada día."
             }
         },
         "work": {
-            "title": "Nuestro Trabajo"
+            "title": "Nuestro Trabajo",
+            "liveBadge": "Todos en producción",
+            "nomorecopyright": "Imágenes, vídeos y música sin derechos de autor generados con IA. Para creadores que necesitan moverse rápido.",
+            "reisknaller": "Plataforma de ofertas de viaje para el mercado holandés. Agrega y presenta ofertas en una interfaz limpia y rápida.",
+            "storytyme": "Los padres generan libros infantiles personalizados con IA en 5 pasos. Producto real, familias reales usándolo.",
+            "getsweetai": "Plataforma de automatización de redes sociales con IA. Escribe, programa y optimiza contenido a escala."
         },
         "mobileApps": {
-            "title": "Apps Móviles Que Construimos",
+            "title": "Apps que Hemos Lanzado",
+            "subtitle": "Apps reales. Usuarios reales. Lanzadas en 15 días.",
             "tikonote": {
                 "name": "TikoNote",
-                "description": "App de Estudio con IA que ayuda a los estudiantes a aprender 10 veces más rápido. Transforma cualquier contenido en Tarjetas, Cuestionarios, Resúmenes y Mapas Mentales al instante.",
-                "tags": {
-                    "aiPowered": "Potenciado por IA",
-                    "mobileApp": "App Móvil",
-                    "education": "Educación"
-                }
+                "tagline": "Estudia más inteligente con IA.",
+                "description": "Convierte cualquier clase, PDF o nota en flashcards, tests y mapas mentales — al instante. Para estudiantes que quieren resultados."
             },
             "seenandfeel": {
                 "name": "SeenAndFeel",
-                "description": "Encuentra la película perfecta para tu grupo en 30 segundos. Recomendaciones potenciadas por IA que a todos les encantarán. ¡No más debates interminables!",
-                "tags": {
-                    "aiRecommendations": "Recomendaciones IA",
-                    "mobileApp": "App Móvil",
-                    "entertainment": "Entretenimiento"
-                }
+                "tagline": "Elige una peli que guste a todos.",
+                "description": "Descubrimiento de películas en grupo con IA. Para de hacer scroll, empieza a ver. Disponible en la App Store."
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "Encontrad el nombre perfecto juntos.",
+                "description": "Las parejas deslizan nombres y hacen match cuando a los dos les gusta el mismo. Sin discusiones para elegir el nombre de tu bebé."
             }
         },
         "stats": {
-            "delivery": "Días de Entrega",
-            "projects": "Proyectos Enviados",
-            "clients": "Clientes Felices"
+            "delivery": "Días de entrega",
+            "projects": "Proyectos entregados",
+            "clients": "Clientes felices",
+            "rating": "Puntuación media"
+        },
+        "reviews": {
+            "title": "Lo Que Dicen Nuestros Clientes",
+            "subtitle": "100% de reseñas de cinco estrellas en Fiverr y Upwork. Cada proyecto entregado con excelencia.",
+            "proofTitle": "Reseñas verificadas de Fiverr y Upwork",
+            "proofSubtitle": "Haz clic en cualquier captura para ampliarla. Son reseñas reales y sin editar de nuestros clientes.",
+            "viewAllUpwork": "Ver todas las reseñas en Upwork",
+            "viewAllFiverr": "Ver todas las reseñas en Fiverr"
         },
         "cta": {
-            "title": "¿Listo para Lanzar Tu Próximo Producto de IA?",
-            "subtitle": "Convirtamos tu idea en realidad con nuestro proceso probado de entrega de 15 días.",
+            "title": "¿Listo para lanzar tu próximo producto de IA?",
+            "subtitle": "Convirtamos tu idea en realidad con nuestro proceso de entrega probado en 15 días.",
             "button": "Comenzar"
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Todo lo que necesitas saber antes de que empecemos a construir.",
+            "q1": "¿Cuánto tiempo se tarda en construir una aplicación?",
+            "a1": "Tiempo de entrega fijo de 15 días para nuestros paquetes estándar.",
+            "q2": "¿Construyen aplicaciones nativas?",
+            "a2": "Sí, construimos aplicaciones en React Native que se compilan en código nativo de alto rendimiento para iOS y Android.",
+            "q3": "¿Hay costos ocultos?",
+            "a3": "No, operamos con un modelo de precio fijo. Lo que cotizamos es exactamente lo que pagas.",
+            "q4": "¿Se encargan del envío a la App Store?",
+            "a4": "Sí, manejamos todo el proceso desde el desarrollo hasta la implementación en Apple App Store y Google Play Store."
+        },
+        "images": {
+            "logoAlt": "Logo de Ship AI Lab - Agencia de Desarrollo de IA",
+            "tikonoteAlt": "App de Estudio con IA TikoNote",
+            "seenandfeelAlt": "App de Recomendaciones de Películas con IA SeenAndFeel",
+            "namelyAlt": "App de Nombres de Bebés con IA Namely"
         },
         "footer": {
             "brand": "Ship AI Lab",
@@ -71,9 +114,9 @@
         "contact": "Contacto"
     },
     "Common": {
-        "learnMore": "Saber Más",
-        "getStarted": "Comenzar",
-        "bookCall": "Reservar Llamada",
-        "viewMore": "Ver Más"
+        "learnMore": "Saber más",
+        "getStarted": "Empezar",
+        "bookCall": "Reservar llamada",
+        "viewMore": "Ver más"
     }
 }

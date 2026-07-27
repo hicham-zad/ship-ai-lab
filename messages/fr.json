@@ -1,0 +1,122 @@
+{
+    "HomePage": {
+        "nav": {
+            "services": "Services",
+            "ourWork": "Notre Travail",
+            "reviews": "Avis",
+            "faq": "FAQ",
+            "bookCall": "Prendre rendez-vous"
+        },
+        "hero": {
+            "title": "Votre idée IA,",
+            "titleHighlight": "lancée en 15 jours.",
+            "titleEnd": "",
+            "socialProof": "+20 avis 5 étoiles sur Upwork et Fiverr",
+            "subtitle": "Une équipe unique de A à Z. Stratégie, design et développement — pour un produit livré vite, sans les lourdeurs des agences classiques.",
+            "cta": "Réserver un appel gratuit",
+            "ctaSub": "Consultation gratuite de 30 min · Sans engagement",
+            "proof": "Approuvé par des fondateurs et des entreprises du monde entier"
+        },
+        "services": {
+            "title": "Ce que nous construisons",
+            "subtitle": "Tout ce dont vous avez besoin pour lancer.",
+            "badge": "Livraison en 15 jours · prix fixe",
+            "saas": {
+                "title": "Plateformes SaaS & Web",
+                "description": "Des apps web full-stack avec authentification, paiements, tableaux de bord. Nous livrons le produit complet — pas seulement le front-end."
+            },
+            "mobile": {
+                "title": "Applications iOS & Android",
+                "description": "Des apps mobiles de qualité native qui passent la revue App Store. Construites avec React Native, expédiées en 15 jours sur les deux stores."
+            },
+            "ai": {
+                "title": "Fonctionnalités IA & Automatisation",
+                "description": "Intégrations GPT, Claude ou modèles sur mesure. Pas des chatbots décoratifs — une IA qui fait gagner du temps à vos utilisateurs chaque jour."
+            }
+        },
+        "work": {
+            "title": "Notre Travail",
+            "liveBadge": "Tous en production",
+            "nomorecopyright": "Images, vidéos et musique sans droits d'auteur générées par IA. Pour les créateurs qui doivent aller vite.",
+            "reisknaller": "Plateforme de bons plans voyage pour le marché néerlandais. Agrège les offres dans une interface rapide et épurée.",
+            "storytyme": "Les parents créent des livres pour enfants personnalisés avec l'IA en 5 étapes. Un vrai produit, de vraies familles.",
+            "getsweetai": "Plateforme d'automatisation des réseaux sociaux par IA. Écrivez, planifiez et optimisez du contenu à grande échelle."
+        },
+        "mobileApps": {
+            "title": "Applications que nous avons lancées",
+            "subtitle": "De vraies apps. De vrais utilisateurs. Livrées en 15 jours.",
+            "tikonote": {
+                "name": "TikoNote",
+                "tagline": "Étudiez plus intelligemment avec l'IA.",
+                "description": "Transformez n'importe quel cours, PDF ou note en flashcards, quiz et cartes mentales — instantanément. Conçu pour les étudiants qui veulent des résultats."
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "tagline": "Choisissez un film qui met tout le monde d'accord.",
+                "description": "Découverte de films pour groupes propulsée par l'IA. Arrêtez de faire défiler, commencez à regarder. Disponible sur l'App Store."
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "Trouvez le prénom de bébé parfait, ensemble.",
+                "description": "Les couples balayent des prénoms et matchent quand les deux aiment le même. Une façon amusante et sans conflit de nommer votre bébé."
+            }
+        },
+        "stats": {
+            "delivery": "Jours de livraison",
+            "projects": "Projets lancés",
+            "clients": "Clients satisfaits",
+            "rating": "Note moyenne"
+        },
+        "reviews": {
+            "title": "Ce que disent nos clients",
+            "subtitle": "100 % d'avis 5 étoiles sur Fiverr et Upwork. Chaque projet livré avec excellence.",
+            "proofTitle": "Avis vérifiés de Fiverr & Upwork",
+            "proofSubtitle": "Cliquez sur une capture d'écran pour l'agrandir. Ce sont de vrais avis non modifiés de nos clients.",
+            "viewAllUpwork": "Voir tous les avis sur Upwork",
+            "viewAllFiverr": "Voir tous les avis sur Fiverr"
+        },
+        "cta": {
+            "title": "Prêt à lancer votre prochain produit IA ?",
+            "subtitle": "Transformons votre idée en réalité avec notre processus de livraison prouvé de 15 jours.",
+            "button": "Commencer"
+        },
+        "faq": {
+            "title": "Foire Aux Questions",
+            "subtitle": "Tout ce que vous devez savoir avant de commencer.",
+            "q1": "Combien de temps faut-il pour construire une application ?",
+            "a1": "Délai de livraison fixe de 15 jours pour nos forfaits standard.",
+            "q2": "Construisez-vous des applications natives ?",
+            "a2": "Oui, nous construisons des applications React Native qui se compilent en code natif haute performance iOS et Android.",
+            "q3": "Y a-t-il des coûts cachés ?",
+            "a3": "Non, nous fonctionnons sur un modèle à prix fixe. Ce que nous citons est exactement ce que vous payez.",
+            "q4": "Gérez-vous la soumission à l'App Store ?",
+            "a4": "Oui, nous gérons tout le processus, du développement au déploiement sur l'App Store d'Apple et le Google Play Store."
+        },
+        "images": {
+            "logoAlt": "Logo Ship AI Lab - Agence de Développement IA",
+            "tikonoteAlt": "TikoNote Application d'Étude IA",
+            "seenandfeelAlt": "SeenAndFeel Application de Recommandation de Films IA",
+            "namelyAlt": "Namely Application de Prénoms de Bébé IA"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. Une marque de Ship AI Solutions, LLC.",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA",
+            "contact": "Email : contact@shipailab.com · Téléphone : 251-332-3311",
+            "privacyPolicy": "Politique de confidentialité",
+            "termsOfService": "Conditions d'utilisation"
+        }
+    },
+    "Navigation": {
+        "home": "Accueil",
+        "features": "Fonctionnalités",
+        "pricing": "Tarification",
+        "contact": "Contact"
+    },
+    "Common": {
+        "learnMore": "En savoir plus",
+        "getStarted": "Commencer",
+        "bookCall": "Réserver un appel",
+        "viewMore": "Voir plus"
+    }
+}

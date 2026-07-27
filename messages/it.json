@@ -1,0 +1,122 @@
+{
+    "HomePage": {
+        "nav": {
+            "services": "Servizi",
+            "ourWork": "I Nostri Lavori",
+            "reviews": "Recensioni",
+            "faq": "FAQ",
+            "bookCall": "Prenota una chiamata"
+        },
+        "hero": {
+            "title": "Creiamo prodotti IA.",
+            "titleHighlight": "Tu lanci veloce.",
+            "titleEnd": "",
+            "socialProof": "+20 recensioni 5 stelle su Upwork e Fiverr",
+            "subtitle": "Ship AI Solutions è un'agenzia specializzata in prodotti basati su IA. Sviluppiamo SaaS, app mobile e siti web per founder e aziende — dalla strategia al lancio, in poche settimane.",
+            "cta": "Prenota una chiamata gratuita",
+            "ctaSub": "Consulenza di 30 min · Senza impegno",
+            "proof": "Scelto da founder e aziende in tutto il mondo"
+        },
+        "services": {
+            "title": "Cosa Costruiamo",
+            "subtitle": "Tutto ciò di cui hai bisogno per lanciare.",
+            "badge": "Consegna in 15 giorni · prezzo fisso",
+            "saas": {
+                "title": "Piattaforme SaaS & Web",
+                "description": "App web full-stack con autenticazione, pagamenti, dashboard e tutto ciò che gli utenti si aspettano. Consegniamo il prodotto completo — non solo il front-end."
+            },
+            "mobile": {
+                "title": "App iOS & Android",
+                "description": "App mobile di qualità nativa che superano la revisione App Store e vengono davvero usate. Costruite con React Native, disponibili su entrambi gli store in 15 giorni."
+            },
+            "ai": {
+                "title": "Funzionalità IA & Automazione",
+                "description": "Integrazioni GPT, Claude o modelli personalizzati che fanno lavoro reale. Non chatbot decorativi — IA che fa risparmiare tempo ai tuoi utenti ogni giorno."
+            }
+        },
+        "work": {
+            "title": "I Nostri Lavori",
+            "liveBadge": "Tutti in produzione",
+            "nomorecopyright": "Immagini, video e musica senza copyright generati da IA. Per creator che devono muoversi velocemente.",
+            "reisknaller": "Piattaforma di offerte viaggi per il mercato olandese. Aggrega le offerte in un'interfaccia veloce e pulita.",
+            "storytyme": "I genitori creano libri per bambini personalizzati con IA in 5 passaggi. Prodotto reale, famiglie reali che lo usano.",
+            "getsweetai": "Piattaforma di automazione social media con IA. Scrivi, pianifica e ottimizza i contenuti su larga scala."
+        },
+        "mobileApps": {
+            "title": "App che Abbiamo Lanciato",
+            "subtitle": "App reali. Utenti reali. Lanciate in 15 giorni.",
+            "tikonote": {
+                "name": "TikoNote",
+                "tagline": "Studia in modo più intelligente con l'IA.",
+                "description": "Trasforma qualsiasi lezione, PDF o nota in flashcard, quiz e mappe mentali — istantaneamente. Per studenti che vogliono risultati."
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "tagline": "Scegli un film che piaccia a tutti.",
+                "description": "Scoperta di film in gruppo con IA. Smetti di scorrere, inizia a guardare. Disponibile sull'App Store."
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "Trovate il nome perfetto per il bambino, insieme.",
+                "description": "Le coppie scorrono i nomi e fanno match quando entrambi amano lo stesso. Un modo divertente e senza conflitti per dare il nome al tuo bambino."
+            }
+        },
+        "stats": {
+            "delivery": "Giorni di Consegna",
+            "projects": "Progetti Consegnati",
+            "clients": "Clienti Soddisfatti",
+            "rating": "Valutazione Media"
+        },
+        "reviews": {
+            "title": "Cosa Dicono i Nostri Clienti",
+            "subtitle": "100% di recensioni 5 stelle su Fiverr e Upwork. Ogni progetto consegnato con eccellenza.",
+            "proofTitle": "Recensioni Verificate da Fiverr e Upwork",
+            "proofSubtitle": "Clicca su qualsiasi screenshot per ingrandirlo. Queste sono recensioni reali e non modificate dei nostri clienti.",
+            "viewAllUpwork": "Visualizza tutte le recensioni su Upwork",
+            "viewAllFiverr": "Visualizza tutte le recensioni su Fiverr"
+        },
+        "cta": {
+            "title": "Pronto a Lanciare il Tuo Prossimo Prodotto IA?",
+            "subtitle": "Trasformiamo la tua idea in realtà con il nostro processo di consegna comprovato di 15 giorni.",
+            "button": "Inizia"
+        },
+        "faq": {
+            "title": "Domande Frequenti",
+            "subtitle": "Tutto ciò che devi sapere prima che iniziamo a costruire.",
+            "q1": "Quanto tempo ci vuole per costruire un'app?",
+            "a1": "Tempo di consegna fisso di 15 giorni per i nostri pacchetti standard.",
+            "q2": "Costruite app native?",
+            "a2": "Sì, costruiamo app React Native che si compilano in codice iOS e Android nativo ad alte prestazioni.",
+            "q3": "Ci sono costi nascosti?",
+            "a3": "No, operiamo con un modello a prezzo fisso. Ciò che quotizziamo è esattamente ciò che paghi.",
+            "q4": "Gestite la pubblicazione sull'App Store?",
+            "a4": "Sì, gestiamo l'intero processo dallo sviluppo al deployment sull'Apple App Store e sul Google Play Store."
+        },
+        "images": {
+            "logoAlt": "Logo Ship AI Lab - Agenzia di Sviluppo IA",
+            "tikonoteAlt": "App di Studio IA TikoNote",
+            "seenandfeelAlt": "App di Raccomandazione Film IA SeenAndFeel",
+            "namelyAlt": "App di Nomi per Bambini IA Namely"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. Un marchio di Ship AI Solutions, LLC.",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA",
+            "contact": "Email: contact@shipailab.com · Tel: 251-332-3311",
+            "privacyPolicy": "Informativa sulla Privacy",
+            "termsOfService": "Termini di Servizio"
+        }
+    },
+    "Navigation": {
+        "home": "Home",
+        "features": "Funzionalità",
+        "pricing": "Prezzi",
+        "contact": "Contatti"
+    },
+    "Common": {
+        "learnMore": "Scopri di più",
+        "getStarted": "Inizia",
+        "bookCall": "Prenota una chiamata",
+        "viewMore": "Visualizza altro"
+    }
+}

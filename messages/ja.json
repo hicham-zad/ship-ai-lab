@@ -1,0 +1,122 @@
+{
+    "HomePage": {
+        "nav": {
+            "services": "サービス",
+            "ourWork": "実績",
+            "reviews": "レビュー",
+            "faq": "よくある質問",
+            "bookCall": "無料相談を予約"
+        },
+        "hero": {
+            "title": "AIプロダクトを開発します。",
+            "titleHighlight": "すばやくローンチ。",
+            "titleEnd": "",
+            "socialProof": "UpworkとFiverrで20件以上の5つ星レビュー",
+            "subtitle": "Ship AI Solutionsは、AIを活用したSaaS・モバイルアプリ（iOS/Android）・Webサービスを開発するエージェンシーです。創業者や企業のために、戦略からローンチまで数週間でプロダクトをお届けします。",
+            "cta": "無料相談を予約する",
+            "ctaSub": "30分の無料相談 · 契約義務なし",
+            "proof": "世界中の創業者と企業に信頼されています"
+        },
+        "services": {
+            "title": "開発内容",
+            "subtitle": "ローンチに必要なすべてを。",
+            "badge": "15日間納品 · 固定価格",
+            "saas": {
+                "title": "SaaS・Webプラットフォーム",
+                "description": "認証、決済、ダッシュボードなど、ユーザーが期待するすべてを備えたフルスタックWebアプリ。フロントエンドだけでなく、プロダクト全体をお届けします。"
+            },
+            "mobile": {
+                "title": "iOS・Androidアプリ",
+                "description": "App Storeの審査を通過し、実際に使われるネイティブ品質のモバイルアプリ。React Nativeで構築し、15日間で両ストアに提供します。"
+            },
+            "ai": {
+                "title": "AI機能・自動化",
+                "description": "GPT、Claude、またはカスタムモデルの統合で実際の業務を効率化。飾りのチャットボットではなく、ユーザーの時間を毎日節約するAIを。"
+            }
+        },
+        "work": {
+            "title": "実績",
+            "liveBadge": "すべて本番稼働中",
+            "nomorecopyright": "AIが生成する著作権フリーの画像、動画、音楽。素早く動く必要があるクリエイター向け。",
+            "reisknaller": "オランダ市場向けの旅行お得情報プラットフォーム。オファーを集約し、高速でクリーンなUIで表示。",
+            "storytyme": "親がAIで5ステップでパーソナライズされた絵本を作成。実際のプロダクト、実際の家族が使用中。",
+            "getsweetai": "AIによるSNS自動化プラットフォーム。コンテンツを書いて、スケジュールし、大規模に最適化。"
+        },
+        "mobileApps": {
+            "title": "リリースしたアプリ",
+            "subtitle": "本物のアプリ。本物のユーザー。15日間でリリース。",
+            "tikonote": {
+                "name": "TikoNote",
+                "tagline": "AIでスマートに学ぼう。",
+                "description": "どんな講義・PDF・ノートも、フラッシュカード・クイズ・マインドマップに即変換。結果を求める学生のために作られました。"
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "tagline": "みんなが同意できる映画を選ぼう。",
+                "description": "グループ向けAI映画発見アプリ。スクロールをやめて、鑑賞を始めよう。App Storeで利用可能。"
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "一緒に完璧な赤ちゃんの名前を見つけよう。",
+                "description": "カップルが名前をスワイプして、二人とも気に入ったら一致。赤ちゃんの名前を楽しく、けんかなしで決める方法。"
+            }
+        },
+        "stats": {
+            "delivery": "日間納品",
+            "projects": "完成プロジェクト",
+            "clients": "満足したクライアント",
+            "rating": "平均評価"
+        },
+        "reviews": {
+            "title": "クライアントの声",
+            "subtitle": "FiverrとUpworkで100%の5つ星レビュー。すべてのプロジェクトを卓越した品質で納品。",
+            "proofTitle": "FiverrとUpworkからの認証済みレビュー",
+            "proofSubtitle": "スクリーンショットをクリックして拡大。クライアントからの本物の未編集レビューです。",
+            "viewAllUpwork": "Upworkのすべてのレビューを見る",
+            "viewAllFiverr": "Fiverrのすべてのレビューを見る"
+        },
+        "cta": {
+            "title": "次のAIプロダクトをローンチする準備はできていますか？",
+            "subtitle": "実績ある15日間納品プロセスであなたのアイデアを現実に変えましょう。",
+            "button": "始める"
+        },
+        "faq": {
+            "title": "よくある質問",
+            "subtitle": "開発を始める前に知っておくべきすべてのこと。",
+            "q1": "アプリの開発にはどれくらいかかりますか？",
+            "a1": "標準パッケージは15日間の固定納期です。",
+            "q2": "ネイティブアプリを開発しますか？",
+            "a2": "はい、高性能なiOSとAndroidのネイティブコードにコンパイルされるReact Nativeアプリを開発します。",
+            "q3": "隠れたコストはありますか？",
+            "a3": "いいえ、固定価格モデルで運営しています。見積もり通りの料金のみお支払いいただきます。",
+            "q4": "App Store申請も対応していますか？",
+            "a4": "はい、開発からApple App StoreおよびGoogle Play Storeへのデプロイまで、全プロセスを担当します。"
+        },
+        "images": {
+            "logoAlt": "Ship AI Lab ロゴ - AI開発エージェンシー",
+            "tikonoteAlt": "TikoNote AIスタディアプリ",
+            "seenandfeelAlt": "SeenAndFeel AI映画レコメンドアプリ",
+            "namelyAlt": "Namely AI赤ちゃん名前アプリ"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. Ship AI Solutions, LLCのブランド。",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA",
+            "contact": "Email: contact@shipailab.com · Tel: 251-332-3311",
+            "privacyPolicy": "プライバシーポリシー",
+            "termsOfService": "利用規約"
+        }
+    },
+    "Navigation": {
+        "home": "ホーム",
+        "features": "機能",
+        "pricing": "料金",
+        "contact": "お問い合わせ"
+    },
+    "Common": {
+        "learnMore": "詳しく見る",
+        "getStarted": "始める",
+        "bookCall": "無料相談を予約",
+        "viewMore": "もっと見る"
+    }
+}

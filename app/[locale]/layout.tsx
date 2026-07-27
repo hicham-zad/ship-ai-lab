@@ -22,71 +22,88 @@ export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-    metadataBase: new URL("https://shipailab.com/"),
-    title: "ShipAI Lab | AI SaaS & Product Development in 15 Days",
-    description:
-        "ShipAI Lab builds and launches your AI-powered SaaS, web, and mobile products in just 15 days. Fixed pricing, expert team, and proven results. Start your project today!",
-    keywords: [
-        "AI SaaS",
-        "AI product development",
-        "AI startup",
-        "SaaS development",
-        "AI agency",
-        "AI web app",
-        "AI mobile app",
-        "AI MVP",
-        "AI automation",
-        "ShipAI Lab",
-        "AI solutions",
-        "AI consulting",
-    ],
-    alternates: {
-        canonical: "https://shipailab.com/",
-    },
-    openGraph: {
-        title: "ShipAI Lab | AI SaaS & Product Development in 15 Days",
+export async function generateMetadata(
+    { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+    const { locale } = await params;
+    const baseUrl = "https://shipailab.com";
+    const canonical = locale === 'en' ? baseUrl : `${baseUrl}/${locale}`;
+
+    return {
+        metadataBase: new URL(baseUrl),
+        title: "AI App Development Agency | Built in 15 Days",
         description:
-            "ShipAI Lab builds and launches your AI-powered SaaS, web, and mobile products in just 15 days. Fixed pricing, expert team, and proven results. Start your project today!",
-        url: "https://shipailab.com/",
-        siteName: "ShipAI Lab",
-        images: [
-            {
-                url: "https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png",
-                width: 800,
-                height: 600,
-                alt: "ShipAI Lab Demo"
-            },
-            {
-                url: "https://res.cloudinary.com/dyovzofma/image/upload/v1762178065/SHIP_AI_mhueop.png",
-                width: 1800,
-                height: 1600,
-                alt: "ShipAI Lab Logo",
-            }
+            "Got an AI app idea? We build it in 15 days. AI-powered SaaS, iOS, and Android apps. One price. No delays.",
+        keywords: [
+            "AI SaaS",
+            "AI product development",
+            "AI startup",
+            "SaaS development",
+            "AI agency",
+            "AI web app",
+            "AI mobile app",
+            "AI MVP",
+            "AI automation",
+            "ShipAI Lab",
+            "AI solutions",
+            "AI consulting",
         ],
-        locale: "en_US",
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "ShipAI Lab | AI SaaS & Product Development in 15 Days",
-        description:
-            "ShipAI Lab builds and launches your AI-powered SaaS, web, and mobile products in just 15 days. Fixed pricing, expert team, and proven results. Start your project today!",
-        images: ["https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png"],
-    },
-    creator: "ShipAI Lab Team",
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
+        alternates: {
+            canonical: canonical,
+            languages: {
+                'en': baseUrl,
+                'es': `${baseUrl}/es`,
+                'fr': `${baseUrl}/fr`,
+                'de': `${baseUrl}/de`,
+                'pt': `${baseUrl}/pt`,
+                'ar': `${baseUrl}/ar`,
+                'x-default': baseUrl
+            },
+        },
+        openGraph: {
+            title: "AI App Development Agency | Built in 15 Days",
+            description:
+                "Got an AI app idea? We build it in 15 days. AI-powered SaaS, iOS, and Android apps. One price. No delays.",
+            url: canonical,
+            siteName: "ShipAI Lab",
+            images: [
+                {
+                    url: "https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png",
+                    width: 800,
+                    height: 600,
+                    alt: "ShipAI Lab Demo"
+                },
+                {
+                    url: "https://res.cloudinary.com/dyovzofma/image/upload/v1762178065/SHIP_AI_mhueop.png",
+                    width: 1800,
+                    height: 1600,
+                    alt: "ShipAI Lab Logo",
+                }
+            ],
+            locale: locale,
+            type: "website",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "AI App Development Agency | Built in 15 Days",
+            description:
+                "Got an AI app idea? We build it in 15 days. AI-powered SaaS, iOS, and Android apps. One price. No delays.",
+            images: ["https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png"],
+        },
+        creator: "ShipAI Lab Team",
+        robots: {
             index: true,
             follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
+            googleBot: {
+                index: true,
+                follow: true,
+                'max-video-preview': -1,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+            },
         },
-    },
-};
+    };
+}
 
 export default async function LocaleLayout({
     children,
@@ -107,7 +124,7 @@ export default async function LocaleLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
+        <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
             <head>
                 {/* Structured Data for SEO */}
                 <StructuredData

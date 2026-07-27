@@ -1,0 +1,122 @@
+{
+    "HomePage": {
+        "nav": {
+            "services": "Diensten",
+            "ourWork": "Ons Werk",
+            "reviews": "Recensies",
+            "faq": "FAQ",
+            "bookCall": "Gesprek inplannen"
+        },
+        "hero": {
+            "title": "Wij bouwen AI-producten.",
+            "titleHighlight": "Jij lanceert snel.",
+            "titleEnd": "",
+            "socialProof": "+20 vijfsterrenreviews op Upwork en Fiverr",
+            "subtitle": "Ship AI Solutions is een AI-ontwikkelbureau gespecialiseerd in SaaS, mobiele apps en websites voor founders en bedrijven — van strategie tot lancering in enkele weken.",
+            "cta": "Boek een gratis gesprek",
+            "ctaSub": "30 min. consult · Geen verplichtingen",
+            "proof": "Vertrouwd door founders en bedrijven wereldwijd"
+        },
+        "services": {
+            "title": "Wat Wij Bouwen",
+            "subtitle": "Alles wat je nodig hebt om te lanceren.",
+            "badge": "15 dagen levering · vaste prijs",
+            "saas": {
+                "title": "SaaS & Webplatforms",
+                "description": "Full-stack web-apps met authenticatie, betalingen, dashboards en alles wat gebruikers verwachten. Wij leveren het complete product — niet alleen de front-end."
+            },
+            "mobile": {
+                "title": "iOS & Android Apps",
+                "description": "Mobiele apps van native kwaliteit die de App Store-review doorstaan en echt gebruikt worden. Gebouwd met React Native, beschikbaar op beide stores in 15 dagen."
+            },
+            "ai": {
+                "title": "AI-functies & Automatisering",
+                "description": "GPT-, Claude- of maatwerkintegraties die echt werk doen. Geen decoratieve chatbots — AI die je gebruikers dagelijks tijd bespaart."
+            }
+        },
+        "work": {
+            "title": "Ons Werk",
+            "liveBadge": "Allemaal live in productie",
+            "nomorecopyright": "Door AI gegenereerde auteursrechtvrije afbeeldingen, video's en muziek. Voor creators die snel moeten handelen.",
+            "reisknaller": "Reiasaanbiedingen platform voor de Nederlandse markt. Brengt aanbiedingen samen in een snelle, overzichtelijke interface.",
+            "storytyme": "Ouders maken gepersonaliseerde kinderboeken met AI in 5 stappen. Een echt product, echte gezinnen die het gebruiken.",
+            "getsweetai": "Social media automatiseringsplatform op basis van AI. Schrijf, plan en optimaliseer content op grote schaal."
+        },
+        "mobileApps": {
+            "title": "Apps die We Hebben Gelanceerd",
+            "subtitle": "Echte apps. Echte gebruikers. Gelanceerd in 15 dagen.",
+            "tikonote": {
+                "name": "TikoNote",
+                "tagline": "Studeer slimmer met AI.",
+                "description": "Zet elke les, PDF of notitie om in flashcards, quizzen en mindmaps — direct. Voor studenten die resultaten willen."
+            },
+            "seenandfeel": {
+                "name": "SeenAndFeel",
+                "tagline": "Kies een film waar iedereen het mee eens is.",
+                "description": "AI-gestuurde filmontdekking voor groepen. Stop met scrollen, begin met kijken. Beschikbaar in de App Store."
+            },
+            "namely": {
+                "name": "Namely",
+                "tagline": "Vind samen de perfecte babynaam.",
+                "description": "Koppels swipen namen en matchen als ze allebei dezelfde leuk vinden. Een leuke, conflictvrije manier om je baby een naam te geven."
+            }
+        },
+        "stats": {
+            "delivery": "Dagen Levering",
+            "projects": "Projecten Geleverd",
+            "clients": "Tevreden Klanten",
+            "rating": "Gem. Beoordeling"
+        },
+        "reviews": {
+            "title": "Wat Onze Klanten Zeggen",
+            "subtitle": "100% vijfsterrenreviews op Fiverr en Upwork. Elk project geleverd met excellentie.",
+            "proofTitle": "Geverifieerde Reviews van Fiverr en Upwork",
+            "proofSubtitle": "Klik op een screenshot om het te vergroten. Dit zijn echte, onbewerkte reviews van onze klanten.",
+            "viewAllUpwork": "Bekijk alle reviews op Upwork",
+            "viewAllFiverr": "Bekijk alle reviews op Fiverr"
+        },
+        "cta": {
+            "title": "Klaar om Je Volgende AI-product te Lanceren?",
+            "subtitle": "Laten we jouw idee omzetten in realiteit met ons bewezen 15-dagenproces.",
+            "button": "Beginnen"
+        },
+        "faq": {
+            "title": "Veelgestelde Vragen",
+            "subtitle": "Alles wat je moet weten voordat we beginnen met bouwen.",
+            "q1": "Hoe lang duurt het om een app te bouwen?",
+            "a1": "Vaste levertijd van 15 dagen voor onze standaardpakketten.",
+            "q2": "Bouwen jullie native apps?",
+            "a2": "Ja, wij bouwen React Native-apps die compileren naar hoogwaardige native iOS- en Android-code.",
+            "q3": "Zijn er verborgen kosten?",
+            "a3": "Nee, wij werken met een vaste prijs. Wat we offreren, is precies wat je betaalt.",
+            "q4": "Regelen jullie de App Store-indiening?",
+            "a4": "Ja, wij regelen het volledige proces van ontwikkeling tot implementatie in de Apple App Store en Google Play Store."
+        },
+        "images": {
+            "logoAlt": "Ship AI Lab Logo - AI Ontwikkelbureau",
+            "tikonoteAlt": "TikoNote AI Studie-app",
+            "seenandfeelAlt": "SeenAndFeel AI Filmaanbevelings-app",
+            "namelyAlt": "Namely AI Babynamens-app"
+        },
+        "footer": {
+            "brand": "Ship AI Lab",
+            "copyright": "© 2024-2025 Ship AI Lab. Een merk van Ship AI Solutions, LLC.",
+            "address": "Ship AI Solutions, LLC · 30 N Gould St Ste R, Sheridan, WY 82801, USA",
+            "contact": "E-mail: contact@shipailab.com · Tel: 251-332-3311",
+            "privacyPolicy": "Privacybeleid",
+            "termsOfService": "Servicevoorwaarden"
+        }
+    },
+    "Navigation": {
+        "home": "Home",
+        "features": "Functies",
+        "pricing": "Prijzen",
+        "contact": "Contact"
+    },
+    "Common": {
+        "learnMore": "Meer informatie",
+        "getStarted": "Beginnen",
+        "bookCall": "Gesprek inplannen",
+        "viewMore": "Meer bekijken"
+    }
+}

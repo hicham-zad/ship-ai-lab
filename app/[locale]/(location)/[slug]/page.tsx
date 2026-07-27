@@ -1,28 +1,118 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowRight, Check, MapPin, Zap, Users, Clock, Sparkles, Brain } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, Check, MapPin, Zap, Users, Clock } from 'lucide-react';
 import locationsData from '@/data/locations';
+import { localizedSeoPages } from '@/data/localized-seo';
+import { gccCities } from '@/data/gcc-cities';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StructuredData from '@/components/StructuredData';
 import { generateLocationFAQs } from '@/lib/faq-generator';
+import GumroadLandingWithProjects from '@/components/GumroadStyleLanding';
 
-// Generate static paths for all locations
+// Generate static paths: location slugs + localized SEO slugs + GCC city slugs
 export async function generateStaticParams() {
-  return locationsData.map((location) => ({
+  const locationPaths = locationsData.map((location) => ({
     slug: location.slug,
   }));
+  const seoPaths = localizedSeoPages.map((p) => ({
+    slug: p.slug,
+  }));
+  const gccPaths = gccCities.map((c) => ({
+    slug: c.slug,
+  }));
+  return [...locationPaths, ...seoPaths, ...gccPaths];
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+
+  // --- GCC city metadata ---
+  const gccCity = gccCities.find((c) => c.slug === slug);
+  if (gccCity) {
+    const baseUrl = 'https://shipailab.com';
+    const pageUrl = `${baseUrl}/ar/${encodeURIComponent(slug)}`;
+    return {
+      metadataBase: new URL(baseUrl),
+      title: gccCity.seoTitle,
+      description: gccCity.seoDescription,
+      alternates: {
+        canonical: pageUrl,
+        languages: {
+          'ar': pageUrl,
+          'x-default': baseUrl,
+        },
+      },
+      openGraph: {
+        title: gccCity.seoTitle,
+        description: gccCity.seoDescription,
+        url: pageUrl,
+        siteName: 'Ship AI Lab',
+        locale: 'ar_SA',
+        type: 'website',
+        images: [{
+          url: 'https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png',
+          width: 1200,
+          height: 630,
+          alt: gccCity.seoTitle,
+        }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: gccCity.seoTitle,
+        description: gccCity.seoDescription,
+        images: ['https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png'],
+      },
+      robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large' as const, 'max-snippet': -1 } },
+    };
+  }
+
+  // --- Localized SEO page metadata ---
+  const seoPage = localizedSeoPages.find(
+    (p) => p.locale === locale && p.slug === slug
+  );
+  if (seoPage) {
+    const baseUrl = 'https://shipailab.com';
+    const pageUrl = `${baseUrl}/${locale}/${slug}`;
+    const languages: Record<string, string> = { 'x-default': baseUrl };
+    localizedSeoPages.forEach((p) => {
+      languages[p.locale] = `${baseUrl}/${p.locale}/${p.slug}`;
+    });
+    return {
+      metadataBase: new URL(baseUrl),
+      title: seoPage.seoTitle,
+      description: seoPage.seoDescription,
+      alternates: { canonical: pageUrl, languages },
+      openGraph: {
+        title: seoPage.seoTitle,
+        description: seoPage.seoDescription,
+        url: pageUrl,
+        siteName: 'Ship AI Lab',
+        locale,
+        type: 'website',
+        images: [{
+          url: 'https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png',
+          width: 1200,
+          height: 630,
+          alt: seoPage.seoTitle,
+        }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: seoPage.seoTitle,
+        description: seoPage.seoDescription,
+        images: ['https://res.cloudinary.com/dyovzofma/image/upload/v1762178102/Screenshot_2025-11-03_at_14.54.49_ugkbl8.png'],
+      },
+      robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large' as const, 'max-snippet': -1 } },
+    };
+  }
+
+  // --- Location page metadata ---
   const location = locationsData.find((l) => l.slug === slug);
-
   if (!location) return {};
-
   const url = `https://shipailab.com/${slug}`;
   const siteName = 'Ship AI Lab';
-
   const defaultKeywords = `AI development ${location.name}, AI app development, MVP development ${location.name}, AI agency ${location.name}, AI chatbot development, machine learning ${location.name}`;
   const keywords = location.keywords && location.keywords.length > 0 ? location.keywords.join(', ') : defaultKeywords;
 
@@ -56,7 +146,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: siteName,
       images: [
         {
-          url: 'https://shipailab.com/og-image.png',
+          url: `https://shipailab.com${location.image}`,
           width: 1200,
           height: 630,
           alt: `${location.name} AI Development Agency - Ship AI Lab`,
@@ -67,14 +157,108 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: 'summary_large_image',
       title: location.title,
       description: location.metaDescription,
-      images: ['https://shipailab.com/og-image.png'],
+      images: [`https://shipailab.com${location.image}`],
       creator: '@shipailab',
     },
   };
 }
 
-export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function LocationPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+
+  // --- Render GCC city page ---
+  const gccCity = gccCities.find((c) => c.slug === slug);
+  if (gccCity) {
+    const baseUrl = 'https://shipailab.com';
+    const pageUrl = `${baseUrl}/ar/${encodeURIComponent(slug)}`;
+
+    // LocalBusiness schema with city-specific data
+    const localBusinessSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      '@id': `${pageUrl}#business`,
+      name: `Ship AI Solutions - ${gccCity.cityName}`,
+      description: gccCity.seoDescription,
+      url: pageUrl,
+      areaServed: {
+        '@type': 'City',
+        name: gccCity.cityNameEn,
+        containedInPlace: {
+          '@type': 'Country',
+          name: gccCity.country,
+        },
+      },
+      serviceArea: { '@type': 'City', name: gccCity.cityNameEn },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '20' },
+      priceRange: '$$$',
+    };
+
+    // FAQPage schema with city-specific Arabic Q&As
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: gccCity.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    };
+
+    // Service schema
+    const serviceSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      serviceType: 'تطوير تطبيقات الذكاء الاصطناعي',
+      provider: { '@type': 'Organization', name: 'Ship AI Solutions' },
+      areaServed: { '@type': 'City', name: gccCity.cityNameEn },
+      availableLanguage: { '@type': 'Language', name: 'Arabic' },
+    };
+
+    // BreadcrumbList schema
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: `${baseUrl}/ar` },
+        { '@type': 'ListItem', position: 2, name: `تطوير الذكاء الاصطناعي في ${gccCity.cityName}`, item: pageUrl },
+      ],
+    };
+
+    return (
+      <>
+        <StructuredData data={[localBusinessSchema, faqSchema, serviceSchema, breadcrumbSchema]} />
+        <GumroadLandingWithProjects
+          heroTitle={gccCity.heroTitle}
+          heroHighlight={gccCity.heroHighlight}
+          heroSubtitle={gccCity.heroSubtitle}
+          ctaLabel={gccCity.ctaLabel}
+          ctaTitle={gccCity.ctaTitle}
+          introParagraph={gccCity.introParagraph}
+          faqOverride={gccCity.faqs}
+        />
+      </>
+    );
+  }
+
+  // --- Render localized SEO page ---
+  const seoPage = localizedSeoPages.find(
+    (p) => p.locale === locale && p.slug === slug
+  );
+  if (seoPage) {
+    return (
+      <GumroadLandingWithProjects
+        heroTitle={seoPage.heroTitle}
+        heroHighlight={seoPage.heroHighlight}
+        heroSubtitle={seoPage.heroSubtitle}
+        ctaLabel={seoPage.ctaLabel}
+        ctaSub={seoPage.ctaSub}
+        socialProof={seoPage.socialProof}
+        introParagraph={seoPage.introParagraph}
+      />
+    );
+  }
+
+  // --- Render location page ---
   const location = locationsData.find((l) => l.slug === slug);
 
   if (!location) {
@@ -184,17 +368,25 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       />
 
       <main className="min-h-screen bg-white">
-        {/* Hero Section */}
+
+        {/* Editorial Header Image — full-width blog-style banner at top */}
+        <div className="w-full">
+          <Image
+            src={location.image}
+            alt={`Ship AI Lab – AI App Development Agency in ${location.name}`}
+            width={1200}
+            height={630}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+
+        {/* Hero Section — below the image */}
         <div className="relative bg-gradient-to-br from-red-50 via-white to-blue-50 py-20">
           <div className="max-w-6xl mx-auto px-5">
             <Breadcrumbs items={breadcrumbItems} />
 
-            <div className="flex items-center gap-3 mb-6">
-              <MapPin className="w-10 h-10 text-gray-900" strokeWidth={2} />
-              <span className="text-2xl font-bold text-gray-900">{location.name}</span>
-            </div>
-
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 mt-6">
               {location.h1}
             </h1>
 
@@ -238,6 +430,33 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
 
+        {/* Intro Section */}
+        <div className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-5">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              Why {location.name}? Why Ship AI Lab?
+            </h2>
+            <p className="text-xl text-gray-700 leading-relaxed">
+              {location.intro}
+            </p>
+          </div>
+        </div>
+
+        {/* Highlights */}
+        <div className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-5">
+            <div className="grid md:grid-cols-3 gap-6">
+              {location.highlights.map((highlight, index) => (
+                <div key={index} className="bg-white border-2 border-black rounded-2xl p-6 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+                  <div className="text-4xl mb-4">{highlight.icon}</div>
+                  <h3 className="text-lg font-bold mb-2 text-gray-900">{highlight.title}</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">{highlight.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Our Services */}
         <div className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-5">
@@ -245,7 +464,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               What We Build in {location.name}
             </h2>
             <p className="text-xl text-gray-600 mb-12">
-              Full-stack AI app development services
+              Full-stack AI app development tailored to the {location.name} market
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -273,14 +492,14 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               Why Ship AI Lab?
             </h2>
             <p className="text-xl text-gray-600 mb-12">
-              Your trusted AI development partner in {location.name}
+              We don&apos;t just write code — we understand your market
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
               {location.whyUs.map((reason: string, index: number) => (
                 <div
                   key={index}
-                  className="border-2 border-gray-200 rounded-2xl p-6 hover:border-blue-200 transition-colors"
+                  className="border-2 border-gray-200 rounded-2xl p-6 hover:border-black transition-colors bg-white"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mt-1">
@@ -365,14 +584,14 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 <div className="w-16 h-16 bg-blue-200 border-2 border-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-blue-900">
                   2
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Design & Plan</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Design &amp; Plan</h3>
                 <p className="text-gray-700">Wireframes and feature planning (Days 1-3)</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-yellow-200 border-2 border-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-yellow-900">
                   3
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Build & Test</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Build &amp; Test</h3>
                 <p className="text-gray-700">Development with daily updates (Days 4-12)</p>
               </div>
               <div className="text-center">
@@ -406,15 +625,15 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <ul className="text-left space-y-3">
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-900">Full design & development</span>
+                  <span className="text-gray-900">Full design &amp; development</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-900">AI integration & testing</span>
+                  <span className="text-gray-900">AI integration &amp; testing</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-900">Deployment & hosting setup</span>
+                  <span className="text-gray-900">Deployment &amp; hosting setup</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -422,7 +641,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-900">Source code & documentation</span>
+                  <span className="text-gray-900">Source code &amp; documentation</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -489,7 +708,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </p>
           </div>
         </div>
-
 
       </main>
     </>
