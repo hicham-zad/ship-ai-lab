@@ -490,6 +490,13 @@ export default function GumroadLandingWithProjects({
             <a href="/terms-of-service" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">{t('footer.termsOfService')}</a>
           </div>
         </div>
+        
+        {/* DanielLaunches Badge */}
+        <div className="flex justify-center mt-12">
+          <a href="https://daniellaunches.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-opacity">
+            <img src="https://daniellaunches.com/badge-light.svg" alt="Featured on DanielLaunches" width="140" height="31" className="w-[140px] h-auto" />
+          </a>
+        </div>
       </footer>
     </main>
   );
