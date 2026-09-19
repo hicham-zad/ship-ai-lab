@@ -733,6 +733,7 @@ export default function SoberGirlPage() {
           <div className="sg-nav-links">
             <a href="#features" className="sg-nav-link">Features</a>
             <a href="#pricing" className="sg-nav-link">Pricing</a>
+            <a href="/sobergirl/support" className="sg-nav-link">Support</a>
             <a href="/sobergirl/privacy-policy" className="sg-nav-link">Privacy</a>
             <a href="/sobergirl/terms-of-service" className="sg-nav-link">Terms</a>
           </div>
