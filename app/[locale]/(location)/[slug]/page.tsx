@@ -1,4 +1,5 @@
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Check, MapPin, Zap, Users, Clock } from 'lucide-react';
@@ -10,18 +11,13 @@ import StructuredData from '@/components/StructuredData';
 import { generateLocationFAQs } from '@/lib/faq-generator';
 import GumroadLandingWithProjects from '@/components/GumroadStyleLanding';
 
-// Generate static paths: location slugs + localized SEO slugs + GCC city slugs
-export async function generateStaticParams() {
-  const locationPaths = locationsData.map((location) => ({
-    slug: location.slug,
-  }));
-  const seoPaths = localizedSeoPages.map((p) => ({
-    slug: p.slug,
-  }));
-  const gccPaths = gccCities.map((c) => ({
-    slug: c.slug,
-  }));
-  return [...locationPaths, ...seoPaths, ...gccPaths];
+// Generate static paths for valid locale/slug pairs only:
+// English location pages, one localized SEO page per locale, Arabic GCC city pages.
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
+  const { locale } = params;
+  if (locale === 'en') return locationsData.map((l) => ({ slug: l.slug }));
+  if (locale === 'ar') return gccCities.map((c) => ({ slug: c.slug }));
+  return localizedSeoPages.filter((p) => p.locale === locale).map((p) => ({ slug: p.slug }));
 }
 
 // Generate metadata for SEO
@@ -39,16 +35,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: gccCity.seoDescription,
       alternates: {
         canonical: pageUrl,
-        languages: {
-          'ar': pageUrl,
-          'x-default': baseUrl,
-        },
       },
       openGraph: {
         title: gccCity.seoTitle,
         description: gccCity.seoDescription,
         url: pageUrl,
-        siteName: 'Ship AI Lab',
+        siteName: 'ShipAI Lab',
         locale: 'ar_SA',
         type: 'website',
         images: [{
@@ -75,7 +67,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (seoPage) {
     const baseUrl = 'https://shipailab.com';
     const pageUrl = `${baseUrl}/${locale}/${slug}`;
-    const languages: Record<string, string> = { 'x-default': baseUrl };
+    const languages: Record<string, string> = {};
     localizedSeoPages.forEach((p) => {
       languages[p.locale] = `${baseUrl}/${p.locale}/${p.slug}`;
     });
@@ -88,7 +80,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: seoPage.seoTitle,
         description: seoPage.seoDescription,
         url: pageUrl,
-        siteName: 'Ship AI Lab',
+        siteName: 'ShipAI Lab',
         locale,
         type: 'website',
         images: [{
@@ -112,7 +104,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const location = locationsData.find((l) => l.slug === slug);
   if (!location) return {};
   const url = `https://shipailab.com/${slug}`;
-  const siteName = 'Ship AI Lab';
+  const siteName = 'ShipAI Lab';
   const defaultKeywords = `AI development ${location.name}, AI app development, MVP development ${location.name}, AI agency ${location.name}, AI chatbot development, machine learning ${location.name}`;
   const keywords = location.keywords && location.keywords.length > 0 ? location.keywords.join(', ') : defaultKeywords;
 
@@ -120,20 +112,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: location.title,
     description: location.metaDescription,
     keywords: keywords,
-    authors: [{ name: 'Ship AI Lab' }],
-    creator: 'Ship AI Lab',
-    publisher: 'Ship AI Lab',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+    authors: [{ name: 'ShipAI Lab' }],
     alternates: {
       canonical: url,
     },
@@ -149,7 +128,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
           url: `https://shipailab.com${location.image}`,
           width: 1200,
           height: 630,
-          alt: `${location.name} AI Development Agency - Ship AI Lab`,
+          alt: `${location.name} AI Development Agency - ShipAI Lab`,
         },
       ],
     },
@@ -158,59 +137,40 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: location.title,
       description: location.metaDescription,
       images: [`https://shipailab.com${location.image}`],
-      creator: '@shipailab',
     },
   };
 }
 
 export default async function LocationPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
 
   // --- Render GCC city page ---
   const gccCity = gccCities.find((c) => c.slug === slug);
   if (gccCity) {
+    // GCC city pages only exist in Arabic
+    if (locale !== 'ar') permanentRedirect(`/ar/${slug}`);
+
     const baseUrl = 'https://shipailab.com';
     const pageUrl = `${baseUrl}/ar/${encodeURIComponent(slug)}`;
 
-    // LocalBusiness schema with city-specific data
-    const localBusinessSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      '@id': `${pageUrl}#business`,
-      name: `Ship AI Solutions - ${gccCity.cityName}`,
-      description: gccCity.seoDescription,
-      url: pageUrl,
-      areaServed: {
-        '@type': 'City',
-        name: gccCity.cityNameEn,
-        containedInPlace: {
-          '@type': 'Country',
-          name: gccCity.country,
-        },
-      },
-      serviceArea: { '@type': 'City', name: gccCity.cityNameEn },
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '20' },
-      priceRange: '$$$',
-    };
-
-    // FAQPage schema with city-specific Arabic Q&As
-    const faqSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: gccCity.faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-      })),
-    };
+    // FAQPage schema is emitted by GumroadLandingWithProjects from faqOverride
 
     // Service schema
     const serviceSchema = {
       '@context': 'https://schema.org',
       '@type': 'Service',
+      '@id': `${pageUrl}#service`,
+      name: gccCity.seoTitle,
+      description: gccCity.seoDescription,
+      url: pageUrl,
       serviceType: 'تطوير تطبيقات الذكاء الاصطناعي',
-      provider: { '@type': 'Organization', name: 'Ship AI Solutions' },
-      areaServed: { '@type': 'City', name: gccCity.cityNameEn },
+      provider: { '@type': 'Organization', name: 'ShipAI Lab', url: baseUrl },
+      areaServed: {
+        '@type': 'City',
+        name: gccCity.cityNameEn,
+        containedInPlace: { '@type': 'Country', name: gccCity.country },
+      },
       availableLanguage: { '@type': 'Language', name: 'Arabic' },
     };
 
@@ -226,7 +186,7 @@ export default async function LocationPage({ params }: { params: Promise<{ local
 
     return (
       <>
-        <StructuredData data={[localBusinessSchema, faqSchema, serviceSchema, breadcrumbSchema]} />
+        <StructuredData data={[serviceSchema, breadcrumbSchema]} />
         <GumroadLandingWithProjects
           heroTitle={gccCity.heroTitle}
           heroHighlight={gccCity.heroHighlight}
@@ -258,6 +218,10 @@ export default async function LocationPage({ params }: { params: Promise<{ local
     );
   }
 
+  // Localized SEO slug requested under the wrong locale -> send to its own locale
+  const seoPageOtherLocale = localizedSeoPages.find((p) => p.slug === slug);
+  if (seoPageOtherLocale) permanentRedirect(`/${seoPageOtherLocale.locale}/${slug}`);
+
   // --- Render location page ---
   const location = locationsData.find((l) => l.slug === slug);
 
@@ -265,31 +229,10 @@ export default async function LocationPage({ params }: { params: Promise<{ local
     notFound();
   }
 
-  // JSON-LD Structured Data for SEO
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': `https://shipailab.com/${slug}#business`,
-    name: `Ship AI Lab - ${location.name}`,
-    description: location.metaDescription,
-    url: `https://shipailab.com/${slug}`,
-    telephone: '+1-XXX-XXX-XXXX',
-    priceRange: location.startingPrice,
-    areaServed: {
-      '@type': 'City',
-      name: location.name,
-    },
-    serviceArea: {
-      '@type': 'City',
-      name: location.name,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-    },
-  };
+  // Location pages are English-only. Other locale prefixes still render (canonical points to
+  // the English URL) — redirecting would loop with next-intl's Accept-Language detection.
 
+  // JSON-LD Structured Data for SEO
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -328,10 +271,15 @@ export default async function LocationPage({ params }: { params: Promise<{ local
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `https://shipailab.com/${slug}#service`,
+    name: location.title,
+    description: location.metaDescription,
+    url: `https://shipailab.com/${slug}`,
     serviceType: 'AI App Development',
     provider: {
       '@type': 'Organization',
-      name: 'Ship AI Lab',
+      name: 'ShipAI Lab',
+      url: 'https://shipailab.com',
     },
     areaServed: {
       '@type': 'City',
@@ -360,7 +308,6 @@ export default async function LocationPage({ params }: { params: Promise<{ local
       {/* JSON-LD Structured Data */}
       <StructuredData
         data={[
-          localBusinessSchema,
           breadcrumbSchema,
           faqSchema,
           serviceSchema,
@@ -405,7 +352,7 @@ export default async function LocationPage({ params }: { params: Promise<{ local
                 <ArrowRight className="w-5 h-5" />
               </a>
               <Link
-                href="/#projects"
+                href="/#work"
                 className="px-8 py-4 bg-white border-2 border-black rounded-full font-semibold text-gray-900 hover:bg-black hover:text-white transition-all inline-flex items-center gap-2"
               >
                 View Our Work

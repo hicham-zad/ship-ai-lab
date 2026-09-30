@@ -28,7 +28,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Dubai',
     country: 'الإمارات العربية المتحدة',
     countryCode: 'AE',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في دبي | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في دبي | ShipAI Lab',
     seoDescription:
       'وكالة متخصصة في تطوير تطبيقات الذكاء الاصطناعي في دبي — SaaS وتطبيقات الجوال ومواقع الويب. من الفكرة إلى الإطلاق في 15 يوماً.',
     heroTitle: 'تطوير الذكاء الاصطناعي',
@@ -70,7 +70,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Riyadh',
     country: 'المملكة العربية السعودية',
     countryCode: 'SA',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في الرياض | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في الرياض | ShipAI Lab',
     seoDescription:
       'وكالة تطوير ذكاء اصطناعي في الرياض — SaaS وتطبيقات الجوال لرواد الأعمال والشركات السعودية. من الفكرة إلى الإطلاق في 15 يوماً.',
     heroTitle: 'تطوير الذكاء الاصطناعي',
@@ -112,7 +112,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Abu Dhabi',
     country: 'الإمارات العربية المتحدة',
     countryCode: 'AE',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في أبوظبي | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في أبوظبي | ShipAI Lab',
     seoDescription:
       'وكالة ذكاء اصطناعي في أبوظبي تبني SaaS وتطبيقات الجوال ومواقع الويب — تسليم في 15 يوماً بسعر ثابت لرواد الأعمال والمؤسسات.',
     heroTitle: 'تطوير الذكاء الاصطناعي',
@@ -154,7 +154,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Jeddah',
     country: 'المملكة العربية السعودية',
     countryCode: 'SA',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في جدة | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في جدة | ShipAI Lab',
     seoDescription:
       'وكالة ذكاء اصطناعي في جدة — نبني SaaS وتطبيقات الجوال ومواقع الويب لرواد الأعمال السعوديين. تسليم في 15 يوماً بسعر ثابت.',
     heroTitle: 'تطوير الذكاء الاصطناعي',
@@ -196,7 +196,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Doha',
     country: 'قطر',
     countryCode: 'QA',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في الدوحة | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في الدوحة | ShipAI Lab',
     seoDescription:
       'وكالة ذكاء اصطناعي في الدوحة — SaaS وتطبيقات الجوال ومواقع الويب لرواد الأعمال والمؤسسات القطرية. تسليم في 15 يوماً.',
     heroTitle: 'تطوير الذكاء الاصطناعي',
@@ -238,7 +238,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Kuwait City',
     country: 'الكويت',
     countryCode: 'KW',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في الكويت | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في الكويت | ShipAI Lab',
     seoDescription:
       'وكالة ذكاء اصطناعي في الكويت — نبني SaaS وتطبيقات الجوال لرواد الأعمال والمؤسسات الكويتية. تسليم في 15 يوماً بسعر ثابت.',
     heroTitle: 'تطوير الذكاء الاصطناعي',
@@ -280,7 +280,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Manama',
     country: 'البحرين',
     countryCode: 'BH',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في المنامة | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في المنامة | ShipAI Lab',
     seoDescription:
       'وكالة ذكاء اصطناعي في المنامة — نبني SaaS وتطبيقات الجوال للشركات البحرينية والخليجية. تسليم في 15 يوماً بسعر ثابت.',
     heroTitle: 'تطوير الذكاء الاصطناعي',
@@ -322,7 +322,7 @@ export const gccCities: GCCCity[] = [
     cityNameEn: 'Muscat',
     country: 'سلطنة عُمان',
     countryCode: 'OM',
-    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في مسقط | Ship AI Solutions',
+    seoTitle: 'تطوير تطبيقات الذكاء الاصطناعي في مسقط | ShipAI Lab',
     seoDescription:
       'وكالة ذكاء اصطناعي في مسقط — نبني SaaS وتطبيقات الجوال ومواقع الويب للمؤسسين والشركات العُمانية. تسليم في 15 يوماً.',
     heroTitle: 'تطوير الذكاء الاصطناعي',

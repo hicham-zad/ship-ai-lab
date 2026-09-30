@@ -118,5 +118,9 @@
         "getStarted": "Empezar",
         "bookCall": "Reservar llamada",
         "viewMore": "Ver más"
+    },
+    "Metadata": {
+        "title": "Agencia de Desarrollo de Apps con IA | Lista en 15 Días | ShipAI Lab",
+        "description": "¿Tienes una idea de app con IA? La construimos en 15 días. SaaS, apps iOS y Android con IA. Precio fijo. Sin retrasos."
     }
 }

@@ -19,7 +19,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'fr',
     slug: 'agence-developpement-ia',
-    seoTitle: 'Agence Développement IA | SaaS & Apps — Ship AI Solutions',
+    seoTitle: 'Agence Développement IA | SaaS & Apps — ShipAI Lab',
     seoDescription:
       "Agence IA spécialisée SaaS, apps mobiles et sites web. De la stratégie au lancement pour fondateurs et entreprises — en quelques semaines.",
     heroTitle: 'Nous créons des produits IA.',
@@ -37,7 +37,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'es',
     slug: 'agencia-desarrollo-ia',
-    seoTitle: 'Agencia Desarrollo IA | SaaS & Apps — Ship AI Solutions',
+    seoTitle: 'Agencia Desarrollo IA | SaaS & Apps — ShipAI Lab',
     seoDescription:
       'Agencia IA para SaaS, apps móviles y sitios web. Del concepto al lanzamiento en semanas para fundadores y empresas que quieren moverse rápido.',
     heroTitle: 'Creamos productos de IA.',
@@ -55,7 +55,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'de',
     slug: 'ki-entwicklungsagentur',
-    seoTitle: 'KI-Entwicklungsagentur | SaaS & Apps — Ship AI Solutions',
+    seoTitle: 'KI-Entwicklungsagentur | SaaS & Apps — ShipAI Lab',
     seoDescription:
       'KI-Agentur für SaaS, Apps und Webentwicklung. Von der Strategie bis zum Launch in wenigen Wochen — für Gründer und Unternehmen weltweit.',
     heroTitle: 'Wir entwickeln KI-Produkte.',
@@ -73,7 +73,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'pt',
     slug: 'agencia-desenvolvimento-ia',
-    seoTitle: 'Agência Desenvolvimento IA | SaaS & Apps — Ship AI Solutions',
+    seoTitle: 'Agência Desenvolvimento IA | SaaS & Apps — ShipAI Lab',
     seoDescription:
       'Agência IA para SaaS, apps móveis e sites. Da estratégia ao lançamento em semanas para fundadores e empresas que precisam agir rápido.',
     heroTitle: 'Criamos produtos de IA.',
@@ -91,7 +91,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'it',
     slug: 'agenzia-sviluppo-ia',
-    seoTitle: 'Agenzia Sviluppo IA | SaaS & App — Ship AI Solutions',
+    seoTitle: 'Agenzia Sviluppo IA | SaaS & App — ShipAI Lab',
     seoDescription:
       'Agenzia IA specializzata in SaaS, app mobile e siti web. Dalla strategia al lancio in poche settimane per founder e aziende che vogliono muoversi veloce.',
     heroTitle: 'Creiamo prodotti IA.',
@@ -109,7 +109,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'nl',
     slug: 'ai-ontwikkelbureau',
-    seoTitle: 'AI Ontwikkelbureau | SaaS & Apps — Ship AI Solutions',
+    seoTitle: 'AI Ontwikkelbureau | SaaS & Apps — ShipAI Lab',
     seoDescription:
       'Gespecialiseerd AI-bureau voor SaaS, mobiele apps en websites. Van strategie tot lancering in enkele weken voor founders en bedrijven.',
     heroTitle: 'Wij bouwen AI-producten.',
@@ -127,7 +127,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'ru',
     slug: 'agentstvo-razrabotki-ii',
-    seoTitle: 'Агентство разработки ИИ | SaaS & Apps — Ship AI Solutions',
+    seoTitle: 'Агентство разработки ИИ | SaaS & Apps — ShipAI Lab',
     seoDescription:
       'ИИ-агентство для SaaS, мобильных приложений и сайтов. От стратегии до запуска за несколько недель — для стартапов и компаний.',
     heroTitle: 'Создаём AI-продукты.',
@@ -145,7 +145,7 @@ export const localizedSeoPages: LocalizedSeoPage[] = [
   {
     locale: 'ja',
     slug: 'ai-kaihatsu-agency',
-    seoTitle: 'AI開発エージェンシー | SaaS・アプリ・Web — Ship AI Solutions',
+    seoTitle: 'AI開発エージェンシー | SaaS・アプリ・Web — ShipAI Lab',
     seoDescription:
       'AIを活用したSaaS・モバイルアプリ・Webサービスを開発。戦略からローンチまで数週間で実現する、創業者・企業向けのAI開発会社です。',
     heroTitle: 'AIプロダクトを開発します。',

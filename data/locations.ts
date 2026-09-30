@@ -29,7 +29,7 @@ const locations: Location[] = [
   {
     slug: "ai-mvp-agency-in-lagos",
     name: "Lagos",
-    title: "AI App Development Agency in Lagos | Ship AI Lab",
+    title: "AI App Development Agency in Lagos | ShipAI Lab",
     metaDescription: "Lagos AI development agency for Nigerian startups. Build fintech and mobile MVPs in 15 days in Africa's tech capital. Paystack & mobile-first integrations included.",
     h1: "AI MVP Agency in Lagos",
     subtitle: "Build Fintech and Mobile AI Apps in West Africa's Fastest-Growing Tech Hub.",
@@ -80,7 +80,7 @@ const locations: Location[] = [
   {
     slug: "ai-mvp-agency-in-tel-aviv",
     name: "Tel Aviv",
-    title: "AI App Development Agency in Tel Aviv | Ship AI Lab",
+    title: "AI App Development Agency in Tel Aviv | ShipAI Lab",
     metaDescription: "Tel Aviv AI development agency for Israeli startups. Build security-first MVPs and enterprise AI tools in 15 days. Trusted by Startup Nation founders.",
     h1: "AI Development Agency in Tel Aviv",
     subtitle: "Build Innovative AI Apps at the Speed of Startup Nation.",
@@ -131,7 +131,7 @@ const locations: Location[] = [
   {
     slug: "ai-mvp-agency-in-philadelphia",
     name: "Philadelphia",
-    title: "AI App Development Agency in Philadelphia | Ship AI Lab",
+    title: "AI App Development Agency in Philadelphia | ShipAI Lab",
     metaDescription: "Philadelphia AI development agency building healthcare and biotech MVPs. HIPAA-aware architecture, 15-day delivery, fixed pricing. Trusted by Philly founders.",
     h1: "AI Development Agency in Philadelphia",
     subtitle: "Build Healthcare and Fintech AI Products with a Team That Knows the East Coast Ecosystem.",
@@ -182,7 +182,7 @@ const locations: Location[] = [
   {
     slug: "ai-mvp-agency-in-bangalore",
     name: "Bangalore",
-    title: "AI App Development Agency in Bangalore | Ship AI Lab",
+    title: "AI App Development Agency in Bangalore | ShipAI Lab",
     metaDescription: "Bangalore AI development agency for Indian startups. SaaS MVPs and enterprise AI tools in 15 days. Starting at ₹6,50,000. India's Silicon Valley deserves top-tier builds.",
     h1: "AI Development Agency in Bangalore",
     subtitle: "Build World-Class AI Products in India's Silicon Valley.",
@@ -233,7 +233,7 @@ const locations: Location[] = [
   {
     slug: "ai-mvp-agency-in-kuwait-city",
     name: "Kuwait City",
-    title: "AI App Development Agency in Kuwait | Ship AI Lab",
+    title: "AI App Development Agency in Kuwait | ShipAI Lab",
     metaDescription: "Kuwait AI development agency for fintech, oil & gas, and government digital transformation. GCC regulatory expertise, Arabic support, 15-day delivery. Book a free call.",
     h1: "AI Development Agency in Kuwait City",
     subtitle: "Build Enterprise AI Apps for Kuwait's Financial and Energy Sectors.",

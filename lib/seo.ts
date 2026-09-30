@@ -192,14 +192,22 @@ export function getCanonicalUrl(path: string): string {
 }
 
 /**
- * Generate alternate language links (if needed in future)
+ * Absolute URL for a path in a given locale (English has no prefix, per localePrefix: 'as-needed')
  */
-export function generateAlternateLinks(path: string, locales: string[]) {
-  return locales.map((locale) => ({
-    rel: 'alternate',
-    hreflang: locale,
-    href: `${SITE_URL}/${locale}${path}`,
-  }));
+export function getLocalizedUrl(locale: string, path: string = ''): string {
+  return locale === 'en' ? `${SITE_URL}${path}` : `${SITE_URL}/${locale}${path}`;
+}
+
+/**
+ * hreflang map for a page that exists in every locale (e.g. the homepage)
+ */
+export function generateLanguageAlternates(locales: readonly string[], path: string = '') {
+  const languages: Record<string, string> = {};
+  locales.forEach((locale) => {
+    languages[locale] = getLocalizedUrl(locale, path);
+  });
+  languages['x-default'] = getLocalizedUrl('en', path);
+  return languages;
 }
 
 /**

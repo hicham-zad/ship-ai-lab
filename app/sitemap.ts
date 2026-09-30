@@ -3,49 +3,70 @@ import locations from '@/data/locations';
 import { localizedSeoPages } from '@/data/localized-seo';
 import { gccCities } from '@/data/gcc-cities';
 import { routing } from '@/i18n/routing';
+import { generateLanguageAlternates, getLocalizedUrl } from '@/lib/seo';
 
+// Only canonical URLs belong here. English-only pages (legal, app pages, location pages)
+// also render under other locale prefixes, but those canonicalize to the English URL.
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://shipailab.com';
-    const locales = routing.locales;
+    const lastModified = new Date('2026-09-30');
 
-    // Helper function to create URLs for all locales (or specific ones)
-    const createUrls = (path: string, priority: number = 0.8, specificLocale?: string) => {
-        const targetLocales = specificLocale ? [specificLocale] : locales;
-        return targetLocales.map((locale) => ({
-            url: locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`,
-            lastModified: new Date().toISOString(),
-            changeFrequency: 'weekly' as const,
-            priority,
-        }));
-    };
+    // 1. Homepage — translated in every locale, with hreflang alternates
+    const homeRoutes = routing.locales.map((locale) => ({
+        url: getLocalizedUrl(locale),
+        lastModified,
+        changeFrequency: 'weekly' as const,
+        priority: 1.0,
+        alternates: { languages: generateLanguageAlternates(routing.locales) },
+    }));
 
-    // 1. Static routes (all locales)
-    const staticRoutes = [
-        { path: '', priority: 1.0 },
-        { path: '/privacy-policy', priority: 0.8 },
-        { path: '/terms-of-service', priority: 0.8 },
-    ].flatMap(({ path, priority }) => createUrls(path, priority));
+    // 2. English-only pages
+    const englishRoutes = [
+        { path: '/sobergirl', priority: 0.7 },
+        { path: '/pendra', priority: 0.7 },
+        { path: '/privacy-policy', priority: 0.3 },
+        { path: '/terms-of-service', priority: 0.3 },
+        { path: '/sobergirl/support', priority: 0.3 },
+        { path: '/sobergirl/privacy-policy', priority: 0.2 },
+        { path: '/sobergirl/terms-of-service', priority: 0.2 },
+        { path: '/pendra/support', priority: 0.3 },
+        { path: '/pendra/privacy-policy', priority: 0.2 },
+        { path: '/pendra/terms-of-service', priority: 0.2 },
+    ].map(({ path, priority }) => ({
+        url: `${baseUrl}${path}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority,
+    }));
 
-    // 2. Location routes (all locales)
-    const locationRoutes = locations.flatMap((location) =>
-        createUrls(`/${location.slug}`, 0.8)
-    );
+    // 3. Location pages (English only)
+    const locationRoutes = locations.map((location) => ({
+        url: `${baseUrl}/${location.slug}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }));
 
-    // 3. Localized SEO pages (specific locale per page)
+    // 4. Localized SEO pages (one per locale, linked to each other via hreflang)
+    const seoLanguages: Record<string, string> = {};
+    localizedSeoPages.forEach((p) => {
+        seoLanguages[p.locale] = `${baseUrl}/${p.locale}/${p.slug}`;
+    });
     const seoRoutes = localizedSeoPages.map((page) => ({
         url: `${baseUrl}/${page.locale}/${page.slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'weekly' as const,
+        lastModified,
+        changeFrequency: 'monthly' as const,
         priority: 0.9,
+        alternates: { languages: seoLanguages },
     }));
 
-    // 4. GCC Arabic City pages (Arabic locale only)
+    // 5. GCC Arabic city pages (Arabic locale only)
     const gccRoutes = gccCities.map((city) => ({
         url: `${baseUrl}/ar/${city.slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'weekly' as const,
+        lastModified,
+        changeFrequency: 'monthly' as const,
         priority: 0.9,
     }));
 
-    return [...staticRoutes, ...locationRoutes, ...seoRoutes, ...gccRoutes];
+    return [...homeRoutes, ...englishRoutes, ...locationRoutes, ...seoRoutes, ...gccRoutes];
 }

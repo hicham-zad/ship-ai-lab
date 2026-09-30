@@ -7,6 +7,22 @@ import ClientReviews from './ClientReviews';
 import ReviewSchema from './ReviewSchema';
 import StructuredData from './StructuredData';
 import { generateFAQSchema, generateImageSchema } from '@/lib/seo';
+import locations from '@/data/locations';
+import { localizedSeoPages } from '@/data/localized-seo';
+import { gccCities } from '@/data/gcc-cities';
+
+// Crawlable links to the city / localized landing pages for the current locale
+function getLocalPageLinks(locale: string) {
+  if (locale === 'en') {
+    return locations.map((l) => ({ href: `/${l.slug}`, label: `AI App Development in ${l.name}` }));
+  }
+  if (locale === 'ar') {
+    return gccCities.map((c) => ({ href: `/ar/${c.slug}`, label: `تطوير تطبيقات الذكاء الاصطناعي في ${c.cityName}` }));
+  }
+  return localizedSeoPages
+    .filter((p) => p.locale === locale)
+    .map((p) => ({ href: `/${p.locale}/${p.slug}`, label: p.seoTitle.split(/ [|—] /)[0] }));
+}
 
 type Props = {
   heroTitle?: string;
@@ -47,10 +63,10 @@ export default function GumroadLandingWithProjects({
 
   const schemas = [
     generateFAQSchema(faqs),
-    generateImageSchema({ url: '/logoooo.png', caption: 'Ship AI Lab Logo' }),
-    generateImageSchema({ url: '/logo-tikonote.png', caption: 'TikoNote AI Study App built by Ship AI Solutions' }),
-    generateImageSchema({ url: '/seenandfeel-logo.png', caption: 'SeenAndFeel AI Movie Recommendation App built by Ship AI Solutions' }),
-    generateImageSchema({ url: '/namely-logo.png', caption: 'Namely AI Baby Naming App built by Ship AI Solutions' })
+    generateImageSchema({ url: '/logoooo.png', caption: 'ShipAI Lab Logo' }),
+    generateImageSchema({ url: '/logo-tikonote.png', caption: 'TikoNote AI Study App built by ShipAI Lab' }),
+    generateImageSchema({ url: '/seenandfeel-logo.png', caption: 'SeenAndFeel AI Movie Recommendation App built by ShipAI Lab' }),
+    generateImageSchema({ url: '/namely-logo.png', caption: 'Namely AI Baby Naming App built by ShipAI Lab' })
   ];
 
   return (
@@ -485,7 +501,14 @@ export default function GumroadLandingWithProjects({
             <p className="text-xs text-gray-400">{t('footer.address')}</p>
             <p className="text-xs text-gray-400">{t('footer.contact')}</p>
           </div>
+          <nav aria-label="Locations" className="flex flex-col gap-2 items-center md:items-start">
+            {getLocalPageLinks(locale).map((link) => (
+              <a key={link.href} href={link.href} className="text-xs text-gray-500 hover:text-black transition-colors">{link.label}</a>
+            ))}
+          </nav>
           <div className="flex flex-col gap-3 md:items-end items-center">
+            <a href="/sobergirl" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">Sober Girl</a>
+            <a href="/pendra" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">Pendra</a>
             <a href="/privacy-policy" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">{t('footer.privacyPolicy')}</a>
             <a href="/terms-of-service" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">{t('footer.termsOfService')}</a>
           </div>
