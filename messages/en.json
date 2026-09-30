@@ -122,5 +122,70 @@
     "Metadata": {
         "title": "AI App Development Agency | Built in 15 Days | ShipAI Lab",
         "description": "Got an AI app idea? We build it in 15 days. AI-powered SaaS, iOS, and Android apps. One fixed price. No delays."
+    },
+    "Guide": {
+        "title": "How a 15-day build works",
+        "subtitle": "Fixed scope, fixed price, and a working product you can put in front of real users in two weeks.",
+        "steps": [
+            {
+                "days": "Before day 1",
+                "title": "Discovery call",
+                "body": "A free 30-minute call to understand your idea, your users and what the first version must do. We agree the scope and the price before any work starts."
+            },
+            {
+                "days": "Days 1–3",
+                "title": "Design & plan",
+                "body": "Wireframes, user flows and a feature list. You review and approve the design before we write production code."
+            },
+            {
+                "days": "Days 4–12",
+                "title": "Build & test",
+                "body": "We build the app with daily progress updates, integrate the AI features and test on real devices."
+            },
+            {
+                "days": "Days 13–15",
+                "title": "Launch",
+                "body": "We deploy the product, submit it to the App Store and Google Play, and hand over the source code and documentation."
+            }
+        ],
+        "includedTitle": "Included in every project",
+        "included": [
+            "Design and full-stack development",
+            "AI integration with GPT, Claude or custom models",
+            "Testing on real devices",
+            "Deployment and App Store / Google Play submission",
+            "Source code and documentation",
+            "30 days of post-launch support"
+        ],
+        "whoTitle": "Who we build for",
+        "who": "Founders validating an MVP, startups adding AI features to an existing product, and businesses that want to automate a workflow with AI. If you need a long-running platform built by a large team, we are probably not the right fit — we specialise in getting a focused first version live quickly.",
+        "stackTitle": "Technology we use",
+        "stack": "React Native for iOS and Android, Next.js for web apps and dashboards, and OpenAI and Claude models for AI features, including retrieval-augmented generation (RAG) over your own data. We pick the simplest stack that will scale with your product.",
+        "faqs": [
+            {
+                "question": "What do I need to prepare before the discovery call?",
+                "answer": "A rough description of the problem you are solving and who it is for. Sketches, competitor examples or existing documents help, but they are not required — we shape the scope together on the call."
+            },
+            {
+                "question": "Who owns the code?",
+                "answer": "At launch you receive the full source code and documentation, so you are free to continue with us, with another team, or on your own."
+            },
+            {
+                "question": "Can you add AI features to an app I already have?",
+                "answer": "Yes. We can add AI features such as chat, search over your documents, summaries or automation to an existing web or mobile product, as well as build new products from scratch."
+            },
+            {
+                "question": "Which AI models do you use?",
+                "answer": "Mainly OpenAI and Claude models, chosen per feature based on quality, speed and cost. We can also build retrieval pipelines (RAG) so the AI answers from your own data."
+            },
+            {
+                "question": "What happens after launch?",
+                "answer": "Every project includes 30 days of post-launch support. After that you can keep working with us on new features or run the product yourself."
+            },
+            {
+                "question": "Is 15 days realistic for any app?",
+                "answer": "It is realistic for a focused first version — the core features that let you test your idea with real users. Larger scopes take longer, and we will tell you honestly on the discovery call which category your project falls into."
+            }
+        ]
     }
 }

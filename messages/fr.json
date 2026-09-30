@@ -122,5 +122,70 @@
     "Metadata": {
         "title": "Agence de Développement d'Apps IA | Livrée en 15 Jours | ShipAI Lab",
         "description": "Une idée d'application IA ? Nous la développons en 15 jours. SaaS, apps iOS et Android propulsées par l'IA. Prix fixe. Sans retard."
+    },
+    "Guide": {
+        "title": "Comment se déroule un projet de 15 jours",
+        "subtitle": "Périmètre défini, prix fixe et un produit fonctionnel à présenter à de vrais utilisateurs en deux semaines.",
+        "steps": [
+            {
+                "days": "Avant le jour 1",
+                "title": "Appel de découverte",
+                "body": "Un appel gratuit de 30 minutes pour comprendre votre idée, vos utilisateurs et ce que la première version doit faire. Nous convenons du périmètre et du prix avant de commencer."
+            },
+            {
+                "days": "Jours 1–3",
+                "title": "Design et planification",
+                "body": "Maquettes, parcours utilisateurs et liste de fonctionnalités. Vous validez le design avant que nous écrivions du code de production."
+            },
+            {
+                "days": "Jours 4–12",
+                "title": "Développement et tests",
+                "body": "Nous développons l'application avec des points d'avancement quotidiens, intégrons les fonctions d'IA et testons sur de vrais appareils."
+            },
+            {
+                "days": "Jours 13–15",
+                "title": "Lancement",
+                "body": "Nous déployons le produit, le soumettons à l'App Store et à Google Play, et vous remettons le code source et la documentation."
+            }
+        ],
+        "includedTitle": "Inclus dans chaque projet",
+        "included": [
+            "Design et développement full-stack",
+            "Intégration d'IA avec GPT, Claude ou des modèles sur mesure",
+            "Tests sur de vrais appareils",
+            "Déploiement et soumission App Store / Google Play",
+            "Code source et documentation",
+            "30 jours de support après le lancement"
+        ],
+        "whoTitle": "Pour qui nous construisons",
+        "who": "Des fondateurs qui valident un MVP, des startups qui ajoutent de l'IA à un produit existant et des entreprises qui veulent automatiser un processus grâce à l'IA. Si vous avez besoin d'une plateforme de long terme développée par une grande équipe, nous ne sommes sans doute pas le bon choix : nous sommes spécialisés dans la mise en ligne rapide d'une première version ciblée.",
+        "stackTitle": "Technologies utilisées",
+        "stack": "React Native pour iOS et Android, Next.js pour les applications web et les tableaux de bord, et les modèles OpenAI et Claude pour les fonctions d'IA, y compris la génération augmentée par récupération (RAG) sur vos propres données. Nous choisissons la pile la plus simple qui pourra évoluer avec votre produit.",
+        "faqs": [
+            {
+                "question": "Que dois-je préparer avant l'appel de découverte ?",
+                "answer": "Une description approximative du problème que vous résolvez et des personnes concernées. Croquis, exemples de concurrents ou documents existants aident, mais ne sont pas obligatoires : nous définissons le périmètre ensemble pendant l'appel."
+            },
+            {
+                "question": "À qui appartient le code ?",
+                "answer": "Au lancement, vous recevez le code source complet et la documentation : vous êtes libre de continuer avec nous, avec une autre équipe ou seul."
+            },
+            {
+                "question": "Pouvez-vous ajouter de l'IA à une application existante ?",
+                "answer": "Oui. Nous pouvons ajouter des fonctions d'IA (chat, recherche dans vos documents, résumés, automatisation) à un produit web ou mobile existant, ou créer de nouveaux produits de zéro."
+            },
+            {
+                "question": "Quels modèles d'IA utilisez-vous ?",
+                "answer": "Principalement des modèles OpenAI et Claude, choisis fonction par fonction selon la qualité, la vitesse et le coût. Nous pouvons aussi construire des pipelines de récupération (RAG) pour que l'IA réponde à partir de vos propres données."
+            },
+            {
+                "question": "Que se passe-t-il après le lancement ?",
+                "answer": "Chaque projet inclut 30 jours de support après le lancement. Ensuite, vous pouvez continuer avec nous sur de nouvelles fonctions ou gérer le produit vous-même."
+            },
+            {
+                "question": "15 jours, est-ce réaliste pour n'importe quelle application ?",
+                "answer": "C'est réaliste pour une première version ciblée : les fonctions essentielles qui permettent de tester votre idée avec de vrais utilisateurs. Les périmètres plus larges demandent plus de temps, et nous vous dirons honnêtement lors de l'appel dans quelle catégorie se situe votre projet."
+            }
+        ]
     }
 }

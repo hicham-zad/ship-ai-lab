@@ -122,5 +122,70 @@
     "Metadata": {
         "title": "KI-App-Entwicklungsagentur | Fertig in 15 Tagen | ShipAI Lab",
         "description": "Sie haben eine KI-App-Idee? Wir bauen sie in 15 Tagen. KI-gestützte SaaS-, iOS- und Android-Apps. Festpreis. Keine Verzögerungen."
+    },
+    "Guide": {
+        "title": "So läuft ein 15-Tage-Projekt ab",
+        "subtitle": "Fester Umfang, Festpreis und ein funktionierendes Produkt, das Sie in zwei Wochen echten Nutzern zeigen können.",
+        "steps": [
+            {
+                "days": "Vor Tag 1",
+                "title": "Kennenlerngespräch",
+                "body": "Ein kostenloses 30-Minuten-Gespräch, um Ihre Idee, Ihre Nutzer und die Anforderungen der ersten Version zu verstehen. Umfang und Preis legen wir fest, bevor die Arbeit beginnt."
+            },
+            {
+                "days": "Tag 1–3",
+                "title": "Design & Planung",
+                "body": "Wireframes, User Flows und Funktionsliste. Sie prüfen und genehmigen das Design, bevor wir Produktionscode schreiben."
+            },
+            {
+                "days": "Tag 4–12",
+                "title": "Entwicklung & Tests",
+                "body": "Wir entwickeln die App mit täglichen Fortschrittsupdates, integrieren die KI-Funktionen und testen auf echten Geräten."
+            },
+            {
+                "days": "Tag 13–15",
+                "title": "Launch",
+                "body": "Wir veröffentlichen das Produkt, reichen es im App Store und bei Google Play ein und übergeben Quellcode und Dokumentation."
+            }
+        ],
+        "includedTitle": "In jedem Projekt enthalten",
+        "included": [
+            "Design und Full-Stack-Entwicklung",
+            "KI-Integration mit GPT, Claude oder eigenen Modellen",
+            "Tests auf echten Geräten",
+            "Bereitstellung und Einreichung im App Store / bei Google Play",
+            "Quellcode und Dokumentation",
+            "30 Tage Support nach dem Launch"
+        ],
+        "whoTitle": "Für wen wir entwickeln",
+        "who": "Gründer, die ein MVP validieren, Startups, die ein bestehendes Produkt um KI-Funktionen erweitern, und Unternehmen, die einen Ablauf mit KI automatisieren möchten. Wenn Sie eine langfristige Plattform mit einem großen Team benötigen, sind wir wahrscheinlich nicht die richtige Wahl – wir sind darauf spezialisiert, eine fokussierte erste Version schnell live zu bringen.",
+        "stackTitle": "Eingesetzte Technologien",
+        "stack": "React Native für iOS und Android, Next.js für Web-Apps und Dashboards sowie OpenAI- und Claude-Modelle für KI-Funktionen, einschließlich Retrieval-Augmented Generation (RAG) auf Ihren eigenen Daten. Wir wählen den einfachsten Stack, der mit Ihrem Produkt mitwachsen kann.",
+        "faqs": [
+            {
+                "question": "Was muss ich vor dem Kennenlerngespräch vorbereiten?",
+                "answer": "Eine grobe Beschreibung des Problems, das Sie lösen, und für wen. Skizzen, Wettbewerbsbeispiele oder vorhandene Dokumente helfen, sind aber nicht nötig – den Umfang erarbeiten wir gemeinsam im Gespräch."
+            },
+            {
+                "question": "Wem gehört der Code?",
+                "answer": "Zum Launch erhalten Sie den vollständigen Quellcode und die Dokumentation. Sie können mit uns, mit einem anderen Team oder allein weitermachen."
+            },
+            {
+                "question": "Können Sie KI-Funktionen in eine bestehende App einbauen?",
+                "answer": "Ja. Wir integrieren KI-Funktionen wie Chat, Suche in Ihren Dokumenten, Zusammenfassungen oder Automatisierung in bestehende Web- oder Mobilprodukte und entwickeln auch neue Produkte von Grund auf."
+            },
+            {
+                "question": "Welche KI-Modelle setzen Sie ein?",
+                "answer": "Hauptsächlich OpenAI- und Claude-Modelle, je Funktion nach Qualität, Geschwindigkeit und Kosten ausgewählt. Wir können auch Retrieval-Pipelines (RAG) bauen, damit die KI aus Ihren eigenen Daten antwortet."
+            },
+            {
+                "question": "Was passiert nach dem Launch?",
+                "answer": "Jedes Projekt enthält 30 Tage Support nach dem Launch. Danach können Sie mit uns an neuen Funktionen weiterarbeiten oder das Produkt selbst betreiben."
+            },
+            {
+                "question": "Sind 15 Tage für jede App realistisch?",
+                "answer": "Für eine fokussierte erste Version ja – die Kernfunktionen, mit denen Sie Ihre Idee mit echten Nutzern testen. Größere Umfänge dauern länger, und im Gespräch sagen wir Ihnen ehrlich, in welche Kategorie Ihr Projekt fällt."
+            }
+        ]
     }
 }

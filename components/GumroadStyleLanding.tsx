@@ -1,5 +1,5 @@
 "use client";
-import { Code, Smartphone, Brain, ArrowRight, ArrowLeft, Star, Zap, Shield, ChevronDown } from 'lucide-react';
+import { Code, Smartphone, Brain, ArrowRight, ArrowLeft, Star, Zap, Shield, ChevronDown, Check } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -36,6 +36,10 @@ type Props = {
   introParagraph?: string;
   /** When provided, replaces translation-based FAQs with city-specific questions */
   faqOverride?: { question: string; answer: string }[];
+  /** City-specific cards (payments, regulation, sectors) rendered before the guide */
+  localFocus?: { title: string; body: string }[];
+  localFocusTitle?: string;
+  localFocusNote?: string;
 };
 
 export default function GumroadLandingWithProjects({
@@ -48,17 +52,28 @@ export default function GumroadLandingWithProjects({
   socialProof,
   introParagraph,
   faqOverride,
+  localFocus,
+  localFocusTitle,
+  localFocusNote,
 }: Props = {}) {
   const t = useTranslations('HomePage');
+  const tg = useTranslations('Guide');
   const locale = useLocale();
   const isRTL = locale === 'ar';
   const Arrow = isRTL ? ArrowLeft : ArrowRight;
 
-  const faqs = faqOverride ?? [
-    { question: t('faq.q1'), answer: t('faq.a1') },
-    { question: t('faq.q2'), answer: t('faq.a2') },
-    { question: t('faq.q3'), answer: t('faq.a3') },
-    { question: t('faq.q4'), answer: t('faq.a4') },
+  const steps = tg.raw('steps') as { days: string; title: string; body: string }[];
+  const included = tg.raw('included') as string[];
+  const guideFaqs = tg.raw('faqs') as { question: string; answer: string }[];
+
+  const faqs = [
+    ...(faqOverride ?? [
+      { question: t('faq.q1'), answer: t('faq.a1') },
+      { question: t('faq.q2'), answer: t('faq.a2') },
+      { question: t('faq.q3'), answer: t('faq.a3') },
+      { question: t('faq.q4'), answer: t('faq.a4') },
+    ]),
+    ...guideFaqs,
   ];
 
   const schemas = [
@@ -435,6 +450,62 @@ export default function GumroadLandingWithProjects({
             <div className="group">
               <div className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-2 group-hover:text-[#ff5859] transition-colors">5.0</div>
               <div className="text-gray-400 text-[10px] font-bold uppercase tracking-widest">{t('stats.rating')} ⭐</div>
+            </div>
+          </div>
+        </section>
+
+        {/* City-specific context (Gulf city pages only) */}
+        {localFocus && localFocus.length > 0 && (
+          <section className="mb-24 max-w-5xl mx-auto" aria-labelledby="local-focus-title">
+            <h2 id="local-focus-title" className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-8 text-center">{localFocusTitle}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {localFocus.map((item) => (
+                <div key={item.title} className="bg-white border border-gray-200 rounded-[2rem] p-8 shadow-sm">
+                  <h3 className="font-bold text-lg text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-500 leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
+            {localFocusNote && <p className="text-xs text-gray-400 text-center mt-6">{localFocusNote}</p>}
+          </section>
+        )}
+
+        {/* How it works / what's included */}
+        <section id="process" className="mb-24 max-w-5xl mx-auto" aria-labelledby="process-title">
+          <div className="text-center mb-12">
+            <h2 id="process-title" className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-3">{tg('title')}</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">{tg('subtitle')}</p>
+          </div>
+          <ol className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            {steps.map((step, i) => (
+              <li key={i} className="bg-white border border-gray-200 rounded-[2rem] p-6 shadow-sm">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-[#ff5859] mb-2">{step.days}</div>
+                <h3 className="font-bold text-lg text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{step.body}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white border border-gray-200 rounded-[2rem] p-8 shadow-sm">
+              <h3 className="font-bold text-xl text-gray-900 mb-4">{tg('includedTitle')}</h3>
+              <ul className="space-y-3">
+                {included.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-600">
+                    <Check className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col gap-6">
+              <div className="bg-white border border-gray-200 rounded-[2rem] p-8 shadow-sm">
+                <h3 className="font-bold text-xl text-gray-900 mb-3">{tg('whoTitle')}</h3>
+                <p className="text-gray-500 leading-relaxed">{tg('who')}</p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-[2rem] p-8 shadow-sm">
+                <h3 className="font-bold text-xl text-gray-900 mb-3">{tg('stackTitle')}</h3>
+                <p className="text-gray-500 leading-relaxed">{tg('stack')}</p>
+              </div>
             </div>
           </div>
         </section>

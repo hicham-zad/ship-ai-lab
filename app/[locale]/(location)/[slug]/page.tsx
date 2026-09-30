@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ArrowRight, Check, MapPin, Zap, Users, Clock } from 'lucide-react';
 import locationsData from '@/data/locations';
 import { localizedSeoPages } from '@/data/localized-seo';
-import { gccCities } from '@/data/gcc-cities';
+import { gccCities, gccLocalFocusTitle, gccLocalFocusNote } from '@/data/gcc-cities';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StructuredData from '@/components/StructuredData';
 import { generateLocationFAQs } from '@/lib/faq-generator';
@@ -195,6 +195,9 @@ export default async function LocationPage({ params }: { params: Promise<{ local
           ctaTitle={gccCity.ctaTitle}
           introParagraph={gccCity.introParagraph}
           faqOverride={gccCity.faqs}
+          localFocus={gccCity.localFocus}
+          localFocusTitle={gccLocalFocusTitle}
+          localFocusNote={gccLocalFocusNote}
         />
       </>
     );
@@ -486,27 +489,27 @@ export default async function LocationPage({ params }: { params: Promise<{ local
         <div className="py-20 bg-gradient-to-br from-pink-50 via-yellow-50 to-blue-50">
           <div className="max-w-6xl mx-auto px-5">
             <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">
-              Proven Results
+              What You Get
             </h2>
             <p className="text-xl text-gray-600 mb-12 text-center">
-              Real impact on your business metrics
+              Clear terms, agreed before we start
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center bg-white border-2 border-black rounded-2xl p-8">
                 <Zap className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-                <div className="text-5xl font-bold mb-2 text-gray-900">{location.stats.timeSaved}</div>
-                <div className="text-gray-700 font-medium">Faster Delivery</div>
+                <div className="text-5xl font-bold mb-2 text-gray-900">{location.timeline}</div>
+                <div className="text-gray-700 font-medium">From Kickoff to Launch</div>
               </div>
               <div className="text-center bg-white border-2 border-black rounded-2xl p-8">
                 <Users className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-                <div className="text-5xl font-bold mb-2 text-gray-900">{location.stats.satisfaction}</div>
-                <div className="text-gray-700 font-medium">Client Rating</div>
+                <div className="text-5xl font-bold mb-2 text-gray-900">30 days</div>
+                <div className="text-gray-700 font-medium">Post-Launch Support</div>
               </div>
               <div className="text-center bg-white border-2 border-black rounded-2xl p-8">
                 <Clock className="w-12 h-12 text-purple-500 mx-auto mb-4" />
-                <div className="text-5xl font-bold mb-2 text-gray-900">{location.stats.successRate}</div>
-                <div className="text-gray-700 font-medium">Track Record</div>
+                <div className="text-5xl font-bold mb-2 text-gray-900">Fixed</div>
+                <div className="text-gray-700 font-medium">Price Agreed Up Front</div>
               </div>
             </div>
           </div>

@@ -3,47 +3,56 @@ export interface FAQ {
     answer: string;
 }
 
-export function generateLocationFAQs(location: any): FAQ[] {
+interface LocationFAQSource {
+    name: string;
+    services: string[];
+    techStack: string[];
+    startingPrice: string;
+    timeline: string;
+    highlights: { title: string; description: string }[];
+}
+
+// Answers draw on each city's own data so pages differ in substance, not just in the city name.
+// Only claims the site can stand behind: price, timeline, process, support and deliverables.
+export function generateLocationFAQs(location: LocationFAQSource): FAQ[] {
+    const { name, services, techStack, startingPrice, timeline, highlights } = location;
+
     return [
         {
-            question: `Why choose Ship AI Lab for AI development in ${location.name}?`,
-            answer: `We're a trusted AI development agency serving ${location.name} with proven expertise, transparent pricing starting at $3,500, and a track record of 100+ successful projects delivered in just 15 days.`
+            question: `How much does AI app development cost in ${name}?`,
+            answer: `Projects for ${name} businesses start at ${startingPrice} at a fixed price that we agree on the free discovery call, before any work begins. The final price depends on scope, so you know the exact cost upfront.`,
         },
         {
-            question: `How much does AI app development cost in ${location.name}?`,
-            answer: `Our AI development services in ${location.name} start at $3,500 with fixed, transparent pricing. Unlike other agencies, you'll know the exact cost upfront with no hidden fees.`
+            question: `How long does it take to build an AI app for ${name}?`,
+            answer: `A focused first version is delivered in ${timeline}: design and planning in days 1–3, build and testing in days 4–12, and launch in days 13–15. Larger scopes take longer, and we say so on the discovery call.`,
         },
         {
-            question: `Do you have developers based in ${location.name}?`,
-            answer: `We work with clients in ${location.name} and worldwide. Our distributed team operates across time zones to ensure fast communication and delivery, regardless of your location.`
+            question: `What can you build for ${name} businesses?`,
+            answer: `For ${name}, our most common projects are: ${services.slice(0, 4).join('; ')}. We also build custom web, mobile and AI products outside this list.`,
         },
         {
-            question: `What types of AI apps can you build for ${location.name} businesses?`,
-            answer: `We build ${location.services.slice(0, 3).join(', ')} and more. From startups to enterprises in ${location.name}, we create custom AI solutions tailored to your industry and goals.`
+            question: `What do you take into account when building for ${name}?`,
+            answer: highlights.slice(0, 3).map((h) => `${h.title}: ${h.description}`).join(' '),
         },
         {
-            question: `How long does it take to develop an AI app in ${location.name}?`,
-            answer: `We deliver production-ready AI applications in just 15 days. Our rapid development process has helped ${location.name} businesses launch faster than traditional development agencies.`
+            question: `What technology do you use for ${name} projects?`,
+            answer: `Typical projects use ${techStack.join(', ')}. We pick the simplest stack that will scale with your product, and you receive the full source code and documentation at launch.`,
         },
         {
-            question: `Can you help ${location.name} startups with MVP development?`,
-            answer: `Absolutely! We specialize in MVP development for ${location.name} startups. Get your product to market quickly with our 15-day sprint, perfect for validating ideas and securing funding.`
+            question: `Do you have a team based in ${name}?`,
+            answer: `We work remotely with clients in ${name} and worldwide. Discovery, design reviews and daily progress updates all happen online, so you can follow the build from wherever you are.`,
         },
         {
-            question: `What technology stack do you use for ${location.name} projects?`,
-            answer: `We use modern, proven technologies including ${location.techStack.slice(0, 3).join(', ')} to ensure your app is fast, scalable, and built with industry best practices.`
+            question: `Can you help a ${name} startup build an MVP?`,
+            answer: `Yes — building a focused first version that you can test with real users is what we specialise in. We scope it to the core features on the discovery call so it can be live in ${timeline}.`,
         },
         {
-            question: `Do you provide ongoing support for ${location.name} clients?`,
-            answer: `Yes! After delivery, we offer deployment assistance, training, documentation, and optional maintenance packages to ensure your ${location.name} business continues to thrive.`
+            question: `What support do you provide after launch?`,
+            answer: `Every project includes 30 days of post-launch support, a training session, and the source code and documentation. After that you can keep working with us on new features or run the product yourself.`,
         },
         {
-            question: `How do I schedule a consultation for my ${location.name} project?`,
-            answer: `Simply book a free consultation call. We'll discuss your ${location.name} business needs, provide expert guidance, and outline a clear 15-day development roadmap.`
+            question: `How do I start a project in ${name}?`,
+            answer: `Book a free 30-minute consultation. We discuss your idea and users, agree on scope and price, and outline the ${timeline} plan — with no commitment.`,
         },
-        {
-            question: `What makes Ship AI Lab different from other ${location.name} development agencies?`,
-            answer: `We offer fixed pricing ($3,500 starting), guaranteed 15-day delivery, ${location.stats?.satisfaction || '98%'} client satisfaction, and proven expertise with 100+ successful projects. No surprises, just results.`
-        }
     ];
 }

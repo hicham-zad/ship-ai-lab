@@ -122,5 +122,70 @@
     "Metadata": {
         "title": "AI-App-Ontwikkelbureau | Klaar in 15 Dagen | ShipAI Lab",
         "description": "Een idee voor een AI-app? Wij bouwen het in 15 dagen. AI-gedreven SaaS-, iOS- en Android-apps. Vaste prijs. Geen vertraging."
+    },
+    "Guide": {
+        "title": "Zo werkt een project van 15 dagen",
+        "subtitle": "Vaste scope, vaste prijs en een werkend product dat je binnen twee weken aan echte gebruikers kunt laten zien.",
+        "steps": [
+            {
+                "days": "Vóór dag 1",
+                "title": "Kennismakingsgesprek",
+                "body": "Een gratis gesprek van 30 minuten om je idee, je gebruikers en de eisen aan de eerste versie te begrijpen. We spreken scope en prijs af voordat het werk begint."
+            },
+            {
+                "days": "Dag 1–3",
+                "title": "Ontwerp en planning",
+                "body": "Wireframes, gebruikersflows en een featurelijst. Jij beoordeelt en keurt het ontwerp goed voordat we productiecode schrijven."
+            },
+            {
+                "days": "Dag 4–12",
+                "title": "Bouwen en testen",
+                "body": "We bouwen de app met dagelijkse voortgangsupdates, integreren de AI-functies en testen op echte apparaten."
+            },
+            {
+                "days": "Dag 13–15",
+                "title": "Lancering",
+                "body": "We zetten het product live, dienen het in bij de App Store en Google Play en leveren de broncode en documentatie op."
+            }
+        ],
+        "includedTitle": "Inbegrepen in elk project",
+        "included": [
+            "Ontwerp en full-stack ontwikkeling",
+            "AI-integratie met GPT, Claude of eigen modellen",
+            "Testen op echte apparaten",
+            "Uitrol en indiening bij App Store / Google Play",
+            "Broncode en documentatie",
+            "30 dagen ondersteuning na lancering"
+        ],
+        "whoTitle": "Voor wie we bouwen",
+        "who": "Oprichters die een MVP valideren, startups die AI-functies toevoegen aan een bestaand product en bedrijven die een werkproces met AI willen automatiseren. Heb je een langlopend platform nodig dat door een groot team wordt gebouwd, dan zijn wij waarschijnlijk niet de juiste keuze – wij zijn gespecialiseerd in het snel live brengen van een gerichte eerste versie.",
+        "stackTitle": "Technologie die we gebruiken",
+        "stack": "React Native voor iOS en Android, Next.js voor webapps en dashboards, en OpenAI- en Claude-modellen voor AI-functies, inclusief retrieval-augmented generation (RAG) op je eigen data. We kiezen de eenvoudigste stack die met je product kan meegroeien.",
+        "faqs": [
+            {
+                "question": "Wat moet ik voorbereiden voor het kennismakingsgesprek?",
+                "answer": "Een globale beschrijving van het probleem dat je oplost en voor wie. Schetsen, voorbeelden van concurrenten of bestaande documenten helpen, maar zijn niet verplicht – we bepalen de scope samen tijdens het gesprek."
+            },
+            {
+                "question": "Van wie is de code?",
+                "answer": "Bij de lancering ontvang je de volledige broncode en documentatie, zodat je vrij bent om met ons, met een ander team of zelfstandig verder te gaan."
+            },
+            {
+                "question": "Kunnen jullie AI-functies toevoegen aan een bestaande app?",
+                "answer": "Ja. We kunnen AI-functies zoals chat, zoeken in je documenten, samenvattingen of automatisering toevoegen aan een bestaand web- of mobiel product, en ook nieuwe producten vanaf nul bouwen."
+            },
+            {
+                "question": "Welke AI-modellen gebruiken jullie?",
+                "answer": "Vooral OpenAI- en Claude-modellen, per functie gekozen op kwaliteit, snelheid en kosten. We kunnen ook retrieval-pipelines (RAG) bouwen zodat de AI antwoordt op basis van je eigen data."
+            },
+            {
+                "question": "Wat gebeurt er na de lancering?",
+                "answer": "Elk project bevat 30 dagen ondersteuning na de lancering. Daarna kun je met ons doorwerken aan nieuwe functies of het product zelf beheren."
+            },
+            {
+                "question": "Zijn 15 dagen realistisch voor elke app?",
+                "answer": "Voor een gerichte eerste versie wel: de kernfuncties waarmee je je idee met echte gebruikers test. Grotere projecten kosten meer tijd, en in het gesprek vertellen we eerlijk in welke categorie jouw project valt."
+            }
+        ]
     }
 }
