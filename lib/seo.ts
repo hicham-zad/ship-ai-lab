@@ -5,6 +5,8 @@
 
 const SITE_URL = 'https://shipailab.com';
 const SITE_NAME = 'ShipAI Lab';
+// Spellings people search for (see Search Console queries) — helps Google map them to this site
+const SITE_ALTERNATE_NAMES = ['Ship AI Lab', 'ShipAI', 'Ship AI Labs', 'ShipAI Labs'];
 
 export interface BreadcrumbItem {
   name: string;
@@ -23,14 +25,15 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
+    alternateName: SITE_ALTERNATE_NAMES,
     url: SITE_URL,
     logo: 'https://res.cloudinary.com/dyovzofma/image/upload/v1762178065/SHIP_AI_mhueop.png',
     description: 'ShipAI Lab builds and launches your AI-powered SaaS, web, and mobile products in just 15 days.',
     sameAs: [
-      // Add your social media profiles here
-      // 'https://twitter.com/shipailab',
-      // 'https://linkedin.com/company/shipailab',
+      'https://www.upwork.com/freelancers/~014be778a3616e96a3',
+      'https://www.fiverr.com/s/jjxkjpL',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -47,13 +50,12 @@ export function generateWebsiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
     name: SITE_NAME,
+    alternateName: SITE_ALTERNATE_NAMES,
     url: SITE_URL,
     description: 'ShipAI Lab builds and launches your AI-powered SaaS, web, and mobile products in just 15 days.',
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-    },
+    publisher: { '@id': `${SITE_URL}/#organization` },
   };
 }
 

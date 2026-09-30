@@ -17,6 +17,7 @@ export default function ReviewSchema() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://shipailab.com/#organization",
     name: "ShipAI Lab",
     description: "ShipAI Lab is a 5-star rated AI development agency specializing in SaaS platforms, mobile apps, and AI-powered applications. Trusted by clients worldwide with 100% five-star reviews on Upwork and Fiverr.",
     url: "https://shipailab.com",
