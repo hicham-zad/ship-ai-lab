@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { pendraStyles } from './pendra-styles';
+import { nerraStyles } from './nerra-styles';
 
 export const metadata: Metadata = {
-  title: 'Pendra — Private GLP-1 Companion for iPhone',
+  title: 'Nerra — Private GLP-1 Companion for iPhone',
   description:
-    'Pendra tracks your GLP-1 doses, injection sites, weight and how you feel. Private by design: no account, no cloud. Pay once, keep it forever.',
+    'Nerra tracks your GLP-1 doses, injection sites, weight and how you feel. Private by design: no account, no cloud. Pay once, keep it forever.',
   keywords: ['GLP-1 app', 'Ozempic tracker', 'Wegovy tracker', 'Mounjaro tracker', 'injection tracker', 'dose reminder', 'semaglutide', 'tirzepatide'],
-  alternates: { canonical: 'https://shipailab.com/pendra' },
+  alternates: { canonical: 'https://shipailab.com/nerra' },
   openGraph: {
-    title: 'Pendra — Private GLP-1 Companion',
+    title: 'Nerra — Private GLP-1 Companion',
     description: 'Doses, injection sites, weight and check-ins. No account, no cloud. Pay once.',
-    url: 'https://shipailab.com/pendra',
-    siteName: 'Pendra',
-    images: [{ url: '/pendra-icon.png', width: 512, height: 512, alt: 'Pendra app icon' }],
+    url: 'https://shipailab.com/nerra',
+    siteName: 'Nerra',
+    images: [{ url: '/nerra-icon.png', width: 512, height: 512, alt: 'Nerra app icon' }],
     type: 'website',
   },
 };
@@ -38,30 +38,29 @@ const shots = [
 const compare: [string, boolean][] = [
   ['Dose logging, reminders & next dose', true],
   ['Injection site rotation & duplicate warning', true],
-  ['Dose history, weight entries & dose calculator', true],
+  ['Dose history & weight entries', true],
   ['Data export', true],
   ['Dose calendar', false],
   ['Daily check-ins & goals', false],
   ['Medication level curve & progress charts', false],
   ['Body measurements', false],
   ['Doctor report as PDF', false],
-  ['Apple Health sync', false],
 ];
 
-export default function PendraLanding() {
+export default function NerraLanding() {
   return (
     <>
-      <style>{pendraStyles}</style>
+      <style>{nerraStyles}</style>
       <div className="nr-page">
         <nav className="nr-nav">
-          <Link href="/pendra" className="nr-brand">
-            <Image src="/pendra-icon.png" alt="Pendra" width={32} height={32} style={{ borderRadius: 9 }} />
-            <span className="nr-wordmark">Pendra</span>
+          <Link href="/nerra" className="nr-brand">
+            <Image src="/nerra-icon.png" alt="Nerra" width={32} height={32} style={{ borderRadius: 9 }} />
+            <span className="nr-wordmark">Nerra</span>
           </Link>
           <div className="nr-nav-links">
-            <Link href="/pendra/support" className="nr-nav-link nr-keep">Support</Link>
-            <Link href="/pendra/privacy-policy" className="nr-nav-link">Privacy</Link>
-            <Link href="/pendra/terms-of-service" className="nr-nav-link">Terms</Link>
+            <Link href="/nerra/support" className="nr-nav-link nr-keep">Support</Link>
+            <Link href="/nerra/privacy-policy" className="nr-nav-link">Privacy</Link>
+            <Link href="/nerra/terms-of-service" className="nr-nav-link">Terms</Link>
           </div>
         </nav>
 
@@ -78,7 +77,7 @@ export default function PendraLanding() {
               <p className="nr-soon-note">For iPhone. Available in English and German.</p>
             </div>
             <div className="nr-phone">
-              <Image src="/pendra/dashboard.png" alt="Pendra dashboard" width={700} height={1522} priority />
+              <Image src="/nerra/dashboard.png" alt="Nerra dashboard" width={700} height={1522} priority />
             </div>
           </div>
           <div className="nr-stats">
@@ -111,7 +110,7 @@ export default function PendraLanding() {
               {shots.map(([file, label]) => (
                 <figure key={file}>
                   <div className="nr-phone">
-                    <Image src={`/pendra/${file}`} alt={`Pendra ${label}`} width={700} height={1522} />
+                    <Image src={`/nerra/${file}`} alt={`Nerra ${label}`} width={700} height={1522} />
                   </div>
                   <figcaption>{label}</figcaption>
                 </figure>
@@ -125,7 +124,7 @@ export default function PendraLanding() {
             <span className="nr-section-tag">Free & Lifetime</span>
             <h2 className="nr-section-title">Start free. Unlock once.</h2>
             <p className="nr-sec-sub">
-              Everything needed to take a dose safely is free. Pendra Lifetime is a single one-time purchase, with no
+              Everything needed to take a dose safely is free. Nerra Lifetime is a single one-time purchase, with no
               subscription, that unlocks the rest.
             </p>
             <div className="nr-table-wrap">
@@ -150,21 +149,21 @@ export default function PendraLanding() {
         <section className="nr-cta">
           <h2>Private by design</h2>
           <p>Your doses, weight and check-ins never leave your iPhone.</p>
-          <Link href="/pendra/privacy-policy" className="nr-btn nr-btn-peach">Read the privacy policy</Link>
+          <Link href="/nerra/privacy-policy" className="nr-btn nr-btn-peach">Read the privacy policy</Link>
         </section>
 
         <div className="nr-legal-strip">
           <p>
-            Pendra is not a medical device and does not provide medical advice. Estimates are informational only.
-            Always follow your prescriber&apos;s instructions. Pendra is not affiliated with any medication manufacturer.
+            Nerra is not a medical device and does not provide medical advice. Estimates are informational only.
+            Always follow your prescriber&apos;s instructions. Nerra is not affiliated with any medication manufacturer.
           </p>
         </div>
 
         <footer className="nr-footer">
           <p>
             © {new Date().getFullYear()} Ship AI Solutions, LLC ·{' '}
-            <Link href="/pendra/privacy-policy">Privacy</Link> · <Link href="/pendra/terms-of-service">Terms</Link> ·{' '}
-            <Link href="/pendra/support">Support</Link>
+            <Link href="/nerra/privacy-policy">Privacy</Link> · <Link href="/nerra/terms-of-service">Terms</Link> ·{' '}
+            <Link href="/nerra/support">Support</Link>
           </p>
         </footer>
       </div>

@@ -23,15 +23,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 2. English-only pages
     const englishRoutes = [
         { path: '/sobergirl', priority: 0.7 },
-        { path: '/pendra', priority: 0.7 },
+        { path: '/nerra', priority: 0.7 },
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms-of-service', priority: 0.3 },
         { path: '/sobergirl/support', priority: 0.3 },
         { path: '/sobergirl/privacy-policy', priority: 0.2 },
         { path: '/sobergirl/terms-of-service', priority: 0.2 },
-        { path: '/pendra/support', priority: 0.3 },
-        { path: '/pendra/privacy-policy', priority: 0.2 },
-        { path: '/pendra/terms-of-service', priority: 0.2 },
+        { path: '/nerra/support', priority: 0.3 },
+        { path: '/nerra/privacy-policy', priority: 0.2 },
+        { path: '/nerra/terms-of-service', priority: 0.2 },
     ].map(({ path, priority }) => ({
         url: `${baseUrl}${path}`,
         lastModified,

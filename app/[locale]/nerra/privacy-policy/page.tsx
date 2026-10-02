@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
-import { BottomLinks, ContactCard, PENDRA_EMAIL, PENDRA_UPDATED, PendraShell, Section, Toc } from '@/components/PendraLegal';
+import { BottomLinks, ContactCard, NERRA_EMAIL, NERRA_UPDATED, NerraShell, Section, Toc } from '@/components/NerraLegal';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Pendra',
+  title: 'Privacy Policy | Nerra',
   description:
-    'Privacy Policy for Pendra, the private GLP-1 companion app. Your doses, weight and check-ins stay on your device.',
-  alternates: { canonical: 'https://shipailab.com/pendra/privacy-policy' },
+    'Privacy Policy for Nerra, the private GLP-1 companion app. Your doses, weight and check-ins stay on your device.',
+  alternates: { canonical: 'https://shipailab.com/nerra/privacy-policy' },
   openGraph: {
-    title: 'Privacy Policy | Pendra',
+    title: 'Privacy Policy | Nerra',
     description: 'Your doses, weight and check-ins stay on your device.',
-    url: 'https://shipailab.com/pendra/privacy-policy',
+    url: 'https://shipailab.com/nerra/privacy-policy',
     type: 'website',
   },
 };
@@ -29,24 +29,24 @@ const toc = [
   { id: 'p-12', label: 'Changes & Contact' },
 ];
 
-export default function PendraPrivacyPolicy() {
+export default function NerraPrivacyPolicy() {
   return (
-    <PendraShell badge="🔒 Legal" title="Privacy Policy" subtitle="How Pendra handles your information">
+    <NerraShell badge="🔒 Legal" title="Privacy Policy" subtitle="How Nerra handles your information">
       <div className="nr-meta">
-        <span className="nr-company">Ship AI Solutions, LLC — Pendra</span>
-        <span className="nr-date">Last Updated: {PENDRA_UPDATED}</span>
+        <span className="nr-company">Ship AI Solutions, LLC — Nerra</span>
+        <span className="nr-date">Last Updated: {NERRA_UPDATED}</span>
       </div>
 
       <div className="nr-highlight">
         Your therapy data is yours. Doses, weight, measurements, check-ins and photos are stored only on your
-        device. Pendra has no account, no cloud and no advertising, and we never receive your health data.
+        device. Nerra has no account, no cloud and no advertising, and we never receive your health data.
       </div>
 
       <Toc items={toc} />
 
       <Section id="p-1" title="1. Introduction">
         <p className="nr-p">
-          Ship AI Solutions, LLC (&ldquo;we&rdquo;, &ldquo;us&rdquo;) operates the Pendra mobile app (the
+          Ship AI Solutions, LLC (&ldquo;we&rdquo;, &ldquo;us&rdquo;) operates the Nerra mobile app (the
           &ldquo;App&rdquo;), a private companion for people who use GLP-1 medication. This Privacy Policy explains
           what information the App handles and how. By using the App you agree to this policy.
         </p>
@@ -74,16 +74,14 @@ export default function PendraPrivacyPolicy() {
 
       <Section id="p-4" title="4. Apple Health">
         <p className="nr-p">
-          If you choose to connect Apple Health, Pendra reads your body weight to show your progress and can write
-          weight entries you log in Pendra back to Apple Health. This is optional, you control it in iOS Settings,
-          and the data is used only inside the App on your device. It is never used for advertising or shared with
-          third parties.
+          Nerra does not access Apple Health (HealthKit). It does not read data from or write data to the Health app.
+          Weight and other entries exist only in Nerra on your device.
         </p>
       </Section>
 
       <Section id="p-5" title="5. Photos & Camera">
         <p className="nr-p">
-          If you add progress photos, Pendra asks for camera or photo library access. Photos are stored only on your
+          If you add progress photos, Nerra asks for camera or photo library access. Photos are stored only on your
           device and are not uploaded anywhere.
         </p>
       </Section>
@@ -97,7 +95,7 @@ export default function PendraPrivacyPolicy() {
 
       <Section id="p-7" title="7. Purchases & RevenueCat">
         <p className="nr-p">
-          Pendra offers a one-time &ldquo;Pendra Lifetime&rdquo; purchase, processed by Apple. We use{' '}
+          Nerra offers a one-time &ldquo;Nerra Lifetime&rdquo; purchase, processed by Apple. We use{' '}
           <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat</a> to
           validate purchases. RevenueCat receives an anonymous app user ID, your purchase receipt and basic device
           and app-version information so it can confirm what you own and restore it on request. It does not receive
@@ -108,7 +106,7 @@ export default function PendraPrivacyPolicy() {
 
       <Section id="p-8" title="8. Children">
         <p className="nr-p">
-          Pendra is intended for adults. We do not knowingly collect personal information from anyone under 18. If
+          Nerra is intended for adults. We do not knowingly collect personal information from anyone under 18. If
           you believe a child has used the App, contact us and we will take appropriate steps.
         </p>
       </Section>
@@ -125,14 +123,14 @@ export default function PendraPrivacyPolicy() {
           Depending on where you live (for example under GDPR or CCPA), you may have rights to access, correct,
           delete or export your personal data, and to object to its processing. As we hold no personal data about you
           beyond anonymous purchase records handled by RevenueCat and Apple, deleting the App removes what is on your
-          device. For any request, email <a href={`mailto:${PENDRA_EMAIL}`}>{PENDRA_EMAIL}</a>.
+          device. For any request, email <a href={`mailto:${NERRA_EMAIL}`}>{NERRA_EMAIL}</a>.
         </p>
       </Section>
 
       <Section id="p-11" title="11. Security">
         <p className="nr-p">
           Your data is protected by your device&apos;s security (passcode, Face ID and iOS storage protection). If
-          you lose or reset your device, Pendra data cannot be recovered, which is an intentional privacy trade-off.
+          you lose or reset your device, Nerra data cannot be recovered, which is an intentional privacy trade-off.
           Use the export feature in the App if you want a copy.
         </p>
       </Section>
@@ -147,10 +145,10 @@ export default function PendraPrivacyPolicy() {
 
       <BottomLinks
         links={[
-          { href: '/pendra', label: '← Pendra' },
-          { href: '/pendra/terms-of-service', label: 'Terms of Service →' },
+          { href: '/nerra', label: '← Nerra' },
+          { href: '/nerra/terms-of-service', label: 'Terms of Service →' },
         ]}
       />
-    </PendraShell>
+    </NerraShell>
   );
 }

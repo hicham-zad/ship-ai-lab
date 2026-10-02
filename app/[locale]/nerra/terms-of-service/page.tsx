@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { BottomLinks, ContactCard, PENDRA_UPDATED, PendraShell, Section, Toc } from '@/components/PendraLegal';
+import { BottomLinks, ContactCard, NERRA_UPDATED, NerraShell, Section, Toc } from '@/components/NerraLegal';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Pendra',
-  description: 'Terms of Service for Pendra, the private GLP-1 companion app.',
-  alternates: { canonical: 'https://shipailab.com/pendra/terms-of-service' },
+  title: 'Terms of Service | Nerra',
+  description: 'Terms of Service for Nerra, the private GLP-1 companion app.',
+  alternates: { canonical: 'https://shipailab.com/nerra/terms-of-service' },
   openGraph: {
-    title: 'Terms of Service | Pendra',
-    description: 'Terms of Service for Pendra.',
-    url: 'https://shipailab.com/pendra/terms-of-service',
+    title: 'Terms of Service | Nerra',
+    description: 'Terms of Service for Nerra.',
+    url: 'https://shipailab.com/nerra/terms-of-service',
     type: 'website',
   },
 };
@@ -19,7 +19,7 @@ const toc = [
   { id: 't-3', label: 'The App' },
   { id: 't-4', label: 'Medical Disclaimer' },
   { id: 't-5', label: 'Your Data' },
-  { id: 't-6', label: 'Pendra Lifetime' },
+  { id: 't-6', label: 'Nerra Lifetime' },
   { id: 't-7', label: 'Intellectual Property' },
   { id: 't-8', label: 'Acceptable Use' },
   { id: 't-9', label: 'Disclaimers' },
@@ -30,16 +30,16 @@ const toc = [
   { id: 't-14', label: 'Contact' },
 ];
 
-export default function PendraTerms() {
+export default function NerraTerms() {
   return (
-    <PendraShell badge="📄 Legal" title="Terms of Service" subtitle="The rules for using Pendra">
+    <NerraShell badge="📄 Legal" title="Terms of Service" subtitle="The rules for using Nerra">
       <div className="nr-meta">
-        <span className="nr-company">Ship AI Solutions, LLC — Pendra</span>
-        <span className="nr-date">Last Updated: {PENDRA_UPDATED}</span>
+        <span className="nr-company">Ship AI Solutions, LLC — Nerra</span>
+        <span className="nr-date">Last Updated: {NERRA_UPDATED}</span>
       </div>
 
       <div className="nr-disclaimer">
-        Pendra is not a medical device and does not give medical advice. Always follow the instructions of your
+        Nerra is not a medical device and does not give medical advice. Always follow the instructions of your
         prescriber and pharmacist for your medication and dose.
       </div>
 
@@ -47,7 +47,7 @@ export default function PendraTerms() {
 
       <Section id="t-1" title="1. Agreement">
         <p className="nr-p">
-          These Terms govern your use of the Pendra mobile app (the &ldquo;App&rdquo;) provided by Ship AI
+          These Terms govern your use of the Nerra mobile app (the &ldquo;App&rdquo;) provided by Ship AI
           Solutions, LLC (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By downloading or using the App you agree to these
           Terms and our Privacy Policy. If you do not agree, do not use the App. Apple&apos;s standard Licensed
           Application End User License Agreement also applies unless we provide a custom one.
@@ -60,19 +60,19 @@ export default function PendraTerms() {
 
       <Section id="t-3" title="3. The App">
         <p className="nr-p">
-          Pendra helps you track GLP-1 medication: logging doses, seeing your next dose, estimating medication
+          Nerra helps you track GLP-1 medication: logging doses, seeing your next dose, estimating medication
           level, reminders, weight and measurements, check-ins, a dose calendar and a PDF report you can share with
-          your doctor. Some features are free and others are part of Pendra Lifetime.
+          your doctor. Some features are free and others are part of Nerra Lifetime.
         </p>
       </Section>
 
       <Section id="t-4" title="4. Medical Disclaimer">
         <div className="nr-disclaimer">
-          Pendra is for tracking and information only. It does not diagnose, treat, cure or prevent any condition
+          Nerra is for tracking and information only. It does not diagnose, treat, cure or prevent any condition
           and does not replace professional medical advice.
         </div>
         <p className="nr-p">
-          The medication level chart, next-dose dates, missed-dose guidance and dose calculator are estimates based
+          The medication level chart, next-dose dates, and missed-dose guidance are estimates based
           on general pharmacological models and the information you enter. They may be inaccurate for you. Never
           change your dose, skip a dose or take an extra dose based only on the App. Confirm everything with your
           healthcare provider. In an emergency, call your local emergency number.
@@ -87,9 +87,9 @@ export default function PendraTerms() {
         </p>
       </Section>
 
-      <Section id="t-6" title="6. Pendra Lifetime">
+      <Section id="t-6" title="6. Nerra Lifetime">
         <ul className="nr-ul">
-          <li>Pendra Lifetime is a one-time, non-consumable in-app purchase. It is not a subscription and does not renew.</li>
+          <li>Nerra Lifetime is a one-time, non-consumable in-app purchase. It is not a subscription and does not renew.</li>
           <li>Payment is charged to your Apple Account at confirmation. The price is shown in the App before you buy.</li>
           <li>The purchase unlocks the premium features of the App for as long as we offer the App. You can restore it on any device signed in to the same Apple Account using &ldquo;Restore&rdquo;.</li>
           <li>Refunds are handled by Apple under its policies. Request one at reportaproblem.apple.com.</li>
@@ -157,10 +157,10 @@ export default function PendraTerms() {
 
       <BottomLinks
         links={[
-          { href: '/pendra', label: '← Pendra' },
-          { href: '/pendra/privacy-policy', label: 'Privacy Policy →' },
+          { href: '/nerra', label: '← Nerra' },
+          { href: '/nerra/privacy-policy', label: 'Privacy Policy →' },
         ]}
       />
-    </PendraShell>
+    </NerraShell>
   );
 }

@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { pendraStyles } from '@/app/[locale]/pendra/pendra-styles';
+import { nerraStyles } from '@/app/[locale]/nerra/nerra-styles';
 
-export const PENDRA_EMAIL = 'integrateopenai@gmail.com';
-export const PENDRA_UPDATED = 'September 23, 2026';
+export const NERRA_EMAIL = 'integrateopenai@gmail.com';
+export const NERRA_UPDATED = 'October 2, 2026';
 
 interface ShellProps {
   badge: string;
@@ -14,22 +14,22 @@ interface ShellProps {
   wide?: boolean;
 }
 
-/** Shared frame for the Pendra legal and support pages: nav, hero, body, footer. */
-export function PendraShell({ badge, title, subtitle, children, wide }: ShellProps) {
+/** Shared frame for the Nerra legal and support pages: nav, hero, body, footer. */
+export function NerraShell({ badge, title, subtitle, children, wide }: ShellProps) {
   return (
     <>
-      <style>{pendraStyles}</style>
+      <style>{nerraStyles}</style>
       <div className="nr-page">
         <nav className="nr-nav">
-          <Link href="/pendra" className="nr-brand">
-            <Image src="/pendra-icon.png" alt="Pendra" width={32} height={32} style={{ borderRadius: 9 }} />
-            <span className="nr-wordmark">Pendra</span>
+          <Link href="/nerra" className="nr-brand">
+            <Image src="/nerra-icon.png" alt="Nerra" width={32} height={32} style={{ borderRadius: 9 }} />
+            <span className="nr-wordmark">Nerra</span>
           </Link>
           <div className="nr-nav-links">
-            <Link href="/pendra/support" className="nr-nav-link">Support</Link>
-            <Link href="/pendra/privacy-policy" className="nr-nav-link">Privacy</Link>
-            <Link href="/pendra/terms-of-service" className="nr-nav-link">Terms</Link>
-            <Link href="/pendra" className="nr-nav-link nr-keep">← Pendra</Link>
+            <Link href="/nerra/support" className="nr-nav-link">Support</Link>
+            <Link href="/nerra/privacy-policy" className="nr-nav-link">Privacy</Link>
+            <Link href="/nerra/terms-of-service" className="nr-nav-link">Terms</Link>
+            <Link href="/nerra" className="nr-nav-link nr-keep">← Nerra</Link>
           </div>
         </nav>
 
@@ -44,8 +44,8 @@ export function PendraShell({ badge, title, subtitle, children, wide }: ShellPro
         <footer className="nr-footer">
           <p>
             © {new Date().getFullYear()} Ship AI Solutions, LLC ·{' '}
-            <Link href="/pendra/privacy-policy">Privacy</Link> · <Link href="/pendra/terms-of-service">Terms</Link> ·{' '}
-            <Link href="/pendra/support">Support</Link>
+            <Link href="/nerra/privacy-policy">Privacy</Link> · <Link href="/nerra/terms-of-service">Terms</Link> ·{' '}
+            <Link href="/nerra/support">Support</Link>
           </p>
         </footer>
       </div>
@@ -82,8 +82,8 @@ export function ContactCard() {
     <div className="nr-contact-card">
       <p><strong>Ship AI Solutions, LLC</strong></p>
       <p>30 N Gould St Ste R, Sheridan, WY 82801</p>
-      <p>Email: <a href={`mailto:${PENDRA_EMAIL}`}>{PENDRA_EMAIL}</a></p>
-      <p>Website: <a href="https://shipailab.com/pendra">shipailab.com/pendra</a></p>
+      <p>Email: <a href={`mailto:${NERRA_EMAIL}`}>{NERRA_EMAIL}</a></p>
+      <p>Website: <a href="https://shipailab.com/nerra">shipailab.com/nerra</a></p>
     </div>
   );
 }
