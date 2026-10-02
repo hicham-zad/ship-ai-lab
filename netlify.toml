@@ -4,3 +4,23 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# The app was renamed Pendra → Nerra. Redirect at the CDN: the next-intl middleware runs before
+# next.config redirects on Netlify, so those alone return 404 for /pendra.
+[[redirects]]
+  from = "/pendra"
+  to = "/nerra"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pendra/*"
+  to = "/nerra/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/pendra/*"
+  to = "/:locale/nerra/:splat"
+  status = 301
+  force = true
