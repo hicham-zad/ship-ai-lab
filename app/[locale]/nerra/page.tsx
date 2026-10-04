@@ -161,7 +161,7 @@ export default function NerraLanding() {
 
         <footer className="nr-footer">
           <p>
-            © {new Date().getFullYear()} Ship AI Solutions, LLC ·{' '}
+            © {new Date().getFullYear()} Hicham Zaidi ·{' '}
             <Link href="/nerra/privacy-policy">Privacy</Link> · <Link href="/nerra/terms-of-service">Terms</Link> ·{' '}
             <Link href="/nerra/support">Support</Link>
           </p>

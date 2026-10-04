@@ -34,7 +34,7 @@ export default function NerraTerms() {
   return (
     <NerraShell badge="📄 Legal" title="Terms of Service" subtitle="The rules for using Nerra">
       <div className="nr-meta">
-        <span className="nr-company">Ship AI Solutions, LLC — Nerra</span>
+        <span className="nr-company">Nerra</span>
         <span className="nr-date">Last Updated: {NERRA_UPDATED}</span>
       </div>
 
@@ -47,8 +47,8 @@ export default function NerraTerms() {
 
       <Section id="t-1" title="1. Agreement">
         <p className="nr-p">
-          These Terms govern your use of the Nerra mobile app (the &ldquo;App&rdquo;) provided by Ship AI
-          Solutions, LLC (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By downloading or using the App you agree to these
+          These Terms govern your use of the Nerra mobile app (the &ldquo;App&rdquo;) provided by Hicham Zaidi, an
+          independent developer (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By downloading or using the App you agree to these
           Terms and our Privacy Policy. If you do not agree, do not use the App. Apple&apos;s standard Licensed
           Application End User License Agreement also applies unless we provide a custom one.
         </p>

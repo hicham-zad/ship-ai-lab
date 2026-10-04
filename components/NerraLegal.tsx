@@ -43,7 +43,7 @@ export function NerraShell({ badge, title, subtitle, children, wide }: ShellProp
 
         <footer className="nr-footer">
           <p>
-            © {new Date().getFullYear()} Ship AI Solutions, LLC ·{' '}
+            © {new Date().getFullYear()} Hicham Zaidi ·{' '}
             <Link href="/nerra/privacy-policy">Privacy</Link> · <Link href="/nerra/terms-of-service">Terms</Link> ·{' '}
             <Link href="/nerra/support">Support</Link>
           </p>
@@ -80,8 +80,7 @@ export function Toc({ items }: { items: { id: string; label: string }[] }) {
 export function ContactCard() {
   return (
     <div className="nr-contact-card">
-      <p><strong>Ship AI Solutions, LLC</strong></p>
-      <p>30 N Gould St Ste R, Sheridan, WY 82801</p>
+      <p><strong>Hicham Zaidi</strong> · Developer of Nerra</p>
       <p>Email: <a href={`mailto:${NERRA_EMAIL}`}>{NERRA_EMAIL}</a></p>
       <p>Website: <a href="https://shipailab.com/nerra">shipailab.com/nerra</a></p>
     </div>

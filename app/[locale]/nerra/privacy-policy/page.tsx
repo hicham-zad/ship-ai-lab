@@ -33,7 +33,7 @@ export default function NerraPrivacyPolicy() {
   return (
     <NerraShell badge="🔒 Legal" title="Privacy Policy" subtitle="How Nerra handles your information">
       <div className="nr-meta">
-        <span className="nr-company">Ship AI Solutions, LLC — Nerra</span>
+        <span className="nr-company">Nerra</span>
         <span className="nr-date">Last Updated: {NERRA_UPDATED}</span>
       </div>
 
@@ -46,7 +46,7 @@ export default function NerraPrivacyPolicy() {
 
       <Section id="p-1" title="1. Introduction">
         <p className="nr-p">
-          Ship AI Solutions, LLC (&ldquo;we&rdquo;, &ldquo;us&rdquo;) operates the Nerra mobile app (the
+          Hicham Zaidi, an independent developer (&ldquo;we&rdquo;, &ldquo;us&rdquo;), operates the Nerra mobile app (the
           &ldquo;App&rdquo;), a private companion for people who use GLP-1 medication. This Privacy Policy explains
           what information the App handles and how. By using the App you agree to this policy.
         </p>
