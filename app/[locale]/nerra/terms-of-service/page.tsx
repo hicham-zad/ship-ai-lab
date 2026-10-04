@@ -60,8 +60,8 @@ export default function NerraTerms() {
 
       <Section id="t-3" title="3. The App">
         <p className="nr-p">
-          Nerra helps you track GLP-1 medication: logging doses, seeing your next dose, estimating medication
-          level, reminders, weight and measurements, check-ins, a dose calendar and a PDF report you can share with
+          Nerra helps you track GLP-1 medication: logging doses, seeing your next dose,
+          reminders, weight and measurements, check-ins, a dose calendar and a PDF report you can share with
           your doctor. Some features are free and others are part of Nerra Lifetime.
         </p>
       </Section>
@@ -72,8 +72,8 @@ export default function NerraTerms() {
           and does not replace professional medical advice.
         </div>
         <p className="nr-p">
-          The medication level chart, next-dose dates, and missed-dose guidance are estimates based
-          on general pharmacological models and the information you enter. They may be inaccurate for you. Never
+          You always enter the dose your healthcare provider prescribed. Nerra does not calculate, recommend or adjust
+          doses. Next-dose dates are simple schedule reminders based on what you log. Never
           change your dose, skip a dose or take an extra dose based only on the App. Confirm everything with your
           healthcare provider. In an emergency, call your local emergency number.
         </p>
@@ -125,7 +125,7 @@ export default function NerraTerms() {
       <Section id="t-10" title="10. Limitation of Liability">
         <p className="nr-p">
           To the fullest extent permitted by law, we are not liable for indirect, incidental, special or
-          consequential damages, or for any loss arising from your reliance on the App&apos;s estimates or your
+          consequential damages, or for any loss arising from your reliance on the App or your
           medication decisions. Our total liability for any claim is limited to the amount you paid for the App in
           the twelve months before the claim. Nothing in these Terms limits liability that cannot be limited by law.
         </p>

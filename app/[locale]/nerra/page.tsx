@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  ['Never miss a dose', 'Reminders, a next-dose date and gentle missed-dose follow-up, all on your device.'],
-  ['Medication level', 'See an estimate of the active medication level and how it changes between doses.'],
+  ['Never miss a dose', 'Reminders, a next-dose date and a gentle follow-up reminder, all on your device.'],
+  ['Dose calendar', 'See every dose you logged and the days you planned, all in one calendar.'],
   ['Injection sites', 'Rotate sites easily and get a warning before you log a duplicate dose.'],
   ['Weight & measurements', 'Track weight and body measurements and watch your progress over time.'],
   ['Daily check-ins', 'Log nausea, appetite and energy to spot patterns after dose changes.'],
@@ -30,7 +30,6 @@ const features = [
 
 const shots = [
   ['dashboard.png', 'Today'],
-  ['level.png', 'Medication level'],
   ['medications.png', 'Medications'],
   ['progress.png', 'Progress'],
 ];
@@ -42,7 +41,7 @@ const compare: [string, boolean][] = [
   ['Data export', true],
   ['Dose calendar', false],
   ['Daily check-ins & goals', false],
-  ['Medication level curve & progress charts', false],
+  ['Progress charts', false],
   ['Body measurements', false],
   ['Doctor report as PDF', false],
 ];
@@ -154,7 +153,7 @@ export default function NerraLanding() {
 
         <div className="nr-legal-strip">
           <p>
-            Nerra is not a medical device and does not provide medical advice. Estimates are informational only.
+            Nerra is not a medical device and does not provide medical advice. You always enter the dose your prescriber gave you; Nerra never calculates or suggests one.
             Always follow your prescriber&apos;s instructions. Nerra is not affiliated with any medication manufacturer.
           </p>
         </div>

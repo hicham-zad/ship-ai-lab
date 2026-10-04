@@ -36,7 +36,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: 'Can Nerra tell me what dose to take?',
-    a: 'No. Nerra tracks what your prescriber has told you. Its estimates are informational only, so always follow your doctor or pharmacist.',
+    a: 'No. Nerra only records the dose your prescriber told you to take. It never calculates or suggests a dose, so always follow your doctor or pharmacist.',
   },
 ];
 
