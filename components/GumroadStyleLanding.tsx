@@ -580,6 +580,7 @@ export default function GumroadLandingWithProjects({
           <div className="flex flex-col gap-3 md:items-end items-center">
             <a href="/sobergirl" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">Sober Girl</a>
             <a href="/nerra" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">Nerra</a>
+            <a href="/pcos" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">PCOS &amp; Endo</a>
             <a href="/privacy-policy" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">{t('footer.privacyPolicy')}</a>
             <a href="/terms-of-service" className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors">{t('footer.termsOfService')}</a>
           </div>
