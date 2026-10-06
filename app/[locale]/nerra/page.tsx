@@ -28,6 +28,15 @@ const features = [
   ['Doctor report', 'Export a clean PDF of your doses and progress for your next appointment.'],
 ];
 
+const guideLinks: [string, string, string][] = [
+  ['/nerra/glp-1-injection-site-rotation', 'Injection site planner', 'Where to inject and a free 12-week rotation plan you can print.'],
+  ['/nerra/glp-1-missed-dose', 'Missed dose checker', 'What each label says if you miss a weekly dose.'],
+  ['/nerra/tirzepatide-dose-chart', 'Tirzepatide dose chart', 'Mounjaro and Zepbound label doses, cited.'],
+  ['/nerra/semaglutide-dose-chart', 'Semaglutide dose chart', 'Ozempic label doses and timing rules.'],
+  ['/nerra/wegovy-dosing-schedule', 'Wegovy dosing schedule', 'Injection and tablet schedules from the label.'],
+  ['/nerra/nerra-app', 'About Nerra', 'Facts, price model and what Nerra will never do.'],
+];
+
 const shots = [
   ['dashboard.png', 'Today'],
   ['medications.png', 'Medications'],
@@ -57,6 +66,7 @@ export default function NerraLanding() {
             <span className="nr-wordmark">Nerra</span>
           </Link>
           <div className="nr-nav-links">
+            <Link href="/nerra/guides" className="nr-nav-link nr-keep">Guides</Link>
             <Link href="/nerra/support" className="nr-nav-link nr-keep">Support</Link>
             <Link href="/nerra/privacy-policy" className="nr-nav-link">Privacy</Link>
             <Link href="/nerra/terms-of-service" className="nr-nav-link">Terms</Link>
@@ -141,6 +151,24 @@ export default function NerraLanding() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+        </section>
+
+        <section className="nr-sec nr-sec-alt">
+          <div className="nr-sec-inner">
+            <span className="nr-section-tag">Free guides</span>
+            <h2 className="nr-section-title">Straight from the labels</h2>
+            <p className="nr-sec-sub">
+              Injection sites, dose charts and missed dose rules for Ozempic, Wegovy, Mounjaro and Zepbound, each linked to the manufacturer&apos;s prescribing information.
+            </p>
+            <div className="nr-features">
+              {guideLinks.map(([href, t, d]) => (
+                <Link key={href} href={href} className="nr-feature" style={{ textDecoration: 'none' }}>
+                  <div className="nr-feature-title">{t}</div>
+                  <p className="nr-feature-desc">{d}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
