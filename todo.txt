@@ -3,3 +3,12 @@
 - pseo 
 - find a strategy
 - alterntiv
+NERRA SEO (17 guides live at /nerra/<slug>, DataForSEO spent ~$0.04 of $1)
+- When Nerra is on the App Store: set NR_APP_STORE_URL in data/nerra/config.ts, replace the "Coming soon" pills, add Nerra's real rating to best-glp-1-tracker-apps and shotsy-alternative
+- ~4-6 weeks after indexing: re-run the AI Overview check (about $0.03 for 6 queries), pull Search Console and Bing Webmaster queries for /nerra/*, re-prioritise
+- glp-1-plateau (1.0K searches, KD 0): needs a citable source first (a published study; the four labels do not cover it). Skipped on purpose
+- how-to-inject Mounjaro and Zepbound: needs Lilly's Instructions for Use text (the pi.lilly.com IFU PDFs returned 403). Find another readable source
+- Re-check label revisions (Zepbound/Mounjaro 08/2026, Ozempic 05/2026, Wegovy 06/2026) and bump NR_UPDATED in data/nerra/config.ts when you do
+- Spot-check the App Store privacy-label sentences on best-glp-1-tracker-apps (read automatically, not by hand)
+- Submit new URLs after each deploy: python3 scripts/indexnow.py <urls>   (or --all https://shipailab.com/sitemap.xml)
+- Submit /pcos to IndexNow once it is deployed
