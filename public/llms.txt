@@ -109,6 +109,10 @@ Nerra is a private GLP-1 companion app for iPhone, made by Hicham Zaidi. It trac
 - [Wegovy Dosing Schedule: Injection and Tablet Doses From the Label](https://shipailab.com/nerra/wegovy-dosing-schedule): The Wegovy label dose ladder: 0.25, 0.5, 1 and 1.7 mg every 4 weeks, maintenance 2.4 mg, the 7.2 mg option, the daily tablet schedule, and the missed dose rule.
 - [Missed a GLP-1 Dose? Ozempic, Wegovy, Mounjaro, Zepbound Rules](https://shipailab.com/nerra/glp-1-missed-dose): What each label says if you miss a weekly GLP-1 injection: 4 days for Mounjaro and Zepbound, 5 days for Ozempic, the 2-day rule for Wegovy. Free missed dose checker.
 - [Nerra: Private GLP-1 Tracker App for iPhone (Facts and Pricing)](https://shipailab.com/nerra/nerra-app): Nerra is a private GLP-1 tracker for iPhone: doses, injection sites, weight and check-ins. No account, no cloud, one-time purchase. What it does, what it does not, and who it suits.
+- [How to Inject Ozempic: Step-by-Step From the Official Instructions](https://shipailab.com/nerra/how-to-inject-ozempic): How to inject Ozempic with the pen, step by step, from Novo Nordisk’s FDA-approved Instructions for Use: new needle, flow check, dose, 6-second count, disposal and storage.
+- [How to Inject Wegovy: FlexTouch Pen Steps From the Official Instructions](https://shipailab.com/nerra/how-to-inject-wegovy): How to inject Wegovy with the 2.4 mg FlexTouch pen from Novo Nordisk’s Instructions for Use: injection sites, 6-second count, flow check, disposal and how long a pen lasts.
+- [Best GLP-1 Tracker Apps for iPhone (2026): Compared by Use](https://shipailab.com/nerra/best-glp-1-tracker-apps): Six GLP-1 tracker apps compared from their App Store listings: Shotsy, MeAgain, GlucoPal, Glippy, GLP-1 Logbook and Nerra. Price model, ratings, privacy labels and what each is best for.
+- [Shotsy Alternatives (2026): GLP-1 Trackers Compared](https://shipailab.com/nerra/shotsy-alternative): Looking for a Shotsy alternative? What Shotsy costs and does, and five other GLP-1 trackers (MeAgain, GlucoPal, Glippy, GLP-1 Logbook, Nerra) compared from their App Store listings.
 
 ## Use Cases
 

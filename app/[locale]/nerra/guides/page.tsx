@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 
 const GROUPS: { title: string; blurb: string; slugs: string[] }[] = [
   { title: 'Free tools', blurb: 'Nothing you enter is saved or sent anywhere.', slugs: ['glp-1-injection-site-rotation', 'glp-1-missed-dose'] },
-  { title: 'Injection sites', blurb: 'What each label says about where to inject and how to rotate.', slugs: ['zepbound-injection-sites', 'mounjaro-injection-sites', 'ozempic-injection-sites'] },
+  { title: 'Injection sites', blurb: 'What each label says about where to inject and how to rotate.', slugs: ['zepbound-injection-sites', 'mounjaro-injection-sites', 'ozempic-injection-sites', 'how-to-inject-ozempic', 'how-to-inject-wegovy'] },
   { title: 'Dose charts', blurb: 'Straight from the US prescribing information, with dates.', slugs: ['tirzepatide-dose-chart', 'semaglutide-dose-chart', 'wegovy-dosing-schedule'] },
-  { title: 'About Nerra', blurb: 'The facts about the app.', slugs: ['nerra-app'] },
+  { title: 'Choosing an app', blurb: 'Compared from App Store listings, dated and linked.', slugs: ['best-glp-1-tracker-apps', 'shotsy-alternative', 'nerra-app'] },
 ];
 
 export default function NerraGuidesHub() {

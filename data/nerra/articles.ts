@@ -829,8 +829,457 @@ export const ARTICLES: Article[] = [
       { q: 'Is Nerra on Android?', a: 'No. Nerra is for iPhone only and is coming soon to the App Store.' },
       { q: 'Who makes Nerra?', a: 'Hicham Zaidi, an independent developer.' },
     ],
-    related: ['glp-1-injection-site-rotation', 'glp-1-missed-dose', 'tirzepatide-dose-chart', 'semaglutide-dose-chart'],
+    related: ['best-glp-1-tracker-apps', 'shotsy-alternative', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
   },
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'how-to-inject-ozempic',
+    metaTitle: 'How to Inject Ozempic: Step-by-Step From the Official Instructions',
+    metaDescription:
+      'How to inject Ozempic with the pen, step by step, from Novo Nordisk’s FDA-approved Instructions for Use: new needle, flow check, dose, 6-second count, disposal and storage.',
+    h1: 'How to inject Ozempic: the pen steps from the official instructions',
+    dek: 'Five steps, in the manufacturer’s own order, with the details people most often get wrong: the flow check, the 6-second count, and what to do with the needle.',
+    quickAnswer:
+      'With the Ozempic pen: wash your hands, check the medicine is clear and colorless, attach a new needle and remove both caps; check the flow with a new pen only; turn the dose selector until the counter shows your dose; wipe the site with an alcohol swab and let it dry; insert the needle, press and hold the dose button until the counter shows 0, then count slowly to 6 before removing the needle; finally unscrew the needle without recapping it and put it in a sharps container [[ozIfu]]. Get training from your healthcare provider before your first injection [[ozIfu]].',
+    kicker: 'How to inject',
+    keywords: ['how to inject ozempic', 'ozempic pen how to use', 'how to use ozempic pen', 'ozempic injection steps', 'ozempic flow check'],
+    sources: ['ozIfu', 'ozLabel'],
+    sections: [
+      {
+        id: 'before',
+        h2: 'Before you start',
+        blocks: [
+          {
+            t: 'callout',
+            kind: 'safety',
+            title: 'Get trained first',
+            x: 'The Instructions for Use say not to use the pen without proper training from your healthcare provider, and that you should make sure you know how to inject before you start treatment [[ozIfu]]. This page summarizes the manufacturer’s instructions for the 0.25 mg or 0.5 mg pen. The 1 mg and 2 mg pens have their own instructions that follow the same pattern, so read the leaflet that came with yours. It is not medical advice.',
+          },
+          {
+            t: 'ul',
+            items: [
+              'You will need your Ozempic pen, a new needle, an alcohol swab, a gauze pad or cotton ball, and a sharps disposal container [[ozIfu]].',
+              'A NovoFine Plus 32G 4 mm needle comes with the pen. Other compatible disposable needles up to 8 mm can be used, so ask your healthcare professional about compatibility [[ozIfu]].',
+              'Do not share your pen with anyone, even if the needle has been changed [[ozIfu]].',
+              'If you are blind or have poor eyesight and cannot read the dose counter, do not use the pen without help from a trained person with good eyesight [[ozIfu]].',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'steps',
+        h2: 'The five steps',
+        blocks: [
+          { t: 'h3', x: 'Step 1. Prepare the pen with a new needle' },
+          {
+            t: 'ul',
+            items: [
+              'Wash your hands, check the pen name and colored label, and pull off the pen cap [[ozIfu]].',
+              'Look through the pen window. The medicine should be clear and colorless. If it looks cloudy or contains particles, do not use the pen [[ozIfu]].',
+              'Tear the paper tab off a new needle, push it straight onto the pen and turn until it is on tight [[ozIfu]].',
+              'The needle has two caps and both must come off. If you forget, no medicine will be injected [[ozIfu]]. Keep the outer cap for later and throw the inner cap away.',
+              'Always use a new needle for each injection, and never a bent or damaged one [[ozIfu]].',
+            ],
+          },
+          { t: 'h3', x: 'Step 2. Check the flow, for a new pen only' },
+          {
+            t: 'ul',
+            items: [
+              'Do this before the first injection with each new pen only. For a pen already in use, go to Step 3 [[ozIfu]].',
+              'Turn the dose selector to the flow check symbol, hold the pen with the needle pointing up, and press and hold the dose button until the counter shows 0. A drop should appear at the needle tip [[ozIfu]].',
+              'If no drop appears, repeat up to 6 times. If there is still no drop, change the needle and repeat once more. If a drop still does not appear, do not use the pen and contact Novo Nordisk on 1-888-693-6742 [[ozIfu]].',
+            ],
+          },
+          { t: 'h3', x: 'Step 3. Select your dose' },
+          {
+            t: 'ul',
+            items: [
+              'Turn the dose selector until the counter stops and shows your dose, 0.25 mg or 0.5 mg for this pen [[ozIfu]].',
+              'Use the dose counter and dose pointer to see the dose. Do not count the clicks [[ozIfu]].',
+              'If the counter stops before your dose, there is not enough medicine left for a full dose and you should use a new pen [[ozIfu]].',
+            ],
+          },
+          { t: 'h3', x: 'Step 4. Inject' },
+          {
+            t: 'ul',
+            items: [
+              'Choose your site, wipe the skin with an alcohol swab and let it dry [[ozIfu]]. The label’s sites are the abdomen, thigh or upper arm, with a different site each week in the same region [[ozLabel]].',
+              'Insert the needle as your healthcare provider showed you. Keep the dose counter visible, since covering it with your fingers could stop the injection [[ozIfu]].',
+              'Press and hold the dose button until the counter shows 0, and keep pressing with the needle in the skin [[ozIfu]].',
+              '**Count slowly to 6** while keeping the button pressed. If you remove the needle earlier, the full dose will not be delivered [[ozIfu]].',
+              'Remove the needle from the skin. If blood appears, press lightly with gauze or a cotton ball and do not rub [[ozIfu]]. A drop at the needle tip afterward is normal [[ozIfu]].',
+            ],
+          },
+          { t: 'h3', x: 'Step 5. After the injection' },
+          {
+            t: 'ul',
+            items: [
+              'Unscrew the needle carefully. Do not put the caps back on it, to avoid needle sticks, and place it in a sharps container right away [[ozIfu]].',
+              'Put the pen cap back on after each use to protect the medicine from light [[ozIfu]].',
+              'Never try to put the inner needle cap back on, and always remove the needle from the pen after each injection [[ozIfu]].',
+            ],
+          },
+        ],
+      },
+      CTA_DOSES_SECTION(),
+      {
+        id: 'problems',
+        h2: 'If something goes wrong',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              '**The counter never reached 0.** You may have a blocked or damaged needle and not received any medicine. Change the needle and start again from Step 1 [[ozIfu]].',
+              '**You dropped the pen.** Attach a new needle and check the flow before you inject [[ozIfu]].',
+              '**You missed your weekly dose.** See the [missed dose guide](/nerra/glp-1-missed-dose). The label window is 5 days [[ozLabel]].',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'storage',
+        h2: 'Storing the pen',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              'New, unused pens go in the refrigerator at 36°F to 46°F (2°C to 8°C) [[ozIfu]].',
+              'A pen in use can be kept for 56 days at room temperature (59°F to 86°F) or in the refrigerator, and should be thrown away after 56 days even if medicine is left [[ozIfu]].',
+              'Do not freeze it or use it if it has been frozen. Keep it away from heat and light, with the cap on [[ozIfu]].',
+              'Never use a syringe to withdraw medicine from the pen [[ozIfu]].',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How do you inject Ozempic?', a: 'Attach a new needle, check the flow if the pen is new, select your dose on the counter, wipe the site and let it dry, insert the needle, press and hold the dose button until the counter shows 0, count slowly to 6, then remove the needle and dispose of it in a sharps container.' },
+      { q: 'How long do you hold the Ozempic pen in?', a: 'Keep the dose button pressed until the counter shows 0 and then count slowly to 6 before removing the needle. If you remove it earlier, the full dose may not be delivered.' },
+      { q: 'Do I need to prime a new Ozempic pen?', a: 'The instructions call it a flow check. Do it before the first injection with each new pen only. You should see a drop at the needle tip.' },
+      { q: 'How long can an Ozempic pen be used once started?', a: 'Up to 56 days at room temperature (59°F to 86°F) or in the refrigerator, then throw it away even if medicine remains.' },
+      { q: 'Can I reuse the needle?', a: 'No. Always use a new needle for each injection, and never share needles.' },
+    ],
+    related: ['ozempic-injection-sites', 'semaglutide-dose-chart', 'glp-1-missed-dose', 'how-to-inject-wegovy'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'how-to-inject-wegovy',
+    metaTitle: 'How to Inject Wegovy: FlexTouch Pen Steps From the Official Instructions',
+    metaDescription:
+      'How to inject Wegovy with the 2.4 mg FlexTouch pen from Novo Nordisk’s Instructions for Use: injection sites, 6-second count, flow check, disposal and how long a pen lasts.',
+    h1: 'How to inject Wegovy: FlexTouch pen steps from the official instructions',
+    dek: 'The steps for the 2.4 mg FlexTouch pen, the places to inject, and how to store and dispose of it, in the manufacturer’s own words.',
+    quickAnswer:
+      'With the Wegovy FlexTouch pen (2.4 mg): attach a new needle and remove both caps, check the flow with each new pen before its first dose, choose a site on the upper arms, stomach or upper legs (keeping 2 inches or 5 cm from the belly button), wipe the skin and let it dry, press and hold the dose button until the counter shows 0, count slowly to 6, then remove the needle and put it in a sharps container [[wegIfu]]. You can inject in the same body area each week but not the same spot [[wegIfu]].',
+    kicker: 'How to inject',
+    keywords: ['how to inject wegovy', 'wegovy pen how to use', 'wegovy flextouch instructions', 'wegovy injection sites', 'wegovy injection steps'],
+    sources: ['wegIfu', 'wegLabel'],
+    sections: [
+      {
+        id: 'before',
+        h2: 'Before you start',
+        blocks: [
+          {
+            t: 'callout',
+            kind: 'safety',
+            title: 'Get trained first, and check your pen type',
+            x: 'The Instructions for Use say not to use the pen without proper training from your healthcare provider [[wegIfu]]. This page follows the instructions for the single-patient-use 2.4 mg FlexTouch pen, which holds four fixed doses of 2.4 mg, one taken weekly [[wegIfu]]. Wegovy also comes as single-dose pens and syringes with their own instructions [[wegLabel]]. If yours is a different presentation, read the leaflet that came with it. It is not medical advice.',
+          },
+          {
+            t: 'ul',
+            items: [
+              'You need the pen, a new needle (a NovoFine Plus 32G 4 mm needle comes with the pen), an alcohol swab, cotton or gauze, and an FDA-cleared sharps container [[wegIfu]].',
+              'Do not share the pen with anyone, even with a new needle [[wegIfu]].',
+              'If you cannot read the dose counter because of poor eyesight, do not use the pen without help from a trained person [[wegIfu]].',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'sites',
+        h2: 'Where to inject',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              'Choose a site on your **upper arms, stomach or upper legs** [[wegIfu]].',
+              'Keep a distance of **2 inches (5 cm) from your belly button** [[wegIfu]].',
+              'You may inject in the same body area each week, but not in the same spot as the last injection [[wegIfu]].',
+              'The prescribing information says to rotate injection sites with each dose [[wegLabel]]. See the [site rotation planner](/nerra/glp-1-injection-site-rotation).',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'steps',
+        h2: 'The five steps',
+        blocks: [
+          { t: 'h3', x: 'Step 1. Prepare the pen with a new needle' },
+          {
+            t: 'ul',
+            items: [
+              'Wash your hands, check the pen contains Wegovy, and pull off the pen cap [[wegIfu]].',
+              'Check through the pen window that the medicine is clear and colorless. If it looks cloudy, do not use the pen [[wegIfu]].',
+              'Attach a new needle straight onto the pen and turn until tight. Remove both the outer and inner needle caps, since forgetting one means no medicine is injected [[wegIfu]].',
+              'Always use a new needle for each injection, never a bent or damaged one [[wegIfu]].',
+            ],
+          },
+          { t: 'h3', x: 'Step 2. Check the flow with each new pen' },
+          { t: 'p', x: 'Before the first dose from a new pen, check the medicine flow. For the second, third and fourth doses from the same pen, go straight to Step 3 [[wegIfu]].' },
+          { t: 'h3', x: 'Step 3. Set your dose' },
+          { t: 'p', x: 'This pen only has the 2.4 mg dose. If the dose counter stops before it reaches your prescribed dose, there is not enough medicine left for a full dose, so throw the pen away and use a new one [[wegIfu]].' },
+          { t: 'h3', x: 'Step 4. Inject' },
+          {
+            t: 'ul',
+            items: [
+              'Wipe the skin with an alcohol swab and let it dry. Insert the needle as your healthcare provider showed you, keeping the dose counter visible [[wegIfu]].',
+              'Press and hold the dose button until the counter shows 0, keep pressing with the needle in your skin, and **count slowly to 6**. Removing the needle earlier means the full dose will not be delivered [[wegIfu]].',
+              'Remove the needle. If blood appears, press lightly with cotton or gauze and do not rub. A drop at the needle tip is normal [[wegIfu]].',
+              'If 0 never appears in the counter, you may have a blocked or damaged needle and have received no medicine. Change the needle and repeat from Step 1 [[wegIfu]].',
+            ],
+          },
+          { t: 'h3', x: 'Step 5. After your injection' },
+          {
+            t: 'ul',
+            items: [
+              'Unscrew the needle without putting the caps back on, and place it in a sharps container right away [[wegIfu]].',
+              'Put the pen cap back on to protect the medicine from light [[wegIfu]].',
+              'After all four doses there may still be medicine in the pen. It should be thrown away [[wegIfu]].',
+            ],
+          },
+        ],
+      },
+      CTA_DOSES_SECTION(),
+      {
+        id: 'storage',
+        h2: 'Storing the pen',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              'Store in the refrigerator at 36°F to 46°F (2°C to 8°C) [[wegIfu]].',
+              'After first use, store at 68°F to 77°F or in the refrigerator for up to 56 days [[wegIfu]].',
+              'Throw it away if it has been frozen, exposed to light or temperatures above 86°F (30°C), or out of the refrigerator for 56 days or longer [[wegIfu]].',
+              'Store the pen without a needle attached, and keep the cap on when not in use [[wegIfu]].',
+            ],
+          },
+          { t: 'p', x: 'Missed an injection? The rule is about the next scheduled dose, see the [missed dose checker](/nerra/glp-1-missed-dose) and the [Wegovy dosing schedule](/nerra/wegovy-dosing-schedule).' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Where do you inject Wegovy?', a: 'On the upper arms, stomach or upper legs, keeping 2 inches (5 cm) from the belly button. You can use the same body area each week but not the same spot.' },
+      { q: 'How long do you hold the Wegovy pen in?', a: 'Press and hold the dose button until the counter shows 0, then count slowly to 6 before removing the needle.' },
+      { q: 'Do I check the flow every time?', a: 'No. Check the flow with each new pen before its first dose. For the second to fourth doses from the same pen, skip it.' },
+      { q: 'How long does a Wegovy pen last once started?', a: 'Up to 56 days stored at 68°F to 77°F or in the refrigerator. The 2.4 mg FlexTouch pen holds four weekly doses.' },
+      { q: 'Is this the same for the Wegovy tablet?', a: 'No. The tablet is taken orally once daily on an empty stomach with water, so see the Wegovy dosing schedule page.' },
+    ],
+    related: ['wegovy-dosing-schedule', 'glp-1-injection-site-rotation', 'glp-1-missed-dose', 'how-to-inject-ozempic'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'best-glp-1-tracker-apps',
+    metaTitle: 'Best GLP-1 Tracker Apps for iPhone (2026): Compared by Use',
+    metaDescription:
+      'Six GLP-1 tracker apps compared from their App Store listings: Shotsy, MeAgain, GlucoPal, Glippy, GLP-1 Logbook and Nerra. Price model, ratings, privacy labels and what each is best for.',
+    h1: 'Best GLP-1 tracker apps for iPhone in 2026: which one for which person',
+    dek: 'Six apps compared on price model, ratings, platforms, privacy labels and whether they show estimated medication levels. Facts come from the US App Store listings, dated and linked.',
+    quickAnswer:
+      'The best GLP-1 tracker depends on what you want. Shotsy has the longest list of languages and 4.8 stars from 33K ratings, with subscriptions listed from $9.99 a month [[asShotsy]]. MeAgain has 4.8 stars from 36K ratings and in-app purchases from $14.99 [[asMeAgain]]. Glippy is listed as free [[asGlippy]]. GlucoPal offers estimated medication-level forecasts in its Pro tier [[asGlucoPal]]. GLP-1 Logbook is free with a $3.99 option to remove ads [[asLogbook]]. Nerra, which we make, is a private tracker with a one-time purchase, but it is not on the App Store yet. Data is from US listings retrieved 6 October 2026.',
+    kicker: 'Comparison',
+    keywords: ['best glp-1 tracker app', 'glp-1 tracker app', 'glp1 tracker', 'ozempic tracker app', 'best ozempic app', 'mounjaro tracker app', 'zepbound tracker app'],
+    sources: ['asShotsy', 'asMeAgain', 'asGlucoPal', 'asGlippy', 'asLogbook'],
+    sections: [
+      {
+        id: 'disclosure',
+        h2: 'Read this first: we make one of these apps',
+        blocks: [
+          {
+            t: 'callout',
+            kind: 'disclosure',
+            title: 'Disclosure',
+            x: 'We build Nerra, so we are not a neutral party. Every fact about the other five apps comes from that app’s own US App Store listing, retrieved 6 October 2026, and links to it. We have not tested these apps ourselves and we do not score them. The labels below say what each is best for, not which is better. Prices, ratings and privacy labels change, so check the listing before you install or pay. Nerra is not on the App Store yet, so you cannot install it today.',
+          },
+        ],
+      },
+      {
+        id: 'table',
+        h2: 'The apps side by side',
+        blocks: [
+          {
+            t: 'table',
+            head: ['App', 'Rating (US App Store)', 'Price model', 'Languages and devices', 'Shows estimated medication levels?'],
+            rows: [
+              ['Shotsy', '4.8, 33K ratings [[asShotsy]]', 'Free with in-app purchases. Listed subscriptions: monthly $9.99 to $19.99, yearly $39.99 to $59.99 [[asShotsy]]', 'English plus 16 languages. iPhone, Mac, Apple Vision [[asShotsy]]', 'Yes, charts it describes as based on peer-reviewed clinical data [[asShotsy]]'],
+              ['MeAgain', '4.8, 36K ratings [[asMeAgain]]', 'Free with in-app purchases from $14.99 up to $119.99 [[asMeAgain]]', 'English. iPhone, iOS 16.4 or later [[asMeAgain]]', 'Yes, “medication-level context between doses” [[asMeAgain]]'],
+              ['GlucoPal', '4.8, 3.2K ratings [[asGlucoPal]]', 'Free with in-app purchases: Pro weekly $12.99, yearly $29.99 and $49.99 [[asGlucoPal]]', 'Six languages. iPhone, Mac, Apple Vision [[asGlucoPal]]', 'Yes, in the Pro tier [[asGlucoPal]]'],
+              ['Glippy', '4.8, 435 ratings [[asGlippy]]', 'Listed as free [[asGlippy]]', 'English. iPhone, iOS 16.4 or later [[asGlippy]]', 'No claim shown [[asGlippy]]'],
+              ['GLP-1 Logbook', 'Not shown [[asLogbook]]', 'Free, with a $3.99 in-app purchase to remove ads [[asLogbook]]', 'English. iPhone, iPad, Mac, Apple Vision [[asLogbook]]', 'Yes, an estimated level curve, described as illustrative [[asLogbook]]'],
+              ['Nerra (ours)', 'No ratings yet. Not on the App Store', 'Free core logging. Nerra Lifetime is a single one-time purchase, no subscription', 'English and German. iPhone only', 'No. You enter the dose your prescriber gave you and Nerra never calculates or suggests one'],
+            ],
+            caption: 'US App Store listings retrieved 6 October 2026. Nerra row is from the Nerra product page.',
+          },
+        ],
+      },
+      {
+        id: 'privacy',
+        h2: 'What the privacy labels say',
+        blocks: [
+          {
+            t: 'p',
+            x: 'App Store privacy labels are self-declared by each developer, so treat them as the developer’s statement. As listed on 6 October 2026: MeAgain declares data used to track you (identifiers and usage data) and a long list linked to you, including health and fitness, purchases and contact info [[asMeAgain]]. GLP-1 Logbook declares location, identifiers and usage data used to track you [[asLogbook]]. Shotsy lists health and fitness data, user content, usage data and diagnostics as not linked to you [[asShotsy]], and GlucoPal lists none linked to you, with health and fitness, usage and diagnostics data not linked [[asGlucoPal]]. Glippy’s listing declares data not linked to you across contact info, user content, usage data and diagnostics [[asGlippy]]. Open the listing’s App Privacy section yourself before you enter health data.',
+          },
+          {
+            t: 'p',
+            x: 'Nerra keeps your doses, weight and check-ins on your iPhone only. There is no account, no cloud, no ads and no trackers.',
+          },
+        ],
+      },
+      {
+        id: 'best-for',
+        h2: 'Best for, in one line each',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              '**Shotsy:** you want the widest language support, Mac and Vision Pro versions, and charts of estimated medication levels, and you are fine with a subscription [[asShotsy]].',
+              '**MeAgain:** you want a large user base (36K ratings) and medication-level context, and you are comfortable with its declared data use [[asMeAgain]].',
+              '**GlucoPal:** you want a tracker with a Pro tier that forecasts estimated medication levels [[asGlucoPal]].',
+              '**Glippy:** you want a free, simple shot tracker and are fine with a newer app (435 ratings) [[asGlippy]].',
+              '**GLP-1 Logbook:** you want a free body-map style tracker and accept ads unless you pay $3.99 to remove them [[asLogbook]].',
+              '**Nerra:** you want data kept only on your iPhone, no account and no subscription, with no dose suggestions or level estimates. Wait for the App Store release.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'how',
+        h2: 'How to choose',
+        blocks: [
+          {
+            t: 'ol',
+            items: [
+              'Decide whether you want estimated medication levels. Several apps show them, and they are estimates, not measurements. Logbook says so itself [[asLogbook]].',
+              'Check the price model. Subscriptions run monthly or yearly in some apps, while others are free or a one-time purchase.',
+              'Read the App Privacy section for the app you pick. It lists what is collected and whether it is used to track you.',
+              'Make sure it runs on your device and in your language.',
+              'Never let an app choose your dose. Your prescriber sets it.',
+            ],
+          },
+        ],
+      },
+      CTA_SITES_SECTION(),
+      {
+        id: 'fit',
+        h2: 'Is Nerra right for you?',
+        blocks: [{ t: 'fit' }],
+      },
+    ],
+    faqs: [
+      { q: 'What is the best GLP-1 tracker app?', a: 'It depends. Shotsy and MeAgain have the most ratings (33K and 36K at 4.8 stars). Glippy and GLP-1 Logbook are free. Nerra is a private, one-time-purchase option that is coming soon to the App Store.' },
+      { q: 'Are GLP-1 tracker apps free?', a: 'Several are free to download with in-app purchases or subscriptions. Glippy is listed as free and GLP-1 Logbook is free with a $3.99 option to remove ads. Check each listing for current prices.' },
+      { q: 'Do GLP-1 tracker apps work for Ozempic, Mounjaro, Wegovy and Zepbound?', a: 'The apps compared here describe support for these medicines. Shotsy lists Ozempic, Wegovy, Mounjaro, Zepbound and others. Check the listing for your medicine.' },
+      { q: 'Is there a GLP-1 tracker with no account?', a: 'Nerra has no account and no cloud, and keeps data on your iPhone. It is not on the App Store yet.' },
+      { q: 'Should an app tell me my dose?', a: 'No. Your prescriber sets your dose. Nerra never calculates or suggests one.' },
+    ],
+    related: ['shotsy-alternative', 'nerra-app', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'shotsy-alternative',
+    metaTitle: 'Shotsy Alternatives (2026): GLP-1 Trackers Compared',
+    metaDescription:
+      'Looking for a Shotsy alternative? What Shotsy costs and does, and five other GLP-1 trackers (MeAgain, GlucoPal, Glippy, GLP-1 Logbook, Nerra) compared from their App Store listings.',
+    h1: 'Shotsy alternatives: GLP-1 trackers compared',
+    dek: 'What Shotsy offers and what it costs, the reasons people look elsewhere, and five alternatives with price, privacy and platform facts from their listings.',
+    quickAnswer:
+      'Shotsy is a free-to-download GLP-1 tracker with 4.8 stars from 33K ratings, in-app subscriptions listed from $9.99 a month, and charts of estimated medication levels [[asShotsy]]. Alternatives with different trade-offs are MeAgain (more expensive tiers, 36K ratings) [[asMeAgain]], GlucoPal (Pro forecasts, 3.2K ratings) [[asGlucoPal]], Glippy (listed as free) [[asGlippy]], GLP-1 Logbook (free with ads, $3.99 to remove) [[asLogbook]], and Nerra (a one-time purchase, no account, coming soon to the App Store). Data is from US listings retrieved 6 October 2026.',
+    kicker: 'Alternatives',
+    keywords: ['shotsy alternative', 'shotsy app', 'shotsy alternatives', 'apps like shotsy', 'shotsy vs', 'shotsy cost'],
+    sources: ['asShotsy', 'asMeAgain', 'asGlucoPal', 'asGlippy', 'asLogbook'],
+    sections: [
+      {
+        id: 'disclosure',
+        h2: 'Disclosure',
+        blocks: [
+          {
+            t: 'callout',
+            kind: 'disclosure',
+            title: 'We make Nerra',
+            x: 'We build Nerra, one of the alternatives, so we are not neutral. Facts about the other apps come from their US App Store listings, retrieved 6 October 2026, and link to them. We have not tested them. Check the live listing before you pay.',
+          },
+        ],
+      },
+      {
+        id: 'shotsy',
+        h2: 'What Shotsy is, from its listing',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              'A GLP-1 tracker for injections and pills, from Shotsy Co., rated 4.8 from 33K ratings [[asShotsy]].',
+              'Free with in-app purchases. Listed subscriptions are monthly at $9.99, $14.99 and $19.99, and yearly at $39.99 and $59.99 [[asShotsy]].',
+              'English plus 16 languages, on iPhone (iOS 18.0 or later), Mac and Apple Vision [[asShotsy]].',
+              'Tracks medication history, side effects, weight, calories, protein and water, and shows medication level charts it describes as based on peer-reviewed clinical data [[asShotsy]].',
+              'Its privacy label lists health and fitness data, user content, usage data and diagnostics as not linked to you [[asShotsy]].',
+            ],
+          },
+          { t: 'p', x: 'Shotsy has a lot going for it: a big user base, many languages and a deep feature set. The reasons to look at alternatives are usually fit, not quality.' },
+        ],
+      },
+      {
+        id: 'reasons',
+        h2: 'Reasons people look at alternatives',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              '**Price model.** Shotsy’s listed purchases are subscriptions. Some alternatives are free, ad-supported or a one-time purchase.',
+              '**Estimated medication levels.** Shotsy shows level charts. If you would rather not see estimates, look for an app that does not provide them.',
+              '**Data location.** If you want health entries kept on your phone only, check each app’s privacy label and policy.',
+              '**Platform or language.** Check your device and language are supported.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'table',
+        h2: 'Five alternatives side by side',
+        blocks: [
+          {
+            t: 'table',
+            head: ['App', 'Rating (US)', 'Price model', 'Estimated medication levels?', 'Privacy label note'],
+            rows: [
+              ['MeAgain', '4.8, 36K [[asMeAgain]]', 'Free with in-app purchases, $14.99 to $119.99 [[asMeAgain]]', 'Yes [[asMeAgain]]', 'Declares identifiers and usage data used to track you [[asMeAgain]]'],
+              ['GlucoPal', '4.8, 3.2K [[asGlucoPal]]', 'Free with in-app purchases, Pro weekly $12.99, yearly $29.99 and $49.99 [[asGlucoPal]]', 'Yes, in Pro [[asGlucoPal]]', 'Lists none linked to you [[asGlucoPal]]'],
+              ['Glippy', '4.8, 435 [[asGlippy]]', 'Listed as free [[asGlippy]]', 'No claim shown [[asGlippy]]', 'Data not linked to you [[asGlippy]]'],
+              ['GLP-1 Logbook', 'Not shown [[asLogbook]]', 'Free, $3.99 to remove ads [[asLogbook]]', 'Yes, illustrative [[asLogbook]]', 'Declares location, identifiers and usage used to track you [[asLogbook]]'],
+              ['Nerra (ours)', 'Not on the App Store yet', 'Free core logging, one-time Lifetime purchase, no subscription', 'No. Never suggests a dose', 'No account, no cloud, no ads or trackers. Data stays on the iPhone'],
+            ],
+            caption: 'US App Store listings retrieved 6 October 2026. Privacy labels are self-declared by developers.',
+          },
+        ],
+      },
+      CTA_SITES_SECTION(),
+      {
+        id: 'fit',
+        h2: 'Is Nerra right for you?',
+        blocks: [{ t: 'fit' }],
+      },
+    ],
+    faqs: [
+      { q: 'How much does Shotsy cost?', a: 'It is free to download with in-app purchases. The listing shows monthly subscriptions at $9.99, $14.99 and $19.99 and yearly at $39.99 and $59.99, as of 6 October 2026.' },
+      { q: 'What is the best free alternative to Shotsy?', a: 'Glippy is listed as free, and GLP-1 Logbook is free with a $3.99 option to remove ads. Check the listings for current terms.' },
+      { q: 'Is there a Shotsy alternative without a subscription?', a: 'Nerra uses a one-time Lifetime purchase with no subscription, and is coming soon to the App Store.' },
+      { q: 'Is there a Shotsy alternative with no medication level estimates?', a: 'Glippy shows no such claim in its listing, and Nerra never estimates levels or suggests a dose.' },
+      { q: 'Can Nerra import my Shotsy data?', a: 'We have not built an import. Nerra supports data export from its own app.' },
+    ],
+    related: ['best-glp-1-tracker-apps', 'nerra-app', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
+  },
+
 ];
 
 export function getArticle(slug: string) {
