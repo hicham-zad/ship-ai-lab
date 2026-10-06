@@ -1,29 +1,36 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { APP_STORE_URL, PLAY_STORE_URL } from '@/data/sobergirl/config';
+import { ARTICLES } from '@/data/sobergirl/articles';
+import { FEATURED_SLUGS } from '@/data/sobergirl/groups';
+
+const PAGE_URL = 'https://shipailab.com/sobergirl';
 
 export const metadata: Metadata = {
-  title: 'Sober Girl — Your Sobriety Companion',
+  title: 'Sober Girl: Sobriety Tracker & Sober Days Counter App',
   description:
-    'Sober Girl is the beautiful, private sobriety app for women. Track your streak, journal your journey, and grow your tree — one sober day at a time.',
+    'Free sobriety tracker and sober days counter for women. Track your sober streak and money saved, get craving SOS help, and journal privately. On Android now, iPhone coming soon.',
   keywords: [
-    'sober app',
-    'sobriety tracker',
-    'quit drinking',
-    'alcohol free',
-    'sober girl',
-    'sobriety journal',
-    'women sobriety',
-    'sober living',
+    'sobriety tracker app',
+    'sober days counter',
+    'sobriety counter app',
+    'quit drinking app',
+    'app to quit drinking',
+    'sober streak app',
+    'sober app for women',
+    'sobriety milestones',
+    'sober journal',
+    'alcohol free app',
   ],
   alternates: {
-    canonical: 'https://shipailab.com/sobergirl',
+    canonical: PAGE_URL,
   },
   openGraph: {
-    title: 'Sober Girl — Your Sobriety Companion',
+    title: 'Sober Girl: Sobriety Tracker & Sober Days Counter',
     description:
-      'Track your streak, journal your journey, and grow your tree — one sober day at a time.',
-    url: 'https://shipailab.com/sobergirl',
+      'Track your sober streak, money saved and milestones. A private, beautiful sobriety app for women.',
+    url: PAGE_URL,
     siteName: 'Sober Girl',
     images: [
       {
@@ -37,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sober Girl — Your Sobriety Companion',
+    title: 'Sober Girl: Sobriety Tracker & Sober Days Counter',
     description:
-      'Track your streak, journal your journey, and grow your tree — one sober day at a time.',
+      'Track your sober streak, money saved and milestones. A private, beautiful sobriety app for women.',
     images: ['/sobergirl-icon.png'],
   },
 };
@@ -98,6 +105,74 @@ const freeVsPlus = [
   { feature: 'Mood & check-in insights', free: false, plus: true },
   { feature: 'Journal blossoms on your tree', free: false, plus: true },
 ];
+
+const milestones = [
+  { when: '1 day', note: 'The hardest step is the first. Day one is done.' },
+  { when: '1 week', note: 'Seven days of choosing yourself.' },
+  { when: '30 days', note: 'A full month alcohol free.' },
+  { when: '90 days', note: 'A new rhythm is taking root.' },
+  { when: '6 months', note: 'Half a year of proof it works.' },
+  { when: '1 year', note: 'A whole year sober. Celebrate it.' },
+];
+
+const faqs = [
+  {
+    q: 'What is a sobriety tracker app?',
+    a: 'A sobriety tracker app counts the days you have been sober, so you can see your streak grow and celebrate milestones. Sober Girl also shows hours and weeks sober and how much money you have saved by not drinking.',
+  },
+  {
+    q: 'Is Sober Girl a free sober days counter?',
+    a: 'Yes. The day counter, money saved, daily check-in, Craving SOS and your growing tree are free. Plus adds the private journal, mood insights and shareable milestone cards.',
+  },
+  {
+    q: 'Can Sober Girl help me quit drinking?',
+    a: 'Sober Girl is a companion for the days you have chosen to be sober. It gives you a streak to protect, a reason to come back to, and a Craving SOS with a breathing exercise and a 10-minute timer for hard moments. It is not medical treatment. If you are worried about withdrawal, talk to a doctor first.',
+  },
+  {
+    q: 'Is my sobriety data private?',
+    a: 'Your journal entries, streak and personal reasons stay on your device. They are never synced or shared.',
+  },
+  {
+    q: 'How do I track money saved from not drinking?',
+    a: 'Enter what you used to spend on alcohol. Sober Girl turns it into a running total of money saved that grows every sober day.',
+  },
+  {
+    q: 'What sobriety milestones does the app celebrate?',
+    a: 'It celebrates your first day, first week, 30 days, 1 year and beyond, with locked and unlocked milestone badges. Plus members can share beautiful milestone cards.',
+  },
+  {
+    q: 'Is Sober Girl available on iPhone?',
+    a: 'Coming soon. Sober Girl is live on Google Play for Android now, and the App Store version is on its way.',
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'MobileApplication',
+      name: 'Sober Girl',
+      alternateName: 'Sober Girl: Sobriety Tracker',
+      description:
+        'A private sobriety tracker and sober days counter for women, with money saved, craving SOS, milestones and a private journal.',
+      operatingSystem: 'Android',
+      applicationCategory: 'HealthApplication',
+      url: PAGE_URL,
+      downloadUrl: PLAY_STORE_URL,
+      image: 'https://shipailab.com/sobergirl-icon.png',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      publisher: { '@type': 'Organization', name: 'ShipAI Lab', url: 'https://shipailab.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
 
 export default function SoberGirlPage() {
   return (
@@ -552,6 +627,56 @@ export default function SoberGirlPage() {
           letter-spacing: 0.8px;
         }
 
+        /* ── MILESTONES + FAQ ── */
+        .sg-milestones-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 16px;
+        }
+        .sg-milestone {
+          background: #fff;
+          border: 1px solid var(--line);
+          border-radius: 20px;
+          padding: 24px;
+        }
+        .sg-milestone-when {
+          font-family: 'Fraunces', serif;
+          font-weight: 700;
+          font-size: 24px;
+          color: var(--plum);
+          margin-bottom: 6px;
+        }
+        .sg-milestone-note {
+          font-size: 14px;
+          line-height: 1.6;
+          color: var(--ink-soft);
+        }
+        .sg-faq-list {
+          max-width: 760px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .sg-faq-item {
+          background: #fff;
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          padding: 20px 24px;
+        }
+        .sg-faq-item summary {
+          cursor: pointer;
+          font-family: 'Fraunces', serif;
+          font-weight: 600;
+          font-size: 18px;
+          color: var(--ink);
+        }
+        .sg-faq-item p {
+          margin-top: 12px;
+          font-size: 15px;
+          line-height: 1.7;
+          color: var(--ink-soft);
+        }
+
         /* ── CTA BOTTOM ── */
         .sg-cta-section {
           background: linear-gradient(135deg, var(--plum) 0%, #8B3A6E 100%);
@@ -723,6 +848,10 @@ export default function SoberGirlPage() {
         }
       `}</style>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="sg-page">
         {/* NAV */}
         <nav className="sg-nav">
@@ -732,19 +861,22 @@ export default function SoberGirlPage() {
           </a>
           <div className="sg-nav-links">
             <a href="#features" className="sg-nav-link">Features</a>
+            <a href="#guides" className="sg-nav-link">Guides</a>
+            <a href="#milestones" className="sg-nav-link">Milestones</a>
+            <a href="#faq" className="sg-nav-link">FAQ</a>
             <a href="#pricing" className="sg-nav-link">Pricing</a>
             <a href="/sobergirl/support" className="sg-nav-link">Support</a>
             <a href="/sobergirl/privacy-policy" className="sg-nav-link">Privacy</a>
             <a href="/sobergirl/terms-of-service" className="sg-nav-link">Terms</a>
           </div>
           <a
-            href="https://apps.apple.com/app/sober-girl/id6736904985"
+            href={PLAY_STORE_URL}
             className="sg-btn-primary"
             target="_blank"
             rel="noopener noreferrer"
             id="hero-cta-nav"
           >
-            🍎 Download on iOS
+            ▶ Get it on Google Play
           </a>
         </nav>
 
@@ -756,21 +888,30 @@ export default function SoberGirlPage() {
             <span>beautifully tracked</span>
           </h1>
           <p className="sg-hero-sub">
-            Sober Girl is the private, beautiful sobriety companion for women.
-            Track your streak, journal your journey, and grow a living tree —
+            Sober Girl is a private sobriety tracker and sober days counter for women.
+            Track your streak and money saved, journal your journey, and grow a living tree —
             one sober day at a time.
           </p>
           <div className="sg-hero-ctas">
             <a
-              href="https://apps.apple.com/app/sober-girl/id6736904985"
+              href={PLAY_STORE_URL}
               className="sg-btn-primary"
               target="_blank"
               rel="noopener noreferrer"
-              id="hero-cta-appstore"
+              id="hero-cta-play"
               style={{ fontSize: 17, padding: '14px 28px' }}
             >
-              🍎 Download on the App Store
+              ▶ Get it on Google Play
             </a>
+            {APP_STORE_URL ? (
+              <a href={APP_STORE_URL} className="sg-btn-ghost" target="_blank" rel="noopener noreferrer" id="hero-cta-appstore">
+                🍎 App Store
+              </a>
+            ) : (
+              <span className="sg-btn-ghost" aria-disabled="true" style={{ borderStyle: 'dashed', cursor: 'not-allowed', opacity: 0.8 }} id="hero-cta-appstore-soon">
+                🍎 App Store · Coming soon
+              </span>
+            )}
             <a href="#features" className="sg-btn-ghost" id="hero-cta-features">
               See what&apos;s inside ↓
             </a>
@@ -779,7 +920,7 @@ export default function SoberGirlPage() {
             <div className="sg-hero-badge-float2">🌿 Day 47 streak</div>
             <Image
               src="/sobergirl-icon.png"
-              alt="Sober Girl App"
+              alt="Sober Girl sobriety tracker app icon"
               width={160}
               height={160}
               className="sg-hero-icon"
@@ -799,8 +940,8 @@ export default function SoberGirlPage() {
             <span className="sg-stat-label">Private</span>
           </div>
           <div className="sg-stat">
-            <span className="sg-stat-num">iOS</span>
-            <span className="sg-stat-label">Native App</span>
+            <span className="sg-stat-num">Android</span>
+            <span className="sg-stat-label">iPhone coming soon</span>
           </div>
           <div className="sg-stat">
             <span className="sg-stat-num">∞</span>
@@ -812,7 +953,7 @@ export default function SoberGirlPage() {
         <section className="sg-section" id="features">
           <div className="sg-section-inner">
             <span className="sg-section-tag">Everything you need</span>
-            <h2 className="sg-section-title">Built for your journey</h2>
+            <h2 className="sg-section-title">A sobriety tracker built for your journey</h2>
             <p className="sg-section-sub">
               Every feature was designed with one woman in mind — the one who&apos;s choosing herself today.
             </p>
@@ -929,22 +1070,88 @@ export default function SoberGirlPage() {
           </div>
         </section>
 
+        {/* GUIDES */}
+        <section className="sg-section" id="guides">
+          <div className="sg-section-inner">
+            <span className="sg-section-tag">Guides</span>
+            <h2 className="sg-section-title">Sourced guides to sobriety</h2>
+            <p className="sg-section-sub">
+              Plain-language guides with every figure linked to its source.
+            </p>
+            <div className="sg-features-grid">
+              {FEATURED_SLUGS.map((slug) => ARTICLES.find((x) => x.slug === slug)).filter((a): a is (typeof ARTICLES)[number] => Boolean(a)).map((a) => (
+                <Link key={a.slug} href={`/sobergirl/${a.slug}`} className="sg-feature-card" style={{ textDecoration: 'none' }}>
+                  <div className="sg-feature-title">{a.h1}</div>
+                  <p className="sg-feature-desc">{a.dek}</p>
+                </Link>
+              ))}
+            </div>
+            <p style={{ marginTop: 24 }}>
+              <Link href="/sobergirl/guides" className="sg-btn-ghost" id="all-guides">See all {ARTICLES.length} guides →</Link>
+            </p>
+          </div>
+        </section>
+
+        {/* MILESTONES */}
+        <section className="sg-section" id="milestones">
+          <div className="sg-section-inner">
+            <span className="sg-section-tag">Sobriety milestones</span>
+            <h2 className="sg-section-title">Every sober day counts</h2>
+            <p className="sg-section-sub">
+              Your sober days counter unlocks a badge at each sobriety milestone, from day one to one year and beyond.
+            </p>
+            <div className="sg-milestones-grid">
+              {milestones.map((m) => (
+                <div key={m.when} className="sg-milestone">
+                  <div className="sg-milestone-when">{m.when}</div>
+                  <p className="sg-milestone-note">{m.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="sg-section sg-alt" id="faq">
+          <div className="sg-section-inner">
+            <span className="sg-section-tag">Questions</span>
+            <h2 className="sg-section-title">Sobriety tracker FAQ</h2>
+            <div className="sg-faq-list">
+              {faqs.map((f) => (
+                <details key={f.q} className="sg-faq-item">
+                  <summary>{f.q}</summary>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA BOTTOM */}
         <section className="sg-cta-section">
           <h2 className="sg-cta-title">Today is day one.</h2>
           <p className="sg-cta-sub">
-            Download Sober Girl on the App Store and start your streak. For free. Right now.
+            Get Sober Girl on Google Play and start your streak. For free. Right now. iPhone is coming soon.
           </p>
           <div className="sg-cta-actions">
             <a
-              href="https://apps.apple.com/app/sober-girl/id6736904985"
+              href={PLAY_STORE_URL}
               className="sg-btn-white"
               target="_blank"
               rel="noopener noreferrer"
-              id="bottom-cta-appstore"
+              id="bottom-cta-play"
             >
-              🍎 Download on the App Store
+              ▶ Get it on Google Play
             </a>
+            {APP_STORE_URL ? (
+              <a href={APP_STORE_URL} className="sg-btn-white-ghost" target="_blank" rel="noopener noreferrer" id="bottom-cta-appstore">
+                🍎 App Store
+              </a>
+            ) : (
+              <span className="sg-btn-white-ghost" aria-disabled="true" style={{ borderStyle: 'dashed', cursor: 'not-allowed' }} id="bottom-cta-appstore-soon">
+                🍎 App Store · Coming soon
+              </span>
+            )}
             <a href="mailto:integrateopenai@gmail.com" className="sg-btn-white-ghost" id="bottom-cta-contact">
               Contact us
             </a>
