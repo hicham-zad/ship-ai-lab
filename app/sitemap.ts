@@ -70,14 +70,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/fr/examen-civique/support', priority: 0.3 },
         { path: '/fr/examen-civique/privacy-policy', priority: 0.2 },
         { path: '/fr/examen-civique/terms-of-service', priority: 0.2 },
-    ].map(({ path, priority }) => ({
-        url: `${baseUrl}${path}`,
-        lastModified,
-        changeFrequency: 'monthly' as const,
         { path: '/measure-kit', priority: 0.7 },
         { path: '/measure-kit/support', priority: 0.3 },
         { path: '/measure-kit/privacy-policy', priority: 0.2 },
         { path: '/measure-kit/terms-of-service', priority: 0.2 },
+    ].map(({ path, priority }) => ({
+        url: `${baseUrl}${path}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
         priority,
     }));
 
