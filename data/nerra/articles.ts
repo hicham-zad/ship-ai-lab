@@ -1563,6 +1563,80 @@ export const ARTICLES: Article[] = [
     related: ['wegovy-dosing-schedule', 'how-to-inject-wegovy', 'glp-1-missed-dose', 'glp-1-side-effects'],
   },
 
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'best-time-to-take-glp-1',
+    metaTitle: 'Best Time to Take Ozempic, Wegovy, Mounjaro and Zepbound: What the Labels Say',
+    metaDescription:
+      'Does time of day matter for Ozempic, Wegovy, Mounjaro or Zepbound? Any time of day, with or without food, same day each week, and when you can change the day. Wegovy tablets are morning only.',
+    h1: 'Best time to take a GLP-1: what the labels say about time of day and day of week',
+    dek: 'The weekly injections can go in at any time of day. The Wegovy tablet cannot. Here is each rule, and how far you can move your injection day.',
+    quickAnswer:
+      'For the weekly injections, the labels say any time of day, with or without meals: Ozempic, Wegovy, Mounjaro and Zepbound [[ozLabel]][[wegLabel]][[mounLabel]][[zepLabel]]. What matters more is the day. Ozempic and Wegovy are given on the same day each week [[ozLabel]][[wegLabel]], and you can move the day if the gap between two doses is at least 3 days (72 hours) for Mounjaro and Zepbound [[mounLabel]][[zepLabel]] or at least 2 days (more than 48 hours) for Ozempic [[ozLabel]]. The Wegovy tablet is different: take it in the morning on an empty stomach with water [[wegLabel]].',
+    kicker: 'Timing',
+    keywords: ['best time to take ozempic', 'best time to inject ozempic', 'what time of day to take mounjaro', 'ozempic injection day', 'wegovy time of day', 'can i change my ozempic day'],
+    sources: ['ozLabel', 'wegLabel', 'mounLabel', 'zepLabel'],
+    sections: [
+      {
+        id: 'table',
+        h2: 'Time of day and day of week, by medicine',
+        blocks: [
+          { t: 'callout', kind: 'note', title: 'Read this first', x: PRESCRIBER },
+          {
+            t: 'table',
+            head: ['Medicine', 'Time of day', 'With food?', 'Day of the week', 'Changing the day'],
+            rows: [
+              ['Ozempic', 'Any time of day [[ozLabel]]', 'With or without meals [[ozLabel]]', 'Same day each week [[ozLabel]]', 'If the time between two doses is at least 2 days (more than 48 hours) [[ozLabel]]'],
+              ['Wegovy injection', 'Any time of day, and it can be changed without a dose modification [[wegLabel]]', 'With or without meals [[wegLabel]]', 'Same day each week [[wegLabel]]', 'The label text we reviewed gives no minimum gap, so ask your prescriber'],
+              ['Mounjaro', 'Any time of day [[mounLabel]]', 'With or without meals [[mounLabel]]', 'Once weekly [[mounLabel]]', 'If the time between two doses is at least 3 days (72 hours) [[mounLabel]]'],
+              ['Zepbound', 'Any time of day [[zepLabel]]', 'With or without meals [[zepLabel]]', 'Once weekly [[zepLabel]]', 'If the time between two doses is at least 3 days (72 hours) [[zepLabel]]'],
+              ['Wegovy tablet (daily)', 'In the morning [[wegLabel]]', 'Empty stomach, water only up to 4 ounces, then wait at least 30 minutes before food, drink or other oral medicines [[wegLabel]]', 'Every day', 'Not applicable'],
+            ],
+            caption: 'US prescribing information: Zepbound and Mounjaro (08/2026), Ozempic (05/2026), Wegovy (06/2026). Retrieved 6 October 2026.',
+          },
+        ],
+      },
+      {
+        id: 'pick',
+        h2: 'So how do you pick a day?',
+        blocks: [
+          {
+            t: 'p',
+            x: 'The labels do not rank days or hours, so the practical choice is yours and your prescriber’s. A day you will remember, with a reminder set, is the common-sense one. The labels’ real constraint is the spacing between doses. If you move the day, check the minimum gap in the table so two doses do not land too close together.',
+          },
+          {
+            t: 'ul',
+            items: [
+              'Moving a Mounjaro or Zepbound day later is fine if at least 3 days (72 hours) separate the two doses [[mounLabel]][[zepLabel]].',
+              'For Ozempic the minimum gap is at least 2 days (more than 48 hours) [[ozLabel]].',
+              'If you are already late for a dose, that is a missed dose rather than a day change. See the [missed dose checker](/nerra/glp-1-missed-dose).',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'reminders',
+        h2: 'Set it up so you do not have to remember',
+        blocks: [
+          {
+            t: 'cta',
+            title: 'Reminders and a next-dose date in Nerra',
+            x: 'Nerra keeps your injection day on a calendar, shows the next-dose date and sends a reminder with a gentle follow-up. It all stays on your iPhone, with no account.',
+          },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'What is the best time of day to take Ozempic?', a: 'The label says any time of day, with or without meals, on the same day each week.' },
+      { q: 'Does it matter if I inject Mounjaro or Zepbound in the morning or at night?', a: 'No. Both labels say once weekly, any time of day, with or without meals.' },
+      { q: 'Can I change my Ozempic injection day?', a: 'Yes, if the time between two doses is at least 2 days (more than 48 hours).' },
+      { q: 'Can I change my Mounjaro or Zepbound day?', a: 'Yes, if the time between two doses is at least 3 days (72 hours).' },
+      { q: 'What time should I take the Wegovy pill?', a: 'In the morning, on an empty stomach, with up to 4 ounces of water, then wait at least 30 minutes before eating, drinking or taking other oral medicines.' },
+      { q: 'Should I take a GLP-1 with food?', a: 'The weekly injections can be taken with or without meals. The Wegovy tablet must be taken on an empty stomach.' },
+    ],
+    related: ['glp-1-missed-dose', 'tirzepatide-dose-chart', 'semaglutide-dose-chart', 'wegovy-pill'],
+  },
+
 ];
 
 export function getArticle(slug: string) {

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const GROUPS: { title: string; blurb: string; slugs: string[] }[] = [
-  { title: 'Free tools', blurb: 'Nothing you enter is saved or sent anywhere.', slugs: ['glp-1-injection-site-rotation', 'glp-1-missed-dose'] },
+  { title: 'Free tools', blurb: 'Nothing you enter is saved or sent anywhere.', slugs: ['glp-1-injection-site-rotation', 'glp-1-missed-dose', 'best-time-to-take-glp-1'] },
   { title: 'Injection sites', blurb: 'What each label says about where to inject and how to rotate.', slugs: ['zepbound-injection-sites', 'mounjaro-injection-sites', 'ozempic-injection-sites', 'how-to-inject-ozempic', 'how-to-inject-wegovy'] },
   { title: 'Dose charts', blurb: 'Straight from the US prescribing information, with dates.', slugs: ['tirzepatide-dose-chart', 'semaglutide-dose-chart', 'wegovy-dosing-schedule', 'wegovy-pill'] },
   { title: 'Side effects', blurb: 'Trial percentages from the labels, with placebo rates.', slugs: ['glp-1-side-effects', 'glp-1-hair-loss'] },

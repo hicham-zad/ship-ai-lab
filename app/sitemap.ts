@@ -71,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/nerra/glp-1-side-effects', priority: 0.8 },
         { path: '/nerra/glp-1-hair-loss', priority: 0.8 },
         { path: '/nerra/wegovy-pill', priority: 0.8 },
+        { path: '/nerra/best-time-to-take-glp-1', priority: 0.8 },
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms-of-service', priority: 0.3 },
         { path: '/sobergirl/support', priority: 0.3 },
