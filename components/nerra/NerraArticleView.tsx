@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ARTICLES, type Article, type Block } from '@/data/nerra/articles';
+import { ARTICLES, type Article, type Block, type Shot } from '@/data/nerra/articles';
 import { NR_AUTHOR, NR_BASE, NR_SITE, NR_UPDATED } from '@/data/nerra/config';
 import { SOURCES } from '@/data/nerra/sources';
 import MissedDoseChecker from './MissedDoseChecker';
@@ -30,6 +30,27 @@ function renderInline(text: string, article: Article): ReactNode[] {
   }
   if (last < text.length) out.push(text.slice(last));
   return out;
+}
+
+function Shots({ shots }: { shots: Shot[] }) {
+  return (
+    <div className="nra-shots">
+      {shots.map((sh) => (
+        <figure key={sh.file} className="nra-shot">
+          <Image
+            src={`/nerra/${sh.file}.png`}
+            alt={sh.alt}
+            title={sh.title}
+            width={700}
+            height={1522}
+            sizes="(max-width: 700px) 60vw, 240px"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <figcaption>{sh.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
 }
 
 function SoonPill({ dark }: { dark?: boolean }) {
@@ -111,7 +132,7 @@ export function articleJsonLd(a: Article) {
       '@type': 'Article',
       headline: a.h1,
       description: a.metaDescription,
-      image: `${NR_SITE}/nerra-icon.png`,
+      image: [`${NR_SITE}/nerra-icon.png`, ...(a.shots ?? []).map((sh) => `${NR_SITE}/nerra/${sh.file}.png`)],
       datePublished: NR_UPDATED,
       dateModified: NR_UPDATED,
       author: { '@type': 'Person', name: NR_AUTHOR },
@@ -132,6 +153,19 @@ export function articleJsonLd(a: Article) {
       mainEntity: a.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
     },
   ];
+  for (const sh of a.shots ?? []) {
+    graph.push({
+      '@type': 'ImageObject',
+      contentUrl: `${NR_SITE}/nerra/${sh.file}.png`,
+      url: `${NR_SITE}/nerra/${sh.file}.png`,
+      name: sh.title,
+      description: sh.alt,
+      caption: sh.caption,
+      width: 700,
+      height: 1522,
+      creator: { '@type': 'Person', name: NR_AUTHOR },
+    });
+  }
   if (a.slug === 'nerra-app') {
     // No rating or review markup: there are no reviews yet.
     graph.push({
@@ -216,6 +250,7 @@ export default function NerraArticleView({ article }: { article: Article }) {
             <section key={s.id} id={s.id}>
               <h2>{s.h2}</h2>
               {s.blocks.map((b, i) => renderBlock(b, i, article))}
+              {article.shots && article.shotsAfter === s.id && <Shots shots={article.shots} />}
             </section>
           ))}
 

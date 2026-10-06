@@ -70,6 +70,10 @@ export const NR_ARTICLE_CSS = `
 .nra-planner td{padding:9px 10px;border-bottom:1px solid var(--line)}
 .nra-planner td:last-child{width:70px}
 .nra-box{display:inline-block;width:18px;height:18px;border:2px solid var(--ink-soft);border-radius:5px}
+.nra-shots{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:28px 0 8px}
+.nra-shot{margin:0;width:240px;max-width:60vw}
+.nra-shot img{border-radius:28px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(71,40,26,.12);display:block}
+.nra-shot figcaption{font-size:13px;line-height:1.5;color:var(--ink-soft);margin-top:10px;text-align:center}
 .nra-note{font-size:13px;color:var(--ink-soft);margin:14px 0 0}
 .nra-print{margin-top:14px}
 @media print{body *{visibility:hidden}.nra-printarea,.nra-printarea *{visibility:visible}.nra-printarea{position:absolute;left:0;top:0;width:100%;border:none}.nra-print{display:none!important}}

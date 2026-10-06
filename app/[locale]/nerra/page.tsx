@@ -37,10 +37,10 @@ const guideLinks: [string, string, string][] = [
   ['/nerra/nerra-app', 'About Nerra', 'Facts, price model and what Nerra will never do.'],
 ];
 
-const shots = [
-  ['dashboard.png', 'Today'],
-  ['medications.png', 'Medications'],
-  ['progress.png', 'Progress'],
+const shots: [string, string, string, string][] = [
+  ['dashboard.png', 'Today', 'Nerra Today screen on iPhone with the weekly shot countdown, the last dose with its injection site and daily check-in ratings (sample data)', 'Nerra Today screen'],
+  ['medications.png', 'Medications', 'Nerra medications screen with filters for Mounjaro, Wegovy and Ozempic and a weekly pen card showing the dose you entered (sample data)', 'Nerra medications screen'],
+  ['progress.png', 'Progress', 'Nerra progress screen with a weight line chart from July to October and a list of weight entries (sample data)', 'Nerra progress screen'],
 ];
 
 const compare: [string, boolean][] = [
@@ -86,7 +86,7 @@ export default function NerraLanding() {
               <p className="nr-soon-note">For iPhone. Available in English and German.</p>
             </div>
             <div className="nr-phone">
-              <Image src="/nerra/dashboard.png" alt="Nerra dashboard" width={700} height={1522} priority />
+              <Image src="/nerra/dashboard.png" alt="Nerra GLP-1 tracker dashboard on iPhone showing the next shot day, a logged dose with its injection site and a nausea, appetite and energy check-in (sample data)" title="Nerra GLP-1 tracker for iPhone" width={700} height={1522} priority />
             </div>
           </div>
           <div className="nr-stats">
@@ -116,10 +116,10 @@ export default function NerraLanding() {
             <span className="nr-section-tag">Screens</span>
             <h2 className="nr-section-title">Calm, clear and yours</h2>
             <div className="nr-shots">
-              {shots.map(([file, label]) => (
+              {shots.map(([file, label, alt, title]) => (
                 <figure key={file}>
                   <div className="nr-phone">
-                    <Image src={`/nerra/${file}`} alt={`Nerra ${label}`} width={700} height={1522} />
+                    <Image src={`/nerra/${file}`} alt={alt} title={title} width={700} height={1522} />
                   </div>
                   <figcaption>{label}</figcaption>
                 </figure>

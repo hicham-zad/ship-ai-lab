@@ -17,6 +17,15 @@ export interface Section {
   blocks: Block[];
 }
 
+export interface Shot {
+  file: 'dashboard' | 'medications' | 'progress';
+  /** Describes what the screenshot shows, for screen readers and image search. */
+  alt: string;
+  /** Short tooltip title. */
+  title: string;
+  caption: string;
+}
+
 export interface Article {
   slug: string;
   metaTitle: string;
@@ -32,6 +41,9 @@ export interface Article {
   sections: Section[];
   faqs: { q: string; a: string }[];
   related: string[];
+  /** App screenshots shown after the section with id `shotsAfter`. All Nerra screenshots use sample data. */
+  shots?: Shot[];
+  shotsAfter?: string;
 }
 
 // Inline citation syntax: [[sourceId]] renders as a numbered link to the source list. **bold** is supported.
@@ -150,6 +162,10 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['zepbound-injection-sites', 'mounjaro-injection-sites', 'ozempic-injection-sites', 'glp-1-missed-dose'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra iPhone dashboard showing a Mounjaro dose logged with its injection site, upper arm right, and the next shot day', title: 'Nerra injection site log', caption: 'Each dose is logged with the site you used, so you can see where the last one went. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -227,6 +243,10 @@ export const ARTICLES: Article[] = [
       { q: 'Is tirzepatide injected the same way as Mounjaro?', a: 'Yes. Zepbound and Mounjaro both contain tirzepatide, and both labels give the same injection sites and rotation instruction.' },
     ],
     related: ['mounjaro-injection-sites', 'tirzepatide-dose-chart', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
+    shotsAfter: 'planner',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra iPhone app logging a tirzepatide weekly injection with the site recorded as upper arm right', title: 'Log your Zepbound injection site in Nerra', caption: 'Nerra records the site with every dose and warns before you log the same spot twice. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -300,6 +320,10 @@ export const ARTICLES: Article[] = [
       { q: 'Are Mounjaro and Zepbound injected the same way?', a: 'Yes. Both are tirzepatide and both labels give the same sites and rotation instruction.' },
     ],
     related: ['zepbound-injection-sites', 'tirzepatide-dose-chart', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
+    shotsAfter: 'planner',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard with a Mounjaro entry logged to the upper arm right and a next shot reminder for Friday', title: 'Mounjaro injection log in Nerra', caption: 'A Mounjaro dose entry with its site, plus the countdown to the next weekly shot. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -369,6 +393,10 @@ export const ARTICLES: Article[] = [
       { q: 'Are semaglutide injection sites the same for Wegovy?', a: 'Yes. The Wegovy label also lists the abdomen, thigh or upper arm and says to rotate sites with each dose.' },
     ],
     related: ['semaglutide-dose-chart', 'glp-1-injection-site-rotation', 'glp-1-missed-dose', 'wegovy-dosing-schedule'],
+    shotsAfter: 'planner',
+    shots: [
+      { file: 'medications', alt: 'Nerra medications screen with filters for Mounjaro, Wegovy and Ozempic and a weekly pen card', title: 'Nerra medications screen', caption: 'Nerra lets you pick the medicine you were prescribed and keeps a separate log for each. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -449,6 +477,10 @@ export const ARTICLES: Article[] = [
       { q: 'Can I stay on a lower tirzepatide dose?', a: 'The Zepbound label says to consider tolerability when choosing a maintenance dose and to consider a lower one if the dose is not tolerated. Talk to your prescriber.' },
     ],
     related: ['zepbound-injection-sites', 'mounjaro-injection-sites', 'glp-1-missed-dose', 'semaglutide-dose-chart'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'medications', alt: 'Nerra medication card for a weekly Mounjaro pen showing the dose the user entered', title: 'Dose you enter in Nerra', caption: 'You enter the dose your prescriber gave you, and Nerra never calculates or suggests one. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -537,6 +569,10 @@ export const ARTICLES: Article[] = [
       { q: 'Can I change my Ozempic day?', a: 'Yes, as long as the time between two doses is at least 2 days (more than 48 hours).' },
     ],
     related: ['wegovy-dosing-schedule', 'ozempic-injection-sites', 'glp-1-missed-dose', 'tirzepatide-dose-chart'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'medications', alt: 'Nerra medications list with Wegovy and Ozempic filters above a weekly pen card', title: 'Nerra semaglutide medication log', caption: 'Keep your own dose history for Ozempic or Wegovy, with the dose your prescriber set. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -644,6 +680,10 @@ export const ARTICLES: Article[] = [
       { q: 'Can I switch between Wegovy tablets and injection?', a: 'The label describes both directions with specific timing. Your prescriber manages the switch.' },
     ],
     related: ['semaglutide-dose-chart', 'glp-1-missed-dose', 'ozempic-injection-sites', 'glp-1-injection-site-rotation'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard with a day 3 of 7 weekly countdown and the next shot day highlighted', title: 'Weekly countdown in Nerra', caption: 'See which day of the week you are on and when the next shot is due. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -725,6 +765,10 @@ export const ARTICLES: Article[] = [
       { q: 'Can I double up after a missed dose?', a: 'None of the rules above say to take two doses. Each tells you to take the missed dose or skip it, then resume the regular schedule.' },
     ],
     related: ['tirzepatide-dose-chart', 'semaglutide-dose-chart', 'wegovy-dosing-schedule', 'glp-1-injection-site-rotation'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard showing day 3 of 7 and the next shot on Friday, with reminders and a bell icon at the top', title: 'Next shot reminder in Nerra', caption: 'A visible next-dose day and reminders make a missed injection less likely. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -830,6 +874,12 @@ export const ARTICLES: Article[] = [
       { q: 'Who makes Nerra?', a: 'Hicham Zaidi, an independent developer.' },
     ],
     related: ['best-glp-1-tracker-apps', 'shotsy-alternative', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
+    shotsAfter: 'does',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard with a weekly countdown, a Mounjaro dose entry, injection site and nausea, appetite and energy check-in', title: 'Nerra GLP-1 companion dashboard', caption: 'Today: the next shot, the last dose and how you felt. Sample data.' },
+      { file: 'medications', alt: 'Nerra medications screen with a weekly pen card and filters for Mounjaro, Wegovy and Ozempic', title: 'Nerra medications screen', caption: 'Your medications, with the dose you entered. Sample data.' },
+      { file: 'progress', alt: 'Nerra progress screen with a weight chart and a list of weight entries', title: 'Nerra progress screen', caption: 'Weight over time, with every entry listed. Sample data.' },
+    ],
   },
   /* ------------------------------------------------------------------ */
   {
@@ -960,6 +1010,10 @@ export const ARTICLES: Article[] = [
       { q: 'Can I reuse the needle?', a: 'No. Always use a new needle for each injection, and never share needles.' },
     ],
     related: ['ozempic-injection-sites', 'semaglutide-dose-chart', 'glp-1-missed-dose', 'how-to-inject-wegovy'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard logging a weekly injection with its site and the next shot day', title: 'Log each Ozempic injection', caption: 'Log the site and date right after you inject, then check the 56-day pen reminder yourself. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1076,6 +1130,10 @@ export const ARTICLES: Article[] = [
       { q: 'Is this the same for the Wegovy tablet?', a: 'No. The tablet is taken orally once daily on an empty stomach with water, so see the Wegovy dosing schedule page.' },
     ],
     related: ['wegovy-dosing-schedule', 'glp-1-injection-site-rotation', 'glp-1-missed-dose', 'how-to-inject-ozempic'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard with the last injection site, upper arm right, and the next shot day', title: 'Log each Wegovy injection', caption: 'Logging the site after every dose makes the same-area, different-spot rule easy to follow. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1185,6 +1243,11 @@ export const ARTICLES: Article[] = [
       { q: 'Should an app tell me my dose?', a: 'No. Your prescriber sets your dose. Nerra never calculates or suggests one.' },
     ],
     related: ['shotsy-alternative', 'nerra-app', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra GLP-1 tracker dashboard with dose, injection site and check-in details', title: 'Nerra dashboard', caption: 'Nerra\'s dashboard: the dose you entered, the site and a daily check-in. Sample data.' },
+      { file: 'progress', alt: 'Nerra GLP-1 tracker progress screen with a weight chart', title: 'Nerra progress screen', caption: 'Weight and measurements over time (some features are in Nerra Lifetime). Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1278,6 +1341,11 @@ export const ARTICLES: Article[] = [
       { q: 'Can Nerra import my Shotsy data?', a: 'We have not built an import. Nerra supports data export from its own app.' },
     ],
     related: ['best-glp-1-tracker-apps', 'nerra-app', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra iPhone GLP-1 tracker dashboard, an alternative to subscription trackers', title: 'Nerra GLP-1 tracker', caption: 'Nerra keeps data on your iPhone, with a one-time purchase and no account. Sample data.' },
+      { file: 'medications', alt: 'Nerra medications screen with Mounjaro, Wegovy and Ozempic options', title: 'Nerra medications', caption: 'Choose the medicine you were prescribed. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1382,6 +1450,10 @@ export const ARTICLES: Article[] = [
       { q: 'Do the side effects go away?', a: 'The labels do not give a general time frame. The step-up schedules are designed to lower the risk of stomach side effects, so talk to your prescriber if they persist.' },
     ],
     related: ['glp-1-hair-loss', 'tirzepatide-dose-chart', 'semaglutide-dose-chart', 'glp-1-missed-dose'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard showing a dose entry with daily check-in ratings for nausea, appetite and energy', title: 'Nausea, appetite and energy check-ins', caption: 'A daily check-in next to each dose helps you spot patterns after a dose change. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1451,6 +1523,10 @@ export const ARTICLES: Article[] = [
       { q: 'Is the hair loss permanent?', a: 'The labels we read do not say. Ask your prescriber.' },
     ],
     related: ['glp-1-side-effects', 'tirzepatide-dose-chart', 'semaglutide-dose-chart', 'nerra-app'],
+    shotsAfter: 'track',
+    shots: [
+      { file: 'progress', alt: 'Nerra progress screen with a weight line chart from July to October and a list of weight entries', title: 'Weight log in Nerra', caption: 'A weight log gives your prescriber dates and numbers to look at together. Sample data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1635,6 +1711,10 @@ export const ARTICLES: Article[] = [
       { q: 'Should I take a GLP-1 with food?', a: 'The weekly injections can be taken with or without meals. The Wegovy tablet must be taken on an empty stomach.' },
     ],
     related: ['glp-1-missed-dose', 'tirzepatide-dose-chart', 'semaglutide-dose-chart', 'wegovy-pill'],
+    shotsAfter: 'reminders',
+    shots: [
+      { file: 'dashboard', alt: 'Nerra dashboard with a next shot Friday label and a weekly day counter', title: 'Next-dose day in Nerra', caption: 'Your injection day, the next-dose date and a reminder, all on your iPhone. Sample data.' },
+    ],
   },
 
 ];
@@ -1660,6 +1740,7 @@ function validate() {
       if (!SOURCES[id]) throw new Error(`Nerra "${a.slug}" lists unknown source "${id}"`);
       if (!used.has(id)) throw new Error(`Nerra "${a.slug}" lists source "${id}" but never cites it`);
     }
+    if (a.shots && !a.sections.some((x) => x.id === a.shotsAfter)) throw new Error(`Nerra "${a.slug}" shotsAfter "${a.shotsAfter}" is not a section id`);
     for (const r of a.related) if (!ARTICLES.some((x) => x.slug === r)) throw new Error(`Nerra "${a.slug}" relates to unknown slug "${r}"`);
   }
 }
