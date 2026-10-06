@@ -113,6 +113,9 @@ Nerra is a private GLP-1 companion app for iPhone, made by Hicham Zaidi. It trac
 - [How to Inject Wegovy: FlexTouch Pen Steps From the Official Instructions](https://shipailab.com/nerra/how-to-inject-wegovy): How to inject Wegovy with the 2.4 mg FlexTouch pen from Novo Nordisk’s Instructions for Use: injection sites, 6-second count, flow check, disposal and how long a pen lasts.
 - [Best GLP-1 Tracker Apps for iPhone (2026): Compared by Use](https://shipailab.com/nerra/best-glp-1-tracker-apps): Six GLP-1 tracker apps compared from their App Store listings: Shotsy, MeAgain, GlucoPal, Glippy, GLP-1 Logbook and Nerra. Price model, ratings, privacy labels and what each is best for.
 - [Shotsy Alternatives (2026): GLP-1 Trackers Compared](https://shipailab.com/nerra/shotsy-alternative): Looking for a Shotsy alternative? What Shotsy costs and does, and five other GLP-1 trackers (MeAgain, GlucoPal, Glippy, GLP-1 Logbook, Nerra) compared from their App Store listings.
+- [GLP-1 Side Effects: What the Ozempic, Wegovy, Mounjaro and Zepbound Labels Report](https://shipailab.com/nerra/glp-1-side-effects): Nausea, vomiting, diarrhea, constipation and fatigue rates from the Ozempic, Wegovy, Mounjaro and Zepbound labels, side by side with placebo, and how to track your own pattern.
+- [GLP-1 Hair Loss: What the Zepbound and Wegovy Labels Say](https://shipailab.com/nerra/glp-1-hair-loss): Hair loss on GLP-1 medicines, from the labels: Zepbound 4 to 5% vs 1% placebo (7.1% in women), Wegovy 3% vs 1%, and what the labels say about weight reduction and stopping.
+- [Wegovy Pill (Oral Wegovy): How to Take It, Doses and the Label Rules](https://shipailab.com/nerra/wegovy-pill): The Wegovy tablet from the US label: 1.5 mg to 25 mg daily doses, take on an empty stomach with water, wait 30 minutes, missed dose rule, switching from the injection.
 
 ## Use Cases
 

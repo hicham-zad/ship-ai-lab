@@ -1280,6 +1280,289 @@ export const ARTICLES: Article[] = [
     related: ['best-glp-1-tracker-apps', 'nerra-app', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
   },
 
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'glp-1-side-effects',
+    metaTitle: 'GLP-1 Side Effects: What the Ozempic, Wegovy, Mounjaro and Zepbound Labels Report',
+    metaDescription:
+      'Nausea, vomiting, diarrhea, constipation and fatigue rates from the Ozempic, Wegovy, Mounjaro and Zepbound labels, side by side with placebo, and how to track your own pattern.',
+    h1: 'GLP-1 side effects: what the four labels report, with placebo numbers',
+    dek: 'The most common side effects of Ozempic, Wegovy, Mounjaro and Zepbound, with the exact percentages from each label’s clinical trials and the placebo rate next to them.',
+    quickAnswer:
+      'The most common GLP-1 side effects are gastrointestinal: nausea, diarrhea, vomiting, constipation and abdominal pain. In the Wegovy 2.4 mg weight trials, 44% reported nausea versus 16% on placebo [[wegLabel]]. In Zepbound’s trials it was 25% to 29% versus 8% [[zepLabel]], in Mounjaro’s diabetes trials 12% to 18% versus 4% [[mounLabel]], and in Ozempic’s 15.8% to 20.3% versus 6.1% [[ozLabel]]. The trials differ in people, doses and length, so the numbers should not be compared across medicines. The labels step doses up gradually to reduce stomach side effects [[zepLabel]][[ozLabel]].',
+    kicker: 'Side effects',
+    keywords: ['glp-1 side effects', 'ozempic side effects', 'wegovy side effects', 'mounjaro side effects', 'zepbound side effects', 'ozempic nausea', 'glp-1 fatigue', 'glp-1 constipation'],
+    sources: ['wegLabel', 'zepLabel', 'mounLabel', 'ozLabel'],
+    sections: [
+      {
+        id: 'warning',
+        h2: 'Before you read the numbers',
+        blocks: [
+          {
+            t: 'callout',
+            kind: 'safety',
+            title: 'This is not a list of everything that can happen',
+            x: 'The tables below only cover the most common reactions reported in clinical trials. Each label has a separate Warnings and Precautions section on serious risks, including a boxed warning. Read the one for your medicine, and call your prescriber about symptoms that are severe or do not go away. This page is not medical advice. Nerra never calculates or suggests a dose.',
+          },
+        ],
+      },
+      {
+        id: 'table',
+        h2: 'Most common side effects in the trials',
+        blocks: [
+          {
+            t: 'table',
+            head: ['Medicine and trial group', 'Nausea', 'Vomiting', 'Diarrhea', 'Constipation', 'Abdominal pain'],
+            rows: [
+              ['Wegovy 2.4 mg weekly (weight reduction, adults). Placebo: 16, 6, 16, 11, 10', '44% [[wegLabel]]', '24% [[wegLabel]]', '30% [[wegLabel]]', '24% [[wegLabel]]', '20% [[wegLabel]]'],
+              ['Zepbound 5, 10, 15 mg (weight reduction). Placebo: 8, 2, 8, 5, 5', '25%, 29%, 28% [[zepLabel]]', '8%, 11%, 13% [[zepLabel]]', '19%, 21%, 23% [[zepLabel]]', '17%, 14%, 11% [[zepLabel]]', '9%, 9%, 10% [[zepLabel]]'],
+              ['Mounjaro 5, 10, 15 mg (type 2 diabetes). Placebo: 4, 2, 9, 1, 4', '12%, 15%, 18% [[mounLabel]]', '5%, 5%, 9% [[mounLabel]]', '12%, 13%, 17% [[mounLabel]]', '6%, 6%, 7% [[mounLabel]]', '6%, 5%, 5% [[mounLabel]]'],
+              ['Ozempic 0.5 mg, 1 mg (type 2 diabetes). Placebo: 6.1, 2.3, 1.9, 1.5, 4.6', '15.8%, 20.3% [[ozLabel]]', '5%, 9.2% [[ozLabel]]', '8.5%, 8.8% [[ozLabel]]', '5%, 3.1% [[ozLabel]]', '7.3%, 5.7% [[ozLabel]]'],
+            ],
+            caption: 'Percent of participants reporting each reaction. Wegovy and Zepbound label tables are for adults with obesity or overweight, Mounjaro and Ozempic for adults with type 2 diabetes. Each placebo group is listed in the first column in the same order as the columns. US labels: Zepbound and Mounjaro 08/2026, Ozempic 05/2026, Wegovy 06/2026.',
+          },
+          {
+            t: 'p',
+            x: 'Read this table down a single row, not across rows. The four trial programs enrolled different people (weight management versus type 2 diabetes), used different doses and ran for different lengths, so a higher number in one row is not evidence that one medicine causes more side effects than another.',
+          },
+        ],
+      },
+      {
+        id: 'more',
+        h2: 'Other common reactions the labels list',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              '**Fatigue.** Wegovy 2.4 mg: 11% versus 5% on placebo [[wegLabel]]. Zepbound: 5%, 6% and 7% at 5, 10 and 15 mg versus 3% [[zepLabel]]. The Ozempic label lists fatigue, dysgeusia and dizziness among reactions seen in more than 0.4% of patients [[ozLabel]].',
+              '**Decreased appetite (Mounjaro).** 5%, 10% and 11% at 5, 10 and 15 mg versus 1% on placebo [[mounLabel]].',
+              '**Headache (Wegovy).** 14% versus 10% on placebo [[wegLabel]].',
+              '**Injection site reactions.** Zepbound: 6%, 8% and 8% versus 2% [[zepLabel]]. Ozempic: 0.2% of treated patients [[ozLabel]].',
+              '**Hair loss.** See the [hair loss page](/nerra/glp-1-hair-loss).',
+            ],
+          },
+          {
+            t: 'p',
+            x: 'The Wegovy label reports that 6.8% of people on 2.4 mg and 3.2% on placebo permanently stopped treatment because of side effects, most often nausea (1.8% versus 0.2%), vomiting (1.2% versus 0%) and diarrhea (0.7% versus 0.1%) [[wegLabel]].',
+          },
+        ],
+      },
+      {
+        id: 'why',
+        h2: 'Why doses step up slowly',
+        blocks: [
+          {
+            t: 'p',
+            x: 'The Zepbound and Ozempic labels say their step-up schedules are meant to reduce the risk of gastrointestinal side effects [[zepLabel]][[ozLabel]]. The Wegovy label says that if a dose is not tolerated during escalation, delaying the next step for 4 weeks should be considered [[wegLabel]]. Only your prescriber should change that schedule. See the [tirzepatide](/nerra/tirzepatide-dose-chart), [semaglutide](/nerra/semaglutide-dose-chart) and [Wegovy](/nerra/wegovy-dosing-schedule) dose charts for the label schedules.',
+          },
+        ],
+      },
+      {
+        id: 'track',
+        h2: 'Track your own pattern',
+        blocks: [
+          {
+            t: 'p',
+            x: 'Trial percentages tell you what is common, not what will happen to you. A simple log of the day, the dose you took and how you felt makes a dose-change conversation with your prescriber much more specific.',
+          },
+          {
+            t: 'cta',
+            title: 'Daily check-ins in Nerra',
+            x: 'Log nausea, appetite and energy each day, and spot patterns after a dose change. It lives on your iPhone, with no account. You enter the dose your prescriber gave you.',
+          },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'What are the most common side effects of GLP-1 medicines?', a: 'Gastrointestinal ones: nausea, diarrhea, vomiting, constipation and abdominal pain, according to the Ozempic, Wegovy, Mounjaro and Zepbound labels.' },
+      { q: 'How common is nausea on Wegovy?', a: '44% of adults on the 2.4 mg dose reported nausea in the label’s trials, versus 16% on placebo.' },
+      { q: 'How common is nausea on Zepbound or Mounjaro?', a: 'Zepbound: 25% to 29% across doses versus 8% on placebo. Mounjaro (type 2 diabetes): 12% to 18% versus 4%.' },
+      { q: 'Does fatigue come with GLP-1 medicines?', a: 'It is listed. Wegovy 2.4 mg: 11% versus 5% on placebo. Zepbound: 5% to 7% versus 3%.' },
+      { q: 'Can I compare side effect rates between Ozempic and Wegovy?', a: 'Not directly. The trials enrolled different people for different conditions, used different doses and lasted different lengths.' },
+      { q: 'Do the side effects go away?', a: 'The labels do not give a general time frame. The step-up schedules are designed to lower the risk of stomach side effects, so talk to your prescriber if they persist.' },
+    ],
+    related: ['glp-1-hair-loss', 'tirzepatide-dose-chart', 'semaglutide-dose-chart', 'glp-1-missed-dose'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'glp-1-hair-loss',
+    metaTitle: 'GLP-1 Hair Loss: What the Zepbound and Wegovy Labels Say',
+    metaDescription:
+      'Hair loss on GLP-1 medicines, from the labels: Zepbound 4 to 5% vs 1% placebo (7.1% in women), Wegovy 3% vs 1%, and what the labels say about weight reduction and stopping.',
+    h1: 'GLP-1 hair loss: what the Zepbound and Wegovy labels say',
+    dek: 'Hair loss is listed on the labels. Here are the exact trial numbers, who reported it most, and what the labels say about its link to weight loss.',
+    quickAnswer:
+      'Hair loss is a listed reaction. In Zepbound’s trials, 4% to 5% of people on tirzepatide reported it versus 1% on placebo, and the label says it was associated with weight reduction and reported more often in women (7.1%) than men (0.5%) [[zepLabel]]. In Wegovy’s 2.4 mg trials it was 3% versus 1% on placebo [[wegLabel]]. The Ozempic and Mounjaro labels list alopecia among reactions reported after approval, where a frequency cannot be reliably estimated [[ozLabel]][[mounLabel]]. No Zepbound-treated patient stopped treatment because of hair loss [[zepLabel]].',
+    kicker: 'Side effects',
+    keywords: ['glp-1 hair loss', 'ozempic hair loss', 'wegovy hair loss', 'zepbound hair loss', 'mounjaro hair loss', 'does ozempic cause hair loss'],
+    sources: ['zepLabel', 'wegLabel', 'ozLabel', 'mounLabel'],
+    sections: [
+      {
+        id: 'numbers',
+        h2: 'The numbers from each label',
+        blocks: [
+          { t: 'callout', kind: 'note', title: 'Read this first', x: 'This page repeats what the manufacturers’ labels say and is not medical advice. If hair loss worries you, talk to your prescriber or a doctor.' },
+          {
+            t: 'table',
+            head: ['Medicine', 'What the label reports'],
+            rows: [
+              ['Zepbound (weight reduction)', 'Hair loss in 5% (5 mg), 4% (10 mg) and 5% (15 mg) of patients versus 1% on placebo [[zepLabel]]'],
+              ['Wegovy 2.4 mg (weight reduction)', 'Hair loss in 3% of patients versus 1% on placebo [[wegLabel]]'],
+              ['Ozempic', 'Alopecia listed among reactions reported after approval, reported voluntarily from a population of uncertain size, so frequency cannot be reliably estimated [[ozLabel]]'],
+              ['Mounjaro', 'Alopecia listed in the reactions reported after approval [[mounLabel]]'],
+            ],
+            caption: 'US prescribing information: Zepbound and Mounjaro (08/2026), Ozempic (05/2026), Wegovy (06/2026). Retrieved 6 October 2026.',
+          },
+        ],
+      },
+      {
+        id: 'who',
+        h2: 'Who reported it most, and the weight link',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              'The Zepbound label says hair loss reactions were **associated with weight reduction** [[zepLabel]].',
+              'In a pool of two Zepbound studies, hair loss was reported more often by women than men: 7.1% versus 0.5% on Zepbound, and 1.3% versus 0% on placebo [[zepLabel]].',
+              'No Zepbound-treated patients, and one placebo patient, stopped treatment because of hair loss [[zepLabel]].',
+            ],
+          },
+          {
+            t: 'p',
+            x: 'The labels do not say how long hair loss lasts or whether it reverses, and we did not find that in them, so we do not make a claim either way. Ask your prescriber.',
+          },
+        ],
+      },
+      {
+        id: 'track',
+        h2: 'Keep notes for your appointment',
+        blocks: [
+          { t: 'p', x: 'If you notice changes, jot down when they started and what your dose and weight were around then. That is far more useful in an appointment than a memory. A weight log and doctor report help with that.' },
+          CTA_DOSES,
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Does Ozempic cause hair loss?', a: 'The Ozempic label lists alopecia among reactions reported after approval, with the note that frequency cannot be reliably estimated because reports are voluntary.' },
+      { q: 'Does Wegovy cause hair loss?', a: 'It is a listed reaction: 3% of adults on 2.4 mg reported hair loss versus 1% on placebo in the label’s weight reduction trials.' },
+      { q: 'Does Zepbound cause hair loss?', a: 'It is listed: 4% to 5% on tirzepatide versus 1% on placebo, and the label says it was associated with weight reduction, reported more often by women (7.1%) than men (0.5%).' },
+      { q: 'Do people stop treatment because of hair loss?', a: 'In Zepbound’s trials no treated patients stopped treatment because of it.' },
+      { q: 'Is the hair loss permanent?', a: 'The labels we read do not say. Ask your prescriber.' },
+    ],
+    related: ['glp-1-side-effects', 'tirzepatide-dose-chart', 'semaglutide-dose-chart', 'nerra-app'],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    slug: 'wegovy-pill',
+    metaTitle: 'Wegovy Pill (Oral Wegovy): How to Take It, Doses and the Label Rules',
+    metaDescription:
+      'The Wegovy tablet from the US label: 1.5 mg to 25 mg daily doses, take on an empty stomach with water, wait 30 minutes, missed dose rule, switching from the injection.',
+    h1: 'Wegovy pill: how to take it, the dose steps and the label rules',
+    dek: 'What the prescribing information says about Wegovy tablets: who they are for, how to take them, the four dose steps, the missed dose rule and how switching works.',
+    quickAnswer:
+      'Wegovy tablets are semaglutide taken once daily by mouth. The label says to take one tablet on an empty stomach in the morning with up to 4 ounces of water, swallow it whole, and wait at least 30 minutes before eating, drinking or taking other oral medicines [[wegLabel]]. The dose steps up from 1.5 mg for 30 days to 4 mg, 9 mg and then 25 mg from day 91 [[wegLabel]]. If a dose is missed, skip it and take the next one the following day [[wegLabel]].',
+    kicker: 'Wegovy pill',
+    keywords: ['wegovy pill', 'oral wegovy', 'wegovy tablets', 'wegovy pill dose', 'how to take wegovy pill', 'wegovy pill vs injection'],
+    sources: ['wegLabel'],
+    sections: [
+      {
+        id: 'what',
+        h2: 'What the Wegovy tablet is',
+        blocks: [
+          { t: 'callout', kind: 'note', title: 'Read this first', x: PRESCRIBER },
+          {
+            t: 'ul',
+            items: [
+              'Wegovy (semaglutide) is approved as both an injection and a tablet. The same US prescribing information covers both [[wegLabel]].',
+              'The tablets are indicated, with a reduced-calorie diet and increased physical activity, to reduce the risk of major cardiovascular events in adults with established cardiovascular disease and either obesity or overweight, and to reduce excess body weight and maintain weight reduction in adults with obesity or overweight with a weight-related condition [[wegLabel]].',
+              'Using Wegovy tablets or injection together with other semaglutide products or any other GLP-1 receptor agonist is not recommended [[wegLabel]].',
+              'Price and availability are not in the label. Ask your prescriber or pharmacy.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'how',
+        h2: 'How to take it',
+        blocks: [
+          {
+            t: 'ol',
+            items: [
+              'Take one tablet by mouth once daily, on an empty stomach, in the morning [[wegLabel]].',
+              'Take it with water only, up to 4 ounces. Do not take it with other liquids [[wegLabel]].',
+              'Swallow it whole. Do not split, crush, chew or dissolve it [[wegLabel]].',
+              'Wait at least 30 minutes before eating, drinking or taking other oral medicines [[wegLabel]].',
+              'Never take more than one tablet a day [[wegLabel]].',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'doses',
+        h2: 'The dose steps',
+        blocks: [
+          {
+            t: 'table',
+            head: ['Days', 'Once-daily tablet'],
+            rows: [
+              ['1 to 30 (starting dose)', '1.5 mg [[wegLabel]]'],
+              ['31 to 60', '4 mg [[wegLabel]]'],
+              ['61 to 90', '9 mg [[wegLabel]]'],
+              ['91 onward (maintenance)', '25 mg [[wegLabel]]'],
+            ],
+            caption: 'Wegovy prescribing information, Table 2, revised 06/2026. Retrieved 6 October 2026.',
+          },
+          {
+            t: 'p',
+            x: 'If a dose is not tolerated during the step-up, the label says to consider delaying the next step. If the 25 mg maintenance dose is not tolerated, it says to consider switching to the 1.7 mg injection [[wegLabel]]. Those are decisions for your prescriber.',
+          },
+        ],
+      },
+      CTA_DOSES_SECTION(),
+      {
+        id: 'missed',
+        h2: 'Missed a tablet?',
+        blocks: [
+          { t: 'p', x: 'Skip the missed dose and take the next one the following day [[wegLabel]]. This is different from the weekly injection, which has a 2-day rule, see the [missed dose checker](/nerra/glp-1-missed-dose).' },
+        ],
+      },
+      {
+        id: 'switch',
+        h2: 'Switching between the tablet and the injection',
+        blocks: [
+          {
+            t: 'ul',
+            items: [
+              'From the 2.4 mg injection to the 25 mg tablet: start the tablet one week after stopping the injection [[wegLabel]].',
+              'From the 25 mg tablet to the injection: start 2.4 mg injection the day after stopping the tablet, or consider 1.7 mg if the tablet was not tolerated [[wegLabel]].',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'meds',
+        h2: 'Other medicines you take by mouth',
+        blocks: [
+          {
+            t: 'p',
+            x: 'The label says Wegovy delays gastric emptying and could affect how other oral medicines are absorbed. In a drug interaction study with the tablet, levothyroxine exposure increased 33%, and the label says to monitor the effects of oral medicines taken with Wegovy, with extra monitoring for medicines with a narrow therapeutic index [[wegLabel]]. Tell your prescriber and pharmacist everything you take.',
+          },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How do you take the Wegovy pill?', a: 'One tablet by mouth once daily on an empty stomach in the morning with up to 4 ounces of water, swallowed whole, then wait at least 30 minutes before eating, drinking or taking other oral medicines.' },
+      { q: 'What are the Wegovy pill doses?', a: '1.5 mg for 30 days, 4 mg for days 31 to 60, 9 mg for days 61 to 90, then 25 mg from day 91.' },
+      { q: 'What if I miss a Wegovy pill?', a: 'Skip the missed dose and take the next one the following day.' },
+      { q: 'Can I take the Wegovy pill with coffee?', a: 'The label says water only, up to 4 ounces, and not to take it with any other liquid.' },
+      { q: 'Can I switch from the Wegovy injection to the pill?', a: 'The label allows switching from 2.4 mg injection to the 25 mg tablet, starting the tablet one week after the last injection. Your prescriber manages the switch.' },
+      { q: 'How much does the Wegovy pill cost?', a: 'It is not in the prescribing information. Ask your prescriber or pharmacy.' },
+    ],
+    related: ['wegovy-dosing-schedule', 'how-to-inject-wegovy', 'glp-1-missed-dose', 'glp-1-side-effects'],
+  },
+
 ];
 
 export function getArticle(slug: string) {
