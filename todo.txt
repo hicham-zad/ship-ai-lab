@@ -12,3 +12,6 @@ NERRA SEO (17 guides live at /nerra/<slug>, DataForSEO spent ~$0.04 of $1)
 - Spot-check the App Store privacy-label sentences on best-glp-1-tracker-apps (read automatically, not by hand)
 - Submit new URLs after each deploy: python3 scripts/indexnow.py <urls>   (or --all https://shipailab.com/sitemap.xml)
 - Submit /pcos to IndexNow once it is deployed
+
+SCREENSHOTS FOR MORE APPS
+- Measure Kit and PCOS & Endo Tracker: no store screenshots exist anywhere on the Desktop. Export App Store screenshots to measure-kit/store/screenshots/ and PCOS/app/store/screenshots/, then add the key 4-5 per app to /measure-kit and /pcos with alt text, titles and captions (see scripts/prepare-app-screens.mjs and the Nerra / Sober Girl / Examen Civique pages for the pattern)
