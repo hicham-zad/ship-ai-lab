@@ -15,3 +15,12 @@ NERRA SEO (17 guides live at /nerra/<slug>, DataForSEO spent ~$0.04 of $1)
 
 SCREENSHOTS FOR MORE APPS
 - Measure Kit and PCOS & Endo Tracker: no store screenshots exist anywhere on the Desktop. Export App Store screenshots to measure-kit/store/screenshots/ and PCOS/app/store/screenshots/, then add the key 4-5 per app to /measure-kit and /pcos with alt text, titles and captions (see scripts/prepare-app-screens.mjs and the Nerra / Sober Girl / Examen Civique pages for the pattern)
+
+NEXT WORK (added after the screenshots + PCOS push)
+- Measure Kit and PCOS screenshots: export from the app (nothing exists yet), then add 4-5 key ones per page with alt, title, caption and ImageObject markup (see the line above)
+- Review the PCOS privacy, terms and support text before promoting /pcos (pushed as written, not reviewed)
+- Examen Civique: add the Arabic screenshots (store/screenshots/ar) if an Arabic page is ever added; the page is FR/EN only today
+- After any Nerra title or screenshot change: node scripts/generate-nerra-og.mjs, then commit public/nerra/og
+- After any new Sober Girl / Examen screenshots: node scripts/prepare-app-screens.mjs
+- Nerra: set NR_APP_STORE_URL and add the real rating when live (see the Nerra SEO block above)
+- 4-6 weeks after indexing: check Search Console + Bing Webmaster for /nerra, /sobergirl, /examen-civique, /pcos and re-run the AI Overview check
