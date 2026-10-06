@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const a = getArticle(slug);
   if (!a) return {};
   const url = `${NR_BASE}/${a.slug}`;
+  const og = `/nerra/og/${a.slug}.png`;
   return {
     title: a.metaTitle,
     description: a.metaDescription,
@@ -28,9 +29,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       publishedTime: NR_UPDATED,
       modifiedTime: NR_UPDATED,
-      images: [{ url: '/nerra-icon.png', width: 512, height: 512, alt: 'Nerra app icon' }],
+      images: [{ url: og, width: 1200, height: 630, alt: `${a.h1} (Nerra)` }],
     },
-    twitter: { card: 'summary', title: a.metaTitle, description: a.metaDescription, images: ['/nerra-icon.png'] },
+    twitter: { card: 'summary_large_image', title: a.metaTitle, description: a.metaDescription, images: [og] },
   };
 }
 

@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   description:
     'Label-sourced GLP-1 guides for Ozempic, Wegovy, Mounjaro and Zepbound: injection site rotation, dose charts, missed dose rules and free tools.',
   alternates: { canonical: URL },
-  openGraph: { title: 'Nerra GLP-1 guides', description: 'Injection sites, dose charts and missed dose rules, straight from the labels.', url: URL, siteName: 'Nerra', type: 'website', images: [{ url: '/nerra-icon.png', width: 512, height: 512, alt: 'Nerra' }] },
+  openGraph: { title: 'Nerra GLP-1 guides', description: 'Injection sites, dose charts and missed dose rules, straight from the labels.', url: URL, siteName: 'Nerra', type: 'website', images: [{ url: '/nerra/og/guides.png', width: 1200, height: 630, alt: 'Nerra GLP-1 guides' }] },
+  twitter: { card: 'summary_large_image', title: 'Nerra GLP-1 guides', description: 'Injection sites, dose charts and missed dose rules, straight from the labels.', images: ['/nerra/og/guides.png'] },
 };
 
 const GROUPS: { title: string; blurb: string; slugs: string[] }[] = [

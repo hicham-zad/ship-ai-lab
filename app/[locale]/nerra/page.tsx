@@ -14,9 +14,10 @@ export const metadata: Metadata = {
     description: 'Doses, injection sites, weight and check-ins. No account, no cloud. Pay once.',
     url: 'https://shipailab.com/nerra',
     siteName: 'Nerra',
-    images: [{ url: '/nerra-icon.png', width: 512, height: 512, alt: 'Nerra app icon' }],
+    images: [{ url: '/nerra/og/nerra.png', width: 1200, height: 630, alt: 'Nerra, a private GLP-1 companion for iPhone' }],
     type: 'website',
   },
+  twitter: { card: 'summary_large_image', title: 'Nerra: Private GLP-1 Companion', description: 'Doses, injection sites, weight and check-ins. No account, no cloud. Pay once.', images: ['/nerra/og/nerra.png'] },
 };
 
 const features = [

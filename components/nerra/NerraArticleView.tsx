@@ -132,7 +132,7 @@ export function articleJsonLd(a: Article) {
       '@type': 'Article',
       headline: a.h1,
       description: a.metaDescription,
-      image: [`${NR_SITE}/nerra-icon.png`, ...(a.shots ?? []).map((sh) => `${NR_SITE}/nerra/${sh.file}.png`)],
+      image: [`${NR_SITE}/nerra/og/${a.slug}.png`, ...(a.shots ?? []).map((sh) => `${NR_SITE}/nerra/${sh.file}.png`)],
       datePublished: NR_UPDATED,
       dateModified: NR_UPDATED,
       author: { '@type': 'Person', name: NR_AUTHOR },
