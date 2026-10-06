@@ -124,6 +124,50 @@ export const LANDING = {
       },
     ],
   ] as [L<string>, L<string>][],
+  screensTag: { fr: "L'application", en: 'The app' } as L<string>,
+  screensTitle: { fr: 'Dans l\'application', en: 'Inside the app' } as L<string>,
+  screensSub: {
+    fr: "Quatre écrans clés : l'explication de chaque réponse, l'examen blanc, votre score par thème et votre préparation. Les chiffres affichés sont des exemples.",
+    en: 'Four key screens: the explanation after every answer, the mock exam, your score by topic and your readiness. The numbers shown are examples.',
+  } as L<string>,
+  screens: [
+    {
+      file: 'answers',
+      title: { fr: 'Comprendre chaque réponse', en: 'Understand every answer' },
+      alt: {
+        fr: "Écran de question d'Examen Civique Prépa : une question sur les droits et devoirs en français et en anglais, la bonne réponse en vert et son explication",
+        en: 'Examen Civique Prep question screen: a rights and duties question in French and English, the correct answer in green and its explanation',
+      },
+      cap: { fr: 'Chaque question est bilingue et suivie d\'une courte explication.', en: 'Every question is bilingual, followed by a short explanation.' },
+    },
+    {
+      file: 'mock-exam',
+      title: { fr: "Examen blanc au format officiel", en: 'Mock exam in the real format' },
+      alt: {
+        fr: "Écran d'examen blanc : question 1 sur 40, chronomètre de 45 minutes et quatre choix de réponse",
+        en: 'Mock exam screen: question 1 of 40, a 45-minute timer and four answer choices',
+      },
+      cap: { fr: '40 questions, 45 minutes, seuil de réussite de 80 %.', en: '40 questions, 45 minutes, 80% pass mark.' },
+    },
+    {
+      file: 'score',
+      title: { fr: 'Votre score par thème', en: 'Your score by topic' },
+      alt: {
+        fr: "Écran de résultat avec 83 %, 33 réponses justes sur 40, le badge Réussi et le détail par thème",
+        en: 'Result screen with 83%, 33 of 40 correct, a Passed badge and a breakdown by topic',
+      },
+      cap: { fr: 'Votre score et un détail par thème pour savoir quoi réviser.', en: 'Your score and a breakdown by topic, so you know what to revise.' },
+    },
+    {
+      file: 'progress',
+      title: { fr: 'Suivez votre préparation', en: 'Track your readiness' },
+      alt: {
+        fr: "Écran d'accueil avec un score de préparation de 54 %, un compte à rebours de 21 jours, une série de 6 jours et les accès à l'examen blanc et aux erreurs",
+        en: 'Home screen with a 54% readiness score, a 21-day countdown, a 6-day streak and shortcuts to the mock exam and mistakes',
+      },
+      cap: { fr: 'Score de préparation, série de jours et compte à rebours.', en: 'Readiness score, daily streak and exam countdown.' },
+    },
+  ] as { file: string; title: L<string>; alt: L<string>; cap: L<string> }[],
   planTag: { fr: 'Gratuit et à vie', en: 'Free & Lifetime' } as L<string>,
   planTitle: { fr: 'Commencez gratuitement. Débloquez une fois.', en: 'Start free. Unlock once.' } as L<string>,
   planSub: {

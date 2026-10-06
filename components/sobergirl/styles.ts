@@ -104,6 +104,10 @@ export const SG_ARTICLE_CSS = `
 .sga-calcell i{display:block;width:16px;height:16px;border:1.5px solid var(--plum-soft);border-radius:50%;margin:2px auto 0}
 .sga-printbtn{margin-top:14px;font:inherit;font-weight:700;font-size:15px;background:var(--plum);color:#fff;border:none;border-radius:50px;padding:11px 24px;cursor:pointer}
 @media print{body *{visibility:hidden}.sga-calprint,.sga-calprint *{visibility:visible}.sga-calprint{position:absolute;left:0;top:0;width:100%;border:none}.sga-printbtn{display:none!important}}
+.sga-shots{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:28px 0 12px}
+.sga-shot{margin:0;width:240px;max-width:60vw}
+.sga-shot img{border-radius:26px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(90,42,76,.14);display:block}
+.sga-shot figcaption{font-size:13px;line-height:1.5;color:var(--ink-soft);margin-top:10px;text-align:center}
 .sga-faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
 .sga-faq summary{cursor:pointer;font-family:'Fraunces',serif;font-weight:600;font-size:18px}
 .sga-faq p{margin:10px 0 0;font-size:16px}

@@ -18,6 +18,15 @@ export interface Section {
   blocks: Block[];
 }
 
+export interface Shot {
+  file: 'home' | 'tree' | 'private' | 'sos' | 'milestones' | 'journal' | 'benefits';
+  /** Describes what the screenshot shows, for screen readers and image search. */
+  alt: string;
+  /** Short tooltip title. */
+  title: string;
+  caption: string;
+}
+
 export interface Article {
   slug: string;
   metaTitle: string;
@@ -36,6 +45,8 @@ export interface Article {
   sections: Section[];
   faqs: { q: string; a: string }[];
   related: string[];
+  /** App screenshots shown after the section that holds the inline app prompt. They show sample data. */
+  shots?: Shot[];
 }
 
 // Inline citation syntax: [[sourceId]] renders as a numbered link to the source list.
@@ -235,6 +246,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['best-app-to-quit-drinking', 'sober-app-for-women', 'sobriety-milestones'],
+    shots: [
+      { file: 'home', alt: 'Sober Girl home screen showing a sober days counter at 92 days, a check-in button, a craving help button and money saved', title: 'Sober Girl days counter and money saved', caption: 'Your days, your savings and a daily check-in on one calm screen. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -392,6 +406,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sober-october', 'dry-january-app', 'best-sober-tracker-apps'],
+    shots: [
+      { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -506,6 +523,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sobriety-milestones', 'dry-january-app', 'sober-curious'],
+    shots: [
+      { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -624,6 +644,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['best-sober-tracker-apps', 'sober-october', 'sobriety-milestones'],
+    shots: [
+      { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -868,6 +891,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['best-sober-tracker-apps', 'best-app-to-quit-drinking', 'dry-january-app'],
+    shots: [
+      { file: 'benefits', alt: 'Sober Girl feature list showing what is free (days, craving SOS, tree) and what is Plus (milestone cards, journal)', title: 'Free and Plus in Sober Girl', caption: 'What you get free, and what Plus adds.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -973,6 +999,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sober-curious', 'sobriety-milestones', 'sober-october'],
+    shots: [
+      { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1093,6 +1122,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['best-sober-tracker-apps', 'sober-october', 'sobriety-milestones'],
+    shots: [
+      { file: 'home', alt: 'Sober Girl home screen showing a sober days counter at 92 days, a check-in button, a craving help button and money saved', title: 'Sober Girl days counter and money saved', caption: 'Your days, your savings and a daily check-in on one calm screen. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1230,6 +1262,10 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['best-sober-tracker-apps', 'sober-curious', 'gray-area-drinking'],
+    shots: [
+      { file: 'private', alt: 'Sober Girl privacy screen listing stored only on your phone, no account, works offline and no ads', title: 'Sober Girl keeps your data on your phone', caption: 'No account, no ads, and your journal never leaves your device.' },
+      { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1364,6 +1400,12 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['best-sober-tracker-apps', 'sober-app-for-women', 'sobriety-milestones'],
+    shots: [
+      { file: 'home', alt: 'Sober Girl home screen showing a sober days counter at 92 days, a check-in button, a craving help button and money saved', title: 'Sober Girl days counter and money saved', caption: 'Your days, your savings and a daily check-in on one calm screen. Example data.' },
+      { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
+      { file: 'tree', alt: 'Sober Girl tree screen with a flowering tree on day 92 and progress toward the next tree stage', title: 'The Sober Girl growing tree', caption: 'A tree you water daily that grows as your days add up. Example data.' },
+      { file: 'private', alt: 'Sober Girl privacy screen listing stored only on your phone, no account, works offline and no ads', title: 'Sober Girl keeps your data on your phone', caption: 'No account, no ads, and your journal never leaves your device.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1466,6 +1508,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sober-october', 'dry-january-app', 'gray-area-drinking'],
+    shots: [
+      { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1544,6 +1589,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sobriety-milestones', 'best-sober-tracker-apps', 'alcohol-free-days'],
+    shots: [
+      { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1660,6 +1708,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['how-to-stop-alcohol-cravings', 'how-to-quit-drinking-on-your-own', 'sobriety-milestones'],
+    shots: [
+      { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1787,6 +1838,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['urge-surfing', 'how-to-quit-drinking-on-your-own', 'what-to-do-instead-of-drinking'],
+    shots: [
+      { file: 'sos', alt: 'Sober Girl craving timer showing 9:53 left, a breathing prompt and a personal reason written by the user', title: 'Ride out a craving with Sober Girl', caption: 'Cravings pass. The screen gives you something to do while you wait. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1883,6 +1937,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['how-to-stop-alcohol-cravings', 'best-app-to-quit-drinking', 'sobriety-milestones'],
+    shots: [
+      { file: 'tree', alt: 'Sober Girl tree screen with a flowering tree on day 92 and progress toward the next tree stage', title: 'The Sober Girl growing tree', caption: 'A tree you water daily that grows as your days add up. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1991,6 +2048,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sobriety-milestones', 'sober-october', 'sobriety-calculator'],
+    shots: [
+      { file: 'tree', alt: 'Sober Girl tree screen with a flowering tree on day 92 and progress toward the next tree stage', title: 'The Sober Girl growing tree', caption: 'A tree you water daily that grows as your days add up. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -2151,6 +2211,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sobriety-milestones', 'how-to-stop-alcohol-cravings', 'sober-girl-app'],
+    shots: [
+      { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -2275,6 +2338,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['how-to-stop-alcohol-cravings', 'sober-journal-prompts', 'sober-october'],
+    shots: [
+      { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -2396,6 +2462,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['gray-area-drinking', 'benefits-of-quitting-alcohol', 'how-much-alcohol-is-too-much-for-women'],
+    shots: [
+      { file: 'sos', alt: 'Sober Girl craving timer showing 9:53 left, a breathing prompt and a personal reason written by the user', title: 'Ride out a craving with Sober Girl', caption: 'Cravings pass. The screen gives you something to do while you wait. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -2623,6 +2692,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['dry-january-app', 'sober-october', 'sobriety-calendar'],
+    shots: [
+      { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -2707,6 +2779,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['sobriety-calculator', 'dry-january-guide', 'sobriety-milestones'],
+    shots: [
+      { file: 'home', alt: 'Sober Girl home screen showing a sober days counter at 92 days, a check-in button, a craving help button and money saved', title: 'Sober Girl days counter and money saved', caption: 'Your days, your savings and a daily check-in on one calm screen. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -2947,6 +3022,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['how-much-alcohol-is-too-much-for-women', 'alcohol-free-days', 'what-to-do-instead-of-drinking'],
+    shots: [
+      { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3162,6 +3240,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['gray-area-drinking', 'how-to-stop-drinking-wine-every-night', 'hangxiety'],
+    shots: [
+      { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3255,6 +3336,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['benefits-of-quitting-alcohol', 'sobriety-milestones', 'what-to-do-instead-of-drinking'],
+    shots: [
+      { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3359,6 +3443,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['hangxiety', 'sleep-after-quitting-alcohol', 'gray-area-drinking'],
+    shots: [
+      { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3492,6 +3579,9 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ['dry-january-guide', 'how-to-stop-alcohol-cravings', 'what-to-do-instead-of-drinking'],
+    shots: [
+      { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
+    ],
   },
 ];
 

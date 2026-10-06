@@ -51,6 +51,14 @@ export const metadata: Metadata = {
   },
 };
 
+const screens = [
+  { file: 'home', title: 'Sober days counter and money saved', alt: 'Sober Girl home screen showing a sober days counter at 92 days, a daily check-in button, a craving help button and money saved', cap: 'Days, hours and money saved, with a daily check-in.' },
+  { file: 'sos', title: 'Craving SOS with breathing and timer', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', cap: 'A guided breath, a 10-minute timer and your own reason.' },
+  { file: 'tree', title: 'The Sober Girl tree that grows with you', alt: 'Sober Girl tree screen with a flowering tree on day 92 and progress toward the next tree stage', cap: 'A tree you water daily that grows as your days add up.' },
+  { file: 'milestones', title: 'Sobriety milestones from day 1 to day 365', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', cap: 'Nine milestones, from day 1 to day 365.' },
+  { file: 'private', title: 'Private by design: no account, no ads', alt: 'Sober Girl privacy screen listing stored only on your phone, no account, works offline and no ads', cap: 'No account, no ads. Your journal stays on your phone.' },
+];
+
 const features = [
   {
     icon: '🌸',
@@ -160,6 +168,13 @@ const jsonLd = {
       url: PAGE_URL,
       downloadUrl: PLAY_STORE_URL,
       image: 'https://shipailab.com/sobergirl-icon.png',
+      screenshot: screens.map((sc) => ({
+        '@type': 'ImageObject',
+        contentUrl: `https://shipailab.com/sobergirl/screens/${sc.file}.png`,
+        name: sc.title,
+        description: sc.alt,
+        caption: sc.cap,
+      })),
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       publisher: { '@type': 'Organization', name: 'ShipAI Lab', url: 'https://shipailab.com' },
     },
@@ -474,6 +489,12 @@ export default function SoberGirlPage() {
           max-width: 560px;
           margin-bottom: 56px;
         }
+
+        /* ── APP SCREENS ── */
+        .sg-screens { display: flex; gap: 22px; overflow-x: auto; padding: 8px 4px 20px; scroll-snap-type: x mandatory; }
+        .sg-screen { flex: 0 0 auto; width: 240px; margin: 0; scroll-snap-align: start; }
+        .sg-screen img { display: block; width: 100%; height: auto; border-radius: 26px; border: 1px solid var(--line, #EFDDD6); box-shadow: 0 14px 34px rgba(90,42,76,0.14); }
+        .sg-screen figcaption { font-size: 13px; line-height: 1.5; color: var(--ink-soft); margin-top: 10px; text-align: center; }
 
         /* ── FEATURES GRID ── */
         .sg-features-grid {
@@ -964,6 +985,25 @@ export default function SoberGirlPage() {
                   <div className="sg-feature-title">{f.title}</div>
                   <p className="sg-feature-desc">{f.desc}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* APP SCREENS */}
+        <section className="sg-section sg-alt" id="screens">
+          <div className="sg-section-inner">
+            <span className="sg-section-tag">See the app</span>
+            <h2 className="sg-section-title">Inside the Sober Girl app</h2>
+            <p className="sg-section-sub">
+              Five screens: your day counter, craving help, your growing tree, milestones and what stays private. The numbers shown are example data.
+            </p>
+            <div className="sg-screens">
+              {screens.map((sc) => (
+                <figure key={sc.file} className="sg-screen">
+                  <Image src={`/sobergirl/screens/${sc.file}.png`} alt={sc.alt} title={sc.title} width={720} height={1565} sizes="240px" />
+                  <figcaption>{sc.cap}</figcaption>
+                </figure>
               ))}
             </div>
           </div>

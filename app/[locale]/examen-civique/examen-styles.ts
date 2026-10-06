@@ -122,6 +122,10 @@ details[open] .ec-faq-chevron { transform: rotate(180deg); }
 
 .ec-sec { padding: 80px 24px; }
 .ec-sec-alt { background: var(--card); }
+.ec-screens { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
+.ec-screen { margin: 0; width: 240px; max-width: 60vw; }
+.ec-screen img { display: block; width: 100%; height: auto; border-radius: 26px; border: 1px solid var(--line); box-shadow: 0 16px 36px rgba(15,31,77,.16); }
+.ec-screen figcaption { font-size: 13px; line-height: 1.5; color: var(--ink-soft, #5B6585); margin-top: 10px; text-align: center; }
 .ec-sec-inner { max-width: 1080px; margin: 0 auto; }
 .ec-sec-sub { font-size: 17px; color: var(--ink-soft); line-height: 1.7; max-width: 620px; margin: -12px 0 40px; }
 .ec-features { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ARTICLES, type Article, type Block } from '@/data/sobergirl/articles';
+import { ARTICLES, type Article, type Block, type Shot } from '@/data/sobergirl/articles';
 import { PLAY_STORE_URL, SG_BASE, SG_SITE, SG_UPDATED } from '@/data/sobergirl/config';
 import { SOURCES } from '@/data/sobergirl/sources';
 import Chart, { chartSourceId } from './Charts';
@@ -128,6 +128,27 @@ function renderBlock(b: Block, k: number, article: Article): ReactNode {
   }
 }
 
+function Shots({ shots }: { shots: Shot[] }) {
+  return (
+    <div className="sga-shots">
+      {shots.map((sh) => (
+        <figure key={sh.file} className="sga-shot">
+          <Image
+            src={`/sobergirl/screens/${sh.file}.png`}
+            alt={sh.alt}
+            title={sh.title}
+            width={720}
+            height={1565}
+            sizes="(max-width: 700px) 60vw, 240px"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <figcaption>{sh.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
 export function articleJsonLd(a: Article) {
   const url = `${SG_BASE}/${a.slug}`;
   return {
@@ -137,7 +158,7 @@ export function articleJsonLd(a: Article) {
         '@type': 'Article',
         headline: a.h1,
         description: a.metaDescription,
-        image: `${SG_BASE}/${a.slug}-og.png`.replace('/sobergirl/', '/sobergirl/'),
+        image: [`${SG_BASE}/${a.slug}-og.png`, ...(a.shots ?? []).map((sh) => `${SG_BASE}/screens/${sh.file}.png`)],
         datePublished: SG_UPDATED,
         dateModified: SG_UPDATED,
         author: { '@type': 'Organization', name: 'Sober Girl by ShipAI Lab', url: SG_BASE },
@@ -146,6 +167,16 @@ export function articleJsonLd(a: Article) {
         mainEntityOfPage: url,
         citation: a.sources.map((id) => SOURCES[id].url),
       },
+      ...(a.shots ?? []).map((sh) => ({
+        '@type': 'ImageObject',
+        contentUrl: `${SG_BASE}/screens/${sh.file}.png`,
+        url: `${SG_BASE}/screens/${sh.file}.png`,
+        name: sh.title,
+        description: sh.alt,
+        caption: sh.caption,
+        width: 720,
+        height: 1565,
+      })),
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -169,6 +200,10 @@ export default function ArticleView({ article }: { article: Article }) {
   const related = article.related
     .map((s) => ARTICLES.find((x) => x.slug === s))
     .filter((x): x is Article => Boolean(x));
+
+  // Screenshots sit after the first section that holds the inline app prompt, or after the first section.
+  const ctaIndex = article.sections.findIndex((s) => s.blocks.some((b) => b.t === 'cta'));
+  const shotsIndex = ctaIndex === -1 ? 0 : ctaIndex;
 
   return (
     <>
@@ -220,10 +255,11 @@ export default function ArticleView({ article }: { article: Article }) {
           </nav>
 
           <div className="sga-body">
-            {article.sections.map((s) => (
+            {article.sections.map((s, si) => (
               <section key={s.id} id={s.id}>
                 <h2>{s.h2}</h2>
                 {s.blocks.map((b, i) => renderBlock(b, i, article))}
+                {article.shots && si === shotsIndex && <Shots shots={article.shots} />}
               </section>
             ))}
 

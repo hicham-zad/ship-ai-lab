@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Blocks, ExamenFooter, Nav, basePath, langOf, pageMeta } from '@/components/ExamenLegal';
 import { examenStyles } from './examen-styles';
@@ -68,6 +69,22 @@ export default async function ExamenLanding({ params }: Props) {
         </section>
 
         <section className="ec-sec ec-sec-alt">
+          <div className="ec-sec-inner">
+            <span className="ec-section-tag">{LANDING.screensTag[lang]}</span>
+            <h2 className="ec-section-title">{LANDING.screensTitle[lang]}</h2>
+            <p className="ec-sec-sub">{LANDING.screensSub[lang]}</p>
+            <div className="ec-screens">
+              {LANDING.screens.map((sc) => (
+                <figure key={sc.file} className="ec-screen">
+                  <Image src={`/examen-civique/${lang}/${sc.file}.png`} alt={sc.alt[lang]} title={sc.title[lang]} width={720} height={1561} sizes="(max-width: 700px) 60vw, 240px" />
+                  <figcaption>{sc.cap[lang]}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="ec-sec">
           <div className="ec-sec-inner">
             <span className="ec-section-tag">{LANDING.planTag[lang]}</span>
             <h2 className="ec-section-title">{LANDING.planTitle[lang]}</h2>
