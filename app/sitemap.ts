@@ -74,6 +74,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}${path}`,
         lastModified,
         changeFrequency: 'monthly' as const,
+        { path: '/measure-kit', priority: 0.7 },
+        { path: '/measure-kit/support', priority: 0.3 },
+        { path: '/measure-kit/privacy-policy', priority: 0.2 },
+        { path: '/measure-kit/terms-of-service', priority: 0.2 },
         priority,
     }));
 
