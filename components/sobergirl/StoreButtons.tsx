@@ -1,10 +1,11 @@
-import { APP_STORE_URL, PLAY_STORE_URL } from '@/data/sobergirl/config';
+import { APP_STORE_URL, PLAY_STORE_URL, playUrlFor } from '@/data/sobergirl/config';
 
 /** Google Play link plus an App Store button that stays disabled ("coming soon") until APP_STORE_URL is set. */
-export default function StoreButtons({ light = false }: { light?: boolean }) {
+export default function StoreButtons({ light = false, campaign }: { light?: boolean; campaign?: string }) {
+  const play = campaign ? playUrlFor(campaign) : PLAY_STORE_URL;
   return (
     <div className="sga-stores">
-      <a href={PLAY_STORE_URL} className={`sga-btn${light ? ' sga-btn-light' : ''}`} target="_blank" rel="noopener noreferrer">
+      <a href={play} className={`sga-btn${light ? ' sga-btn-light' : ''}`} target="_blank" rel="noopener noreferrer">
         ▶ Get it on Google Play
       </a>
       {APP_STORE_URL ? (

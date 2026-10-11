@@ -173,3 +173,46 @@ Rules that still apply: no reviews of content we have not consumed, no figures w
 Evidence added: Skrzynski and Creswell 2021 solitary-drinking meta-analysis (small association, not cause), Boden and Fergusson 2011 alcohol and depression review (pooled odds ratios 2.00 to 2.09), Traversy and Chaput 2015 alcohol and obesity review (mixed evidence), 988 Lifeline. The wine page's pour-size table and the weight page's calorie table are arithmetic on sourced figures (14 g per drink, 7 kcal per gram), labelled as illustrative.
 
 Deliberately skipped (no source we could verify): alcohol and your period (590, KD 0), alcohol and skin, sugar cravings after quitting alcohol (390, KD 0). Revisit if citable studies turn up.
+
+## Update 2026-10-10: 30 programmatic pages (58 guides + hub)
+
+Built from typed data in `data/sobergirl/pseo/` (milestones, compare, usecases, challenges), merged into `ARTICLES`. Plan and reasoning: `sobergirl-pseo-plan.md`. **No new DataForSEO pull this round** (no credentials in the session; Semrush had no API units), so volumes for most new targets are unverified. Run the step-0 check from the plan and prune or merge anything with no demand.
+
+| Template | Pages |
+|---|---|
+| Milestones (one per app badge: 1, 3, 7, 14, 30, 60, 90, 180, 365 days) | 24-hours-sober, 3-days-sober, 1-week-sober, 2-weeks-sober, 30-days-sober, 60-days-sober, 90-days-sober, 6-months-sober, 1-year-sober |
+| Comparisons | i-am-sober-alternative, reframe-alternative, sunflower-alternative, try-dry-alternative, i-am-sober-vs-reframe, i-am-sober-vs-sunflower, reframe-vs-try-dry, sober-girl-vs-i-am-sober |
+| Use cases | sobriety-app-android, free-sobriety-tracker-app, private-sobriety-tracker, money-saved-not-drinking-calculator, sobriety-app-with-journal, how-to-count-sober-days, sober-mom |
+| Challenges | 30-day-no-alcohol-challenge, dry-february, alcohol-free-for-lent, dry-july, sober-september, plus sobriety-anniversary-messages |
+
+- Milestone pages match the app's own badges and tree stages. There are no 100-day or 2-year badges, so there are no pages for them.
+- Images: `node scripts/generate-sobergirl-pseo-assets.mjs` draws the hero, the OG image and 39 figures from the page data, porting the app's tree and badge code. `scripts/prepare-app-screens.mjs` now also copies the 06-share card.
+- Build gates (they fail the build): each page needs at least 450 words found on no other page, at least 4 FAQs, at least 3 images, at least 1 source and 3 related links. Sources are filled in from citations and must exist in `sources.ts`. Every `[text](/sobergirl/...)` link and related slug must resolve.
+- Store facts were re-read on 10 October 2026: App Store listings, and the Google Play listings including Data safety. Re-check them every 90 days, or whenever a competitor changes its price.
+- The challenge dates are for 2027 (Dry Feb, Lent 10 Feb to 27 Mar, Dry July, Sober September). Update them each year.
+- New sources: medlineDT, niaaaRecovery, lally, bpsHabit, niaaaWomen, dryFeb, dryJulyWiki (secondary, because dryjuly.com blocks bots), playReframe, playTryDry, playSoberGirl, playCancel.
+
+## Update 2026-10-10 (later): keyword gaps vs sobergirlsociety.com, with data
+
+DataForSEO pull about $0.30. Full tables in `sobergirl-keyword-gaps.md`, raw CSVs in `research/`.
+
+- sobergirlsociety.com is a community, events and shop brand with no app. It ranks for no tracker keyword. Half its ranked keywords are non-alcoholic drinks.
+- Largest verified gaps for us: "N years sober" and the months between (12 pages, about 3,500 searches, KD 9 or lower), the body cluster ("alcohol face" 6,600, "alcohol puffy face" 3,600, needs sources), relapse ("lapse vs relapse" KD 4), and the counter terms ("sobriety counter" 1,600, "sobriety counter app" 1,000).
+- Declining a drink, sober FOMO, sober wedding and the brand-confusion page have no measurable volume. Do not build them as standalone pages.
+- Verified phrasing now in the titles of `sobriety-anniversary-messages` (soberversary), `60-days-sober`, `90-days-sober` and `6-months-sober`.
+
+## Update 2026-10-11: golden keywords and 11 more pages (70 guides + hub)
+
+Method and full tables in `sobergirl-traffic-plan.md`. Google Ads Keyword Planner (through ElixRank, free) gave 5,453 ideas; DataForSEO added KD for 680; 320 were golden (100+ searches, KD 35 or lower, tracker-relevant intent).
+
+Built: `what-happens-when-you-stop-drinking-alcohol` (hub, 5,400), `sobriety-counter` (live counter, 1,600), `lapse-vs-relapse`, `100-days-sober`, `2-years-sober`, `3-years-sober`, `5-years-sober`, `months-sober`, `years-sober`, `mindful-drinking`, `alcohol-face`.
+
+Conversion changes: every Play button carries `utm_campaign=<page>-<placement>` through the install referrer; a slim sticky "Get the app" bar on phones; the counter keeps a bookmarked date in the URL, not on a server.
+
+Evidence limits are stated on the pages (alcohol face, years sober, mindful drinking). Backlog and decisions are in section 6 of the plan.
+
+## Update 2026-10-11 (later): evidence pages (76 guides + hub)
+
+Six more pages from the verified backlog: `non-alcoholic-wine`, `is-red-wine-good-for-you`, `alcohol-and-adhd`, `alcohol-flush-reaction`, `alcohol-belly-and-bloating`, `alcohol-and-hair-loss`. Sources are in `sources.ts` and listed in `sobergirl-traffic-plan.md` section 5b. Each page states what the research does not show.
+
+Accuracy fix found while building: the free daily check-in is a single tap and records no mood; mood is recorded in the journal (a Plus feature). Pages written by us now say so. **The older fact sheet (`sober-girl-app`) and some guides still say "daily check-in with mood tracking"; review those against the app.**

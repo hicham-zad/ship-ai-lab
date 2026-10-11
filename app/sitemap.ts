@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import locations from '@/data/locations';
 import { localizedSeoPages } from '@/data/localized-seo';
 import { gccCities } from '@/data/gcc-cities';
+import { FEATURES as PCOS_FEATURES } from '@/data/pcos/features';
+import { PSEO_ARTICLES as SOBERGIRL_PSEO } from '@/data/sobergirl/pseo';
 import { routing } from '@/i18n/routing';
 import { generateLanguageAlternates, getLocalizedUrl } from '@/lib/seo';
 
@@ -53,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/sobergirl/sober-curious', priority: 0.8 },
         { path: '/sobergirl/reframe-app-cost', priority: 0.8 },
         { path: '/sobergirl/gray-area-drinking', priority: 0.8 },
+        ...SOBERGIRL_PSEO.map((a) => ({ path: `/sobergirl/${a.slug}`, priority: 0.8 })),
         { path: '/nerra', priority: 0.7 },
         { path: '/nerra/guides', priority: 0.8 },
         { path: '/nerra/glp-1-injection-site-rotation', priority: 0.8 },
@@ -73,6 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/nerra/wegovy-pill', priority: 0.8 },
         { path: '/nerra/best-time-to-take-glp-1', priority: 0.8 },
         { path: '/pcos', priority: 0.7 },
+        ...PCOS_FEATURES.map((f) => ({ path: `/pcos/${f.slug}`, priority: 0.8 })),
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms-of-service', priority: 0.3 },
         { path: '/sobergirl/support', priority: 0.3 },

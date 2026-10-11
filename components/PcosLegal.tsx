@@ -46,7 +46,7 @@ export function PcosShell({ badge, title, subtitle, children, wide }: ShellProps
 
         <footer className="nr-footer">
           <p>
-            © {new Date().getFullYear()} Hicham Zaidi ·{' '}
+            © {new Date().getFullYear()} Hicham Zaidi · Ship AI Solutions LLC ·{' '}
             <Link href="/pcos/privacy-policy">Privacy</Link> · <Link href="/pcos/terms-of-service">Terms</Link> ·{' '}
             <Link href="/pcos/support">Support</Link>
           </p>
@@ -56,10 +56,38 @@ export function PcosShell({ badge, title, subtitle, children, wide }: ShellProps
   );
 }
 
+/** Same nav and footer as PcosShell, without the hero, for pages that bring their own. */
+export function PcosShellBare({ children }: { children: ReactNode }) {
+  return (
+    <div className="nr-page">
+      <nav className="nr-nav">
+        <Link href="/pcos" className="nr-brand">
+          <Image src="/pcos-icon.png" alt={PCOS_NAME} width={32} height={32} style={{ borderRadius: 9 }} />
+          <span className="nr-wordmark">PCOS &amp; Endo</span>
+        </Link>
+        <div className="nr-nav-links">
+          <Link href="/pcos/support" className="nr-nav-link">Support</Link>
+          <Link href="/pcos/privacy-policy" className="nr-nav-link">Privacy</Link>
+          <Link href="/pcos/terms-of-service" className="nr-nav-link">Terms</Link>
+          <Link href="/pcos" className="nr-nav-link nr-keep">← App</Link>
+        </div>
+      </nav>
+      {children}
+      <footer className="nr-footer">
+        <p>
+          © {new Date().getFullYear()} Hicham Zaidi · Ship AI Solutions LLC ·{' '}
+          <Link href="/pcos/privacy-policy">Privacy</Link> · <Link href="/pcos/terms-of-service">Terms</Link> ·{' '}
+          <Link href="/pcos/support">Support</Link>
+        </p>
+      </footer>
+    </div>
+  );
+}
+
 export function PcosContactCard() {
   return (
     <div className="nr-contact-card">
-      <p><strong>Hicham Zaidi</strong> · Developer of {PCOS_NAME}</p>
+      <p><strong>Hicham Zaidi</strong> (Apple App Store) · <strong>Ship AI Solutions LLC</strong> (Google Play)</p>
       <p>Email: <a href={`mailto:${PCOS_EMAIL}`}>{PCOS_EMAIL}</a></p>
       <p>Website: <a href="https://shipailab.com/pcos">shipailab.com/pcos</a></p>
     </div>

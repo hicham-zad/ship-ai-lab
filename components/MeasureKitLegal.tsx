@@ -43,7 +43,7 @@ export function MeasureKitShell({ badge, title, subtitle, children, wide }: Shel
 
         <footer className="mk-footer">
           <p>
-            © {new Date().getFullYear()} Hicham Zaidi ·{' '}
+            © {new Date().getFullYear()} Hicham Zaidi · Ship AI Solutions LLC ·{' '}
             <Link href="/measure-kit/privacy-policy">Privacy</Link> · <Link href="/measure-kit/terms-of-service">Terms</Link> ·{' '}
             <Link href="/measure-kit/support">Support</Link>
           </p>
@@ -80,7 +80,7 @@ export function Toc({ items }: { items: { id: string; label: string }[] }) {
 export function ContactCard() {
   return (
     <div className="mk-contact-card">
-      <p><strong>Hicham Zaidi</strong> · Developer of Measure Kit</p>
+      <p><strong>Hicham Zaidi</strong> (Apple App Store) · <strong>Ship AI Solutions LLC</strong> (Google Play)</p>
       <p>Email: <a href={`mailto:${MK_EMAIL}`}>{MK_EMAIL}</a></p>
       <p>Website: <a href="https://shipailab.com/measure-kit">shipailab.com/measure-kit</a></p>
     </div>

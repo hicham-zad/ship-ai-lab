@@ -54,7 +54,7 @@ function Shots({ shots }: { shots: Shot[] }) {
 }
 
 function SoonPill({ dark }: { dark?: boolean }) {
-  return <span className={`nra-pill${dark ? ' on-dark' : ''}`}>Coming soon to the App Store</span>;
+  return <span className={`nra-pill${dark ? ' on-dark' : ''}`}>Now on iPhone and Android</span>;
 }
 
 function renderBlock(b: Block, k: number, article: Article): ReactNode {
@@ -105,7 +105,7 @@ function renderBlock(b: Block, k: number, article: Article): ReactNode {
           <div className="nra-fit-col good">
             <strong>A good fit if you</strong>
             <ul>
-              <li>use an iPhone (it is coming soon to the App Store)</li>
+              <li>use an iPhone or Android phone</li>
               <li>want your dose history, sites and weight kept private on your own device</li>
               <li>do not want an account, ads or a subscription</li>
               <li>enter the dose your prescriber gave you and want a log, reminders and a clean report for appointments</li>
@@ -173,7 +173,7 @@ export function articleJsonLd(a: Article) {
       name: 'Nerra',
       operatingSystem: 'iOS',
       applicationCategory: 'HealthApplication',
-      description: 'A private GLP-1 companion for iPhone. Tracks doses you enter, injection sites, weight and check-ins. No account, no cloud.',
+      description: 'A private GLP-1 companion for iPhone and Android. Tracks doses you enter, injection sites, weight and check-ins. No account, no cloud.',
       url: NR_BASE,
       inLanguage: ['en', 'de'],
       author: { '@type': 'Person', name: NR_AUTHOR },
@@ -289,7 +289,7 @@ export default function NerraArticleView({ article }: { article: Article }) {
 
           <div className="nra-end">
             <h2>Your therapy, completely in view.</h2>
-            <p>Nerra is a private GLP-1 companion for iPhone: doses you enter, injection sites, weight and check-ins. No account, no cloud, pay once.</p>
+            <p>Nerra is a private GLP-1 companion for iPhone and Android: doses you enter, injection sites, weight and check-ins. No account, no cloud, pay once.</p>
             <SoonPill dark />
           </div>
           <p className="nra-legal">

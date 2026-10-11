@@ -2,9 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { ARTICLES, type Article, type Block, type Shot } from '@/data/sobergirl/articles';
-import { PLAY_STORE_URL, SG_BASE, SG_SITE, SG_UPDATED } from '@/data/sobergirl/config';
+import { SG_BASE, SG_SITE, SG_UPDATED, playUrlFor } from '@/data/sobergirl/config';
 import { SOURCES } from '@/data/sobergirl/sources';
 import Chart, { chartSourceId } from './Charts';
+import LiveCounter from './LiveCounter';
 import MoneyCalculator from './MoneyCalculator';
 import SobrietyCalculator from './SobrietyCalculator';
 import SobrietyCalendar from './SobrietyCalendar';
@@ -22,7 +23,8 @@ function formatDate(iso: string) {
 
 function renderInline(text: string, article: Article): ReactNode[] {
   const out: ReactNode[] = [];
-  const re = /\[\[(\w+)\]\]|\*\*(.+?)\*\*|\*(.+?)\*/g;
+  // [[id]] cites a source, [text](/sobergirl/slug) links to another page, **bold**, *italic*.
+  const re = /\[\[(\w+)\]\]|\[([^\[\]]+)\]\((\/sobergirl[a-z0-9/-]*)\)|\*\*(.+?)\*\*|\*(.+?)\*/g;
   let last = 0;
   let m: RegExpExecArray | null;
   let i = 0;
@@ -36,8 +38,10 @@ function renderInline(text: string, article: Article): ReactNode[] {
           <a href={`#src-${n}`} aria-label={`Source ${n}`}>[{n}]</a>
         </sup>,
       );
-    } else if (m[2]) out.push(<strong key={i++}>{renderInline(m[2], article)}</strong>);
-    else if (m[3]) out.push(<em key={i++}>{m[3]}</em>);
+    } else if (m[2]) {
+      out.push(<Link key={i++} href={m[3]}>{m[2]}</Link>);
+    } else if (m[4]) out.push(<strong key={i++}>{renderInline(m[4], article)}</strong>);
+    else if (m[5]) out.push(<em key={i++}>{m[5]}</em>);
     last = m.index + m[0].length;
   }
   if (last < text.length) out.push(text.slice(last));
@@ -91,6 +95,15 @@ function renderBlock(b: Block, k: number, article: Article): ReactNode {
       return <SobrietyCalendar key={k} />;
     case 'sobcalc':
       return <SobrietyCalculator key={k} />;
+    case 'counter':
+      return <LiveCounter key={k} />;
+    case 'figure':
+      return (
+        <figure key={k} className="sga-figure">
+          <img src={b.src} alt={b.alt} title={b.title} width={b.w} height={b.h} loading="lazy" decoding="async" />
+          <figcaption>{b.caption}</figcaption>
+        </figure>
+      );
     case 'cta':
       return (
         <aside key={k} className="sga-inline-cta">
@@ -98,7 +111,7 @@ function renderBlock(b: Block, k: number, article: Article): ReactNode {
             <strong>{b.title}</strong>
             <p>{b.x}</p>
           </div>
-          <StoreButtons />
+          <StoreButtons campaign={`${article.slug}-inline`} />
         </aside>
       );
     case 'fit':
@@ -149,8 +162,13 @@ function Shots({ shots }: { shots: Shot[] }) {
   );
 }
 
+function figuresOf(a: Article) {
+  return a.sections.flatMap((s) => s.blocks).filter((b): b is Extract<Block, { t: 'figure' }> => b.t === 'figure');
+}
+
 export function articleJsonLd(a: Article) {
   const url = `${SG_BASE}/${a.slug}`;
+  const figures = figuresOf(a);
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -158,7 +176,11 @@ export function articleJsonLd(a: Article) {
         '@type': 'Article',
         headline: a.h1,
         description: a.metaDescription,
-        image: [`${SG_BASE}/${a.slug}-og.png`, ...(a.shots ?? []).map((sh) => `${SG_BASE}/screens/${sh.file}.png`)],
+        image: [
+          `${SG_BASE}/${a.slug}-og.png`,
+          ...figures.map((f) => `${SG_SITE}${f.src}`),
+          ...(a.shots ?? []).map((sh) => `${SG_BASE}/screens/${sh.file}.png`),
+        ],
         datePublished: SG_UPDATED,
         dateModified: SG_UPDATED,
         author: { '@type': 'Organization', name: 'Sober Girl by ShipAI Lab', url: SG_BASE },
@@ -167,6 +189,16 @@ export function articleJsonLd(a: Article) {
         mainEntityOfPage: url,
         citation: a.sources.map((id) => SOURCES[id].url),
       },
+      ...figures.map((f) => ({
+        '@type': 'ImageObject',
+        contentUrl: `${SG_SITE}${f.src}`,
+        url: `${SG_SITE}${f.src}`,
+        name: f.title,
+        description: f.alt,
+        caption: f.caption,
+        width: f.w,
+        height: f.h,
+      })),
       ...(a.shots ?? []).map((sh) => ({
         '@type': 'ImageObject',
         contentUrl: `${SG_BASE}/screens/${sh.file}.png`,
@@ -221,7 +253,7 @@ export default function ArticleView({ article }: { article: Article }) {
             ))}
             <Link href="/sobergirl/support">Support</Link>
           </div>
-          <a href={PLAY_STORE_URL} className="sga-btn" target="_blank" rel="noopener noreferrer">Get the app</a>
+          <a href={playUrlFor(`${article.slug}-nav`)} className="sga-btn" target="_blank" rel="noopener noreferrer">Get the app</a>
         </nav>
 
         <main className="sga-wrap">
@@ -306,10 +338,15 @@ export default function ArticleView({ article }: { article: Article }) {
             <div className="sga-cta">
               <h2>Today is day one.</h2>
               <p>Sober Girl is a private sobriety tracker for women, on Android now and coming soon to iPhone: day counter, money saved, craving SOS and a tree that grows with you. Free to start.</p>
-              <StoreButtons light />
+              <StoreButtons light campaign={`${article.slug}-footer`} />
             </div>
           </div>
         </main>
+
+        <div className="sga-sticky" role="complementary" aria-label="Get the Sober Girl app">
+          <span>Track it in Sober Girl. Free to start.</span>
+          <a href={playUrlFor(`${article.slug}-sticky`)} className="sga-btn" target="_blank" rel="noopener noreferrer">Get the app</a>
+        </div>
 
         <footer className="sga-foot">
           <div className="sga-foot-in">

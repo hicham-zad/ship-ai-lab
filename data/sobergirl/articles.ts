@@ -1,3 +1,6 @@
+import { PSEO_ARTICLES } from './pseo';
+import { SAFETY_WITHDRAWAL } from './pseo/shared';
+
 export type Block =
   | { t: 'p'; x: string }
   | { t: 'h3'; x: string }
@@ -10,7 +13,11 @@ export type Block =
   | { t: 'sobcalc' }
   | { t: 'sobcal' }
   | { t: 'fit' }
-  | { t: 'cta'; title: string; x: string };
+  /** A live, second-by-second sober counter (client component). */
+  | { t: 'counter' }
+  | { t: 'cta'; title: string; x: string }
+  /** A generated illustration from /public/sobergirl. Captions carry no citations. */
+  | { t: 'figure'; src: string; alt: string; title: string; caption: string; w: number; h: number };
 
 export interface Section {
   id: string;
@@ -19,7 +26,7 @@ export interface Section {
 }
 
 export interface Shot {
-  file: 'home' | 'tree' | 'private' | 'sos' | 'milestones' | 'journal' | 'benefits';
+  file: 'home' | 'tree' | 'private' | 'sos' | 'milestones' | 'journal' | 'benefits' | 'share';
   /** Describes what the screenshot shows, for screen readers and image search. */
   alt: string;
   /** Short tooltip title. */
@@ -52,8 +59,6 @@ export interface Article {
 // Inline citation syntax: [[sourceId]] renders as a numbered link to the source list.
 // **bold** is supported. Never state a number here without a citation or a clear "illustrative" label.
 
-const SAFETY_WITHDRAWAL =
-  'If you drink heavily or every day, do not stop suddenly on your own. Alcohol withdrawal can be dangerous. MedlinePlus says to go to the emergency room or call 911 if seizures, fever, severe confusion, hallucinations or an irregular heartbeat occur [[medline]]. Talk to a doctor before you stop, or call the SAMHSA National Helpline on 1-800-662-4357 (free, confidential, 24/7) [[samhsa]].';
 
 export const ARTICLES: Article[] = [
   /* ------------------------------------------------------------------ */
@@ -65,7 +70,7 @@ export const ARTICLES: Article[] = [
     h1: 'Best sober tracker apps in 2026: which one for which person',
     dek: 'Six apps compared on what each is best for, what it costs and where it runs. Facts come from store listings, dated and linked, with a plain summary of what the research says about apps.',
     quickAnswer:
-      'The best sober tracker app depends on the job. I Am Sober has the widest reach (4.9 from 188K App Store ratings) and runs on iPhone and Android [[asIAmSober]]. Try Dry is free with no ads and suits cutting down or a month off [[asTryDry]]. Reframe is a structured 160-day program from $13.99 a month [[asReframe]]. Sunflower adds an AI sponsor [[asSunflower]]. Sober: Sobriety Tracker handles several substances [[asSober]]. Sober Girl, which we make, is a private tracker for women, on Android now with iPhone coming soon. Prices are from US listings retrieved 6 October 2026.',
+      'The best sober tracker app depends on the job. I Am Sober has the widest reach (4.9 from 189K App Store ratings) and runs on iPhone and Android [[asIAmSober]]. Try Dry is free with no ads and suits cutting down or a month off [[asTryDry]]. Reframe is a structured 160-day program from $13.99 a month [[asReframe]]. Sunflower adds an AI sponsor [[asSunflower]]. Sober: Sobriety Tracker handles several substances [[asSober]]. Sober Girl, which we make, is a private tracker for women, on Android now with iPhone coming soon. Prices are from US listings retrieved 6 October 2026.',
     kicker: 'Comparison',
     keywords: [
       'best sober tracker app',
@@ -105,7 +110,7 @@ export const ARTICLES: Article[] = [
                 'A long-running streak tracker with a daily pledge, money and time saved, milestones and private groups [[asIAmSober]]',
                 'Free. Sober Plus is listed at $9.99 a month, $27.49 for 6 months or $39.99 a year [[asIAmSober]]',
                 'iPhone, iPad, Mac, Apple Watch and Apple Vision [[asIAmSober]]. Also on Android [[playIAmSober]]',
-                '4.9 from 188K ratings [[asIAmSober]]',
+                '4.9 from 189K ratings [[asIAmSober]]',
               ],
               [
                 'Try Dry',
@@ -179,6 +184,10 @@ export const ARTICLES: Article[] = [
           {
             t: 'p',
             x: 'Sober Girl is designed for women who want a quiet daily companion: a day counter, money saved, Craving SOS with a breathing exercise and a 10-minute timer, and a tree that grows as you stay sober. The journal stays on your device. It is on Android now with an iPhone version coming soon, it has no coaching and no community feed, and as a newer app it lacks the track record of the others.',
+          },
+          {
+            t: 'p',
+            x: 'Going deeper on one app? See [I Am Sober alternatives](/sobergirl/i-am-sober-alternative), [Reframe alternatives](/sobergirl/reframe-alternative), [Sunflower alternatives](/sobergirl/sunflower-alternative), [Try Dry alternatives](/sobergirl/try-dry-alternative), or the head-to-heads [I Am Sober vs Reframe](/sobergirl/i-am-sober-vs-reframe) and [Reframe vs Try Dry](/sobergirl/reframe-vs-try-dry). On Android, start with [sobriety apps for Android](/sobergirl/sobriety-app-android).',
           },
         ],
       },
@@ -287,6 +296,10 @@ export const ARTICLES: Article[] = [
           {
             t: 'p',
             x: 'Bodies differ, and so does how much and how long someone has been drinking. The studies we can cite measure specific things over specific windows, usually a month. They do not describe what you will feel on day 47. So below, each milestone has two parts: what is documented, and ways to mark it. Where nothing is documented, we say so.',
+          },
+          {
+            t: 'p',
+            x: 'Each badge in the app also has its own page, with what is documented at that point, the money and drinks you have skipped, and prompts for that stage: [24 hours](/sobergirl/24-hours-sober), [3 days](/sobergirl/3-days-sober), [1 week](/sobergirl/1-week-sober), [2 weeks](/sobergirl/2-weeks-sober), [30 days](/sobergirl/30-days-sober), [60 days](/sobergirl/60-days-sober), [90 days](/sobergirl/90-days-sober), [6 months](/sobergirl/6-months-sober) and [1 year](/sobergirl/1-year-sober).',
           },
         ],
       },
@@ -405,7 +418,7 @@ export const ARTICLES: Article[] = [
         a: 'We cannot give a reliable number. MedlinePlus notes that sleep disturbance after stopping can last for months for some people. If sleep stays poor, tell a doctor.',
       },
     ],
-    related: ['sober-october', 'dry-january-app', 'best-sober-tracker-apps'],
+    related: ['what-happens-when-you-stop-drinking-alcohol', '30-days-sober', '1-year-sober'],
     shots: [
       { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
     ],
@@ -522,7 +535,7 @@ export const ARTICLES: Article[] = [
         a: 'For many people yes, but if you drink heavily or daily, withdrawal can be dangerous. Speak to a doctor before you stop.',
       },
     ],
-    related: ['sobriety-milestones', 'dry-january-app', 'sober-curious'],
+    related: ['sober-september', 'sobriety-milestones', 'sober-curious'],
     shots: [
       { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
     ],
@@ -728,7 +741,7 @@ export const ARTICLES: Article[] = [
             items: [
               '**Choose a window.** Thirty days is long enough to notice things and short enough to feel doable.',
               '**Write your question.** “How do I sleep without alcohol?” is easier to answer than “Should I quit?”',
-              '**Track it.** Count the days, note your mood in a daily check-in and record what you spend. Memory edits the story.',
+              '**Track it.** Count the days, check in daily, note your mood in the journal (Plus) and record what you spend. Memory edits the story.',
               '**Plan the social parts.** Decide in advance what you will order and when you will leave.',
               '**Review at the end.** What changed? What did not? Then decide what comes next, whether that is more time off, drinking less or carrying on.',
             ],
@@ -890,7 +903,7 @@ export const ARTICLES: Article[] = [
         a: 'Open Settings, tap your name, choose Subscriptions, select the subscription and tap Cancel Subscription.',
       },
     ],
-    related: ['best-sober-tracker-apps', 'best-app-to-quit-drinking', 'dry-january-app'],
+    related: ['reframe-alternative', 'i-am-sober-vs-reframe', 'free-sobriety-tracker-app'],
     shots: [
       { file: 'benefits', alt: 'Sober Girl feature list showing what is free (days, craving SOS, tree) and what is Plus (milestone cards, journal)', title: 'Free and Plus in Sober Girl', caption: 'What you get free, and what Plus adds.' },
     ],
@@ -998,7 +1011,7 @@ export const ARTICLES: Article[] = [
         a: 'They overlap. Gray area drinking describes a pattern people are uneasy about, while sober curious describes the choice to question it and try time without alcohol.',
       },
     ],
-    related: ['sober-curious', 'sobriety-milestones', 'sober-october'],
+    related: ['mindful-drinking', 'sober-curious', 'sobriety-milestones'],
     shots: [
       { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
     ],
@@ -1261,7 +1274,7 @@ export const ARTICLES: Article[] = [
         a: 'No. It is a private tracker. For treatment, use the NIAAA Alcohol Treatment Navigator or the SAMHSA National Helpline.',
       },
     ],
-    related: ['best-sober-tracker-apps', 'sober-curious', 'gray-area-drinking'],
+    related: ['sober-mom', 'best-sober-tracker-apps', 'gray-area-drinking'],
     shots: [
       { file: 'private', alt: 'Sober Girl privacy screen listing stored only on your phone, no account, works offline and no ads', title: 'Sober Girl keeps your data on your phone', caption: 'No account, no ads, and your journal never leaves your device.' },
       { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
@@ -1311,7 +1324,7 @@ export const ARTICLES: Article[] = [
             t: 'ul',
             items: [
               '**Day counter.** Days, hours and weeks sober, with a running total of money saved from what you used to spend.',
-              '**Daily check-in** with mood tracking.',
+              '**Daily check-in.** One tap that waters your tree.',
               '**Craving SOS.** A breathing exercise, a 10-minute timer and your own reason, one tap away.',
               '**Milestone badges** at 1 day, 1 week, 30 days, 1 year and beyond, with locked and unlocked states.',
               '**A living tree** that grows as you water it daily and unlocks new stages.',
@@ -1399,7 +1412,7 @@ export const ARTICLES: Article[] = [
         a: 'Your journal, streak and personal reasons stay on your device and are never synced or shared.',
       },
     ],
-    related: ['best-sober-tracker-apps', 'sober-app-for-women', 'sobriety-milestones'],
+    related: ['sober-girl-vs-i-am-sober', 'private-sobriety-tracker', 'sobriety-app-android'],
     shots: [
       { file: 'home', alt: 'Sober Girl home screen showing a sober days counter at 92 days, a check-in button, a craving help button and money saved', title: 'Sober Girl days counter and money saved', caption: 'Your days, your savings and a daily check-in on one calm screen. Example data.' },
       { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
@@ -1588,7 +1601,7 @@ export const ARTICLES: Article[] = [
         a: 'Your weekly spend divided by seven and multiplied by your days sober. It is simple arithmetic based on your own estimate.',
       },
     ],
-    related: ['sobriety-milestones', 'best-sober-tracker-apps', 'alcohol-free-days'],
+    related: ['how-to-count-sober-days', 'money-saved-not-drinking-calculator', 'sobriety-milestones'],
     shots: [
       { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
     ],
@@ -1724,7 +1737,7 @@ export const ARTICLES: Article[] = [
     quickAnswer:
       'NIAAA says urges to drink are short-lived, predictable and controllable, and recommends riding the urge out, reminding yourself of your reasons, talking it through with someone, distracting yourself, challenging the thought behind the urge, and leaving a tempting situation quickly [[niaaaUrges]]. If cravings are strong or frequent, a doctor can discuss the three FDA-approved medications for alcohol use disorder: naltrexone, acamprosate and disulfiram [[niaaaSupport]].',
     kicker: 'Guide',
-    keywords: ['how to stop alcohol cravings', 'alcohol cravings', 'why do i crave alcohol', 'alcohol craving help', 'cravings for alcohol'],
+    keywords: ['how to stop alcohol cravings', 'alcohol cravings', 'why do i crave alcohol', 'alcohol craving help', 'cravings for alcohol', 'how to curb alcohol cravings', 'how to control alcohol cravings', 'how to avoid alcohol cravings', 'how to suppress alcohol cravings'],
     heroAlt: 'Four rounded buttons labelled ride it out, talk it through, distract, and leave',
     sources: ['niaaaUrges', 'urgeSurf', 'niaaaSupport', 'medline', 'samhsa', 'navigator'],
     sections: [
@@ -1820,6 +1833,10 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
+      {
+        q: 'How do I curb, control or avoid alcohol cravings?',
+        a: 'NIAAA lists these ways to handle an urge: keep little or no alcohol at home and avoid activities involving drinking, remind yourself of your reasons, talk it through with someone you trust, distract yourself with a healthy activity, challenge the thought driving the urge, ride it out because it will crest like a wave and pass, or leave the situation quickly and gracefully.',
+      },
       {
         q: 'How do I stop alcohol cravings?',
         a: 'NIAAA recommends riding out the urge, reminding yourself of your reasons, talking it through with someone, distracting yourself, challenging the thought behind it, and leaving a tempting situation quickly.',
@@ -1936,7 +1953,7 @@ export const ARTICLES: Article[] = [
         a: 'The SAMHSA National Helpline (1-800-662-4357) is free, confidential and open 24/7. The NIAAA Alcohol Treatment Navigator helps you find care.',
       },
     ],
-    related: ['how-to-stop-alcohol-cravings', 'best-app-to-quit-drinking', 'sobriety-milestones'],
+    related: ['what-happens-when-you-stop-drinking-alcohol', 'alcohol-face', 'sobriety-milestones'],
     shots: [
       { file: 'tree', alt: 'Sober Girl tree screen with a flowering tree on day 92 and progress toward the next tree stage', title: 'The Sober Girl growing tree', caption: 'A tree you water daily that grows as your days add up. Example data.' },
     ],
@@ -2337,7 +2354,7 @@ export const ARTICLES: Article[] = [
         a: 'Have an alcohol-free drink in your hand, decide an end time, drive yourself and suggest plans that are not built around alcohol.',
       },
     ],
-    related: ['how-to-stop-alcohol-cravings', 'sober-journal-prompts', 'sober-october'],
+    related: ['non-alcoholic-wine', 'how-to-stop-alcohol-cravings', 'sober-girl-app'],
     shots: [
       { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
     ],
@@ -2588,7 +2605,7 @@ export const ARTICLES: Article[] = [
     quickAnswer:
       'Dry January is a month without alcohol that began in 2013 with Alcohol Change UK and has grown from 4,000 participants to 200,000 app and tool users worldwide in 2025 [[acukAbout]]. Participants in a 2019 evaluation self-reported saving money (86%), sleeping better (70%) and having more energy (66%) [[acuk]]. In a BMJ Open study of 94 people, a month off cut insulin resistance by 25.9% and systolic blood pressure by 6.6% [[bmj]]. If you drink heavily, speak to a doctor before stopping suddenly [[medline]].',
     kicker: 'Guide',
-    keywords: ['dry january', 'dry january benefits', 'how to do dry january', 'dry january tips', 'dry january rules', 'what is dry january'],
+    keywords: ['dry january', 'dry january meaning', 'what does dry january mean', 'dry january benefits', 'how to do dry january', 'dry january tips', 'dry january rules', 'what is dry january'],
     heroAlt: 'A January calendar page with a frosted snowflake and a row of ticked days',
     sources: ['acukAbout', 'acuk', 'bmj', 'medline', 'samhsa'],
     sections: [
@@ -2675,6 +2692,10 @@ export const ARTICLES: Article[] = [
     ],
     faqs: [
       {
+        q: 'What does Dry January mean?',
+        a: 'Dry January means giving up alcohol for the 31 days of January. It is a challenge run by the charity Alcohol Change UK, which says it began in 2013 with 4,000 people.',
+      },
+      {
         q: 'What is Dry January?',
         a: 'A challenge to go the month of January without alcohol, started in 2013 by Alcohol Change UK. It grew from 4,000 participants that year to 200,000 app and tool users worldwide in 2025.',
       },
@@ -2691,7 +2712,7 @@ export const ARTICLES: Article[] = [
         a: 'Log it and carry on. Alcohol Change UK reports that six months after the campaign, seven in ten participants were still drinking less riskily.',
       },
     ],
-    related: ['dry-january-app', 'sober-october', 'sobriety-calendar'],
+    related: ['dry-february', '30-day-no-alcohol-challenge', 'sobriety-calendar'],
     shots: [
       { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
     ],
@@ -3021,7 +3042,7 @@ export const ARTICLES: Article[] = [
         a: 'It can be if you drink heavily or every night. Withdrawal symptoms include shakiness, sweating, anxiety and, in severe cases, seizures. Speak to a doctor before stopping.',
       },
     ],
-    related: ['how-much-alcohol-is-too-much-for-women', 'alcohol-free-days', 'what-to-do-instead-of-drinking'],
+    related: ['is-red-wine-good-for-you', 'alcohol-free-days', 'gray-area-drinking'],
     shots: [
       { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
     ],
@@ -3126,7 +3147,7 @@ export const ARTICLES: Article[] = [
         a: 'In a 2019 evaluation summarised by Alcohol Change UK, 54% of participants self-reported losing weight. The amount was not stated in our source.',
       },
     ],
-    related: ['benefits-of-quitting-alcohol', 'how-to-stop-drinking-wine-every-night', 'dry-january-guide'],
+    related: ['alcohol-belly-and-bloating', 'how-much-alcohol-is-too-much-for-women', 'what-to-do-instead-of-drinking'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3300,7 +3321,7 @@ export const ARTICLES: Article[] = [
               '**Watch caffeine and screens late in the day.**',
               '**Move during the day.** A walk or workout helps many people sleep.',
               '**Do not fight the clock.** If you are awake for a long time, get up, do something quiet, and go back when you feel sleepy.',
-              '**Track it.** A short daily check-in on sleep and mood shows whether things are moving. Sober Girl has one, and our sobriety calculator shows how many days in you are.',
+              '**Track it.** A short daily note on sleep and mood shows whether things are moving. Sober Girl’s journal (Plus) takes a mood and one line, and our sobriety calculator shows how many days in you are.',
             ],
           },
           { t: 'callout', kind: 'safety', title: 'If you drink heavily, do not stop suddenly on your own', x: SAFETY_WITHDRAWAL },
@@ -3335,7 +3356,7 @@ export const ARTICLES: Article[] = [
         a: 'It can make you drowsy at first, but it can fragment sleep later in the night and reduce REM sleep.',
       },
     ],
-    related: ['benefits-of-quitting-alcohol', 'sobriety-milestones', 'what-to-do-instead-of-drinking'],
+    related: ['what-happens-when-you-stop-drinking-alcohol', 'benefits-of-quitting-alcohol', 'what-to-do-instead-of-drinking'],
     shots: [
       { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
     ],
@@ -3442,7 +3463,7 @@ export const ARTICLES: Article[] = [
         a: 'Yes, and a doctor can help with both. Do not stop suddenly on your own if you drink heavily.',
       },
     ],
-    related: ['hangxiety', 'sleep-after-quitting-alcohol', 'gray-area-drinking'],
+    related: ['alcohol-and-adhd', 'benefits-of-quitting-alcohol', 'sobriety-milestones'],
     shots: [
       { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
     ],
@@ -3585,6 +3606,9 @@ export const ARTICLES: Article[] = [
   },
 ];
 
+// Programmatic pages (milestones, comparisons, use cases, challenges) live in ./pseo.
+ARTICLES.push(...PSEO_ARTICLES);
+
 /** Which source each chart cites. Charts.tsx holds the data; this keeps numbering in sync. */
 export const CHART_SOURCE: Record<string, string> = { gallup: 'gallup', bmj: 'bmj', dryjan: 'acuk' };
 
@@ -3599,7 +3623,10 @@ function citedIds(a: Article): string[] {
       if (b.t === 'p') add(b.x);
       else if (b.t === 'ul' || b.t === 'ol') b.items.forEach(add);
       else if (b.t === 'callout') add(b.x);
-      else if (b.t === 'table') b.rows.flat().forEach(add);
+      else if (b.t === 'table') {
+        b.rows.flat().forEach(add);
+        if (b.caption) add(b.caption);
+      }
       else if (b.t === 'chart') {
         const id = CHART_SOURCE[b.id];
         if (!seen.includes(id)) seen.push(id);
@@ -3635,6 +3662,18 @@ for (const a of ARTICLES) {
     throw new Error(`${a.slug}: missing sources [${missing}] unused sources [${unused}]`);
   }
   a.sources = cited;
+}
+
+// Internal links ([text](/sobergirl/...)) and related slugs must point at pages that exist.
+{
+  const pages = new Set(['/sobergirl', '/sobergirl/guides', '/sobergirl/support', '/sobergirl/privacy-policy', '/sobergirl/terms-of-service', ...ARTICLES.map((a) => `/sobergirl/${a.slug}`)]);
+  const broken: string[] = [];
+  for (const a of ARTICLES) {
+    const texts = [a.quickAnswer, ...a.sections.flatMap((s) => s.blocks.flatMap((b) => (b.t === 'p' || b.t === 'callout' ? [b.x] : b.t === 'ul' || b.t === 'ol' ? b.items : b.t === 'table' ? b.rows.flat() : [])))];
+    for (const t of texts) for (const m of t.matchAll(/\]\((\/sobergirl[^)]*)\)/g)) if (!pages.has(m[1])) broken.push(`${a.slug} -> ${m[1]}`);
+    for (const r of a.related) if (!pages.has(`/sobergirl/${r}`)) broken.push(`${a.slug} -> related ${r}`);
+  }
+  if (broken.length) throw new Error(`Broken Sober Girl links:\n${broken.join('\n')}`);
 }
 
 export function getArticle(slug: string): Article | undefined {

@@ -102,7 +102,7 @@ export default function GuidesHub() {
             <div className="sga-cta">
               <h2>Today is day one.</h2>
               <p>Sober Girl is a private sobriety tracker for women, on Android now and coming soon to iPhone. Core tools are free.</p>
-              <StoreButtons light />
+              <StoreButtons light campaign="guides-hub" />
             </div>
           </div>
         </main>

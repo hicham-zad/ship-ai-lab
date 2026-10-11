@@ -104,6 +104,25 @@ export const SG_ARTICLE_CSS = `
 .sga-calcell i{display:block;width:16px;height:16px;border:1.5px solid var(--plum-soft);border-radius:50%;margin:2px auto 0}
 .sga-printbtn{margin-top:14px;font:inherit;font-weight:700;font-size:15px;background:var(--plum);color:#fff;border:none;border-radius:50px;padding:11px 24px;cursor:pointer}
 @media print{body *{visibility:hidden}.sga-calprint,.sga-calprint *{visibility:visible}.sga-calprint{position:absolute;left:0;top:0;width:100%;border:none}.sga-printbtn{display:none!important}}
+.sga-live{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 6px;text-align:center}
+.sga-live div{background:var(--plum);color:#fff;border-radius:16px;padding:16px 6px}
+.sga-live b{display:block;font-family:'Fraunces',serif;font-size:clamp(26px,6vw,42px);line-height:1.1;font-variant-numeric:tabular-nums}
+.sga-live span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+.sga-counter-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.sga-counter-inputs label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700}
+.sga-counter-inputs input{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.sga-prog{height:10px;border-radius:6px;background:var(--plum-tint);margin:14px 0 6px;overflow:hidden}
+.sga-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--sage),var(--rose));border-radius:6px}
+.sga-sticky{display:none}
+@media (max-width:700px){
+  .sga-sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;align-items:center;justify-content:space-between;gap:12px;background:#fff;border-top:1px solid var(--line);padding:10px 16px;box-shadow:0 -6px 20px rgba(90,42,76,.10)}
+  .sga-sticky span{font-size:14px;font-weight:700;color:var(--plum);line-height:1.3}
+  .sga-sticky .sga-btn{padding:9px 18px;font-size:14px;white-space:nowrap}
+  .sga-foot{padding-bottom:84px}
+}
+.sga-figure{margin:26px 0 14px}
+.sga-figure img{width:100%;height:auto;border-radius:20px;border:1px solid var(--line);display:block;background:var(--petal)}
+.sga-figure figcaption{font-size:13px;line-height:1.5;color:var(--ink-soft);margin-top:10px;text-align:center}
 .sga-shots{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:28px 0 12px}
 .sga-shot{margin:0;width:240px;max-width:60vw}
 .sga-shot img{border-radius:26px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(90,42,76,.14);display:block}

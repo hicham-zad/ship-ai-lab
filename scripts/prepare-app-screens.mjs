@@ -7,9 +7,9 @@ import sharp from 'sharp';
 const DESK = '/Users/Apple/Desktop';
 const jobs = [];
 
-// Sober Girl: the seven screenshots that show real UI or the privacy and pricing story (06-share is skipped).
+// Sober Girl: the eight screenshots that show real UI, the privacy and pricing story, and the milestone share card.
 const SG = `${DESK}/Sober Girl/app/store/screenshots`;
-for (const [src, name] of [['01-home', 'home'], ['02-tree', 'tree'], ['03-private', 'private'], ['04-sos', 'sos'], ['05-milestones', 'milestones'], ['07-journal', 'journal'], ['08-benefits', 'benefits']]) {
+for (const [src, name] of [['01-home', 'home'], ['02-tree', 'tree'], ['03-private', 'private'], ['04-sos', 'sos'], ['05-milestones', 'milestones'], ['06-share', 'share'], ['07-journal', 'journal'], ['08-benefits', 'benefits']]) {
   jobs.push([`${SG}/${src}.png`, `public/sobergirl/screens/${name}.png`]);
 }
 // Examen Civique: answers, mock exam, score by topic, progress. English and French sets.

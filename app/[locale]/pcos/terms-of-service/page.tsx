@@ -46,8 +46,8 @@ export default function PcosTerms() {
 
       <Section id="t-1" title="1. Agreement">
         <p className="nr-p">
-          These Terms govern your use of the PCOS &amp; Endo Tracker mobile app (the &ldquo;App&rdquo;), operated by
-          Hicham Zaidi (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By using the App you agree to these Terms and our{' '}
+          These Terms govern your use of the PCOS &amp; Endo Tracker mobile app (the &ldquo;App&rdquo;), published by
+          Hicham Zaidi on the Apple App Store and by Ship AI Solutions LLC on Google Play (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By using the App you agree to these Terms and our{' '}
           <a href="/pcos/privacy-policy">Privacy Policy</a>. If you do not agree, do not use the App.
         </p>
       </Section>

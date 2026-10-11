@@ -46,8 +46,8 @@ export default function MeasureKitPrivacyPolicy() {
 
       <Section id="p-1" title="1. Introduction">
         <p className="mk-p">
-          Hicham Zaidi, an independent developer (&ldquo;we&rdquo;, &ldquo;us&rdquo;), operates the Measure Kit mobile
-          app (the &ldquo;App&rdquo;), a toolkit with a ruler, bubble level, compass, protractor, decibel meter, AR tape
+          The Measure Kit mobile app (the &ldquo;App&rdquo;) is published by Hicham Zaidi, an individual developer, on
+          the Apple App Store, and by Ship AI Solutions LLC on Google Play (&ldquo;we&rdquo;, &ldquo;us&rdquo;). It is a toolkit with a ruler, bubble level, compass, protractor, decibel meter, AR tape
           measure and magnetic field detector. This Privacy Policy explains what information the App handles and how.
           By using the App you agree to this policy.
         </p>

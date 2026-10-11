@@ -47,8 +47,9 @@ export default function PcosPrivacyPolicy() {
 
       <Section id="p-1" title="1. Introduction">
         <p className="nr-p">
-          Hicham Zaidi, an independent developer (&ldquo;we&rdquo;, &ldquo;us&rdquo;), operates the PCOS &amp; Endo
-          Tracker mobile app (the &ldquo;App&rdquo;). This Privacy Policy explains what information the App handles
+          The PCOS &amp; Endo Tracker mobile app (the &ldquo;App&rdquo;) is published by Hicham Zaidi, an individual
+          developer, on the Apple App Store, and by Ship AI Solutions LLC on Google Play (&ldquo;we&rdquo;, &ldquo;us&rdquo;). The App works the
+          same way on both stores. This Privacy Policy explains what information the App handles
           and how. By using the App you agree to this policy.
         </p>
       </Section>

@@ -774,13 +774,13 @@ export const ARTICLES: Article[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'nerra-app',
-    metaTitle: 'Nerra: Private GLP-1 Tracker App for iPhone (Facts and Pricing)',
+    metaTitle: 'Nerra: Private GLP-1 Tracker App for iPhone and Android (Facts and Pricing)',
     metaDescription:
-      'Nerra is a private GLP-1 tracker for iPhone: doses, injection sites, weight and check-ins. No account, no cloud, one-time purchase. What it does, what it does not, and who it suits.',
-    h1: 'Nerra: a private GLP-1 tracker for iPhone',
+      'Nerra is a private GLP-1 tracker for iPhone and Android: doses, injection sites, weight and check-ins. No account, no cloud, one-time purchase. What it does, what it does not, and who it suits.',
+    h1: 'Nerra: a private GLP-1 tracker for iPhone and Android',
     dek: 'A plain fact sheet: what Nerra is, who makes it, what is free, what it will never do, and where it is not the right choice.',
     quickAnswer:
-      'Nerra is a GLP-1 companion app for iPhone made by Hicham Zaidi. It tracks the doses you enter, injection sites, weight and body measurements, and daily check-ins for nausea, appetite and energy. It has no account and no cloud, so your data stays on your iPhone. The core logging is free and Nerra Lifetime is a single one-time purchase with no subscription. It is not a medical device and never calculates or suggests a dose. It is coming soon to the App Store, in English and German.',
+      'Nerra is a GLP-1 companion app for iPhone and Android made by Hicham Zaidi. It tracks the doses you enter, injection sites, weight and body measurements, and daily check-ins for nausea, appetite and energy. It has no account and no cloud, so your data stays on your phone. The core logging is free and Nerra Lifetime is a single one-time purchase with no subscription. It is not a medical device and never calculates or suggests a dose. It is available on the App Store and Google Play, in English and German.',
     kicker: 'About Nerra',
     keywords: ['nerra app', 'glp-1 tracker app', 'private glp-1 tracker', 'glp-1 tracker no account', 'injection tracker app', 'ozempic tracker app', 'shotsy alternative'],
     sources: [],
@@ -793,11 +793,11 @@ export const ARTICLES: Article[] = [
             t: 'table',
             head: ['', 'Nerra'],
             rows: [
-              ['What it is', 'A GLP-1 companion app for iPhone'],
+              ['What it is', 'A GLP-1 companion app for iPhone and Android'],
               ['Maker', 'Hicham Zaidi, independent developer'],
-              ['Status', 'Coming soon to the App Store. Not yet downloadable'],
+              ['Status', 'Available on the App Store and Google Play'],
               ['Languages', 'English and German'],
-              ['Platforms', 'iPhone only. No Android version'],
+              ['Platforms', 'iPhone and Android'],
               ['Account', 'None. No sign-up and no login'],
               ['Data storage', 'On your device only. No cloud, no ads and no trackers'],
               ['Price', 'Free to start. Nerra Lifetime is a single one-time purchase with no subscription'],
@@ -866,11 +866,11 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
-      { q: 'What is Nerra?', a: 'A private GLP-1 companion app for iPhone that tracks doses you enter, injection sites, weight and check-ins, with no account and no cloud.' },
+      { q: 'What is Nerra?', a: 'A private GLP-1 companion app for iPhone and Android that tracks doses you enter, injection sites, weight and check-ins, with no account and no cloud.' },
       { q: 'Is Nerra free?', a: 'Core logging is free. Nerra Lifetime is a single one-time purchase with no subscription that unlocks the calendar, check-ins, charts, measurements and the doctor report.' },
       { q: 'Does Nerra need an account or the cloud?', a: 'No. There is no account and no cloud. Your doses, weight and check-ins stay on your iPhone.' },
       { q: 'Does Nerra tell me what dose to take?', a: 'No. You enter the dose your prescriber gave you. Nerra never calculates or suggests a dose.' },
-      { q: 'Is Nerra on Android?', a: 'No. Nerra is for iPhone only and is coming soon to the App Store.' },
+      { q: 'Is Nerra on Android?', a: 'Yes. Nerra is on Google Play for Android and on the App Store for iPhone.' },
       { q: 'Who makes Nerra?', a: 'Hicham Zaidi, an independent developer.' },
     ],
     related: ['best-glp-1-tracker-apps', 'shotsy-alternative', 'glp-1-injection-site-rotation', 'glp-1-missed-dose'],
@@ -1175,7 +1175,7 @@ export const ARTICLES: Article[] = [
               ['GlucoPal', '4.8, 3.2K ratings [[asGlucoPal]]', 'Free with in-app purchases: Pro weekly $12.99, yearly $29.99 and $49.99 [[asGlucoPal]]', 'Six languages. iPhone, Mac, Apple Vision [[asGlucoPal]]', 'Yes, in the Pro tier [[asGlucoPal]]'],
               ['Glippy', '4.8, 435 ratings [[asGlippy]]', 'Listed as free [[asGlippy]]', 'English. iPhone, iOS 16.4 or later [[asGlippy]]', 'No claim shown [[asGlippy]]'],
               ['GLP-1 Logbook', 'Not shown [[asLogbook]]', 'Free, with a $3.99 in-app purchase to remove ads [[asLogbook]]', 'English. iPhone, iPad, Mac, Apple Vision [[asLogbook]]', 'Yes, an estimated level curve, described as illustrative [[asLogbook]]'],
-              ['Nerra (ours)', 'No ratings yet. Not on the App Store', 'Free core logging. Nerra Lifetime is a single one-time purchase, no subscription', 'English and German. iPhone only', 'No. You enter the dose your prescriber gave you and Nerra never calculates or suggests one'],
+              ['Nerra (ours)', 'No ratings yet. New on the App Store and Google Play', 'Free core logging. Nerra Lifetime is a single one-time purchase, no subscription', 'English and German. iPhone and Android', 'No. You enter the dose your prescriber gave you and Nerra never calculates or suggests one'],
             ],
             caption: 'US App Store listings retrieved 6 October 2026. Nerra row is from the Nerra product page.',
           },
@@ -1191,7 +1191,7 @@ export const ARTICLES: Article[] = [
           },
           {
             t: 'p',
-            x: 'Nerra keeps your doses, weight and check-ins on your iPhone only. There is no account, no cloud, no ads and no trackers.',
+            x: 'Nerra keeps your doses, weight and check-ins on your phone only. There is no account, no cloud, no ads and no trackers.',
           },
         ],
       },
@@ -1236,7 +1236,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
-      { q: 'What is the best GLP-1 tracker app?', a: 'It depends. Shotsy and MeAgain have the most ratings (33K and 36K at 4.8 stars). Glippy and GLP-1 Logbook are free. Nerra is a private, one-time-purchase option that is coming soon to the App Store.' },
+      { q: 'What is the best GLP-1 tracker app?', a: 'It depends. Shotsy and MeAgain have the most ratings (33K and 36K at 4.8 stars). Glippy and GLP-1 Logbook are free. Nerra is a private, one-time-purchase option on the App Store and Google Play.' },
       { q: 'Are GLP-1 tracker apps free?', a: 'Several are free to download with in-app purchases or subscriptions. Glippy is listed as free and GLP-1 Logbook is free with a $3.99 option to remove ads. Check each listing for current prices.' },
       { q: 'Do GLP-1 tracker apps work for Ozempic, Mounjaro, Wegovy and Zepbound?', a: 'The apps compared here describe support for these medicines. Shotsy lists Ozempic, Wegovy, Mounjaro, Zepbound and others. Check the listing for your medicine.' },
       { q: 'Is there a GLP-1 tracker with no account?', a: 'Nerra has no account and no cloud, and keeps data on your iPhone. It is not on the App Store yet.' },
@@ -1259,7 +1259,7 @@ export const ARTICLES: Article[] = [
     h1: 'Shotsy alternatives: GLP-1 trackers compared',
     dek: 'What Shotsy offers and what it costs, the reasons people look elsewhere, and five alternatives with price, privacy and platform facts from their listings.',
     quickAnswer:
-      'Shotsy is a free-to-download GLP-1 tracker with 4.8 stars from 33K ratings, in-app subscriptions listed from $9.99 a month, and charts of estimated medication levels [[asShotsy]]. Alternatives with different trade-offs are MeAgain (more expensive tiers, 36K ratings) [[asMeAgain]], GlucoPal (Pro forecasts, 3.2K ratings) [[asGlucoPal]], Glippy (listed as free) [[asGlippy]], GLP-1 Logbook (free with ads, $3.99 to remove) [[asLogbook]], and Nerra (a one-time purchase, no account, coming soon to the App Store). Data is from US listings retrieved 6 October 2026.',
+      'Shotsy is a free-to-download GLP-1 tracker with 4.8 stars from 33K ratings, in-app subscriptions listed from $9.99 a month, and charts of estimated medication levels [[asShotsy]]. Alternatives with different trade-offs are MeAgain (more expensive tiers, 36K ratings) [[asMeAgain]], GlucoPal (Pro forecasts, 3.2K ratings) [[asGlucoPal]], Glippy (listed as free) [[asGlippy]], GLP-1 Logbook (free with ads, $3.99 to remove) [[asLogbook]], and Nerra (a one-time purchase, no account, on the App Store and Google Play). Data is from US listings retrieved 6 October 2026.',
     kicker: 'Alternatives',
     keywords: ['shotsy alternative', 'shotsy app', 'shotsy alternatives', 'apps like shotsy', 'shotsy vs', 'shotsy cost'],
     sources: ['asShotsy', 'asMeAgain', 'asGlucoPal', 'asGlippy', 'asLogbook'],
@@ -1336,7 +1336,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       { q: 'How much does Shotsy cost?', a: 'It is free to download with in-app purchases. The listing shows monthly subscriptions at $9.99, $14.99 and $19.99 and yearly at $39.99 and $59.99, as of 6 October 2026.' },
       { q: 'What is the best free alternative to Shotsy?', a: 'Glippy is listed as free, and GLP-1 Logbook is free with a $3.99 option to remove ads. Check the listings for current terms.' },
-      { q: 'Is there a Shotsy alternative without a subscription?', a: 'Nerra uses a one-time Lifetime purchase with no subscription, and is coming soon to the App Store.' },
+      { q: 'Is there a Shotsy alternative without a subscription?', a: 'Nerra uses a one-time Lifetime purchase with no subscription, and is on the App Store and Google Play.' },
       { q: 'Is there a Shotsy alternative with no medication level estimates?', a: 'Glippy shows no such claim in its listing, and Nerra never estimates levels or suggests a dose.' },
       { q: 'Can Nerra import my Shotsy data?', a: 'We have not built an import. Nerra supports data export from its own app.' },
     ],

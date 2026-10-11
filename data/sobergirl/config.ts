@@ -5,3 +5,10 @@ export const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com
 // The iOS app is not live yet. Set this to the App Store URL on launch and the "coming soon" button becomes a link.
 export const APP_STORE_URL: string | null = null;
 export const SG_UPDATED = '2026-10-06';
+
+/**
+ * Play Store link tagged with the page it was clicked on. Google Play passes the referrer to the install,
+ * so Play Console's acquisition reports show which page sent each install.
+ */
+export const playUrlFor = (campaign: string, medium = 'seo') =>
+  `${PLAY_STORE_URL}&referrer=${encodeURIComponent(`utm_source=shipailab&utm_medium=${medium}&utm_campaign=${campaign}`)}`;

@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { nerraStyles } from './nerra-styles';
+import { NR_APP_STORE_URL, NR_PLAY_STORE_URL } from '@/data/nerra/config';
 
 export const metadata: Metadata = {
-  title: 'Nerra — Private GLP-1 Companion for iPhone',
+  title: 'Nerra — Private GLP-1 Companion for iPhone and Android',
   description:
     'Nerra tracks your GLP-1 doses, injection sites, weight and how you feel. Private by design: no account, no cloud. Pay once, keep it forever.',
   keywords: ['GLP-1 app', 'Ozempic tracker', 'Wegovy tracker', 'Mounjaro tracker', 'injection tracker', 'dose reminder', 'semaglutide', 'tirzepatide'],
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Doses, injection sites, weight and check-ins. No account, no cloud. Pay once.',
     url: 'https://shipailab.com/nerra',
     siteName: 'Nerra',
-    images: [{ url: '/nerra/og/nerra.png', width: 1200, height: 630, alt: 'Nerra, a private GLP-1 companion for iPhone' }],
+    images: [{ url: '/nerra/og/nerra.png', width: 1200, height: 630, alt: 'Nerra, a private GLP-1 companion for iPhone and Android' }],
     type: 'website',
   },
   twitter: { card: 'summary_large_image', title: 'Nerra: Private GLP-1 Companion', description: 'Doses, injection sites, weight and check-ins. No account, no cloud. Pay once.', images: ['/nerra/og/nerra.png'] },
@@ -56,6 +57,21 @@ const compare: [string, boolean][] = [
   ['Doctor report as PDF', false],
 ];
 
+function StoreButtons() {
+  return (
+    <div className="nr-stores">
+      <a href={NR_APP_STORE_URL} className="nr-retro" target="_blank" rel="noopener noreferrer">
+        <span className="nr-retro-ico" aria-hidden="true">🍎</span>
+        <span className="nr-retro-txt"><small>Download on the</small><strong>App Store</strong></span>
+      </a>
+      <a href={NR_PLAY_STORE_URL} className="nr-retro nr-retro-play" target="_blank" rel="noopener noreferrer">
+        <span className="nr-retro-ico" aria-hidden="true">▶</span>
+        <span className="nr-retro-txt"><small>Get it on</small><strong>Google Play</strong></span>
+      </a>
+    </div>
+  );
+}
+
 export default function NerraLanding() {
   return (
     <>
@@ -83,8 +99,8 @@ export default function NerraLanding() {
                 Track doses, injection sites, weight and how you feel. Private by design: no account, no cloud.
                 Pay once, keep it forever.
               </p>
-              <span className="nr-soon">Coming soon to the App Store</span>
-              <p className="nr-soon-note">For iPhone. Available in English and German.</p>
+              <StoreButtons />
+              <p className="nr-soon-note">For iPhone and Android. Available in English and German.</p>
             </div>
             <div className="nr-phone">
               <Image src="/nerra/dashboard.png" alt="Nerra GLP-1 tracker dashboard on iPhone showing the next shot day, a logged dose with its injection site and a nausea, appetite and energy check-in (sample data)" title="Nerra GLP-1 tracker for iPhone" width={700} height={1522} priority />
@@ -176,8 +192,8 @@ export default function NerraLanding() {
 
         <section className="nr-cta">
           <h2>Private by design</h2>
-          <p>Your doses, weight and check-ins never leave your iPhone.</p>
-          <Link href="/nerra/privacy-policy" className="nr-btn nr-btn-peach">Read the privacy policy</Link>
+          <p>Your doses, weight and check-ins never leave your phone.</p>
+          <StoreButtons />
         </section>
 
         <div className="nr-legal-strip">

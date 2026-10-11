@@ -111,7 +111,21 @@ details[open] .nr-faq-chevron { transform: rotate(180deg); }
 .nr-land-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(40px, 5.6vw, 68px); line-height: 1.05; letter-spacing: -1.5px; color: var(--espresso); margin: 0 0 18px; }
 .nr-land-title span { color: var(--peach-strong); }
 .nr-land-sub { font-size: 19px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 28px; max-width: 520px; }
-.nr-soon { display: inline-flex; align-items: center; gap: 8px; background: var(--dark); color: #fff; font-weight: 700; font-size: 15px; padding: 14px 24px; border-radius: 50px; }
+.nr-stores { display: flex; flex-wrap: wrap; gap: 16px; }
+.nr-retro { display: inline-flex; align-items: center; gap: 12px; background: var(--card); color: var(--espresso); border: 3px solid var(--espresso); border-radius: 10px; padding: 11px 22px 11px 16px; text-decoration: none; box-shadow: 5px 5px 0 var(--espresso); transition: transform .12s, box-shadow .12s, background .12s; }
+.nr-retro:hover { background: var(--peach-tint); transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--espresso); }
+.nr-retro:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--espresso); }
+.nr-retro:focus-visible { outline: 3px solid var(--peach-strong); outline-offset: 4px; }
+.nr-retro-ico { font-size: 28px; line-height: 1; }
+.nr-retro-txt { display: flex; flex-direction: column; text-align: left; line-height: 1.1; }
+.nr-retro-txt small { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); }
+.nr-retro-txt strong { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 20px; letter-spacing: -.2px; }
+.nr-retro-play { background: var(--peach); }
+.nr-retro-play:hover { background: var(--peach-strong); }
+.nr-cta .nr-stores { justify-content: center; }
+.nr-cta .nr-retro { border-color: #fff; box-shadow: 5px 5px 0 var(--peach-strong); }
+.nr-cta .nr-retro:hover { box-shadow: 7px 7px 0 var(--peach-strong); }
+.nr-cta .nr-retro:active { box-shadow: 0 0 0 var(--peach-strong); }
 .nr-soon-note { font-size: 13px; color: var(--ink-faint); margin-top: 12px; }
 .nr-phone { border-radius: 44px; background: #111; padding: 10px; box-shadow: 0 40px 80px -20px rgba(70,40,20,.35); max-width: 320px; margin: 0 auto; }
 .nr-phone img { display: block; width: 100%; height: auto; border-radius: 34px; }

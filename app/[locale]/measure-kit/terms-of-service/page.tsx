@@ -37,8 +37,8 @@ export default function MeasureKitTerms() {
 
       <Section id="t-1" title="1. Agreement">
         <p className="mk-p">
-          By downloading or using Measure Kit (the &ldquo;App&rdquo;), operated by Hicham Zaidi, an independent
-          developer, you agree to these terms. If you obtained the App from the Apple App Store, Apple&apos;s{' '}
+          By downloading or using Measure Kit (the &ldquo;App&rdquo;), published by Hicham Zaidi (Apple App Store) or
+          Ship AI Solutions LLC (Google Play), you agree to these terms. If you obtained the App from the Apple App Store, Apple&apos;s{' '}
           <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
             Standard Licensed Application End User License Agreement
           </a>{' '}
