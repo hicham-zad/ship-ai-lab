@@ -6,7 +6,7 @@ import { pcosStyles } from '@/app/[locale]/pcos/pcos-styles';
 export { BottomLinks, Section, Toc } from '@/components/NerraLegal';
 
 export const PCOS_NAME = 'PCOS & Endo Tracker';
-export const PCOS_EMAIL = 'integrateopenai@gmail.com';
+export const PCOS_EMAIL = 'contact@shipailab.com';
 export const PCOS_UPDATED = 'October 6, 2026';
 
 interface ShellProps {
