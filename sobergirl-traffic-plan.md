@@ -130,3 +130,23 @@ Also extended: `how-to-stop-alcohol-cravings` (curb / control / avoid FAQ from N
 - Links into the new pages from 9 related guides.
 
 **Next:** after deploy, IndexNow all Sober Girl URLs, and use URL Inspection's "Request indexing" in the GSC UI for the top 10 (the API cannot request indexing). Re-run the inspection script in 7 days.
+
+## 9. DataForSEO content ideas (2026-10-13, $0.53 spent)
+
+Pulled what 8 sober apps and sobriety blogs rank for in the US top 20 (I Am Sober, Reframe, Sunflower, Tempest, Soberish, Sober Girl Society, The Sober School, Loosid), plus keyword ideas from 8 seeds. Dropped anything our pages already cover, then checked difficulty and page one for the best. Script: `scripts/dataforseo-content-ideas.mjs`. Raw output: `research/content-ideas-2026-10-13.{csv,json}`, `research/content-ideas-serp-2026-10-13.json`.
+
+| # | Page idea | Searches (US/month, KD) | Who is on page one | App fit |
+|---|---|---|---|---|
+| 1 | **How many glasses of wine in a bottle** (calculator: glasses, standard drinks and calories per bottle, by pour size) | 27,100 (KD 0), with about 20 identical variants | Wine shops, Reddit, Instagram, Mashed. No health site | High: the wine-every-night reader. Tool page, links to the wine-every-night guide |
+| 2 | **Days without alcohol, 4 to 12** (pages for 4, 5, 6 and 10 days; a day 8 to 12 hub) | 4 days 2,400 (9 to 14); 5 days 2,400 (2); 6 days 1,300 (13); 10 days 1,300 (17); 8, 9, 11, 12 days 590 to 880 (3 to 12) | I Am Sober, rehab blogs, Reddit | Highest: they are counting days. Fills the gap between our 3-day and 1-week pages |
+| 3 | **Sobriety quotes and affirmations** (our own lines plus verified attributions, as shareable image cards) | about 42,000 across the cluster, KD 0 (sobriety quotes 3,600; inspirational 1,000; funny 720; proud of your sobriety 720) | Rehab centre listicles, Pinterest, Goodreads | High; image search and Pinterest. The app has milestone share cards |
+| 4 | **What does being drunk feel like** (stages by BAC, why tipsy feels good then doesn't) | 5,400 + 5,400 + 1,900 (KD 2 to 5) | SAMHSA, Reddit, Healthline, rehab blogs | Medium: many readers are sober-curious |
+| 5 | **Is a bottle of wine a day too much?** (NIAAA limits, what a bottle holds in standard drinks) | about 3,000 combined (KD 0 to 16) | Reddit, rehab centres, The Sober School | Very high: the core user, at the moment they question it |
+| 6 | **Sober dating** (how and when to tell, ideas for dates, apps listed from store facts) | 8,500 across the cluster (KD 15 to 23) | Reddit, Loosid, Women's Health | High |
+| 7 | **30 days no alcohol: before and after** (what changes you can see, with a photo-diary method, and no fake photos) | 2,900 (KD 0) | Reddit, Business Insider, Pinterest | High. Could be a section of 30-days-sober |
+| 8 | Famous women who don't drink (sourced to interviews) | about 1,500 (KD 0) | This Naked Mind, Cosmopolitan, Vogue AU | Medium |
+| 9 | California sober; habit vs addiction | 3,600 (KD 0); about 1,500 (KD 0 to 4) | Rehab blogs | Low to medium |
+
+**Quick wins on existing pages:** add "sobriety days calculator" (6,600, KD 5) to the calculator; "can alcoholics drink non alcoholic beer" (390, KD 0) as a FAQ on non-alcoholic-beer; "3 days no alcohol" phrasing in the 3-days-sober title.
+
+**Skipped:** celebrity recovery stories (men, gossip intent), energy drinks, cannabis and the liver, non-alcoholic vodka and gin roundups (product reviews), AA step work (AA's own literature), "sober tools" (rehab-dominated, mixed intent).
