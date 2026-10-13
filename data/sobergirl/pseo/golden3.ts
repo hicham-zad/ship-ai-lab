@@ -255,6 +255,7 @@ export const GOLDEN3_ARTICLES: Article[] = [
       { q: 'Can you get drunk on non-alcoholic beer?', a: 'At under 0.5%, it would take a very large amount. The bigger risk is a mislabelled product: one analysis found some drinks labelled 0.0% contained up to 1.8% alcohol.' },
       { q: 'Does NA beer break sobriety?', a: 'There is no official rule. Some people count only alcohol-free drinks, some accept under 0.5%. Decide before you start and keep to it. If you are in treatment, ask your clinician.' },
       { q: 'Is NA beer OK in early recovery?', a: 'The evidence is mixed. A 2026 commentary warned of relapse risk for people recovering from alcohol use disorder, and a Japanese study of 198 men found lower one-year abstinence among those who drank it. Neither proves cause.' },
+      { q: 'Can alcoholics drink non-alcoholic beer?', a: 'There is no single answer, and it is worth asking your clinician. A 2026 commentary warned that no and low alcohol drinks may carry a significant relapse risk for people recovering from alcohol use disorder, and a study of 198 Japanese men treated for alcohol dependence found lower one-year abstinence among those who drank non-alcoholic beer.' },
       { q: 'What is the difference between 0.0 and 0.5 beer?', a: 'A 0.5% label in the US is under the non-alcoholic rule and can contain a trace of alcohol. 0.0 is a marketing claim of essentially none; only “alcohol free” on a US label promises no alcohol.' },
     ],
     related: ['non-alcoholic-wine', 'easy-mocktails', 'how-to-count-sober-days', 'lapse-vs-relapse'],

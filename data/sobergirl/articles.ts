@@ -1542,7 +1542,7 @@ export const ARTICLES: Article[] = [
       'To work out how many days sober you are, count the days from the date of your last drink to today. Enter that date below to see your days, weeks, whole months and complete years, an optional money-saved total, and your next milestone. It runs in your browser and nothing you enter is stored or sent anywhere. Counting conventions vary, so this calculator counts whole days since the date you enter.',
     kicker: 'Tool',
     metaNote: 'A calculator, no external sources needed',
-    keywords: ['sobriety calculator', 'sobriety date calculator', 'days sober calculator', 'sober date calculator', 'how many days sober', 'how many days sober am i', 'how many days have i been sober', 'sober days counter', 'aa sobriety calculator'],
+    keywords: ['sobriety calculator', 'sobriety date calculator', 'days sober calculator', 'sober date calculator', 'how many days sober', 'how many days sober am i', 'how many days have i been sober', 'sober days counter', 'sobriety days calculator', 'aa sobriety calculator'],
     heroAlt: 'A progress ring with a small bloom at its end and chips for weeks, money saved and next milestone',
     sources: [],
     sections: [
@@ -1760,7 +1760,7 @@ export const ARTICLES: Article[] = [
         a: 'Talk to a doctor. Medications are available for alcohol use disorder, and the SAMHSA National Helpline can point you to help.',
       },
     ],
-    related: ['how-to-stop-alcohol-cravings', 'how-to-quit-drinking-on-your-own', 'sobriety-milestones'],
+    related: ['how-to-stop-alcohol-cravings', 'how-to-quit-drinking-on-your-own', 'sobriety-milestones', 'sobriety-quotes'],
     shots: [
       { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
     ],
@@ -2267,7 +2267,7 @@ export const ARTICLES: Article[] = [
         a: 'We have not cited a study showing that, so we do not claim it. Many people find it a useful way to notice patterns and remember their reasons.',
       },
     ],
-    related: ['sobriety-milestones', 'how-to-stop-alcohol-cravings', 'sober-girl-app'],
+    related: ['sobriety-milestones', 'how-to-stop-alcohol-cravings', 'sober-girl-app', 'sobriety-quotes'],
     shots: [
       { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
     ],
@@ -2969,7 +2969,7 @@ export const ARTICLES: Article[] = [
         a: 'NIAAA says the less alcohol, the better, and the NHS advises several drink-free days each week for people who want to cut down. If you cannot skip a night, speak to a doctor.',
       },
     ],
-    related: ['alcohol-free-days', 'gray-area-drinking', 'sober-curious', 'alcohol-and-menopause'],
+    related: ['alcohol-free-days', 'gray-area-drinking', 'sober-curious', 'alcohol-and-menopause', 'how-many-glasses-of-wine-in-a-bottle'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3082,7 +3082,7 @@ export const ARTICLES: Article[] = [
         a: 'It can be if you drink heavily or every night. Withdrawal symptoms include shakiness, sweating, anxiety and, in severe cases, seizures. Speak to a doctor before stopping.',
       },
     ],
-    related: ['is-red-wine-good-for-you', 'alcohol-free-days', 'gray-area-drinking'],
+    related: ['is-red-wine-good-for-you', 'alcohol-free-days', 'gray-area-drinking', 'is-a-bottle-of-wine-a-day-too-much', 'how-many-glasses-of-wine-in-a-bottle'],
     shots: [
       { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
     ],

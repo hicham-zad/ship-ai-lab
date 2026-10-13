@@ -18,7 +18,7 @@ export const GUIDE_GROUPS: { title: string; blurb: string; slugs: string[] }[] =
   {
     title: 'Getting started and cravings',
     blurb: 'Practical help, grounded in NIAAA and MedlinePlus guidance.',
-    slugs: ['how-to-quit-drinking-on-your-own', 'how-to-count-sober-days', 'sober-mom', 'how-to-stop-alcohol-cravings', 'urge-surfing', 'what-to-do-instead-of-drinking', 'easy-mocktails', 'non-alcoholic-wine', 'non-alcoholic-beer', 'sober-journal-prompts', 'how-to-stop-drinking-wine-every-night', 'sleep-after-quitting-alcohol'],
+    slugs: ['how-to-quit-drinking-on-your-own', 'how-to-count-sober-days', 'sober-mom', 'how-to-stop-alcohol-cravings', 'urge-surfing', 'what-to-do-instead-of-drinking', 'easy-mocktails', 'non-alcoholic-wine', 'non-alcoholic-beer', 'sober-journal-prompts', 'how-to-stop-drinking-wine-every-night', 'is-a-bottle-of-wine-a-day-too-much', 'how-many-glasses-of-wine-in-a-bottle', 'sleep-after-quitting-alcohol', 'sobriety-quotes'],
   },
   {
     title: 'Understanding your drinking',
@@ -28,7 +28,7 @@ export const GUIDE_GROUPS: { title: string; blurb: string; slugs: string[] }[] =
   {
     title: 'Milestones, day by day',
     blurb: 'What is documented at each badge in the app, from 24 hours to a year.',
-    slugs: ['what-happens-when-you-stop-drinking-alcohol', 'sobriety-milestones', '24-hours-sober', '3-days-sober', '1-week-sober', '2-weeks-sober', '30-days-sober', '60-days-sober', '90-days-sober', '100-days-sober', '6-months-sober', '1-year-sober', '2-years-sober', '3-years-sober', '5-years-sober', 'months-sober', 'years-sober', 'sobriety-anniversary-messages'],
+    slugs: ['what-happens-when-you-stop-drinking-alcohol', 'sobriety-milestones', '24-hours-sober', '3-days-sober', '5-days-sober', '1-week-sober', '10-days-sober', '2-weeks-sober', '30-days-sober', '60-days-sober', '90-days-sober', '100-days-sober', '6-months-sober', '1-year-sober', '2-years-sober', '3-years-sober', '5-years-sober', 'months-sober', 'years-sober', 'sobriety-anniversary-messages'],
   },
   {
     title: 'Challenges',

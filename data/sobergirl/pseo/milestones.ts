@@ -140,7 +140,7 @@ const ROWS: MilestoneRow[] = [
         a: 'Note what happened and start again tomorrow. Many people take more than one attempt. If you find you cannot stop once you start, that is worth telling a doctor about.',
       },
     ],
-    related: ['3-days-sober', 'how-to-quit-drinking-on-your-own', 'how-to-count-sober-days'],
+    related: ['3-days-sober', 'how-to-quit-drinking-on-your-own', 'how-to-count-sober-days', '5-days-sober', '10-days-sober'],
     shots: [
       { file: 'home', alt: 'Sober Girl home screen with a sober days counter, money saved and a check-in button', title: 'Day counter in Sober Girl', caption: 'Your counter starts the moment you set your date. Example data.' },
       { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle and a 10-minute timer', title: 'Craving SOS for the first evening', caption: 'Craving SOS: a guided breath, a 10-minute timer and your reason. Example data.' },
@@ -152,7 +152,7 @@ const ROWS: MilestoneRow[] = [
     days: 3,
     slug: '3-days-sober',
     label: '3 days',
-    metaTitle: '3 Days Sober: The 72-Hour Mark, What Is Normal and What Is Not',
+    metaTitle: '3 Days Sober (3 Days No Alcohol): The 72-Hour Mark',
     metaDescription:
       'Three days without alcohol: why the 24 to 72 hour window matters, which symptoms need a doctor, how sleep and cravings tend to behave, and what helps.',
     h1: '3 days sober: getting past the 72-hour mark',

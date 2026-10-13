@@ -870,6 +870,86 @@ SINGLE['alcohol-and-menopause-card'] = menopauseCard;
 SINGLE['alcohol-and-antidepressants-card'] = antidepressantCard;
 SINGLE['moderation-management-card'] = moderationCard;
 
+/* ------------------------------------------------------------------ batch 4: wine numbers, days 5 and 10, quotes */
+
+const bottle = (cx, base, fill = '#9C3D5B', scale = 1) =>
+  `<g transform="translate(${cx} ${base}) scale(${scale})"><path d="M-22 -400 h44 v90 q50 30 50 100 v200 q0 10 -10 10 h-124 q-10 0 -10 -10 v-200 q0 -70 50 -100 z" fill="${C.petal}" stroke="${C.plum}" stroke-width="8" stroke-linejoin="round"/><path d="M-62 -190 h124 v170 h-124 z" fill="${fill}" opacity="0.85"/><rect x="-46" y="-170" width="92" height="70" rx="8" fill="#fff" opacity="0.9"/><rect x="-26" y="-420" width="52" height="28" rx="6" fill="${C.plum}"/></g>`;
+const smallGlass = (cx, base, level, scale = 0.45) => glass(cx, base, level ? C.rose : C.petal, C.plum, scale);
+
+HERO_ART['how-many-glasses-of-wine-in-a-bottle'] = () =>
+  bottle(120, 480) + [0, 1, 2, 3, 4].map((i) => smallGlass(250 + i * 78, 470, true, 0.42)).join('') + txt(400, 160, '≈ 5', { size: 90, anchor: 'middle', font: SERIF, fill: C.plum }) + txt(400, 205, 'glasses at 5 oz', { size: 24, anchor: 'middle', fill: C.inkSoft, weight: 800 });
+HERO_ART['is-a-bottle-of-wine-a-day-too-much'] = () =>
+  bottle(110, 480) + ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => `<rect x="${220 + i * 54}" y="200" width="46" height="230" rx="14" fill="${C.roseTint}" stroke="${C.line}" stroke-width="3"/><rect x="${226 + i * 54}" y="${430 - 200}" width="34" height="194" rx="10" fill="${C.roseDeep}" opacity="0.85"/>${txt(243 + i * 54, 190, d, { size: 18, anchor: 'middle', fill: C.plum, weight: 800 })}`).join('') + `<line x1="210" y1="${430 - 44}" x2="600" y2="${430 - 44}" stroke="${C.sageDeep}" stroke-width="5" stroke-dasharray="10 8"/>${txt(600, 470, 'heavy-drinking line', { size: 18, anchor: 'end', fill: C.sageDeep, weight: 800 })}`;
+const dayArt = (days, prev, next) =>
+  `<ellipse cx="250" cy="470" rx="230" ry="28" fill="${T.hillNear}" opacity="0.8"/>${tree(days <= 6 ? 3 : 7, 40, 80, 400)}` + badge(prev, 400, 60, 110, TIER_OF[prev]) + badge(next, 470, 330, 110, TIER_OF[next]) +
+  `<path d="M455 175 q60 60 70 150" fill="none" stroke="${C.plumSoft}" stroke-width="5" stroke-dasharray="8 8"/><circle cx="490" cy="250" r="34" fill="${C.plum}"/>${txt(490, 262, days, { size: 32, anchor: 'middle', font: SERIF, fill: '#fff' })}`;
+HERO_ART['5-days-sober'] = () => dayArt(5, 3, 7);
+HERO_ART['10-days-sober'] = () => dayArt(10, 7, 14);
+HERO_ART['sobriety-quotes'] = () =>
+  [['One evening', 'at a time.', C.roseTint, C.roseDeep, -8], ['Clear head,', 'full heart.', C.sageTint, C.sageDeep, 4], ['Choosing', 'myself, daily.', C.plumTint, C.plum, -2]].map(([a, b, f, ink, r], i) => `<g transform="rotate(${r} ${130 + i * 170} 300)"><rect x="${40 + i * 170}" y="${150 + (i % 2) * 40}" width="180" height="230" rx="22" fill="${f}" stroke="#fff" stroke-width="6"/>${txt(130 + i * 170, 220 + (i % 2) * 40, '“', { size: 60, anchor: 'middle', font: SERIF, fill: ink })}${txt(130 + i * 170, 280 + (i % 2) * 40, a, { size: 24, anchor: 'middle', font: SERIF, fill: ink })}${txt(130 + i * 170, 312 + (i % 2) * 40, b, { size: 24, anchor: 'middle', font: SERIF, fill: ink })}</g>`).join('') + bloom(300, 80, 30, C.rose, C.champagne);
+
+function pourCard() {
+  let s = bg(1200, 675, 'pc');
+  s += txt(70, 90, 'One 750 mL bottle, three pour sizes', { size: 44, font: SERIF, fill: C.plum });
+  s += txt(70, 128, 'Bigger glasses mean fewer glasses, not less wine.', { size: 22, fill: C.inkSoft, weight: 600 });
+  [['5 oz', 5, '5 glasses'], ['6 oz', 4, '4 glasses'], ['8 oz', 3, '3 glasses']].forEach(([l, n, g], row) => {
+    const y = 250 + row * 140;
+    s += txt(70, y + 10, l, { size: 34, font: SERIF, fill: C.plum });
+    for (let i = 0; i < n; i++) s += glass(260 + i * (row === 2 ? 150 : row === 1 ? 120 : 100), y + 70, C.rose, C.plum, 0.32 + row * 0.07);
+    s += txt(1120, y + 10, g, { size: 30, anchor: 'end', font: SERIF, fill: C.roseDeep });
+  });
+  s += wordmark(80, 650);
+  return svg(1200, 675, s, 'A 750 mL bottle gives five glasses at 5 oz, four at 6 oz and three at 8 oz');
+}
+
+function weeklyCard() {
+  let s = bg(1200, 675, 'wk');
+  s += txt(70, 90, 'Standard drinks a week from wine', { size: 44, font: SERIF, fill: C.plum });
+  s += txt(70, 128, 'NIAAA heavy drinking for women: 8 or more drinks a week', { size: 22, fill: C.inkSoft, weight: 600 });
+  const rows = [['A 5 oz glass a night', 7, C.sage], ['Half a bottle a night (13.5%)', 20, C.rose], ['A bottle a night (12%)', 35, C.roseDeep], ['A bottle a night (14.5%)', 43, C.plumSoft]];
+  const X = (v) => 520 + (v / 45) * 600;
+  rows.forEach(([l, v, f], i) => {
+    const y = 190 + i * 100;
+    s += txt(70, y + 42, l, { size: 24, weight: 700 });
+    s += `<rect x="520" y="${y}" width="${X(v) - 520}" height="60" rx="30" fill="${f}"/>${txt(X(v) - 18, y + 41, v, { size: 28, anchor: 'end', font: SERIF, fill: '#fff' })}`;
+  });
+  s += `<line x1="${X(8)}" y1="170" x2="${X(8)}" y2="590" stroke="${C.plum}" stroke-width="4" stroke-dasharray="10 8"/>${txt(X(8) + 10, 610, '8 a week', { size: 20, fill: C.plum, weight: 800 })}`;
+  s += wordmark(880, 650);
+  return svg(1200, 675, s, 'Weekly standard drinks for four wine habits against an 8-drink weekly line');
+}
+
+function dayCard(days, prev, next, stage) {
+  const tier = TIERS[TIER_OF[prev]];
+  let s = bg(1200, 675, `dc${days}`);
+  s += `<defs><linearGradient id="skyd${days}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${T.skyTop}"/><stop offset="1" stop-color="${C.cream}"/></linearGradient></defs>`;
+  s += `<rect x="600" y="40" width="560" height="595" rx="36" fill="url(#skyd${days})" stroke="${C.line}" stroke-width="3"/><circle cx="1050" cy="130" r="46" fill="${C.champagne}" opacity="0.7"/><path d="M600 520 q140 -60 280 -10 t280 -20 v145 h-560 z" fill="${T.hillFar}"/><path d="M600 560 q160 -40 300 0 t260 -10 v85 h-560 z" fill="${T.hillNear}"/>`;
+  s += tree(prev, 660, 95, 440);
+  s += badge(prev, 70, 100, 150, TIER_OF[prev]) + badge(next, 360, 100, 150, TIER_OF[next]);
+  s += `<path d="M230 175 h120" stroke="${C.plumSoft}" stroke-width="5" stroke-dasharray="8 8"/><circle cx="290" cy="175" r="30" fill="${C.plum}"/>${txt(290, 186, days, { size: 28, anchor: 'middle', font: SERIF, fill: '#fff' })}`;
+  s += txt(70, 400, `Day ${days}`, { size: 72, font: SERIF, fill: C.plum });
+  s += txt(70, 450, `Between the ${prev}-day and ${next}-day badges`, { size: 26, fill: C.inkSoft, weight: 600 });
+  s += `<rect x="70" y="490" width="${(stage.length + 6) * 12.5 + 60}" height="48" rx="24" fill="${tier.inner}" stroke="${tier.edge}" stroke-opacity="0.4" stroke-width="2"/>${txt(98, 522, `Tree: ${stage}`, { size: 22, fill: tier.ink, weight: 800 })}`;
+  s += wordmark(80, 610);
+  return svg(1200, 675, s, `Day ${days} between the ${prev}-day and ${next}-day badges, with the ${stage} tree`);
+}
+
+function quoteCard(lines, f, ink, label) {
+  let s = `<rect width="1080" height="1080" fill="${f}"/><circle cx="900" cy="160" r="260" fill="#fff" opacity="0.25"/><circle cx="120" cy="980" r="220" fill="#fff" opacity="0.2"/>`;
+  s += txt(120, 330, '“', { size: 220, font: SERIF, fill: ink });
+  lines.forEach((l, i) => { s += txt(120, 470 + i * 96, l, { size: 78, font: SERIF, fill: ink }); });
+  s += bloom(140, 940, 28, C.rose, C.champagne) + txt(185, 950, 'sober girl', { size: 34, font: SERIF, fill: ink });
+  return svg(1080, 1080, s, label);
+}
+
+SINGLE['how-many-glasses-of-wine-in-a-bottle-card'] = pourCard;
+SINGLE['is-a-bottle-of-wine-a-day-too-much-card'] = weeklyCard;
+SINGLE['5-days-sober-card'] = () => dayCard(5, 3, 7, 'Seedling until day 7');
+SINGLE['10-days-sober-card'] = () => dayCard(10, 7, 14, 'Sapling until day 14');
+SINGLE['sobriety-quotes-card-1'] = () => quoteCard(['The craving is', 'a wave.', 'I am the shore.'], C.roseTint, C.plum, 'The craving is a wave. I am the shore.');
+SINGLE['sobriety-quotes-card-2'] = () => quoteCard(['I can want it', 'and still not', 'have it.'], C.sageTint, C.sageDeep, 'I can want it and still not have it.');
+SINGLE['sobriety-quotes-card-3'] = () => quoteCard(['I am becoming', 'someone', 'I trust.'], C.plum, '#fff', 'I am becoming someone I trust.');
+Object.assign(MILESTONE_DAYS, { '5-days-sober': [5, '5 days'], '10-days-sober': [10, '10 days'] });
+
 function renderFigure(name, article) {
   if (SINGLE[name]) return SINGLE[name]();
   const m = name.match(/^(.*)-(card|savings|calendar)$/);

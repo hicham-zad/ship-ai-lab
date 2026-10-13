@@ -658,7 +658,7 @@ export const CHALLENGE_ARTICLES: Article[] = [
       { q: 'What is a good gift for a sobriety anniversary?', a: 'An experience, something for their new routine, a handwritten card, or a coin if they are in a twelve-step group.' },
       { q: 'Which sobriety milestones are usually celebrated?', a: 'Many groups mark 24 hours, 30, 60 and 90 days, then each year. Sober Girl has badges at 1, 3, 7, 14, 30, 60, 90, 180 and 365 days.' },
     ],
-    related: ['1-year-sober', '90-days-sober', 'sobriety-milestones'],
+    related: ['1-year-sober', '90-days-sober', 'sobriety-milestones', 'sobriety-quotes'],
     shots: [
       { file: 'share', alt: 'Sober Girl milestone card reading Day 90 sober, ready to share', title: 'Shareable milestone card', caption: 'A milestone card you can save or share (Plus). Example data.' },
       { file: 'milestones', alt: 'Sober Girl milestone badges from 1 to 365 days', title: 'Nine milestones', caption: 'Nine milestones worth a message. Example data.' },
