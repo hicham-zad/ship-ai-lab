@@ -7,131 +7,6 @@ import { SAFETY_WITHDRAWAL, drinksTable, figure, moneyTable } from './shared';
 const page = (a: Omit<Article, 'sources' | 'kicker'> & { kicker?: string }): Article => ({ kicker: 'Explainer', sources: [], ...a });
 
 export const GOLDEN4_ARTICLES: Article[] = [
-  /* ================================================================ glasses in a bottle */
-  page({
-    slug: 'how-many-glasses-of-wine-in-a-bottle',
-    kicker: 'Numbers',
-    metaTitle: 'How Many Glasses of Wine in a Bottle? (By Pour Size)',
-    metaDescription:
-      'A 750 mL bottle holds about 5 glasses at a 5 oz pour, but 3 at a large pour. Glasses, standard drinks and calories per bottle by pour size and ABV.',
-    h1: 'How many glasses of wine are in a bottle?',
-    dek: 'The answer depends on the glass. Here it is for every common pour, plus the number that matters more for your health: how many standard drinks a bottle really holds.',
-    quickAnswer:
-      'A standard 750 mL bottle of wine holds about 5 glasses at a 5 oz (148 mL) pour, which is the size NIAAA uses for one standard drink of 12% wine [[niaaaStandard]]. At a 6 oz pour you get about 4 glasses, and at a large 8 oz pour about 3. Because most wine today is stronger than 12%, a bottle usually holds more than 5 standard drinks: about 5.7 at 13.5% and 6.3 at 15%. A bottle at 12% carries about 500 calories from the alcohol alone [[traversy]].',
-    keywords: ['how many glasses of wine in a bottle', 'how many glasses in a bottle of wine', 'bottle of wine how many glasses', 'how many standard drinks in a bottle of wine', 'how many ounces in a bottle of wine', 'calories in a bottle of wine', 'how many glasses of wine to get drunk'],
-    heroAlt: 'A wine bottle beside five small glasses, with the fifth glass half filled',
-    sections: [
-      {
-        id: 'by-pour',
-        h2: 'Glasses per bottle, by pour size',
-        blocks: [
-          {
-            t: 'table',
-            caption: 'Arithmetic for a 750 mL (25.4 fl oz) bottle. Rounded to the nearest tenth.',
-            head: ['Pour', 'Millilitres', 'Glasses per 750 mL bottle'],
-            rows: [
-              ['Tasting pour, 2 oz', '59 mL', '12.7'],
-              ['Standard drink pour, 5 oz', '148 mL', '5.1'],
-              ['Restaurant pour, 6 oz', '177 mL', '4.2'],
-              ['Large pour, 8 oz', '237 mL', '3.2'],
-              ['UK large glass', '250 mL', '3.0'],
-              ['Very large pour, 9 oz', '266 mL', '2.8'],
-            ],
-          },
-          {
-            t: 'p',
-            x: 'The 5 oz pour is the one in official guidance: NIAAA counts a 5-ounce glass of 12% wine as one standard drink, and notes that standard drink amounts may not reflect customary serving sizes [[niaaaStandard]]. At home, few people measure. A big modern wine glass filled to the widest point can easily hold 8 oz, which turns a bottle into three glasses, not five.',
-          },
-          figure(
-            'how-many-glasses-of-wine-in-a-bottle-card',
-            'A wine bottle divided into glasses at three pour sizes: five glasses at 5 ounces, four at 6 ounces and three at 8 ounces',
-            'The same bottle at three pour sizes',
-            '750 mL at 5, 6 and 8 oz. Bigger glasses mean fewer glasses, not less wine.',
-          ),
-        ],
-      },
-      {
-        id: 'standard-drinks',
-        h2: 'How many standard drinks in a bottle of wine',
-        blocks: [
-          {
-            t: 'p',
-            x: 'A “glass” is a volume. A standard drink is an amount of alcohol: in the US, about 14 grams of pure alcohol [[niaaaStandard]]. Stronger wine packs more alcohol into the same glass, so the bottle count changes with the percentage on the label.',
-          },
-          {
-            t: 'table',
-            caption: 'Illustrative arithmetic: 750 mL × ABV × 0.79 g of alcohol per mL ÷ 14 g per standard drink. Calories are from the alcohol alone, at 7 kcal per gram.',
-            head: ['Wine strength (ABV)', 'Alcohol in the bottle', 'US standard drinks', 'Calories from the alcohol'],
-            rows: [
-              ['11% (many light whites)', '65 g', '4.7', 'about 455 kcal'],
-              ['12% (NIAAA’s reference wine)', '71 g', '5.1', 'about 500 kcal'],
-              ['13.5% (a common red)', '80 g', '5.7', 'about 560 kcal'],
-              ['14.5% (a big red)', '86 g', '6.1', 'about 600 kcal'],
-              ['15% (the strongest table wines)', '89 g', '6.3', 'about 620 kcal'],
-            ],
-          },
-          {
-            t: 'p',
-            x: 'The calorie column uses the 7 kcal per gram that alcohol provides [[traversy]]; sugar in the wine adds more, especially in sweet and dessert wines. NIAAA’s calculator lets you check a specific drink [[niaaaCalc]].',
-          },
-        ],
-      },
-      {
-        id: 'sizes',
-        h2: 'Other bottle sizes',
-        blocks: [
-          {
-            t: 'table',
-            caption: 'Glasses at a 5 oz (148 mL) pour. Same arithmetic as above.',
-            head: ['Bottle', 'Volume', 'Glasses at 5 oz'],
-            rows: [
-              ['Split (single serve)', '187.5 mL', '1.3'],
-              ['Half bottle', '375 mL', '2.5'],
-              ['Standard bottle', '750 mL', '5.1'],
-              ['Litre bottle', '1 L', '6.8'],
-              ['Magnum', '1.5 L', '10.1'],
-              ['Box or bag-in-box', '3 L', '20.3'],
-            ],
-          },
-          {
-            t: 'p',
-            x: 'Boxes deserve a note. A 3 litre box is four bottles, and because there is no empty bottle at the end of the night, it is easy to lose count. If you are trying to drink less, a box is the hardest format to track.',
-          },
-        ],
-      },
-      {
-        id: 'drunk',
-        h2: 'How many glasses of wine does it take to get drunk?',
-        blocks: [
-          {
-            t: 'p',
-            x: 'There is no single number. Blood alcohol depends on body size, sex, food, speed of drinking and the strength of the wine. Women generally reach a higher concentration from the same drink, because alcohol sits mainly in body water and, pound for pound, women have less water than men [[niaaaWomen]].',
-          },
-          {
-            t: 'p',
-            x: 'What is defined is the pattern. NIAAA defines binge drinking as drinking that brings blood alcohol to 0.08%, and heavy drinking for women as 4 or more drinks on any day or 8 or more in a week [[niaaaPatterns]]. On the table above, a single 750 mL bottle of 13.5% wine shared between two women is nearly three standard drinks each.',
-          },
-          {
-            t: 'p',
-            x: 'If a bottle is a normal evening for you, our page [is a bottle of wine a day too much?](/sobergirl/is-a-bottle-of-wine-a-day-too-much) puts it against the guidelines, and [how to stop drinking wine every night](/sobergirl/how-to-stop-drinking-wine-every-night) is the practical next step.',
-          },
-        ],
-      },
-    ],
-    faqs: [
-      { q: 'How many glasses of wine are in a bottle?', a: 'About 5 at a 5 oz pour, 4 at a 6 oz pour and 3 at an 8 oz pour, from a standard 750 mL bottle.' },
-      { q: 'How many ounces are in a bottle of wine?', a: 'A standard 750 mL bottle holds about 25.4 US fluid ounces.' },
-      { q: 'How many standard drinks are in a bottle of wine?', a: 'About 5 at 12% alcohol, 5.7 at 13.5% and 6.3 at 15%. A US standard drink is about 14 grams of pure alcohol.' },
-      { q: 'How many calories are in a bottle of wine?', a: 'About 500 calories from the alcohol alone in a 12% bottle, and about 560 at 13.5%. Residual sugar adds more, especially in sweet wines.' },
-      { q: 'Is half a bottle of wine a lot?', a: 'Half a 13.5% bottle is nearly three US standard drinks. NIAAA defines heavy drinking for women as 4 or more drinks on any day or 8 or more in a week.' },
-    ],
-    related: ['is-a-bottle-of-wine-a-day-too-much', 'how-to-stop-drinking-wine-every-night', 'how-much-alcohol-is-too-much-for-women', 'non-alcoholic-wine'],
-    shots: [
-      { file: 'home', alt: 'Sober Girl home screen with alcohol-free days and money saved', title: 'Wine-free evenings, counted', caption: 'Days and money saved from the evenings you skip. Example data.' },
-      { file: 'benefits', alt: 'Sober Girl screen listing benefits people notice after stopping drinking', title: 'What changes', caption: 'Benefits to look for as the days add up. Example data.' },
-    ],
-  }),
-
   /* ================================================================ bottle a day */
   page({
     slug: 'is-a-bottle-of-wine-a-day-too-much',
@@ -169,7 +44,7 @@ export const GOLDEN4_ARTICLES: Article[] = [
           ),
           {
             t: 'p',
-            x: 'Two glasses a night sounds moderate, but modern glasses are big and modern wines are strong. Two 8 oz pours of a 13.5% red add up to about 25 standard drinks a week, three times the weekly line. See [how many glasses of wine in a bottle](/sobergirl/how-many-glasses-of-wine-in-a-bottle) for the arithmetic.',
+            x: 'Two glasses a night sounds moderate, but modern glasses are big and modern wines are strong. Two 8 oz pours of a 13.5% red add up to about 25 standard drinks a week, three times the weekly line.',
           },
         ],
       },
@@ -237,7 +112,7 @@ export const GOLDEN4_ARTICLES: Article[] = [
       { q: 'How long after stopping wine does the liver recover?', a: 'We did not find a reliable timeline. The research says fatty liver can be reversed when drinking stops, while more advanced disease can stabilise. A doctor can check your liver.' },
       { q: 'How many calories is a bottle of wine a day?', a: 'About 500 calories from the alcohol in a 12% bottle, so about 3,500 a week, before any sugar in the wine.' },
     ],
-    related: ['how-many-glasses-of-wine-in-a-bottle', 'how-to-stop-drinking-wine-every-night', 'gray-area-drinking', 'how-much-alcohol-is-too-much-for-women'],
+    related: ['how-to-stop-drinking-wine-every-night', 'gray-area-drinking', 'how-much-alcohol-is-too-much-for-women'],
     shots: [
       { file: 'home', alt: 'Sober Girl home screen with alcohol-free days, money saved and a daily check-in', title: 'Count the nights off', caption: 'Each night without the bottle adds a day and the money you kept. Example data.' },
       { file: 'sos', alt: 'Sober Girl craving SOS with a breathing circle and a 10-minute timer', title: 'For the moment you reach for the bottle', caption: 'A breath, a timer and your own reason. Example data.' },

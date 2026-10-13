@@ -18,7 +18,7 @@ export const GUIDE_GROUPS: { title: string; blurb: string; slugs: string[] }[] =
   {
     title: 'Getting started and cravings',
     blurb: 'Practical help, grounded in NIAAA and MedlinePlus guidance.',
-    slugs: ['how-to-quit-drinking-on-your-own', 'how-to-count-sober-days', 'sober-mom', 'how-to-stop-alcohol-cravings', 'urge-surfing', 'what-to-do-instead-of-drinking', 'easy-mocktails', 'non-alcoholic-wine', 'non-alcoholic-beer', 'sober-journal-prompts', 'how-to-stop-drinking-wine-every-night', 'is-a-bottle-of-wine-a-day-too-much', 'how-many-glasses-of-wine-in-a-bottle', 'sleep-after-quitting-alcohol', 'sobriety-quotes'],
+    slugs: ['how-to-quit-drinking-on-your-own', 'how-to-count-sober-days', 'sober-mom', 'how-to-stop-alcohol-cravings', 'urge-surfing', 'what-to-do-instead-of-drinking', 'easy-mocktails', 'non-alcoholic-wine', 'non-alcoholic-beer', 'sober-journal-prompts', 'how-to-stop-drinking-wine-every-night', 'is-a-bottle-of-wine-a-day-too-much', 'sleep-after-quitting-alcohol', 'sobriety-quotes'],
   },
   {
     title: 'Understanding your drinking',

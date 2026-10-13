@@ -2969,7 +2969,7 @@ export const ARTICLES: Article[] = [
         a: 'NIAAA says the less alcohol, the better, and the NHS advises several drink-free days each week for people who want to cut down. If you cannot skip a night, speak to a doctor.',
       },
     ],
-    related: ['alcohol-free-days', 'gray-area-drinking', 'sober-curious', 'alcohol-and-menopause', 'how-many-glasses-of-wine-in-a-bottle'],
+    related: ['alcohol-free-days', 'gray-area-drinking', 'sober-curious', 'alcohol-and-menopause'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3082,7 +3082,7 @@ export const ARTICLES: Article[] = [
         a: 'It can be if you drink heavily or every night. Withdrawal symptoms include shakiness, sweating, anxiety and, in severe cases, seizures. Speak to a doctor before stopping.',
       },
     ],
-    related: ['is-red-wine-good-for-you', 'alcohol-free-days', 'gray-area-drinking', 'is-a-bottle-of-wine-a-day-too-much', 'how-many-glasses-of-wine-in-a-bottle'],
+    related: ['is-red-wine-good-for-you', 'alcohol-free-days', 'gray-area-drinking', 'is-a-bottle-of-wine-a-day-too-much'],
     shots: [
       { file: 'home', alt: 'Sober Girl app home screen with the sober day count, daily check-in button and money saved so far', title: 'Sober days counter in Sober Girl', caption: 'See exactly how many days you have kept, and what you have saved. Example data.' },
     ],
