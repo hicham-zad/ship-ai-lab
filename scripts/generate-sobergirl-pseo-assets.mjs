@@ -743,6 +743,133 @@ SINGLE['is-red-wine-good-for-you-card'] = redWineCard;
 SINGLE['alcohol-and-adhd-card'] = adhdCard;
 SINGLE['alcohol-flush-reaction-card'] = flushCard;
 
+/* ------------------------------------------------------------------ batch 3: mocktails, NA beer, menopause, antidepressants, moderation */
+
+const tall = (cx, base, fill, h = 260, w = 110) =>
+  `<g><rect x="${cx - w / 2}" y="${base - h}" width="${w}" height="${h}" rx="14" fill="${C.petal}" stroke="${C.plum}" stroke-width="7"/><rect x="${cx - w / 2 + 10}" y="${base - h + 50}" width="${w - 20}" height="${h - 62}" rx="8" fill="${fill}" opacity="0.85"/>` +
+  [0, 1, 2].map((i) => `<rect x="${cx - 30 + i * 18}" y="${base - h + 70 + i * 34}" width="26" height="26" rx="6" fill="#fff" opacity="0.6" transform="rotate(${i * 14 - 10} ${cx} ${base - h / 2})"/>`).join('') +
+  `<circle cx="${cx + w / 2 - 6}" cy="${base - h + 18}" r="26" fill="${C.sage}" opacity="0.9"/><line x1="${cx + 12}" y1="${base - h - 40}" x2="${cx - 8}" y2="${base - 30}" stroke="${C.plum}" stroke-width="7" stroke-linecap="round"/></g>`;
+const beerGlass = (cx, base, scale = 1) =>
+  `<g transform="translate(${cx} ${base}) scale(${scale})"><path d="M-70 -300 h140 l-14 290 h-112 z" fill="${C.petal}" stroke="${C.plum}" stroke-width="8" stroke-linejoin="round"/><path d="M-60 -230 h120 l-11 214 h-98 z" fill="${C.champagne}" opacity="0.9"/><path d="M-72 -300 q20 -40 50 -18 q22 -30 50 -6 q30 -20 44 24 z" fill="#fff" stroke="${C.plum}" stroke-width="6"/>${[[-30, -150], [10, -100], [30, -180], [-15, -60]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="6" fill="#fff" opacity="0.7"/>`).join('')}</g>`;
+
+HERO_ART['easy-mocktails'] = () =>
+  tall(170, 470, C.sage) + tall(300, 450, C.rose, 300, 120) + tall(430, 470, C.champagne) + bloom(300, 80, 30, C.rose, C.champagne);
+HERO_ART['non-alcoholic-beer'] = () =>
+  beerGlass(200, 470) + [['< 0.5%', C.champagne, 'non-alcoholic'], ['0.0', C.sage, 'alcohol free'], ['?', C.roseDeep, 'read the can']].map(([n, f, l], i) => `<rect x="350" y="${110 + i * 120}" width="220" height="96" rx="24" fill="#fff" stroke="${C.line}" stroke-width="3"/><circle cx="398" cy="${158 + i * 120}" r="30" fill="${f}"/>${txt(440, 152 + i * 120, n, { size: 26, font: SERIF, fill: C.plum })}${txt(440, 180 + i * 120, l, { size: 16, fill: C.inkSoft, weight: 800 })}`).join('');
+HERO_ART['alcohol-and-menopause'] = () =>
+  `<rect x="90" y="80" width="70" height="300" rx="35" fill="#fff" stroke="${C.plum}" stroke-width="8"/><rect x="108" y="170" width="34" height="200" rx="17" fill="${C.roseDeep}"/><circle cx="125" cy="410" r="56" fill="${C.roseDeep}" stroke="${C.plum}" stroke-width="8"/>` +
+  `<path d="M330 120 a110 110 0 1 0 110 160 a90 90 0 1 1 -110 -160 z" fill="${C.plumSoft}"/>` + glass(470, 470, C.rose, C.plum, 0.7) + txt(470, 250, '?', { size: 70, anchor: 'middle', font: SERIF, fill: C.plum }) + bloom(250, 440, 30, C.sage, C.champagne);
+HERO_ART['alcohol-and-antidepressants'] = () =>
+  `<rect x="60" y="140" width="220" height="280" rx="26" fill="#fff" stroke="${C.plum}" stroke-width="7"/>` +
+  [0, 1, 2, 3, 4, 5].map((i) => `<ellipse cx="${115 + (i % 2) * 110}" cy="${200 + Math.floor(i / 2) * 80}" rx="34" ry="22" fill="${i < 2 ? C.plumTint : C.sageTint}" stroke="${C.plumSoft}" stroke-width="4"/>`).join('') +
+  `<path d="M300 200 l40 -70 l40 70 z" fill="${C.champagne}" stroke="${C.plum}" stroke-width="6" stroke-linejoin="round"/>${txt(340, 192, '!', { size: 40, anchor: 'middle', font: SERIF, fill: C.plum })}` + glass(470, 460, C.rose, C.plum, 0.8) + bloom(340, 380, 28, C.rose, C.champagne);
+HERO_ART['moderation-management'] = () =>
+  ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => { const x = 30 + i * 80, drink = [1, 4, 5].includes(i); return `<rect x="${x}" y="150" width="68" height="220" rx="20" fill="${drink ? C.roseTint : C.sageTint}" stroke="${C.line}" stroke-width="3"/>${txt(x + 34, 190, d, { size: 22, anchor: 'middle', fill: C.plum, weight: 800 })}${drink ? [0, 1, 2].map((j) => `<rect x="${x + 22}" y="${220 + j * 46}" width="24" height="36" rx="5" fill="${C.rose}"/>`).join('') : bloom(x + 34, 280, 20, C.sage, C.champagne)}`; }).join('') +
+  txt(300, 440, 'up to 9 a week · 3 per day · 4 days off', { size: 22, anchor: 'middle', fill: C.plum, weight: 800 });
+
+function mocktailFormula() {
+  let s = bg(1200, 675, 'mf');
+  s += txt(70, 90, 'The easy mocktail formula', { size: 44, font: SERIF, fill: C.plum });
+  s += txt(70, 128, 'Sour + sweet + long + garnish, over ice. One tall glass.', { size: 22, fill: C.inkSoft, weight: 600 });
+  const layers = [['Garnish', C.sage, 'mint · basil · rosemary · citrus peel'], ['Long', '#CFE3EA', 'soda · ginger ale · ginger beer · tonic'], ['Sweet', C.champagne, 'honey · maple · orange or pineapple juice'], ['Sour', C.rose, 'lime · lemon · grapefruit']];
+  s += `<rect x="150" y="170" width="220" height="440" rx="22" fill="${C.petal}" stroke="${C.plum}" stroke-width="8"/>`;
+  layers.forEach(([t, f, ex], i) => {
+    const y = 190 + i * 102;
+    s += `<rect x="166" y="${y}" width="188" height="92" rx="${i === 0 ? 46 : 10}" fill="${f}" opacity="0.92"/>`;
+    s += `<line x1="380" y1="${y + 46}" x2="470" y2="${y + 46}" stroke="${C.plumSoft}" stroke-width="4" stroke-dasharray="6 6"/>`;
+    s += txt(490, y + 40, t, { size: 34, font: SERIF, fill: C.plum });
+    s += txt(490, y + 74, ex, { size: 22, fill: C.ink, weight: 700 });
+  });
+  s += wordmark(880, 640);
+  return svg(1200, 675, s, 'A tall glass split into sour, sweet, long and garnish layers with examples');
+}
+
+function halloweenCard() {
+  let s = bg(1200, 675, 'hw');
+  s += txt(70, 90, 'Three Halloween mocktails', { size: 44, font: SERIF, fill: C.plum });
+  const drinks = [['Witch’s brew', '#9CC27E', 'lime · green apple · soda'], ['Blood orange punch', '#D9534F', 'orange · cranberry · ginger ale'], ['Black cherry fizz', '#5A2A4C', 'cherry · lime · cola']];
+  drinks.forEach(([t, f, ex], i) => {
+    const cx = 230 + i * 370;
+    s += tall(cx, 520, f, 300, 130);
+    s += txt(cx, 575, t, { size: 30, anchor: 'middle', font: SERIF, fill: C.plum });
+    s += txt(cx, 610, ex, { size: 20, anchor: 'middle', fill: C.inkSoft, weight: 700 });
+  });
+  s += `<ellipse cx="1080" cy="150" rx="70" ry="56" fill="#E8913B"/><rect x="1072" y="80" width="16" height="30" rx="6" fill="${C.sageDeep}"/><path d="M1050 140 l12 -14 l12 14 z M1086 140 l12 -14 l12 14 z" fill="${C.plum}"/><path d="M1045 170 q35 26 70 0" fill="none" stroke="${C.plum}" stroke-width="6" stroke-linecap="round"/>`;
+  return svg(1200, 675, s, 'Three Halloween mocktails with their ingredients and a small pumpkin');
+}
+
+function naBeerScale() {
+  let s = bg(1200, 675, 'nb');
+  s += txt(70, 90, 'Where NA beer sits on the alcohol scale', { size: 44, font: SERIF, fill: C.plum });
+  s += txt(70, 128, 'US beer label terms (TTB). Alcohol by volume.', { size: 22, fill: C.inkSoft, weight: 600 });
+  const X = (v) => 110 + (v / 6) * 980;
+  s += `<rect x="${X(0)}" y="330" width="${X(6) - X(0)}" height="34" rx="17" fill="${C.plumTint}"/>`;
+  s += `<rect x="${X(0)}" y="330" width="${X(0.5) - X(0)}" height="34" rx="17" fill="${C.sage}"/><rect x="${X(0.5)}" y="330" width="${X(2.5) - X(0.5)}" height="34" fill="${C.champagne}"/>`;
+  [0, 0.5, 1, 2, 2.5, 3, 4, 5, 6].forEach((v) => { s += `<line x1="${X(v)}" y1="372" x2="${X(v)}" y2="388" stroke="${C.plumSoft}" stroke-width="3"/>${txt(X(v), 414, `${v}%`, { size: 18, anchor: 'middle', fill: C.inkSoft, weight: 700 })}`; });
+  const marks = [[0, 'Alcohol free', 'no alcohol', C.sageDeep, 230], [0.5, 'Non-alcoholic', 'under 0.5%, stated', C.plum, 500], [2.5, 'Low alcohol', 'under 2.5%', C.champagneDeep, 230]];
+  marks.forEach(([v, t, l, f, y]) => {
+    const up = y < 330;
+    s += `<line x1="${X(v)}" y1="${up ? y + 40 : 364}" x2="${X(v)}" y2="${up ? 330 : y - 50}" stroke="${f}" stroke-width="4"/><circle cx="${X(v)}" cy="347" r="12" fill="#fff" stroke="${f}" stroke-width="5"/>`;
+    s += txt(X(v) + (v === 0 ? 0 : 0), y, t, { size: 30, anchor: v === 0 ? 'start' : 'middle', font: SERIF, fill: f });
+    s += txt(X(v), y + 30, l, { size: 20, anchor: v === 0 ? 'start' : 'middle', fill: C.inkSoft, weight: 700 });
+  });
+  s += `<rect x="${X(4.2)}" y="470" width="240" height="80" rx="20" fill="#fff" stroke="${C.line}" stroke-width="3"/>${txt(X(4.2) + 120, 505, 'Regular beer', { size: 24, anchor: 'middle', font: SERIF, fill: C.plum })}${txt(X(4.2) + 120, 535, 'well above 2.5%', { size: 18, anchor: 'middle', fill: C.inkSoft, weight: 700 })}`;
+  s += wordmark(80, 640);
+  return svg(1200, 675, s, 'Alcohol scale from 0 to 6 percent marking alcohol free, non-alcoholic under 0.5 and low alcohol under 2.5');
+}
+
+function menopauseCard() {
+  let s = bg(1200, 675, 'mp');
+  s += txt(70, 90, 'Alcohol and bothersome hot flashes', { size: 44, font: SERIF, fill: C.plum });
+  s += txt(70, 128, 'Odds vs lifelong non-drinkers, 4,164 Korean women aged 42 to 52 (Kwon 2022)', { size: 21, fill: C.inkSoft, weight: 600 });
+  const rows = [['< 10 g/day', 1.42], ['10–19 g', 1.99], ['20–39 g', 2.06], ['40 g +', 3.52]];
+  rows.forEach(([l, v], i) => {
+    const x = 110 + i * 170, h = v * 105;
+    s += `<rect x="${x}" y="${560 - h}" width="120" height="${h}" rx="16" fill="${[C.rose, C.rose, C.roseDeep, C.plumSoft][i]}"/>${txt(x + 60, 548 - h, v.toFixed(2), { size: 30, anchor: 'middle', font: SERIF, fill: C.plum })}${txt(x + 60, 595, l, { size: 19, anchor: 'middle', fill: C.inkSoft, weight: 700 })}`;
+  });
+  s += `<line x1="100" y1="${560 - 105}" x2="770" y2="${560 - 105}" stroke="${C.plum}" stroke-width="3" stroke-dasharray="8 8"/>${txt(775, 560 - 98, '1.0', { size: 18, fill: C.plum, weight: 800 })}`;
+  s += `<rect x="830" y="190" width="300" height="300" rx="28" fill="#fff" stroke="${C.line}" stroke-width="3"/>${txt(980, 260, 'But a US study', { size: 26, anchor: 'middle', font: SERIF, fill: C.plum })}${txt(980, 300, 'of midlife women', { size: 26, anchor: 'middle', font: SERIF, fill: C.plum })}${txt(980, 355, 'linked current drinking', { size: 20, anchor: 'middle', weight: 800 })}${txt(980, 385, 'to fewer hot flashes', { size: 20, anchor: 'middle', weight: 800 })}${txt(980, 440, 'Schilling 2007', { size: 17, anchor: 'middle', fill: C.inkSoft, weight: 600 })}`;
+  s += wordmark(880, 640);
+  return svg(1200, 675, s, 'Odds ratios for bothersome hot flashes rising with alcohol intake, beside a US study that found the opposite');
+}
+
+function antidepressantCard() {
+  let s = bg(1200, 675, 'ad3');
+  s += txt(70, 90, 'Alcohol with depression medicines', { size: 44, font: SERIF, fill: C.plum });
+  s += txt(70, 128, 'Possible reactions listed by NIAAA (Harmful Interactions)', { size: 22, fill: C.inkSoft, weight: 600 });
+  const cards = [['Drowsiness, dizziness', 'all the medicines listed', C.champagne], ['Overdose risk', 'increased, all listed', C.roseDeep], ['Worse depression', 'or hopelessness, all listed', C.plumSoft], ['MAOIs', 'heart effects; tyramine in beer and red wine', C.rose]];
+  cards.forEach(([t, l, f], i) => {
+    const x = 70 + (i % 2) * 540, y = 170 + Math.floor(i / 2) * 210;
+    s += `<rect x="${x}" y="${y}" width="510" height="180" rx="28" fill="#fff" stroke="${C.line}" stroke-width="3"/><rect x="${x}" y="${y}" width="16" height="180" rx="8" fill="${f}"/>`;
+    s += txt(x + 44, y + 78, t, { size: 34, font: SERIF, fill: C.plum });
+    wrap(l, 40).forEach((ln, j) => { s += txt(x + 44, y + 120 + j * 28, ln, { size: 21, fill: C.inkSoft, weight: 700 }); });
+  });
+  s += txt(70, 630, 'Not a full list. Ask your prescriber about your own medicine.', { size: 20, fill: C.plum, weight: 800 });
+  return svg(1200, 675, s, 'Four cards listing possible reactions when alcohol is mixed with depression medicines');
+}
+
+function moderationCard() {
+  let s = bg(1200, 675, 'mm');
+  s += txt(70, 90, 'Moderation Management limits, one week', { size: 44, font: SERIF, fill: C.plum });
+  s += txt(70, 128, 'Women: up to 9 a week, 3 per occasion, drinking on 3 to 4 days at most', { size: 22, fill: C.inkSoft, weight: 600 });
+  ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].forEach((d, i) => {
+    const x = 70 + i * 152, drink = [2, 4, 5].includes(i);
+    s += `<rect x="${x}" y="170" width="136" height="360" rx="24" fill="${drink ? '#fff' : C.sageTint}" stroke="${C.line}" stroke-width="3"/>${txt(x + 68, 215, d, { size: 26, anchor: 'middle', font: SERIF, fill: C.plum })}`;
+    if (drink) [0, 1, 2].forEach((j) => { s += `<rect x="${x + 44}" y="${250 + j * 86}" width="48" height="70" rx="10" fill="${C.rose}"/>`; });
+    else s += bloom(x + 68, 340, 34, C.sage, C.champagne) + txt(x + 68, 440, 'alcohol-free', { size: 17, anchor: 'middle', fill: C.sageDeep, weight: 800 });
+  });
+  s += txt(70, 590, '3 days × 3 drinks = 9, the weekly limit. MM calls these limits, not targets.', { size: 22, fill: C.ink, weight: 800 });
+  s += wordmark(880, 645);
+  return svg(1200, 675, s, 'A week with three drinking days of three drinks and four alcohol-free days');
+}
+
+SINGLE['easy-mocktails-card'] = mocktailFormula;
+SINGLE['easy-mocktails-halloween'] = halloweenCard;
+SINGLE['non-alcoholic-beer-card'] = naBeerScale;
+SINGLE['alcohol-and-menopause-card'] = menopauseCard;
+SINGLE['alcohol-and-antidepressants-card'] = antidepressantCard;
+SINGLE['moderation-management-card'] = moderationCard;
+
 function renderFigure(name, article) {
   if (SINGLE[name]) return SINGLE[name]();
   const m = name.match(/^(.*)-(card|savings|calendar)$/);

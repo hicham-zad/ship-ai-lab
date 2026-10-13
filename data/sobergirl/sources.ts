@@ -462,4 +462,53 @@ export const SOURCES: Record<string, Source> = {
     publisher: 'Brooks PJ, Enoch MA, Goldman D, Li TK, Yokoyama A. PLoS Medicine 2009;6(3):e1000050',
     url: 'https://doi.org/10.1371/journal.pmed.1000050',
   },
+  niaaaInteractions: {
+    title: 'Harmful Interactions: Mixing Alcohol With Medicines',
+    publisher: 'NIAAA, NIH Publication No. 13-5329, revised 2014',
+    url: 'https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/harmful-interactions-mixing-alcohol-with-medicines',
+  },
+  nhsSertraline: {
+    title: 'Common questions about sertraline',
+    publisher: 'NHS, page last reviewed 8 September 2025',
+    url: 'https://www.nhs.uk/medicines/sertraline/common-questions-about-sertraline/',
+  },
+  medSertraline: {
+    title: 'Sertraline: MedlinePlus Drug Information',
+    publisher: 'MedlinePlus (US National Library of Medicine), last revised 15 October 2025',
+    url: 'https://medlineplus.gov/druginfo/meds/a697048.html',
+  },
+  hester: {
+    title: 'ModerateDrinking.com and Moderation Management: outcomes of a randomized clinical trial with non-dependent problem drinkers',
+    publisher: 'Hester RK, Delaney HD, Campbell W. Journal of Consulting and Clinical Psychology 2011;79(2):215-224',
+    url: 'https://doi.org/10.1037/a0022487',
+    note: '80 non-dependent problem drinkers randomised, followed at 3, 6 and 12 months. Both arms used Moderation Management resources.',
+  },
+  mmHome: {
+    title: 'Moderation Management',
+    publisher: 'Moderation Management (nonprofit), home and about pages, retrieved 13 October 2026',
+    url: 'https://moderation.org/',
+  },
+  mmGuidelines: {
+    title: 'Moderate Drinking Guidelines',
+    publisher: 'Moderation Management, retrieved 13 October 2026',
+    url: 'https://moderation.org/moderate-drinking-guidelines/',
+  },
+  kwon: {
+    title: 'Alcohol Consumption Patterns and Risk of Early-Onset Vasomotor Symptoms in Premenopausal Women',
+    publisher: 'Kwon R, Chang Y, Kim Y, et al. Nutrients 2022;14(11):2276',
+    url: 'https://doi.org/10.3390/nu14112276',
+    note: 'Korean women aged 42 to 52 from a health-screening cohort: 4,164 in the cross-sectional analysis, 2,394 followed. Observational.',
+  },
+  schilling: {
+    title: 'Current alcohol use, hormone levels, and hot flashes in midlife women',
+    publisher: 'Schilling C, Gallicchio L, Miller SR, et al. Fertility and Sterility, 2007',
+    url: 'https://doi.org/10.1016/j.fertnstert.2006.11.033',
+    note: 'Midlife women in Maryland. Observational.',
+  },
+  adiong: {
+    title: 'Consuming non-alcoholic beer and other beverages during pregnancy and breastfeeding',
+    publisher: 'Adiong JP, Kim E, Koren G, Bozzo P. Canadian Family Physician 2014;60(8):724-725',
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4131961/',
+    note: 'Summarises a Motherisk analysis of 45 beverages sold as non-alcoholic or low-alcohol.',
+  },
 };

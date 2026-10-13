@@ -18,12 +18,12 @@ export const GUIDE_GROUPS: { title: string; blurb: string; slugs: string[] }[] =
   {
     title: 'Getting started and cravings',
     blurb: 'Practical help, grounded in NIAAA and MedlinePlus guidance.',
-    slugs: ['how-to-quit-drinking-on-your-own', 'how-to-count-sober-days', 'sober-mom', 'how-to-stop-alcohol-cravings', 'urge-surfing', 'what-to-do-instead-of-drinking', 'non-alcoholic-wine', 'sober-journal-prompts', 'how-to-stop-drinking-wine-every-night', 'sleep-after-quitting-alcohol'],
+    slugs: ['how-to-quit-drinking-on-your-own', 'how-to-count-sober-days', 'sober-mom', 'how-to-stop-alcohol-cravings', 'urge-surfing', 'what-to-do-instead-of-drinking', 'easy-mocktails', 'non-alcoholic-wine', 'non-alcoholic-beer', 'sober-journal-prompts', 'how-to-stop-drinking-wine-every-night', 'sleep-after-quitting-alcohol'],
   },
   {
     title: 'Understanding your drinking',
     blurb: 'Definitions, numbers and the research behind them.',
-    slugs: ['sober-curious', 'mindful-drinking', 'gray-area-drinking', 'is-red-wine-good-for-you', 'alcohol-face', 'alcohol-flush-reaction', 'alcohol-belly-and-bloating', 'alcohol-and-hair-loss', 'alcohol-and-adhd', 'lapse-vs-relapse', 'hangxiety', 'how-much-alcohol-is-too-much-for-women', 'alcohol-free-days', 'drinking-alone', 'alcohol-and-weight', 'alcohol-and-depression'],
+    slugs: ['sober-curious', 'mindful-drinking', 'moderation-management', 'gray-area-drinking', 'is-red-wine-good-for-you', 'alcohol-face', 'alcohol-flush-reaction', 'alcohol-belly-and-bloating', 'alcohol-and-hair-loss', 'alcohol-and-adhd', 'lapse-vs-relapse', 'hangxiety', 'how-much-alcohol-is-too-much-for-women', 'alcohol-free-days', 'drinking-alone', 'alcohol-and-weight', 'alcohol-and-depression', 'alcohol-and-antidepressants', 'alcohol-and-menopause'],
   },
   {
     title: 'Milestones, day by day',

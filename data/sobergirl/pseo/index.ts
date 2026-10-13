@@ -4,6 +4,7 @@ import { CHALLENGE_ARTICLES } from './challenges';
 import { COMPARE_ARTICLES } from './compare';
 import { GOLDEN_ARTICLES } from './golden';
 import { GOLDEN2_ARTICLES } from './golden2';
+import { GOLDEN3_ARTICLES } from './golden3';
 import { MILESTONE_ARTICLES } from './milestones';
 import { checkPseoQuality } from './shared';
 import { USECASE_ARTICLES } from './usecases';
@@ -31,7 +32,13 @@ function citationsOf(a: Article): string[] {
   return seen;
 }
 
-export const PSEO_ARTICLES: Article[] = [...MILESTONE_ARTICLES, ...COMPARE_ARTICLES, ...USECASE_ARTICLES, ...CHALLENGE_ARTICLES, ...GOLDEN_ARTICLES, ...GOLDEN2_ARTICLES];
+const dated = (date: string, list: Article[]) => list.map((a) => ({ updated: date, ...a }));
+
+export const PSEO_ARTICLES: Article[] = [
+  ...dated('2026-10-10', [...MILESTONE_ARTICLES, ...COMPARE_ARTICLES, ...USECASE_ARTICLES, ...CHALLENGE_ARTICLES]),
+  ...dated('2026-10-11', [...GOLDEN_ARTICLES, ...GOLDEN2_ARTICLES]),
+  ...dated('2026-10-13', GOLDEN3_ARTICLES),
+];
 
 for (const a of PSEO_ARTICLES) {
   a.sources = citationsOf(a);

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { ARTICLES, type Article, type Block, type Shot } from '@/data/sobergirl/articles';
-import { SG_BASE, SG_SITE, SG_UPDATED, playUrlFor } from '@/data/sobergirl/config';
+import { SG_BASE, SG_SITE, SG_UPDATED, playUrlFor, updatedOf } from '@/data/sobergirl/config';
 import { SOURCES } from '@/data/sobergirl/sources';
 import Chart, { chartSourceId } from './Charts';
 import LiveCounter from './LiveCounter';
@@ -182,7 +182,7 @@ export function articleJsonLd(a: Article) {
           ...(a.shots ?? []).map((sh) => `${SG_BASE}/screens/${sh.file}.png`),
         ],
         datePublished: SG_UPDATED,
-        dateModified: SG_UPDATED,
+        dateModified: updatedOf(a),
         author: { '@type': 'Organization', name: 'Sober Girl by ShipAI Lab', url: SG_BASE },
         abstract: a.quickAnswer.replace(/\[\[\w+\]\]/g, ''),
         publisher: { '@type': 'Organization', name: 'ShipAI Lab', url: SG_SITE },
@@ -268,7 +268,7 @@ export default function ArticleView({ article }: { article: Article }) {
             <p>{renderInline(article.quickAnswer, article)}</p>
           </section>
           <div className="sga-meta">
-            By the Sober Girl team at ShipAI Lab · Updated {formatDate(SG_UPDATED)} · {article.sources.length > 0 ? `${article.sources.length} sources cited` : (article.metaNote ?? 'No external sources needed')} · General information, not medical advice
+            By the Sober Girl team at ShipAI Lab · Updated {formatDate(updatedOf(article))} · {article.sources.length > 0 ? `${article.sources.length} sources cited` : (article.metaNote ?? 'No external sources needed')} · General information, not medical advice
           </div>
 
           <div className="sga-hero">

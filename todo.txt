@@ -44,3 +44,9 @@ TRAFFIC PLAN (2026-10-11, see sobergirl-traffic-plan.md)
 - Find sources, then build: bloating and belly (1,900 each), hair loss (1,300), puffy face detail, is red wine good for you (8,100), alcohol and ADHD (3,600)
 - Extend titles/H2s: how-to-stop-alcohol-cravings (curb/control/avoid cravings, 1,000 each), dry-january-guide (dry january meaning, 2,900)
 - Optional: app badges for 2, 5, 10 years so the years pages have something to unlock
+
+GSC CHECK 2026-10-13 (see sobergirl-traffic-plan.md section 8)
+- 57 of 78 /sobergirl URLs were unknown to Google. Sitemap resubmitted. After deploy: python3 scripts/indexnow.py --all https://shipailab.com/sitemap.xml
+- In the GSC UI, Request indexing for: sobergirl, sobergirl/guides, sobriety-counter, what-happens-when-you-stop-drinking-alcohol, easy-mocktails, non-alcoholic-beer, alcohol-face, 30-days-sober, 90-days-sober, 1-year-sober
+- Re-run URL Inspection for /sobergirl on 2026-10-20
+- Off-page: Play Store listing description should link https://shipailab.com/sobergirl; shipailab.com homepage should link the guides hub and 3-4 top guides, not just /sobergirl

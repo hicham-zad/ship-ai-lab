@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ArticleView from '@/components/sobergirl/ArticleView';
 import { ARTICLES, getArticle } from '@/data/sobergirl/articles';
-import { SG_BASE, SG_UPDATED } from '@/data/sobergirl/config';
+import { SG_BASE, SG_UPDATED, updatedOf } from '@/data/sobergirl/config';
 
 export const dynamicParams = false;
 
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: 'Sober Girl',
       type: 'article',
       publishedTime: SG_UPDATED,
-      modifiedTime: SG_UPDATED,
+      modifiedTime: updatedOf(a),
       images: [{ url: og, width: 1200, height: 630, alt: a.heroAlt }],
     },
     twitter: { card: 'summary_large_image', title: a.metaTitle, description: a.metaDescription, images: [og] },

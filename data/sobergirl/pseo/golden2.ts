@@ -114,7 +114,7 @@ export const GOLDEN2_ARTICLES: Article[] = [
       { q: 'Is non-alcoholic wine safe in pregnancy?', a: 'We did not find a source on this that we could cite. Ask your doctor or midwife, and note that non-alcoholic does not mean zero alcohol.' },
       { q: 'What is the difference between non-alcoholic and alcohol free?', a: 'On US beer labels, non-alcoholic means under 0.5% alcohol by volume with a statement, and alcohol free means no alcohol at all.' },
     ],
-    related: ['what-to-do-instead-of-drinking', 'how-to-count-sober-days', 'best-app-to-quit-drinking'],
+    related: ['what-to-do-instead-of-drinking', 'how-to-count-sober-days', 'best-app-to-quit-drinking', 'non-alcoholic-beer'],
     shots: [
       { file: 'home', alt: 'Sober Girl home screen with a sober days counter, money saved and a check-in', title: 'Count the days you choose', caption: 'You set the sober date and what it means. Example data.' },
       { file: 'sos', alt: 'Sober Girl craving SOS with a breathing circle and a 10-minute timer', title: 'For the glass-in-hand moment', caption: 'A guided breath and a 10-minute timer. Example data.' },

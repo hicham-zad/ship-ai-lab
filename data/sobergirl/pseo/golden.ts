@@ -1059,7 +1059,7 @@ export const GOLDEN_ARTICLES: Article[] = [
       { q: 'How do I drink less alcohol?', a: 'Decide the number before the first drink, notice what is behind the urge, keep little alcohol at home, and track your days. If you cannot cut down, speak to a doctor.' },
       { q: 'Who is mindful drinking not for?', a: 'People who drink heavily or every day, or who have had withdrawal symptoms, should speak to a doctor before changing how they drink.' },
     ],
-    related: ['gray-area-drinking', 'alcohol-free-days', 'best-app-to-quit-drinking'],
+    related: ['gray-area-drinking', 'alcohol-free-days', 'best-app-to-quit-drinking', 'moderation-management'],
     shots: [
       { file: 'home', alt: 'Sober Girl home screen with alcohol-free days, money saved and a check-in', title: 'Alcohol-free days in Sober Girl', caption: 'Days, money saved and a one-tap daily check-in. Example data.' },
       { file: 'sos', alt: 'Sober Girl craving SOS with a breathing circle and a timer', title: 'A pause before you pour', caption: 'A guided breath and a 10-minute timer. Example data.' },

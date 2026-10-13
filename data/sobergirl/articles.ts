@@ -54,6 +54,8 @@ export interface Article {
   related: string[];
   /** App screenshots shown after the section that holds the inline app prompt. They show sample data. */
   shots?: Shot[];
+  /** ISO date the page was last changed. Falls back to SG_UPDATED. Feeds the sitemap lastmod and the Article dates. */
+  updated?: string;
 }
 
 // Inline citation syntax: [[sourceId]] renders as a numbered link to the source list.
@@ -535,7 +537,7 @@ export const ARTICLES: Article[] = [
         a: 'For many people yes, but if you drink heavily or daily, withdrawal can be dangerous. Speak to a doctor before you stop.',
       },
     ],
-    related: ['sober-september', 'sobriety-milestones', 'sober-curious'],
+    related: ['sober-september', 'sobriety-milestones', 'sober-curious', 'easy-mocktails'],
     shots: [
       { file: 'milestones', alt: 'Sober Girl milestones screen with badges from 1 day to 365 days, seven of nine unlocked', title: 'Milestones in Sober Girl', caption: 'Nine milestones from day 1 to day 365, shown as badges you unlock. Example data.' },
     ],
@@ -783,7 +785,8 @@ export const ARTICLES: Article[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'reframe-app-cost',
-    metaTitle: 'Is Reframe Free? Reframe vs I Am Sober Cost',
+    updated: '2026-10-13',
+    metaTitle: 'Is Reframe Free? Reframe App Cost and Free Trial (2026)',
     metaDescription:
       'What the Reframe, I Am Sober, Sunflower and Sober apps cost, taken from their App Store listings and dated, plus how to cancel a subscription.',
     h1: 'Is the Reframe app free? Reframe and I Am Sober costs, compared',
@@ -1011,7 +1014,7 @@ export const ARTICLES: Article[] = [
         a: 'They overlap. Gray area drinking describes a pattern people are uneasy about, while sober curious describes the choice to question it and try time without alcohol.',
       },
     ],
-    related: ['mindful-drinking', 'sober-curious', 'sobriety-milestones'],
+    related: ['mindful-drinking', 'sober-curious', 'sobriety-milestones', 'moderation-management'],
     shots: [
       { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
     ],
@@ -1529,16 +1532,17 @@ export const ARTICLES: Article[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'sobriety-calculator',
-    metaTitle: 'Sobriety Calculator: Days Sober, Money Saved, Milestones',
+    updated: '2026-10-13',
+    metaTitle: 'Sobriety Calculator: How Many Days Sober Am I?',
     metaDescription:
       'Free sobriety date calculator. Enter your last drink date to see days sober, weeks, months, money saved and your next milestone. Runs in your browser and stores nothing.',
-    h1: 'Sobriety calculator: count your days sober and money saved',
+    h1: 'Sobriety calculator: how many days sober are you?',
     dek: 'Enter the date of your last drink. See your days, weeks and months sober, what you have saved, and when your next milestone falls.',
     quickAnswer:
       'To work out how many days sober you are, count the days from the date of your last drink to today. Enter that date below to see your days, weeks, whole months and complete years, an optional money-saved total, and your next milestone. It runs in your browser and nothing you enter is stored or sent anywhere. Counting conventions vary, so this calculator counts whole days since the date you enter.',
     kicker: 'Tool',
     metaNote: 'A calculator, no external sources needed',
-    keywords: ['sobriety calculator', 'sobriety date calculator', 'days sober calculator', 'sober date calculator', 'how many days sober', 'sober days counter'],
+    keywords: ['sobriety calculator', 'sobriety date calculator', 'days sober calculator', 'sober date calculator', 'how many days sober', 'how many days sober am i', 'how many days have i been sober', 'sober days counter', 'aa sobriety calculator'],
     heroAlt: 'A progress ring with a small bloom at its end and chips for weeks, money saved and next milestone',
     sources: [],
     sections: [
@@ -1558,6 +1562,30 @@ export const ARTICLES: Article[] = [
               '**Weeks and months.** Weeks are days divided by seven. Months are whole calendar months, so a date on the 31st rolls to the last day of shorter months.',
               '**Money saved.** Your weekly spend divided by seven, times your days. Use an honest average of what you really spent, not your best week.',
               '**Milestones.** The markers are ours (1 day, 1 week, 30 days, 60, 90, 6 months, 9 months, 1 year and beyond). They are a reason to pause and notice, not a clinical schedule.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'table',
+        h2: 'How many days is that? Common sober milestones',
+        blocks: [
+          {
+            t: 'table',
+            caption: 'Plain calendar arithmetic. Months and years vary by a day or two depending on the dates they span.',
+            head: ['Milestone', 'Days sober', 'Weeks'],
+            rows: [
+              ['[1 week](/sobergirl/1-week-sober)', '7', '1'],
+              ['[2 weeks](/sobergirl/2-weeks-sober)', '14', '2'],
+              ['[1 month](/sobergirl/30-days-sober)', '28 to 31', 'about 4'],
+              ['[60 days](/sobergirl/60-days-sober)', '60', 'about 8.5'],
+              ['[90 days](/sobergirl/90-days-sober), about 3 months', '90', 'about 13'],
+              ['[100 days](/sobergirl/100-days-sober)', '100', 'about 14'],
+              ['[6 months](/sobergirl/6-months-sober)', '181 to 184', 'about 26'],
+              ['[1 year](/sobergirl/1-year-sober)', '365 or 366', 'about 52'],
+              ['[2 years](/sobergirl/2-years-sober)', '730 or 731', 'about 104'],
+              ['1,000 days', '1,000', 'about 143 (about 2 years and 9 months)'],
+              ['[5 years](/sobergirl/5-years-sober)', '1,826 or 1,827', 'about 261'],
             ],
           },
         ],
@@ -1584,6 +1612,18 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
+      {
+        q: 'How many days sober am I?',
+        a: 'Enter the date of your last drink in the calculator above and it shows your days, weeks, months and years sober. By hand: count the whole days from that date to today.',
+      },
+      {
+        q: 'What is a sober date calculator?',
+        a: 'A tool that turns your sobriety date, usually the date of your last drink, into days, weeks, months and years sober. This one also shows money saved and your next milestone.',
+      },
+      {
+        q: 'Is this the AA Grapevine sobriety calculator?',
+        a: 'No. AA Grapevine, the AA magazine, has its own sobriety calculator on its website and app. This calculator is independent and not affiliated with AA; it counts the same way, from your sobriety date, and adds money saved and your next milestone.',
+      },
       {
         q: 'How do I calculate how many days sober I am?',
         a: 'Count the whole days between the date of your last drink and today. If your last drink was yesterday, you are on day 1. The calculator on this page does it for you.',
@@ -2354,7 +2394,7 @@ export const ARTICLES: Article[] = [
         a: 'Have an alcohol-free drink in your hand, decide an end time, drive yourself and suggest plans that are not built around alcohol.',
       },
     ],
-    related: ['non-alcoholic-wine', 'how-to-stop-alcohol-cravings', 'sober-girl-app'],
+    related: ['non-alcoholic-wine', 'how-to-stop-alcohol-cravings', 'sober-girl-app', 'easy-mocktails'],
     shots: [
       { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
     ],
@@ -2929,7 +2969,7 @@ export const ARTICLES: Article[] = [
         a: 'NIAAA says the less alcohol, the better, and the NHS advises several drink-free days each week for people who want to cut down. If you cannot skip a night, speak to a doctor.',
       },
     ],
-    related: ['alcohol-free-days', 'gray-area-drinking', 'sober-curious'],
+    related: ['alcohol-free-days', 'gray-area-drinking', 'sober-curious', 'alcohol-and-menopause'],
   },
 
   /* ------------------------------------------------------------------ */
@@ -3356,7 +3396,7 @@ export const ARTICLES: Article[] = [
         a: 'It can make you drowsy at first, but it can fragment sleep later in the night and reduce REM sleep.',
       },
     ],
-    related: ['what-happens-when-you-stop-drinking-alcohol', 'benefits-of-quitting-alcohol', 'what-to-do-instead-of-drinking'],
+    related: ['what-happens-when-you-stop-drinking-alcohol', 'benefits-of-quitting-alcohol', 'what-to-do-instead-of-drinking', 'alcohol-and-menopause'],
     shots: [
       { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
     ],
@@ -3463,7 +3503,7 @@ export const ARTICLES: Article[] = [
         a: 'Yes, and a doctor can help with both. Do not stop suddenly on your own if you drink heavily.',
       },
     ],
-    related: ['alcohol-and-adhd', 'benefits-of-quitting-alcohol', 'sobriety-milestones'],
+    related: ['alcohol-and-adhd', 'benefits-of-quitting-alcohol', 'sobriety-milestones', 'alcohol-and-antidepressants'],
     shots: [
       { file: 'journal', alt: 'Sober Girl journal screen with five mood faces, a one-line note field and weekly check-in insights', title: 'Mood journal in Sober Girl', caption: 'Pick a mood, write one line, and see your week at a glance. Example data.' },
     ],
@@ -3599,7 +3639,7 @@ export const ARTICLES: Article[] = [
         a: 'Note what led to it and carry on. A slip does not erase your days. If you cannot stop once you start, speak to a doctor.',
       },
     ],
-    related: ['dry-january-guide', 'how-to-stop-alcohol-cravings', 'what-to-do-instead-of-drinking'],
+    related: ['dry-january-guide', 'how-to-stop-alcohol-cravings', 'what-to-do-instead-of-drinking', 'easy-mocktails'],
     shots: [
       { file: 'sos', alt: 'Sober Girl craving SOS screen with a breathing circle, a 10-minute timer and your own reason for stopping', title: 'Craving SOS in Sober Girl', caption: 'A guided breath, a 10-minute timer and your own reason, for when a craving hits. Example data.' },
     ],

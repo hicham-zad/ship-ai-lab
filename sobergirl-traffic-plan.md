@@ -109,3 +109,24 @@ Also extended: `how-to-stop-alcohol-cravings` (curb / control / avoid FAQ from N
 | Week 4 to 6 | Pull Search Console queries per page and re-run `node scripts/dataforseo-keyword-gaps.mjs --skip-ranked --terms research/terms-round2.json`. Compare positions against this plan |
 | Prune rule | A page with no impressions after 8 weeks gets merged into its hub or rewritten, not left |
 | Always | Re-read competitor store facts by 2027-01-08 (the comparison pages date them) |
+
+## 8. Search Console check and batch 3 (2026-10-13)
+
+**What GSC showed (API, 1 Jul to 12 Oct):** first impressions on 6 Oct; 97 impressions and 2 clicks in total, almost all US. URL Inspection on 78 Sober Girl URLs: **17 indexed, 4 discovered but not indexed, 57 unknown to Google.** The sitemap had last been read on 6 Oct (83 URLs, before the 41 new pages), and every Sober Girl `lastmod` said 2026-09-30.
+
+| Page | Query | Position |
+|---|---|---|
+| sobriety-calendar | sobriety calendar | 7.5 avg |
+| reframe-app-cost | is reframe app free | 10 to 15 |
+| benefits-of-quitting-alcohol | (page) | 8 |
+| best-sober-tracker-apps | sober tracker app, sober app | 34 to 61 |
+| sobriety-calculator | sobriety calculator, how many days sober, sober date calculator, aa grapevine sobriety calculator | 50 to 87 |
+
+**Done:**
+- Sitemap resubmitted through the API. Sober Girl sitemap entries now come from `ARTICLES`, with a real `lastmod` per page (`updated` on `Article`; pSEO batches are dated in `pseo/index.ts`). The same date feeds `dateModified` and the "Updated" line.
+- `sobriety-calculator`: title and H1 now target "how many days sober am I"; added a days-per-milestone table linking to each milestone page, and FAQs for "sober date calculator" and AA Grapevine (independent, not affiliated).
+- `reframe-app-cost`: title now "Is Reframe Free? Reframe App Cost and Free Trial (2026)".
+- 5 new pages (`pseo/golden3.ts`), each with a hero, OG image, 1 to 2 data figures and 2 screenshots: `easy-mocktails` (mocktails 90,500 KD 30; easy mocktails 8,100 KD 1; halloween mocktails 1,900 KD 1), `non-alcoholic-beer` (na beer 110,000 KD 12), `alcohol-and-antidepressants` (1,900 KD 2, ×2 variants), `alcohol-and-menopause` (480 KD 4), `moderation-management` (1,300 KD 4).
+- Links into the new pages from 9 related guides.
+
+**Next:** after deploy, IndexNow all Sober Girl URLs, and use URL Inspection's "Request indexing" in the GSC UI for the top 10 (the API cannot request indexing). Re-run the inspection script in 7 days.
