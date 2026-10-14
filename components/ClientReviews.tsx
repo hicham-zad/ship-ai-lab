@@ -106,11 +106,7 @@ export default function ClientReviews() {
         id="client-reviews"
         className="mb-20 md:mb-32"
         aria-labelledby="reviews-heading"
-        itemScope
-        itemType="https://schema.org/ProfessionalService"
       >
-        <meta itemProp="name" content="Ship AI Lab" />
-        <meta itemProp="description" content="Ship AI Lab is a 5-star rated AI development agency with 12+ verified client reviews on Upwork and Fiverr. Specializing in SaaS, mobile apps, and AI-powered applications." />
 
         {/* Section Header */}
         <div className="mb-14">
@@ -163,9 +159,6 @@ export default function ClientReviews() {
             <article
               key={index}
               className="group border-2 border-black p-6 bg-white rounded-3xl hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all"
-              itemScope
-              itemType="https://schema.org/Review"
-              itemProp="review"
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
@@ -176,8 +169,8 @@ export default function ClientReviews() {
                     {review.author[0].toUpperCase()}
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 text-sm" itemProp="author" itemScope itemType="https://schema.org/Person">
-                      <span itemProp="name">{review.author}</span>
+                    <div className="font-semibold text-gray-900 text-sm">
+                      <span>{review.author}</span>
                     </div>
                     {review.country && (
                       <div className="text-xs text-gray-500">
@@ -193,14 +186,12 @@ export default function ClientReviews() {
               </div>
 
               {/* Stars */}
-              <div className="mb-3" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-                <meta itemProp="ratingValue" content="5" />
-                <meta itemProp="bestRating" content="5" />
+              <div className="mb-3">
                 <StarRating />
               </div>
 
               {/* Review Text */}
-              <blockquote className="text-sm text-gray-700 leading-relaxed" itemProp="reviewBody">
+              <blockquote className="text-sm text-gray-700 leading-relaxed">
                 &ldquo;{review.text}&rdquo;
               </blockquote>
 
