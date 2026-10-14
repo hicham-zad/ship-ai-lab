@@ -157,27 +157,7 @@ const faqs = [
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'MobileApplication',
-      name: 'Sober Girl',
-      alternateName: 'Sober Girl: Sobriety Tracker',
-      description:
-        'A private sobriety tracker and sober days counter for women, with money saved, craving SOS, milestones and a private journal.',
-      operatingSystem: 'Android',
-      applicationCategory: 'HealthApplication',
-      url: PAGE_URL,
-      downloadUrl: PLAY_STORE_URL,
-      image: 'https://shipailab.com/sobergirl-icon.png',
-      screenshot: screens.map((sc) => ({
-        '@type': 'ImageObject',
-        contentUrl: `https://shipailab.com/sobergirl/screens/${sc.file}.png`,
-        name: sc.title,
-        description: sc.alt,
-        caption: sc.cap,
-      })),
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      publisher: { '@type': 'Organization', name: 'ShipAI Lab', url: 'https://shipailab.com' },
-    },
+    // No MobileApplication node: Google requires aggregateRating or review for it, and the app has no ratings yet.
     {
       '@type': 'FAQPage',
       mainEntity: faqs.map((f) => ({

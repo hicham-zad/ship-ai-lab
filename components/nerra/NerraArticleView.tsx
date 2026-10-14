@@ -166,19 +166,7 @@ export function articleJsonLd(a: Article) {
       creator: { '@type': 'Person', name: NR_AUTHOR },
     });
   }
-  if (a.slug === 'nerra-app') {
-    // No rating or review markup: there are no reviews yet.
-    graph.push({
-      '@type': 'MobileApplication',
-      name: 'Nerra',
-      operatingSystem: 'iOS',
-      applicationCategory: 'HealthApplication',
-      description: 'A private GLP-1 companion for iPhone and Android. Tracks doses you enter, injection sites, weight and check-ins. No account, no cloud.',
-      url: NR_BASE,
-      inLanguage: ['en', 'de'],
-      author: { '@type': 'Person', name: NR_AUTHOR },
-    });
-  }
+  // No MobileApplication node: Google requires aggregateRating or review for it, and Nerra has no ratings yet.
   return { '@context': 'https://schema.org', '@graph': graph };
 }
 
