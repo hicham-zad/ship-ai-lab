@@ -208,6 +208,9 @@ export function articleJsonLd(a: Article) {
         caption: sh.caption,
         width: 720,
         height: 1565,
+        creator: { '@type': 'Organization', name: 'ShipAI Lab', url: SG_SITE },
+        creditText: 'Sober Girl',
+        copyrightNotice: '© ShipAI Lab',
       })),
       {
         '@type': 'BreadcrumbList',

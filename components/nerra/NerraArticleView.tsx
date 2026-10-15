@@ -164,6 +164,8 @@ export function articleJsonLd(a: Article) {
       width: 700,
       height: 1522,
       creator: { '@type': 'Person', name: NR_AUTHOR },
+      creditText: 'Nerra',
+      copyrightNotice: `© ${NR_AUTHOR}`,
     });
   }
   // No MobileApplication node: Google requires aggregateRating or review for it, and Nerra has no ratings yet.
