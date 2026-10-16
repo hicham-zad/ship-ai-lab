@@ -1,5 +1,6 @@
 import { KSEF_PAGES, KSEF_UPDATED_ISO, ksefUrl } from '@/data/ksef/config';
 import { FIGURES } from '@/data/ksef/figures';
+import { FEATURES } from '@/data/ksef/features';
 import { GUIDES, guideFigures } from '@/data/ksef/guides';
 
 // ksef.shipailab.com/sitemap.xml (proxy.ts rewrites it here). The main sitemap lists shipailab.com only.
@@ -7,6 +8,7 @@ export function GET() {
   type Entry = { loc: string; lastmod: string; priority: number; images?: { loc: string; title: string }[] };
   const entries: Entry[] = [
     ...KSEF_PAGES.map((p) => ({ loc: ksefUrl(p.path), lastmod: KSEF_UPDATED_ISO, priority: p.priority })),
+    ...FEATURES.map((f) => ({ loc: ksefUrl(`/funkcje/${f.slug}`), lastmod: f.updated, priority: 0.7 })),
     ...GUIDES.map((g) => ({
       loc: ksefUrl(`/${g.slug}`),
       lastmod: g.updated,

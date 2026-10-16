@@ -13,7 +13,7 @@ export function SiteNav() {
           {KSEF_NAME}
         </Link>
         <nav className="fk-nav-links" aria-label="Główna nawigacja">
-          <Link href="/#funkcje" className="fk-hide-sm">Funkcje</Link>
+          <Link href="/funkcje" className="fk-hide-sm">Funkcje</Link>
           <Link href="/guides">Poradniki</Link>
           <Link href="/#cennik" className="fk-hide-sm">Cennik</Link>
           <Link href="/support" className="fk-hide-sm">Pomoc</Link>
@@ -56,6 +56,7 @@ export function SiteFooter() {
               {FEATURED_GUIDES.map((g) => (
                 <li key={g.slug}><Link href={`/${g.slug}`}>{g.short}</Link></li>
               ))}
+              <li><Link href="/status-ksef">Status KSeF</Link></li>
               <li><Link href="/guides">Wszystkie poradniki</Link></li>
             </ul>
           </div>

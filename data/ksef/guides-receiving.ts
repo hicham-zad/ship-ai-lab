@@ -111,7 +111,7 @@ export const GUIDES_RECEIVING: Guide[] = [
     ],
     sources: [SRC.odebrac, SRC.podrecznik2, SRC.pytania, SRC.jdg, SRC.mobilna],
     app: { shot: 'start', from: 0.17, to: 0.44, text: 'KSeF nie wysyła powiadomień. Faktury KSeF sprawdza system w tle i daje znać, gdy przyjdzie nowa faktura, a na pulpicie pokazuje, co jest do zapłaty i do kiedy.' },
-    related: ['jak-pobrac-fakture-z-ksef', 'jak-znalezc-fakture-w-ksef', 'uprawnienia-ksef-dla-ksiegowej'],
+    related: ['jak-pobrac-fakture-z-ksef', 'jak-znalezc-fakture-w-ksef', 'aplikacje-mobilne-ksef'],
   },
   {
     slug: 'jak-pobrac-fakture-z-ksef',
@@ -2281,6 +2281,7 @@ export const GUIDES_RECEIVING: Guide[] = [
       'Komunikat o błędzie nie zawsze oznacza awarię KSeF. Często nie działa logowanie przez login.gov.pl albo sama Aplikacja Podatnika, a system przyjmuje faktury z programów. Poniżej, jak to rozróżnić, gdzie sprawdzić komunikaty MF i co zrobić z fakturami.',
     summary: [
       'Najpierw sprawdź komunikaty techniczne na ksef.podatki.gov.pl. MF ogłasza tam przerwy i utrudnienia, także w Profilu Zaufanym.',
+      'Czy KSeF odpowiada w tej chwili, zobaczysz na stronie [status KSeF](/status-ksef): pomiar co 5 minut, tylko zmierzone dane.',
       'Gdy nie działa Profil Zaufany, wybierz w login.gov.pl inną metodę (np. mObywatel lub bankowość), zaloguj się podpisem kwalifikowanym albo w programie tokenem lub certyfikatem KSeF.',
       'Przy ogłoszonej niedostępności KSeF wystawiasz faktury offline i dosyłasz je najpóźniej następnego dnia roboczego. Przy ogłoszonej awarii masz 7 dni roboczych.',
       'Przy awarii całkowitej, ogłoszonej w mediach, faktury wystawia się papierowo lub elektronicznie i nie dosyła do KSeF.',
@@ -2371,5 +2372,123 @@ export const GUIDES_RECEIVING: Guide[] = [
     sources: [SRC.komunikaty, SRC.utrudnienia1310, SRC.niedostepnosc, SRC.awaryjny, SRC.awariaCalkowita, SRC.offline24, SRC.kontakt, SRC.apTest],
     app: { shot: 'invoices', from: 0.13, to: 0.6, text: 'Faktury pobrane przez Faktury KSeF są zapisane na telefonie. Gdy KSeF lub Aplikacja Podatnika chwilowo nie działa, nadal je przeszukasz, otworzysz i wyślesz księgowej.' },
     related: ['ksef-tryb-offline', 'certyfikat-ksef', 'odbieranie-faktur-z-ksef'],
+  },
+  {
+    slug: 'aplikacje-mobilne-ksef',
+    short: 'Aplikacje mobilne KSeF',
+    title: 'Aplikacja mobilna KSeF: jaką wybrać na telefon?',
+    metaTitle: 'Aplikacja mobilna KSeF – porównanie aplikacji na telefon',
+    description:
+      'Aplikacja mobilna KSeF na telefon: co potrafi bezpłatna aplikacja Ministerstwa Finansów, czym różnią się aplikacje od programów księgowych i kiedy wybrać aplikację do odbierania faktur.',
+    lede:
+      'Do KSeF możesz zajrzeć z telefonu na kilka sposobów: oficjalną aplikacją MF, aplikacją swojego programu do faktur albo aplikacją skupioną na odbieraniu faktur. Poniżej, co każda z nich robi według źródeł i jak wybrać pod to, czego potrzebujesz.',
+    summary: [
+      'Ministerstwo Finansów udostępnia bezpłatną Aplikację mobilną KSeF na iOS i Androida. Pozwala wystawiać faktury i korekty oraz wyszukiwać, przeglądać, pobierać i udostępniać faktury.',
+      'Logujesz się do niej biometrią lub PIN-em, a tożsamość potwierdzasz przez mObywatela, mojeID, e-dowód albo Profil Zaufany. Działa tylko w środowisku produkcyjnym.',
+      'Aplikacje programów księgowych i fakturowych obejmują zwykle funkcje tego programu. Zakres sprawdź u dostawcy.',
+      'Aplikacja skupiona na odbieraniu faktur, jak Faktury KSeF, nie wystawia faktur. Pobiera faktury kosztowe, pokazuje terminy płatności i przygotowuje paczkę dla księgowej.',
+    ],
+    keywords: ['aplikacja mobilna ksef', 'aplikacja ksef na telefon', 'ksef na telefon', 'aplikacja ksef', 'aplikacja do ksef', 'jaka aplikacja do ksef', 'aplikacja mobilna ksef 2.0'],
+    published: '2026-10-16',
+    updated: '2026-10-16',
+    sections: [
+      {
+        id: 'rodzaje',
+        h2: 'Trzy rodzaje aplikacji KSeF na telefon',
+        blocks: [
+          { figure: 'aplikacje-ksef-wybor' },
+          {
+            table: {
+              head: ['', 'Aplikacja mobilna KSeF (MF)', 'Aplikacja programu księgowego', 'Aplikacja do odbierania faktur'],
+              rows: [
+                ['Kto ją wydaje', 'Ministerstwo Finansów', 'Dostawca programu do faktur lub księgowości', 'Niezależny wydawca'],
+                ['Koszt', 'Bezpłatna', 'Zależy od abonamentu programu', 'Zależy od wydawcy'],
+                ['Najlepsza do', 'Wystawiania pojedynczych faktur i przeglądania faktur w KSeF', 'Pracy na danych, które masz już w programie', 'Przeglądania faktur kosztowych i pilnowania płatności'],
+                ['Konto u wydawcy', 'Nie, logowanie przez węzeł krajowy', 'Zwykle tak', 'Zależy od aplikacji'],
+              ],
+              caption: 'Ogólny podział. Zakres konkretnych aplikacji programów księgowych sprawdź u ich dostawców.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'mf',
+        h2: 'Aplikacja mobilna KSeF od Ministerstwa Finansów',
+        blocks: [
+          { p: 'Według strony MF aplikacja jest bezpłatna i dostępna w Google Play oraz App Store. Od 1 lutego 2026 r. obowiązuje jej wersja dla KSeF 2.0. Strona MF opisuje takie funkcje:' },
+          {
+            ul: [
+              'wystawianie faktur i korekt oraz zapisywanie wersji roboczych,',
+              'wyszukiwanie, przeglądanie, pobieranie i udostępnianie faktur wysłanych do KSeF,',
+              'profile firm, między którymi przełączasz się bez ponownego logowania, oraz listy nabywców i rachunków bankowych,',
+              'profil jako wizytówka z kodem QR do udostępnienia kontrahentowi.',
+            ],
+          },
+          { p: 'Do logowania służy biometria lub PIN. Tożsamość potwierdzasz przez Krajowy Węzeł Identyfikacji Elektronicznej: mObywatelem, mojeID, e-dowodem albo Profilem Zaufanym, a aplikacja sprawdza Twoje uprawnienia.' },
+          {
+            ul: [
+              'Działa tylko w środowisku produkcyjnym. Każda faktura wysłana z niej do KSeF jest prawnie skuteczna, więc do ćwiczeń nie nadaje się.',
+              'Nie pokazuje i nie pobiera szczegółów załączników do faktur, tylko informację, że załącznik istnieje.',
+              'Synchronizację danych w chmurze włączasz opcjonalnie. MF podaje, że aplikacja nie gromadzi danych o aktywności użytkownika.',
+            ],
+          },
+          { note: 'Stan na 16 października 2026 r. według strony MF „Aplikacja mobilna KSeF 2.0” (zmodyfikowana 15.10.2026). Strona nie opisuje osobno odbierania faktur ani działania offline.' },
+        ],
+      },
+      {
+        id: 'program',
+        h2: 'Aplikacje programów księgowych i fakturowych',
+        blocks: [
+          { p: 'Wielu dostawców programów ma własne aplikacje na telefon. Ich zakres zależy od programu i abonamentu, więc nie da się ich opisać jedną tabelą. Zwykle pokazują dane z konta w programie, a faktury z KSeF trafiają tam przez integrację z API KSeF 2.0. Zapytaj dostawcę, czy aplikacja pobiera faktury kosztowe z KSeF, czy tylko pokazuje te, które wprowadzono do programu.' },
+          { p: 'To dobry wybór, gdy cała księgowość jest w jednym programie i księgowa pracuje w tym samym systemie.' },
+        ],
+      },
+      {
+        id: 'odbieranie',
+        h2: 'Aplikacja do odbierania faktur: Faktury KSeF',
+        blocks: [
+          { p: 'Faktury KSeF to skrzynka odbiorcza na faktury z KSeF. Nie wystawia faktur. Pobiera faktury, które wystawili Ci dostawcy, i zapisuje je na telefonie.' },
+          {
+            ul: [
+              'Łączy się z KSeF [certyfikatem](/certyfikat-ksef) (pliki .crt i .key) albo tokenem z uprawnieniem do przeglądania faktur. Klucz trafia do Keychain lub Keystore, a hasła do klucza aplikacja nie zapisuje.',
+              'Nie wymaga konta u wydawcy. Token i faktury zostają na urządzeniu.',
+              'Pobiera faktury pakietami eksportu, tak jak zaleca KSeF, i pilnuje limitów zapytań.',
+              'Pokazuje fakturę czytelnie, jako [wizualizację z kodem QR](/wizualizacja-faktury-ksef), i zapisuje ją do PDF.',
+              'Przypomina o terminach płatności i powiadamia o nowych fakturach.',
+              'Przygotowuje paczkę z miesiąca dla księgowej.',
+            ],
+          },
+          { note: 'Faktury KSeF jest w przygotowaniu i nie została jeszcze opublikowana w sklepach.' },
+        ],
+      },
+      {
+        id: 'wybor',
+        h2: 'Którą aplikację wybrać',
+        blocks: [
+          {
+            table: {
+              head: ['Czego potrzebujesz', 'Dobry wybór'],
+              rows: [
+                ['Wystawić pojedynczą fakturę z telefonu, bez programu', 'Aplikacja mobilna KSeF (MF)'],
+                ['Mieć wszystko w jednym programie z księgowością', 'Aplikacja Twojego programu'],
+                ['Szybko zobaczyć faktury kosztowe i zapłacić na czas', 'Aplikacja do odbierania faktur'],
+                ['Pracować na komputerze i pobrać dużo faktur', 'Aplikacja Podatnika KSeF lub program z integracją'],
+              ],
+            },
+          },
+          { p: 'Aplikacje się nie wykluczają. Możesz wystawiać faktury w aplikacji MF albo programie, a odbierać je w osobnej aplikacji. Faktury i tak leżą w KSeF, więc zmiana aplikacji niczego nie kasuje. Wszystkie sposoby odbierania opisujemy w poradniku [odbieranie faktur z KSeF](/odbieranie-faktur-z-ksef).' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Czy jest oficjalna aplikacja mobilna KSeF?', a: 'Tak. Ministerstwo Finansów udostępnia bezpłatną Aplikację mobilną KSeF na Androida (Google Play) i iOS (App Store). Wersja dla KSeF 2.0 jest dostępna od 1 lutego 2026 r.' },
+      { q: 'Jak zalogować się do aplikacji mobilnej KSeF?', a: 'Biometrią lub PIN-em. Tożsamość potwierdzasz przez mObywatela, mojeID, e-dowód albo Profil Zaufany, a aplikacja sprawdza uprawnienia w KSeF.' },
+      { q: 'Czy aplikacją mobilną KSeF można poćwiczyć na środowisku testowym?', a: 'Nie. Według MF działa tylko w środowisku produkcyjnym, a faktury wysłane z niej są prawnie skuteczne. Do ćwiczeń użyj [wersji testowej KSeF](/ksef-demo-i-wersja-testowa).' },
+      { q: 'Czy aplikacja Faktury KSeF wystawia faktury?', a: 'Nie. Służy do odbierania i przeglądania faktur oraz pilnowania płatności. Do wystawiania użyj aplikacji MF, Aplikacji Podatnika albo programu.' },
+      { q: 'Czy aplikacja mobilna KSeF jest bezpłatna?', a: 'Według strony MF aplikacja Ministerstwa Finansów jest bezpłatna. Koszt aplikacji programów i aplikacji innych wydawców ustalają ich twórcy.' },
+    ],
+    sources: [SRC.mobilna, SRC.mobManual, SRC.ap20, SRC.odebrac],
+    app: { shot: 'start', from: 0.17, to: 0.44, text: 'Faktury KSeF to skrzynka odbiorcza: faktury kosztowe z KSeF na telefonie, z terminami płatności. Nie wystawia faktur.' },
+    related: ['odbieranie-faktur-z-ksef', 'jak-pobrac-fakture-z-ksef', 'jak-wystawic-fakture-w-ksef'],
   },
 ];

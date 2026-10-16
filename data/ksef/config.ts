@@ -13,6 +13,8 @@ export const ksefUrl = (path = '') => `${KSEF_BASE}${path === '/' ? '' : path}`;
 export const KSEF_PAGES: { path: string; priority: number }[] = [
   { path: '/', priority: 1.0 },
   { path: '/guides', priority: 0.8 },
+  { path: '/status-ksef', priority: 0.9 },
+  { path: '/funkcje', priority: 0.9 },
   { path: '/support', priority: 0.3 },
   { path: '/privacy-policy', priority: 0.2 },
   { path: '/terms-of-service', priority: 0.2 },

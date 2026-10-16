@@ -1,4 +1,5 @@
 import { KSEF_EMAIL, KSEF_NAME, KSEF_PUBLISHER, ksefUrl } from '@/data/ksef/config';
+import { FEATURES } from '@/data/ksef/features';
 import { GUIDES } from '@/data/ksef/guides';
 
 // ksef.shipailab.com/llms.txt (proxy.ts rewrites it here): a plain summary of the app and the guides
@@ -7,6 +8,8 @@ export function GET() {
   const guides = GUIDES.map(
     (g) => `### [${g.title}](${ksefUrl(`/${g.slug}`)})\nAktualizacja: ${g.updated}\n${g.summary.map((s) => `- ${s}`).join('\n')}\nŹródła: ${g.sources.map((s) => s.url).join(', ')}`,
   ).join('\n\n');
+
+  const features = FEATURES.map((f) => `- [${f.title}](${ksefUrl(`/funkcje/${f.slug}`)}): ${f.answer}`).join('\n');
 
   const body = `# ${KSEF_NAME}
 
@@ -21,6 +24,13 @@ Wydawca: ${KSEF_PUBLISHER}. Kontakt: ${KSEF_EMAIL}. Język treści: polski.
 - Powiadomienia: nowe faktury (sprawdzanie w tle) i przypomnienie o 9:00 dzień przed terminem płatności.
 - Płatności: oznaczanie opłaconych, wpłaty częściowe i raty, kalendarz płatności, należności.
 - Dane: przechowywane lokalnie (Keychain/Keystore dla danych logowania), połączenie wyłącznie z api.ksef.mf.gov.pl.
+
+## Funkcje aplikacji
+- [Wszystkie funkcje](${ksefUrl('/funkcje')})
+${features}
+
+## Narzędzia
+- [Status KSeF na żywo](${ksefUrl('/status-ksef')}): pomiar co 5 minut API KSeF, Aplikacji Podatnika, strony MF i login.gov.pl, z historią 30 dni.
 
 ## Poradniki KSeF
 ${guides}

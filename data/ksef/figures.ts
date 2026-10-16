@@ -135,6 +135,18 @@ export const FIGURES = {
       "height": 1632
     }
   },
+  "aplikacje-ksef-wybor": {
+    "alt": "Aplikacja mobilna KSeF: aplikacja Ministerstwa Finansów do wystawiania i przeglądania faktur, aplikacja programu księgowego, aplikacja do odbierania faktur kosztowych",
+    "caption": "Trzy rodzaje aplikacji KSeF na telefon. Opis aplikacji MF pochodzi ze strony Ministerstwa Finansów.",
+    "w": {
+      "width": 1200,
+      "height": 675
+    },
+    "n": {
+      "width": 960,
+      "height": 1692
+    }
+  },
   "biuro-modele": {
     "alt": "Uprawnienia KSeF dla biura rachunkowego: przeglądanie faktur do księgowania, wystawianie faktur tylko gdy biuro je wystawia, nadanie całemu biuru z prawem delegowania, odbieranie w każdej chwili",
     "caption": "Jakie uprawnienia KSeF nadać księgowej lub biuru rachunkowemu.",
