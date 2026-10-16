@@ -1,4 +1,3 @@
-import StoreBadges from '@/components/StoreBadges';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
@@ -177,7 +176,6 @@ export default function KsefLanding() {
                 <a href={WAITLIST} className="fk-btn fk-btn-primary fk-btn-lg">Powiadom mnie o premierze</a>
                 <a href="#funkcje" className="fk-btn fk-btn-line fk-btn-lg">Zobacz funkcje</a>
               </div>
-              <div style={{ marginTop: 18 }}><StoreBadges lang="pl" /></div>
               <ul className="fk-hero-meta">
                 <li><b>iPhone, iPad i Android</b><span>Wkrótce w App Store i Google Play</span></li>
                 <li><b>Certyfikat lub token KSeF</b><span>Działa obok Twojego programu do faktur</span></li>
